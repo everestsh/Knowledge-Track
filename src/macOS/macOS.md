@@ -22,3 +22,13 @@ brew install git
 sudo gem install cocoapods
 pod setup
 ```
+
+## Q&A 速查
+
+- MacBook Pro 2018 款连接iPhone或iPad设备频繁连续断开问题
+
+  ```sh
+  sudo killall -STOP -c usbd
+  ```
+
+  会引发新问题：连接的设备会显示「不在充电」（也是解决问题的原因）
