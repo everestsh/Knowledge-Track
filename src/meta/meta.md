@@ -24,3 +24,7 @@
 
 * [GitHub Pages](https://pages.github.com/) 发布 🌏
 
+## 知识体系
+
+![Knowledge Hierachy](./assets/knowledge_hierarchy.png)
+
