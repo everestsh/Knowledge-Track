@@ -18,11 +18,9 @@ jobs:
       run: cargo install mdbook
     - name: Build book
       run: mdbook build
-    - name: Deploy to GitHub
-      env:
-        GITHUB_DEPLOY_KEY: ${{ secrets.GITHUB_DEPLOY_KEY }}
-      run: |
-        touch book/.nojekyll
-        curl -LsSf https://raw.githubusercontent.com/rust-lang/simpleinfra/master/setup-deploy-keys/src/deploy.rs | rustc - -o /tmp/deploy
-        cd book
-        /tmp/deploy
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: book
