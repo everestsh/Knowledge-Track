@@ -13,7 +13,8 @@
 
 - [Typora](https://typora.io/) - markdown 编辑器，简洁、易用，所见即所得
 
-- [滴答清单](https://guide.dida365.com/) - 跨平台 GTD 提醒待办，番茄钟、习惯打卡等 All in One
+- [滴答清单](https://guide.dida365.com/) - 一站式行动： GTD、项目流程、进度追踪、番茄专注、习惯打卡
 - [The Unarchiver](https://theunarchiver.com/) - 解压缩
 - [Alfred](./alfred.md) - 快捷打开任意应用或工作流
+- [SnippetsLab](https://www.renfei.org/snippets-lab/manual/mac/index.html) - 代码片段库，支持 iCloud/gist 同步
 
