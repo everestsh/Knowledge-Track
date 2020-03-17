@@ -4,3 +4,10 @@ language = "zh-CN"
 multilingual = false
 src = "src"
 title = "棒棒彬的第二大脑"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+google-analytics = "UA-160717450-2"
+git-repository-url = "https://github.com/Binlogo/Knowledge-Track"
+git-repository-icon = "fa-github"
