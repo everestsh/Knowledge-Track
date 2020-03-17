@@ -38,7 +38,7 @@
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div id="sidebar-scrollbox" class="sidebar-scrollbox">
-                <ol class="chapter"><li class="expanded "><a href="Introduction.html"><strong aria-hidden="true">1.</strong> 首页</a></li><li class="expanded "><a href="meta/meta.html"><strong aria-hidden="true">2.</strong> 知识体系</a></li><li class="expanded "><a href="macOS/macOS.html"><strong aria-hidden="true">3.</strong> macOS</a></li><li><ol class="section"><li class="expanded "><a href="macOS/apps.html"><strong aria-hidden="true">3.1.</strong> macOS 应用</a></li></ol></li><li class="expanded "><a href="cs/cs.html"><strong aria-hidden="true">4.</strong> 计算机科学基础</a></li><li><ol class="section"><li class="expanded "><a href="cs/algrithoms.html"><strong aria-hidden="true">4.1.</strong> 数据结构与算法</a></li></ol></li><li class="expanded "><a href="language/language.html"><strong aria-hidden="true">5.</strong> 语言学习</a></li><li class="expanded "><a href="iOSDev/iOSDev.html"><strong aria-hidden="true">6.</strong> iOS 开发</a></li><li><ol class="section"><li class="expanded "><a href="iOSDev/community.html"><strong aria-hidden="true">6.1.</strong> 开发社区</a></li></ol></li></ol>
+                <ol class="chapter"><li class="expanded "><a href="Introduction.html"><strong aria-hidden="true">1.</strong> 首页</a></li><li class="expanded "><a href="meta/meta.html"><strong aria-hidden="true">2.</strong> 知识体系</a></li><li class="expanded "><a href="macOS/macOS.html"><strong aria-hidden="true">3.</strong> macOS</a></li><li><ol class="section"><li class="expanded "><a href="macOS/apps.html"><strong aria-hidden="true">3.1.</strong> macOS 应用</a></li><li><ol class="section"><li class="expanded "><a href="macOS/alfred.html"><strong aria-hidden="true">3.1.1.</strong> Alfred</a></li></ol></li></ol></li><li class="expanded "><a href="cs/cs.html"><strong aria-hidden="true">4.</strong> 计算机科学基础</a></li><li><ol class="section"><li class="expanded "><a href="cs/algrithoms.html"><strong aria-hidden="true">4.1.</strong> 数据结构与算法</a></li></ol></li><li class="expanded "><a href="language/language.html"><strong aria-hidden="true">5.</strong> 语言学习</a></li><li class="expanded "><a href="iOSDev/iOSDev.html"><strong aria-hidden="true">6.</strong> iOS 开发</a></li><li><ol class="section"><li class="expanded "><a href="iOSDev/community.html"><strong aria-hidden="true">6.1.</strong> 开发社区</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -120,6 +120,10 @@
                         <div class="right-buttons">
                             <a href="print.html" title="Print this book" aria-label="Print this book">
                                 <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                            <a href="https://github.com/Binlogo/Knowledge-Track" title="Git repository" aria-label="Git repository">
+                                <i id="git-repository-button" class="fa fa-github"></i>
                             </a>
                             
                         </div>
@@ -185,6 +189,8 @@
 <p><img src="meta/./assets/knowledge_hierarchy.png" alt="Knowledge Hierachy" /></p>
 <h1><a class="header" href="#macos" id="macos">macOS</a></h1>
 <p>记录 macOS 应用与习惯的环境配置。</p>
+<h2><a class="header" href="#键盘标识" id="键盘标识">键盘标识</a></h2>
+<p><code>⇧</code> Shift <code>⌃</code> Control <code>⌥</code> Option <code>⌘</code> Command <code>↩</code> Enter</p>
 <h2><a class="header" href="#开发环境配置" id="开发环境配置">开发环境配置</a></h2>
 <ul>
 <li><a href="https://brew.sh/">Homebrew</a></li>
@@ -215,42 +221,94 @@ pod setup
 <p>记录日常使用与喜爱的 macOS 应用</p>
 <ul>
 <li>
-<p>浏览器</p>
+<p><a href="https://www.iterm2.com/">iTerm</a> - 更强大易用的命令行终端</p>
 <ul>
-<li><a href="https://www.google.com.tw/chrome/browser/desktop/index.html">Google Chrome</a></li>
+<li>with <a href="http://ohmyz.sh/">oh-my-zsh</a></li>
 </ul>
 </li>
 <li>
-<p>命令行终端</p>
-<ul>
-<li><a href="https://www.iterm2.com/">iTerm</a> + <a href="http://ohmyz.sh/">oh-my-zsh</a></li>
-</ul>
+<p><a href="https://git-fork.com/">Fork</a> - Git 管理应用，简洁、易用</p>
 </li>
 <li>
-<p>版本管理</p>
-<ul>
-<li><a href="https://git-fork.com/">Fork</a></li>
+<p><a href="https://kapeli.com/dash">Dash</a> - 开发文档阅读</p>
+</li>
 </ul>
+<ul>
+<li><a href="https://code.visualstudio.com/">VSCode</a> - 编辑器，内部直接使用命令行非常便捷</li>
+</ul>
+<ul>
+<li>
+<p><a href="https://typora.io/">Typora</a> - markdown 编辑器，简洁、易用，所见即所得</p>
 </li>
 <li>
-<p>开发文档阅读</p>
-<ul>
-<li><a href="https://kapeli.com/dash">Dash</a></li>
-</ul>
+<p><a href="https://guide.dida365.com/">滴答清单</a> - 跨平台 GTD 提醒待办，番茄钟、习惯打卡等 All in One</p>
 </li>
 <li>
-<p>Markdown 写作</p>
-<ul>
-<li><a href="https://typora.io/">Typora</a></li>
-</ul>
+<p><a href="https://theunarchiver.com/">The Unarchiver</a> - 解压缩</p>
 </li>
 <li>
-<p>GTD 提醒待办</p>
-<ul>
-<li><a href="https://guide.dida365.com/">滴答清单</a></li>
-</ul>
+<p><a href="macOS/./alfred.html">Alfred</a> - 快捷打开任意应用或工作流</p>
 </li>
 </ul>
+<h1><a class="header" href="#alfred" id="alfred">Alfred</a></h1>
+<p>快捷操作 macOS 的各项事务 + 工作流自定义</p>
+<h2><a class="header" href="#基本快捷键" id="基本快捷键">基本快捷键</a></h2>
+<p><code>⌃ + 空格</code> 全局唤起 Alfred</p>
+<p><code>⌘ + ＃</code> 直接执行＃项[1-9]</p>
+<p><code>⌘ + o</code> 在默认的应用程序打开文件或应用程序</p>
+<p><code>⌘ + ,</code> 显示首选项窗口</p>
+<p><code>⌥ + ↩</code> 搜索Spotlight中当前输入的查询</p>
+<p><code>^ + ↩</code> 搜索在默认的Web搜索当前输入的查询</p>
+<p><code>⌘ + ↩</code> 在Finder中显示（如果结果是一个本地文件）</p>
+<p><code>preferences</code> 显示偏好设置</p>
+<h2><a class="header" href="#快速查找文件" id="快速查找文件">快速查找文件</a></h2>
+<p><code>open</code> 通过查询跟随关键字打开文件</p>
+<p><code>空格</code> 在查询中跟随空格打开文件</p>
+<p><code>find</code> 通过查询找到关键字以在Finder中显示文件</p>
+<p><code>⌘ + o</code> 打开文件</p>
+<p><code>in</code> 搜索包含该关键字的文件</p>
+<h2><a class="header" href="#加快mac的工作效率" id="加快mac的工作效率">加快Mac的工作效率</a></h2>
+<p><code>define</code> 查询字典</p>
+<p><code>spell</code> 查看建议的拼写</p>
+<p><code>13*567</code> 快速计算</p>
+<p><code>=</code> 开启高级计算</p>
+<p><code>screensaver</code> 开启屏幕保护</p>
+<p><code>trash</code> 显示废纸篓</p>
+<p><code>emptytrash</code> 清空废纸篓</p>
+<p><code>logout</code> 注销</p>
+<p><code>sleep</code> 睡眠</p>
+<p><code>sleepdisplays</code> 睡眠显示器</p>
+<p><code>lock</code> 锁定</p>
+<p><code>restart</code> 重启</p>
+<p><code>shutdown</code> 关机</p>
+<p><code>eject</code> 弹出（可移动设备或已安装镜像包）</p>
+<p><code>hide</code> 隐藏正在运行的应用</p>
+<p><code>quit</code> 退出正在运行的应用</p>
+<p><code>forcequit</code> 强制退出正在运行的应用</p>
+<h2><a class="header" href="#处理文件和应用程序" id="处理文件和应用程序">处理文件和应用程序</a></h2>
+<p><code>〜</code> 导航到您的主文件夹</p>
+<p><code>/</code> 导航到您的根文件夹</p>
+<p><code>⌥ + ⌘ + /</code>转到最后浏览路径文件系统导航</p>
+<p><code>previous</code> 转到文件系统导航中的最后浏览路径</p>
+<p><code>→</code> 显示所选项目的可用动作列表</p>
+<p><code>⌃</code> 显示所选项目的可用动作列表</p>
+<p><code>⌥ + ⌘ + \</code> 所选搜索项的可用操作的显示列表</p>
+<p><code>⌘ + ↓</code> 在文件系统导航浏览所选文件夹</p>
+<p><code>↩</code> 在文件系统导航输入文件夹</p>
+<p><code>退格</code> 返回上一级文件夹</p>
+<p><code>⇥</code> 自动补全</p>
+<p><code>.</code> 在文件系统导航中显示隐藏的文件</p>
+<blockquote>
+<p>提示：输入文件夹/文件的名称以将其选中</p>
+</blockquote>
+<h2><a class="header" href="#加速剪贴板" id="加速剪贴板">加速剪贴板</a></h2>
+<p><code>⌥ + ⌘ + c</code> 打开剪贴板历史记录查看器</p>
+<p><code>⌘ + c</code> 复制选定内容到当前剪贴板</p>
+<p><code>snip</code> 从主窗口搜索访问剪贴板</p>
+<p><code>clear</code> 清空剪贴板</p>
+<p><code>⌘ + s</code> 保存剪贴板内容为文本片段（snippet）</p>
+<h2><a class="header" href="#全部快捷键" id="全部快捷键">全部快捷键</a></h2>
+<p><a href="https://www.alfredapp.com/help/getting-started/cheatsheet/">Alfred Cheatsheet</a></p>
 <h1><a class="header" href="#计算机科学基础" id="计算机科学基础">计算机科学基础</a></h1>
 <p>与 CS 相关的基础知识，修炼内功。</p>
 <h1><a class="header" href="#数据结构与算法" id="数据结构与算法">数据结构与算法</a></h1>
@@ -262,6 +320,9 @@ pod setup
 <p><strong>宣言</strong>：<del>早搞晚搞，迟早要搞，干就是了！</del> <strong>Just Do IT！</strong></p>
 </blockquote>
 <h1><a class="header" href="#语言学习" id="语言学习">语言学习</a></h1>
+<ul>
+<li><a href="https://byoungd.gitbook.io/english-level-up-tips/">English-level-up-tips-for-Chinese</a></li>
+</ul>
 <h1><a class="header" href="#ios-开发" id="ios-开发">iOS 开发</a></h1>
 <p>精进 + 创造中 🚀</p>
 <ul>
@@ -320,6 +381,23 @@ pod setup
 
         
 
+        
+        <!-- Google Analytics Tag -->
+        <script type="text/javascript">
+            var localAddrs = ["localhost", "127.0.0.1", ""];
+
+            // make sure we don't activate google analytics if the developer is
+            // inspecting the book locally...
+            if (localAddrs.indexOf(document.location.hostname) === -1) {
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-160717450-2', 'auto');
+                ga('send', 'pageview');
+            }
+        </script>
         
 
         
