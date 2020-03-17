@@ -6,6 +6,8 @@
 
   - [macOS 应用](./macOS/apps.md)
 
+    - [Alfred](./macOS/alfred.md)
+
 - [计算机科学基础](./cs/cs.md)
 
   - [数据结构与算法](./cs/algrithoms.md)

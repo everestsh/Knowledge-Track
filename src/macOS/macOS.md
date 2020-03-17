@@ -2,6 +2,10 @@
 
 记录 macOS 应用与习惯的环境配置。
 
+## 键盘标识
+
+`⇧` Shift `⌃` Control `⌥` Option `⌘` Command `↩` Enter
+
 ## 开发环境配置
 
 - [Homebrew](https://brew.sh/)
