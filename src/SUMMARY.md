@@ -7,6 +7,7 @@
   - [macOS 应用](./macOS/apps.md)
 
     - [Alfred](./macOS/alfred.md)
+    - [SnippetsLab](./macOS/snippetsLab.md)
 
 - [计算机科学基础](./cs/cs.md)
 
