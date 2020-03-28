@@ -15,6 +15,7 @@
 - **Decks 卡堆**：由一组卡片组成，可包含其他卡堆。`::` 用于指定卡堆层级。
 
 - **Notes & Fields 笔记**：自定义链接有对应关系的卡片，以便结合记忆。
+
 - **Card Type 卡片类型**：定义卡片类模板。
 
 ```
@@ -34,11 +35,15 @@ A: {{English}}<br>
   - Basic (optional reversed card)
   - Cloze
 
-- **Collection 集合**：储存所有Anki资源
+- **Collection 集合**：储存所有 Anki 资源
 
 ## 共享卡堆
 
 - [获取](https://ankiweb.net/shared/decks/)共享卡堆
+
+## 链接
+
+- [MDAnki](https://github.com/ashlinchak/mdanki) - 通过 Markdown 生成 Anki 卡片
 
 --------------------------------------------------------------------------------
 
