@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div id="sidebar-scrollbox" class="sidebar-scrollbox">
-                <ol class="chapter"><li class="expanded "><a href="Introduction.html"><strong aria-hidden="true">1.</strong> 首页</a></li><li class="expanded "><a href="meta/meta.html"><strong aria-hidden="true">2.</strong> 知识体系</a></li><li class="expanded "><a href="macOS/macOS.html"><strong aria-hidden="true">3.</strong> macOS</a></li><li><ol class="section"><li class="expanded "><a href="macOS/apps.html"><strong aria-hidden="true">3.1.</strong> macOS 应用</a></li><li><ol class="section"><li class="expanded "><a href="macOS/alfred.html"><strong aria-hidden="true">3.1.1.</strong> Alfred</a></li><li class="expanded "><a href="macOS/snippetsLab.html"><strong aria-hidden="true">3.1.2.</strong> SnippetsLab</a></li></ol></li></ol></li><li class="expanded "><a href="cs/cs.html"><strong aria-hidden="true">4.</strong> 计算机科学基础</a></li><li><ol class="section"><li class="expanded "><a href="cs/algrithoms.html"><strong aria-hidden="true">4.1.</strong> 数据结构与算法</a></li></ol></li><li class="expanded "><a href="language/language.html"><strong aria-hidden="true">5.</strong> 语言学习</a></li><li class="expanded "><a href="iOSDev/iOSDev.html"><strong aria-hidden="true">6.</strong> iOS 开发</a></li><li><ol class="section"><li class="expanded "><a href="iOSDev/community.html"><strong aria-hidden="true">6.1.</strong> 开发社区</a></li></ol></li><li class="expanded "><a href="open-source/open-source.html"><strong aria-hidden="true">7.</strong> 开源</a></li></ol>
+                <ol class="chapter"><li class="expanded "><a href="Introduction.html"><strong aria-hidden="true">1.</strong> 首页</a></li><li class="expanded "><a href="meta/meta.html"><strong aria-hidden="true">2.</strong> 知识体系</a></li><li><ol class="section"><li class="expanded "><a href="meta/anki.html"><strong aria-hidden="true">2.1.</strong> Anki</a></li></ol></li><li class="expanded "><a href="macOS/macOS.html"><strong aria-hidden="true">3.</strong> macOS</a></li><li><ol class="section"><li class="expanded "><a href="macOS/apps.html"><strong aria-hidden="true">3.1.</strong> macOS 应用</a></li><li><ol class="section"><li class="expanded "><a href="macOS/alfred.html"><strong aria-hidden="true">3.1.1.</strong> Alfred</a></li><li class="expanded "><a href="macOS/snippetsLab.html"><strong aria-hidden="true">3.1.2.</strong> SnippetsLab</a></li></ol></li></ol></li><li class="expanded "><a href="cs/cs.html"><strong aria-hidden="true">4.</strong> 计算机科学基础</a></li><li><ol class="section"><li class="expanded "><a href="cs/algrithoms.html"><strong aria-hidden="true">4.1.</strong> 数据结构与算法</a></li></ol></li><li class="expanded "><a href="language/language.html"><strong aria-hidden="true">5.</strong> 语言学习</a></li><li class="expanded "><a href="iOSDev/iOSDev.html"><strong aria-hidden="true">6.</strong> iOS 开发</a></li><li><ol class="section"><li class="expanded "><a href="iOSDev/community.html"><strong aria-hidden="true">6.1.</strong> 开发社区</a></li></ol></li><li class="expanded "><a href="open-source/open-source.html"><strong aria-hidden="true">7.</strong> 开源</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -192,6 +192,56 @@
 </blockquote>
 <p><img src="https://firebasestorage.googleapis.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LM0VlyiSvOLlFnC9s6P%2F-LM0W1zjL7sigYL0vPRc%2F-LM0W2Q27M_OQ6cLuiyT%2FConeofLearning-old.png?generation=1536549997254490&amp;alt=media" alt="ConeofLearning-old.png" /></p>
 <p>主动学习：Learning by doing &amp; sharing &amp; teaching.</p>
+<h1><a class="header" href="#anki-记忆卡片" id="anki-记忆卡片">Anki 记忆卡片</a></h1>
+<p>让知识要点更容易，更牢靠。</p>
+<h2><a class="header" href="#背景理论" id="背景理论">背景理论</a></h2>
+<ul>
+<li><a href="https://zh.wikipedia.org/wiki/%E9%97%B4%E9%9A%94%E9%87%8D%E5%A4%8D">间隔重复</a></li>
+</ul>
+<p>利用心理学<a href="https://zh.wikipedia.org/w/index.php?title=%E9%97%B4%E9%9A%94%E6%95%88%E5%BA%94&amp;action=edit&amp;redlink=1">间隔效应</a>，通过不断复习所学内容并逐步增加两次复习间的时间间隔来提升效率的学习技巧。</p>
+<h2><a class="header" href="#核心概念" id="核心概念">核心概念</a></h2>
+<ul>
+<li>
+<p><strong>Cards 卡片</strong>： 一对「问题」与「答案」，对应卡片正反面🎴</p>
+</li>
+<li>
+<p><strong>Decks 卡堆</strong>：由一组卡片组成，可包含其他卡堆。<code>::</code> 用于指定卡堆层级。</p>
+</li>
+<li>
+<p><strong>Notes &amp; Fields 笔记</strong>：自定义链接有对应关系的卡片，以便结合记忆。</p>
+</li>
+<li>
+<p><strong>Card Type 卡片类型</strong>：定义卡片类模板。</p>
+</li>
+</ul>
+<pre><code>Q: Bonjour
+A: Hello
+   Page #12
+-----
+Q: {{French}}
+A: {{English}}&lt;br&gt;
+   Page #{{Page}}
+</code></pre>
+<ul>
+<li>
+<p><strong>Note Types 笔记类型</strong>：</p>
+<ul>
+<li>Basic</li>
+<li>Basic (and reversed card)</li>
+<li>Basic (optional reversed card)</li>
+<li>Cloze</li>
+</ul>
+</li>
+<li>
+<p><strong>Collection 集合</strong>：储存所有Anki资源</p>
+</li>
+</ul>
+<h2><a class="header" href="#共享卡堆" id="共享卡堆">共享卡堆</a></h2>
+<ul>
+<li><a href="https://ankiweb.net/shared/decks/">获取</a>共享卡堆</li>
+</ul>
+<hr />
+<p>附：<a href="https://docs.ankiweb.net/#/studying">完整帮助文档</a></p>
 <h1><a class="header" href="#macos" id="macos">macOS</a></h1>
 <p>记录 macOS 应用与习惯的环境配置。</p>
 <h2><a class="header" href="#键盘标识" id="键盘标识">键盘标识</a></h2>
