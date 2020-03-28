@@ -2,6 +2,9 @@
 
 - [首页](./Introduction.md)
 - [知识体系](./meta/meta.md)
+
+  - [Anki](./meta/anki.md)
+
 - [macOS](./macOS/macOS.md)
 
   - [macOS 应用](./macOS/apps.md)
