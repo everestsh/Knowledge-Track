@@ -28,4 +28,8 @@
 
 - [开源世界](./open-source/open-source.md)
 
+  - [遇见天才](./open-source/meet-geniuses.md)
+
 - [语言学习](./language/language.md)
+
+
