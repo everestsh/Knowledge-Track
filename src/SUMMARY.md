@@ -1,9 +1,10 @@
 # Summary
 
 - [首页](./Introduction.md)
-- [知识体系](./meta/meta.md)
+- [知识体系元](./meta/meta.md)
 
   - [Anki](./meta/anki.md)
+  - [构建第二大脑播客](./meta/second-brain-podcast.md)
 
 - [macOS](./macOS/macOS.md)
 
@@ -31,5 +32,3 @@
   - [遇见天才](./open-source/meet-geniuses.md)
 
 - [语言学习](./language/language.md)
-
-
