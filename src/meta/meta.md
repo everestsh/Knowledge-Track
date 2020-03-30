@@ -35,3 +35,11 @@
 
 主动学习：Learning by doing & sharing & teaching.
 
+## 构建第二大脑
+
+* [Building a Second Brain: Capturing, Organizing, and Sharing Knowledge Using Digital Notes](https://www.youtube.com/watch?v=SjZSy8s2VEE)
+
+![构建第二大脑](./assets/building_second_brain_methodology.jpg)
+
+![第一大脑](./assets/first_brain_for_situational_awareness.jpg)
+
