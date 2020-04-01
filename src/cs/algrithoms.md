@@ -6,3 +6,6 @@
 
 > **宣言**：~~早搞晚搞，迟早要搞，干就是了！~~ **Just Do IT！**
 
+## 链接
+
+- [labuladong的算法小抄](https://labuladong.gitbook.io/algo/)
