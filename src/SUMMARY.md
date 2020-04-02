@@ -26,6 +26,7 @@
 - [iOS 开发](./iOSDev/iOSDev.md)
 
   - [开发社区](./iOSDev/community.md)
+  - [iOS 应用](./iOSDev/apps.md)
 
 - [开源世界](./open-source/open-source.md)
 
