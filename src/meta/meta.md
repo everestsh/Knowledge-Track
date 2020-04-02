@@ -40,3 +40,8 @@
 ![构建第二大脑](./assets/building_second_brain_methodology.jpg)
 
 ![第一大脑](./assets/first_brain_for_situational_awareness.jpg)
+
+## 链接 - 其他大脑传送带
+
+- [Everything I know by Nikita Voloboev](https://wiki.nikitavoloboev.xyz/) - 最初建设的重要灵感来源之一
+- [David Seah](https://davidseah.gitbook.io/davidseah/)
