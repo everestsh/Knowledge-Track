@@ -33,3 +33,7 @@
   - [遇见天才](./open-source/meet-geniuses.md)
 
 - [语言学习](./language/language.md)
+
+- [工作](./work/work.md)
+
+  - [求职](./work/job-hunt.md)
