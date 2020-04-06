@@ -37,3 +37,4 @@
 - [工作](./work/work.md)
 
   - [求职](./work/job-hunt.md)
+  - [远程工作](./work/remote.md)
