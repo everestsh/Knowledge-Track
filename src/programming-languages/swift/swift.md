@@ -4,3 +4,7 @@
 - [Swift进阶](./advanced-swift.md)
 - [Swift Style Guide within Google](https://google.github.io/swift/)
 - [SwiftDoc.org](https://swiftdoc.org/) - Swift 开源文档查询
+
+## 链接
+
+- [Swift Concurrency by Uber](https://github.com/uber/swift-concurrency) - Uber 开源的并发编程实用工具
