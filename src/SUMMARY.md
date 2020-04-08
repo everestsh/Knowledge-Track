@@ -38,3 +38,4 @@
 
   - [求职](./work/job-hunt.md)
   - [远程工作](./work/remote.md)
+  - [斜杠/生活](./work/slashie.md)
