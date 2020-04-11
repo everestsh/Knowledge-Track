@@ -25,6 +25,7 @@
 
 - [iOS 开发](./iOSDev/iOSDev.md)
 
+  - [架构设计](./iOSDev/architecture.md)
   - [开发社区](./iOSDev/community.md)
   - [iOS 应用](./iOSDev/apps.md)
 
