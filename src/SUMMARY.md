@@ -25,8 +25,17 @@
 
 - [iOS 开发](./iOSDev/iOSDev.md)
 
-  - [架构设计](./iOSDev/architecture.md)
+- [架构设计](./iOSDev/architecture.md)
+
+  - [多线程编程](./iOSDev/threading-programming/threading-programming.md)
+
+    - [关于多线程编程](./iOSDev/threading-programming/about.md)
+    - [线程管理](./iOSDev/threading-programming/thread-management.md)
+    - [Run Loops](./iOSDev/threading-programming/run-loops.md)
+    - [线程同步](./iOSDev/threading-programming/synchronization.md)
+
   - [开发社区](./iOSDev/community.md)
+
   - [iOS 应用](./iOSDev/apps.md)
 
 - [开源世界](./open-source/open-source.md)
