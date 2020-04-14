@@ -11,13 +11,19 @@
 
 - [多线程编程](./threading-programming/threading-programming.md)
 
-
-
 ## 性能优化
 
-* [WWDC - Measuring Performance Using Logging](https://developer.apple.com/videos/play/wwdc2018/405)
+- [WWDC - Measuring Performance Using Logging](https://developer.apple.com/videos/play/wwdc2018/405)
 
+##  特性
 
+### iOS 13
+
+- [WWDC - Modernizing Your UI for iOS 13](https://developer.apple.com/videos/play/wwdc2019/224/)
+
+- [Context Menus](https://developer.apple.com/design/human-interface-guidelines/ios/controls/context-menus/)
+
+  - [Context Menus Tutorial for iOS: Getting Started](https://www.raywenderlich.com/6328155-context-menus-tutorial-for-ios-getting-started)
 
 ## 链接
 
