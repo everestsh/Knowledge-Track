@@ -25,8 +25,7 @@
 
 - [iOS 开发](./iOSDev/iOSDev.md)
 
-- [架构设计](./iOSDev/architecture.md)
-
+  - [架构设计](./iOSDev/architecture.md)
   - [多线程编程](./iOSDev/threading-programming/threading-programming.md)
 
     - [关于多线程编程](./iOSDev/threading-programming/about.md)

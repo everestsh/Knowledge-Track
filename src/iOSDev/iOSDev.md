@@ -11,6 +11,14 @@
 
 - [多线程编程](./threading-programming/threading-programming.md)
 
+
+
+## 性能优化
+
+* [WWDC - Measuring Performance Using Logging](https://developer.apple.com/videos/play/wwdc2018/405)
+
+
+
 ## 链接
 
 - [iOS Playbook from Babylon](https://github.com/babylonhealth/ios-playbook) - [Babylon 团队](http://github.com/babylonhealth) 的 iOS 攻略手册
