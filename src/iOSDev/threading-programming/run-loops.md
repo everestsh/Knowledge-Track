@@ -184,3 +184,138 @@ Timer 并不是实时的，会有误差。如果一个 timer 不在正在运行�
 
 可以使用 run loop 对象将其手动唤醒，其他事件也可能导致 run loop 被唤醒。比如添加另一个非基于端口的 input source 唤醒 run loop，input source 就能立刻被处理，而不是一直等到其他事件发生。
 
+### 该何时使用 Run Loop？
+
+需要手动运行 run loop 的场景只有一个，那就是你创建次级线程的时候。应用主线程的 run loop 是基础设施中至关重要的部分。应用框架会把自动运行主线程 run loop 的程序写好，比如 `UIApplication` 或 `NSApplication` 中的 `run`。如果使用 Xcode 带的模板创建工程，千万不要去调用这些方法。
+
+对于次级线程是否有必要手动开启 run loop，那要看实际情况了。比如使用线程执行一些预先设定好的运行时间较长的任务，可能就不需要开启 run loop 了。Run Loop 是为**『想要与线程更多交互』**的场景准备的，例如：
+
+- 使用 input source 与其他线程通信
+- 在线程中使用 timer
+- 在 Cocoa 应用中使用任何 `performSelector...` 系列的方法
+- 让线程执行周期性任务
+
+如果选择使用 run loop，配置和启动是很简单的。可是对所有的线程编程而言，应该计划好在合适的场景下退出次级线程，这比强行退出要好。
+
+### 使用 Run Loop 对象
+
+Run Loop 对象提供了向 run loop 中添加 input source、timer 和 run-loop observer 的主要接口，并运行起来。**每个线程都关联一个单独的 run loop。**在 Cocoa 中，Run Loop 对象是个 `RunLoop` 类的实例，在 Core Foundation 中是 `CFRunLoop` 指针。但它们不是 toll-free bridge 的。
+
+#### 获取 Run Loop 对象
+
+获取当前线程的 run loop 对象有两种方式：
+
+- Cocoa 框架 `RunLoop` 的类属性 [`current`](https://developer.apple.com/documentation/foundation/runloop/1412291-current)
+- `CFRunLoopGetCurrent` 函数
+
+可以从 `RunLoop` 对象的 `getCFRunLoop` 方法获取到 `CFRunLoop`，这样就可以传给 Core Foundation 程序使用了。二者都指向同一个 run loop，所以可以混用。
+
+#### 配置 Run Loop
+
+在次级线程运行 run loop 之前，必须向其添加至少一个 input source 或 timer，否则 run loop 会因没有可监控的 source 而在运行后立刻退出。
+
+除了用 source 外，还可以用 run loop observer 观察 run loop 的各种运行阶段。做法是创建一个 `CFRunLoopObserver` 类型的对象并用 `CFRunLoopAddObserver` 函数将其添加到 run loop 中。注意的是只能用 Core Foundation 创建 run loop observer，Cocoa 框架无能为力。
+
+下面的示例代码在线程入口函数中创建了 run loop observer 并将其添加到 run loop 中。observer 监听了 run loop 所有的活动，并省略了回调函数 `myRunLoopObserver` 的实现。
+
+```swift
+@objc func threadMain() {
+    autoreleasepool() {
+        let myRunLoop = RunLoop.current
+
+        // Create a run loop observer and attach it to the run loop.
+        let context = CFRunLoopObserverContext(version: 0, info: self, retain: nil, release: nil, copyDescription: nil)
+        if let observer = CFRunLoopObserverCreate(kCFAllocatorDefault, CFRunLoopActivity.allActivities.rawValue, true, 0, &myRunLoopObserver, &context) {
+            let cfLoop = myRunLoop.getCFRunLoop()
+            CFRunLoopAddObserver(cfLoop, observer, .defaultMode)
+        }
+        // Create and schedule the timer.
+        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(doFireTimer), userInfo: nil, repeats: true)
+        var loopCount = 10
+        while loopCount > 0 {
+            myRunLoop.run(until: Date(timeIntervalSinceNow: 1))
+            loopCount -= 1
+        }
+    }
+}
+```
+
+为了不让 run loop 刚运行就立刻退出，上面的代码向 run loop 添加了一个 timer。因为 timer 一旦触发就无效了，依然会导致 run loop 退出，所以这里 `repeats` 参数传入 `YES`。但这样会让 run loop 一直运行很久，并需要周期性触发 timer 来唤醒线程，这实际上是轮询的另一种形式罢了。相反，输入源等待事件发生，让线程一直处于休眠状态，直到事件发生再唤起。
+
+[`CFRunLoopObserverContext`](https://github.com/apple/swift-corelibs-foundation/blob/05b5a05fa4f3be28eb1fd16203b34286ccc7d541/CoreFoundation/RunLoop.subproj/CFRunLoop.h#L131) 结构体定义如下，查文档可知第二个参数 `info` 会在回调函数被调用时当做参数传入，这里传入 `self`。
+
+```c
+typedef struct {
+    CFIndex	version;
+    void *	info;
+    const void *(*retain)(const void *info);
+    void	(*release)(const void *info);
+    CFStringRef	(*copyDescription)(const void *info);
+} CFRunLoopObserverContext;
+```
+
+#### 启动 Run Loop
+
+只有在应用的次级线程才需要启动 run loop，而且需要有至少一个 input source 或 timer，否则 run loop 启动后会立刻退出。
+
+启动 run loop 的几种方式包括：
+
+- 无条件：
+- 设定时间限制
+- 处于特定模式（Mode）
+
+| 方式         | 方法名(NSRunLoop)   | 解释                                                         |
+| :----------- | :------------------ | :----------------------------------------------------------- |
+| 无条件       | run                 | 最简单但也最不可取的方案。会让线程进入无限循环，对 run loop 很难控制。可以添加和移除 input source 和 timer，但只能通过 kill 的方式停止 run loop。也无法在自定义模式下运行 run loop。 |
+| 设定时间限制 | runUntilDate:       | run loop 在收到事件或超时前会一直运行。run loop 结束后可以重启，并处理接下来的事情。比上一种方式更好，提供了时间限制。 |
+| 处于特定模式 | runMode:beforeDate: | 相比上一种方式，增加了在特定模式下运行 run loop。            |
+
+`run` 和 `runUntilDate:` 方法会使用 `NSDefaultRunLoopMode` 参数不断调用 `runMode:beforeDate:` 方法。
+
+下面的代码展示了一个线程入口函数的大纲，主要是 run loop 的基本构成。本质上就是配置好 run loop 并运行后，每轮运行后不断检查是否需要退出线程。使用 Core Foundation 可以检查 run loop 每次运行的结果，并决定是否需要退出线程。当然也可以使用上面 `NSRunLoop` 提供的 API，而且无需检查每次运行的返回值。后面会有例子。
+
+```objective-c
+- (void)skeletonThreadMain
+{
+    // Set up an autorelease pool here if not using garbage collection.
+    BOOL done = NO;
+ 
+    // Add your sources or timers to the run loop and do any other setup.
+ 
+    do
+    {
+        // Start the run loop but return after each source is handled.
+        SInt32    result = CFRunLoopRunInMode(kCFRunLoopDefaultMode, 10, YES);
+ 
+        // If a source explicitly stopped the run loop, or if there are no
+        // sources or timers, go ahead and exit.
+        if ((result == kCFRunLoopRunStopped) || (result == kCFRunLoopRunFinished))
+            done = YES;
+ 
+        // Check for any other exit conditions here and set the
+        // done variable as needed.
+    }
+    while (!done);
+ 
+    // Clean up code here. Be sure to release any allocated autorelease pools.
+}
+```
+
+其实上面这段调用 `CFRunLoopRunInMode()` 的逻辑跟 `CFRunLoopRun()` 差不多。
+
+可以递归启动 run loop。也就是说可以在 input source 或 timer 的回调处理函数中调用 `CFRunLoopRun`, `CFRunLoopRunInMode` 或上面提到的 `NSRunLoop` 的三个方法，而且嵌套的 run loop 可以在任意 Mode 下运行。
+
+#### 退出 Run Loop
+
+在 run loop 已经将事件处理之前有两种退出的方式：
+
+1. 给 run loop 配置 timeout 值
+2. 告诉 run loop 停止
+
+推荐第一种方法，因为它会让 run loop 完成一切正常的处理，包括在退出前向 observer 发通知。
+
+使用 `CFRunLoopStop` 函数停止 run loop 的结果跟第一种方式差不多，run loop 会把剩下的通知发出去，然后退出。不同点在于可以用这个函数停止以无条件方式（`run` 方法）启动的 run loop。**要注意的是 `CFRunLoopStop` 只会停止对 `CFRunLoopRun` 和 `CFRunLoopRunInMode` 的调用，对于 Cocoa 框架相当于只停止一次 `runMode:beforeDate:` 的调用，而不是退出 run loop。stop 一次运行和 exit 整个 run loop 是不一样的**。
+
+虽然移除 run loop 的 input source 和 timer 也会导致其退出，但**这种方法不可靠**。因为有些系统程序会向 run loop 中添加 input source，开发者根本不知道有这回事，移除的时候就会漏掉，自然就不会导致 run loop 退出。
+
+// TODO
