@@ -318,4 +318,10 @@ typedef struct {
 
 虽然移除 run loop 的 input source 和 timer 也会导致其退出，但**这种方法不可靠**。因为有些系统程序会向 run loop 中添加 input source，开发者根本不知道有这回事，移除的时候就会漏掉，自然就不会导致 run loop 退出。
 
-// TODO
+#### 线程安全和 Run Loop 对象
+
+使用 Core Foundation 中的函数操作 run loop 对象一般都是线程安全的，可以在任何线程调用。如果要更改 run loop 的配置，尽可能在 run loop 自己的线程操作。
+
+Cocoa 中对应的 `NSRunLoop` 内部并不是线程安全的，必须在 run loop 所在的线程修改它。向其他线程的 run loop 添加 input source 或 timer 都会导致 crash 或异常行为。
+
+// TODO:
