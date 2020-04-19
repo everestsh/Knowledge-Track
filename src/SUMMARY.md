@@ -46,9 +46,14 @@
 - [工作](./work/work.md)
 
   - [求职](./work/job-hunt.md)
+  - [职场发展](./work/career.md)
   - [远程工作](./work/remote.md)
   - [斜杠/生活](./work/slashie.md)
 
 - [命令行](./cli/cli.md)
 
 - [Linux](./linux/linux.md)
+
+- [阅读](./reading/reading.md)
+
+  - [《能力陷阱》](./reading/act-like-a-leader.md)
