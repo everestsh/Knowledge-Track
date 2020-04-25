@@ -397,9 +397,9 @@ typedef struct __CFRuntimeBase {
 <li>给 run loop 配置 timeout 值</li>
 <li>告诉 run loop 停止</li>
 </ol>
-<p>推荐第一种方法，因为它会让 run loop 完成一切正常的处理，包括在退出前向 observer 发通知。</p>
+<p><strong>推荐第一种方法</strong>，因为它会让 run loop 完成一切正常的处理，包括在退出前向 observer 发通知。</p>
 <p>使用 <code>CFRunLoopStop</code> 函数停止 run loop 的结果跟第一种方式差不多，run loop 会把剩下的通知发出去，然后退出。不同点在于可以用这个函数停止以无条件方式（<code>run</code> 方法）启动的 run loop。<strong>要注意的是 <code>CFRunLoopStop</code> 只会停止对 <code>CFRunLoopRun</code> 和 <code>CFRunLoopRunInMode</code> 的调用，对于 Cocoa 框架相当于只停止一次 <code>runMode:beforeDate:</code> 的调用，而不是退出 run loop。stop 一次运行和 exit 整个 run loop 是不一样的</strong>。</p>
-<p>虽然移除 run loop 的 input source 和 timer 也会导致其退出，但<strong>这种方法不可靠</strong>。因为有些系统程序会向 run loop 中添加 input source，开发者根本不知道有这回事，移除的时候就会漏掉，自然就不会导致 run loop 退出。</p>
+<p>虽然移除 run loop 的 input source 和 timer 也会导致其退出，但<strong>这种方法不可靠</strong>。因为<strong>有些系统程序会向 run loop 中添加 input source，开发者根本不知道有这回事</strong>，移除的时候就会漏掉，自然就不会导致 run loop 退出。</p>
 <h4><a class="header" href="#线程安全和-run-loop-对象" id="线程安全和-run-loop-对象">线程安全和 Run Loop 对象</a></h4>
 <p>使用 Core Foundation 中的函数操作 run loop 对象一般都是线程安全的，可以在任何线程调用。如果要更改 run loop 的配置，尽可能在 run loop 自己的线程操作。</p>
 <p>Cocoa 中对应的 <code>NSRunLoop</code> 内部并不是线程安全的，必须在 run loop 所在的线程修改它。向其他线程的 run loop 添加 input source 或 timer 都会导致 crash 或异常行为。</p>
