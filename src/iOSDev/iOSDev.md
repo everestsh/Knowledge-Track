@@ -5,11 +5,10 @@
 - [《iOS 开发高手课》笔记](https://mubu.com/doc/5Iio_eHpUPE)
 - [图片储存与展示性能优化](https://mubu.com/doc/fPEZGSYGr0)
 - [设计模式 - Swift 示例](https://github.com/Binlogo/Design-Patterns-In-Swift-CN)
-- [Run Loop 开发文档](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/Multithreading/RunLoopManagement/RunLoopManagement.html)
-
-  - TODO: 思维导图大纲
-
 - [多线程编程](./threading-programming/threading-programming.md)
+  - [线程管理](./threading-programming/thread-management.md)
+  - [Run Loops](./threading-programming/run-loops.md)
+  - [线程同步](./threading-programming/synchronization.md)
 
 ## 性能优化
 
