@@ -312,11 +312,11 @@ typedef struct {
 1. 给 run loop 配置 timeout 值
 2. 告诉 run loop 停止
 
-推荐第一种方法，因为它会让 run loop 完成一切正常的处理，包括在退出前向 observer 发通知。
+**推荐第一种方法**，因为它会让 run loop 完成一切正常的处理，包括在退出前向 observer 发通知。
 
 使用 `CFRunLoopStop` 函数停止 run loop 的结果跟第一种方式差不多，run loop 会把剩下的通知发出去，然后退出。不同点在于可以用这个函数停止以无条件方式（`run` 方法）启动的 run loop。**要注意的是 `CFRunLoopStop` 只会停止对 `CFRunLoopRun` 和 `CFRunLoopRunInMode` 的调用，对于 Cocoa 框架相当于只停止一次 `runMode:beforeDate:` 的调用，而不是退出 run loop。stop 一次运行和 exit 整个 run loop 是不一样的**。
 
-虽然移除 run loop 的 input source 和 timer 也会导致其退出，但**这种方法不可靠**。因为有些系统程序会向 run loop 中添加 input source，开发者根本不知道有这回事，移除的时候就会漏掉，自然就不会导致 run loop 退出。
+虽然移除 run loop 的 input source 和 timer 也会导致其退出，但**这种方法不可靠**。因为**有些系统程序会向 run loop 中添加 input source，开发者根本不知道有这回事**，移除的时候就会漏掉，自然就不会导致 run loop 退出。
 
 #### 线程安全和 Run Loop 对象
 
