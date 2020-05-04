@@ -42,3 +42,4 @@ while (alive) {
 - [Tiercel](https://github.com/Danie1s/Tiercel) - 简单易用、功能丰富的纯 Swift 下载框架
 - [swift-corelibs-libdispatch](https://github.com/apple/swift-corelibs-libdispatch) - GCD 官方源码
 - [Objective-C Runtime 1小时入门教程](https://www.ianisme.com/ios/2019.html)
+- [SwiftInfo](https://github.com/rockbruno/SwiftInfo) - 抓取分析 iOS 应用信息以便追踪质量
