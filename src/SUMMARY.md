@@ -23,6 +23,8 @@
 
     - [《Swift 进阶》阅读纪要](./programming-languages/swift/advanced-swift.md)
 
+  - [Rust](./programming-languages/rust/rust.md)
+
 - [iOS 开发](./iOSDev/iOSDev.md)
 
   - [架构设计](./iOSDev/architecture.md)
