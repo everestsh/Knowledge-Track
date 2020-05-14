@@ -36,3 +36,7 @@ Caused by:
 ```sh
 ssh-add -K ~/.ssh/id_rsa
 ```
+
+## 链接
+
+- [Rust Platform Support](https://forge.rust-lang.org/release/platform-support.html)
