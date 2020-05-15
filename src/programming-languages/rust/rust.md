@@ -40,7 +40,10 @@ ssh-add -K ~/.ssh/id_rsa
 ## 链接
 
 - [Rust Platform Support](https://forge.rust-lang.org/release/platform-support.html)
+- [Closures: Magic Functions](https://rustyyato.github.io/rust/syntactic/sugar/2019/01/17/Closures-Magic-Functions.html)
 
 ### Rust 移动端跨平台
 
 - [swapi-rust-mobile](https://github.com/xajik/rust-cross-platform-mobile)
+- [Rust FFI Omnibus](http://llever.com/rust-ffi-omnibus/)
+- [High performance flexbox implementation written in rust](https://github.com/vislyhq/stretch)
