@@ -40,3 +40,7 @@ ssh-add -K ~/.ssh/id_rsa
 ## 链接
 
 - [Rust Platform Support](https://forge.rust-lang.org/release/platform-support.html)
+
+### Rust 移动端跨平台
+
+- [swapi-rust-mobile](https://github.com/xajik/rust-cross-platform-mobile)
