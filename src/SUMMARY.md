@@ -25,6 +25,8 @@
 
   - [Rust](./programming-languages/rust/rust.md)
 
+    - [化解神奇的闭包](./programming-languages/rust/closure.md)
+
 - [iOS 开发](./iOSDev/iOSDev.md)
 
   - [架构设计](./iOSDev/architecture.md)

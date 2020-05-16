@@ -2,11 +2,14 @@
 
 > 为了安全，向编译器学习（di tou）。
 
+- [化解神奇的闭包](./closure.md)
+
 ## Q&A 速查
 
 - 如何加速 crates.io-index 更新速度？
 
 执行以下命令更换镜像源
+
 ```sh
 tee $HOME/.cargo/config <<-'EOF'
 [source.crates-io]
