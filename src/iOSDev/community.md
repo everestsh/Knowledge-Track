@@ -13,3 +13,10 @@
   - [AppCoda 台湾](https://www.appcoda.com.tw/)
 
 - [pointfree.co](https://www.pointfree.co/) - Swift ❤️ 函数式编程
+
+## 订阅
+
+- [iOS Dev Weekly](https://iosdevweekly.com/)
+- [老司机 iOS 周报](https://github.com/SwiftOldDriver/iOS-Weekly)
+- [Use Your Loaf](https://useyourloaf.com/)
+
