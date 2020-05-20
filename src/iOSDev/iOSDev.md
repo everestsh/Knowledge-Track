@@ -6,6 +6,7 @@
 - [图片储存与展示性能优化](https://mubu.com/doc/fPEZGSYGr0)
 - [设计模式 - Swift 示例](https://github.com/Binlogo/Design-Patterns-In-Swift-CN)
 - [多线程编程](./threading-programming/threading-programming.md)
+
   - [线程管理](./threading-programming/thread-management.md)
   - [Run Loops](./threading-programming/run-loops.md)
   - [线程同步](./threading-programming/synchronization.md)
@@ -43,3 +44,4 @@ while (alive) {
 - [swift-corelibs-libdispatch](https://github.com/apple/swift-corelibs-libdispatch) - GCD 官方源码
 - [Objective-C Runtime 1小时入门教程](https://www.ianisme.com/ios/2019.html)
 - [SwiftInfo](https://github.com/rockbruno/SwiftInfo) - 抓取分析 iOS 应用信息以便追踪质量
+- [Kernal Programming Guide](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/About/About.html#//apple_ref/doc/uid/TP30000905-CH204-TPXREF101)
