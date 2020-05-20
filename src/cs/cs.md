@@ -6,3 +6,16 @@
 - [面向应用开发者的系统指南](https://www.codedump.info/post/20200501-system-guide-for-application-programmer/)
 
   - TODO: Keep up 整理幕布大纲
+
+- [The Missing Semester of Your CS Education](https://missing.csail.mit.edu/)
+
+  - [x] Course overview + the shell
+  - [ ] Shell Tools and Scripting
+  - [ ] Editors (Vim)
+  - [ ] Data Wrangling
+  - [ ] Command-line Environment
+  - [ ] Version Control (Git)
+  - [ ] Debugging and Profiling
+  - [ ] Metaprogramming
+  - [ ] Security and Cryptography
+  - [ ] Potpourri
