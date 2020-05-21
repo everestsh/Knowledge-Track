@@ -17,6 +17,8 @@
 
   - [数据结构与算法](./cs/algrithoms.md)
 
+- [软件工程](./software-engineering/software-engineering.md)
+
 - [编程语言](./programming-languages/programming-languages.md)
 
   - [Swift](./programming-languages/swift/swift.md)
