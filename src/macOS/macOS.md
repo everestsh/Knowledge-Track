@@ -6,6 +6,10 @@
 
 `⇧` Shift `⌃` Control `⌥` Option `⌘` Command `↩` Enter
 
+## 快捷键速览
+
+- 打开"截屏"。按下 Shift-Command-5 以查看屏幕上的控件。
+
 ## 开发环境配置
 
 - [Homebrew](https://brew.sh/)
@@ -36,3 +40,9 @@ pod setup
   ```
 
   会引发新问题：连接的设备会显示「不在充电」（也是解决问题的原因）
+
+## 链接
+
+- [Apple Teacher Learning Center](https://appleteacher.apple.com/#/home/resources)
+
+  - TODO: 🎖 Go get it, get it.
