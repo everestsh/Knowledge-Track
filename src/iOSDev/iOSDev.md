@@ -45,3 +45,4 @@ while (alive) {
 - [Objective-C Runtime 1小时入门教程](https://www.ianisme.com/ios/2019.html)
 - [SwiftInfo](https://github.com/rockbruno/SwiftInfo) - 抓取分析 iOS 应用信息以便追踪质量
 - [Kernal Programming Guide](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/About/About.html#//apple_ref/doc/uid/TP30000905-CH204-TPXREF101)
+- [Creating and Distributing an iOS Binary Framework](https://instabug.com/blog/ios-binary-framework/)
