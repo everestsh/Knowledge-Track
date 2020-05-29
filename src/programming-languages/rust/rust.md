@@ -50,3 +50,9 @@ ssh-add -K ~/.ssh/id_rsa
 - [swapi-rust-mobile](https://github.com/xajik/rust-cross-platform-mobile)
 - [Rust FFI Omnibus](http://llever.com/rust-ffi-omnibus/)
 - [High performance flexbox implementation written in rust](https://github.com/vislyhq/stretch)
+
+### 库
+
+- [A Rust implementation of DEFLATE algorithm and related formats (ZLIB, GZIP)](https://github.com/sile/libflate)
+- [FlatBuffers: Use in Rust](https://google.github.io/flatbuffers/flatbuffers_guide_use_rust.html) - Memory Efficient Serialization Library
+- [Cap'n Proto for Rust](https://github.com/capnproto/capnproto-rust) - serialization/RPC system
