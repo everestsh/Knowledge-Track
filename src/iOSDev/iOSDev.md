@@ -46,3 +46,4 @@ while (alive) {
 - [SwiftInfo](https://github.com/rockbruno/SwiftInfo) - 抓取分析 iOS 应用信息以便追踪质量
 - [Kernal Programming Guide](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/About/About.html#//apple_ref/doc/uid/TP30000905-CH204-TPXREF101)
 - [Creating and Distributing an iOS Binary Framework](https://instabug.com/blog/ios-binary-framework/)
+- [Optimize your iOS projects creating binaries Frameworks](https://medium.com/@cristianarielbarril/optimize-your-ios-projects-creating-binaries-frameworks-f83cb848f59f)
