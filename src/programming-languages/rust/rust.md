@@ -56,3 +56,5 @@ ssh-add -K ~/.ssh/id_rsa
 - [A Rust implementation of DEFLATE algorithm and related formats (ZLIB, GZIP)](https://github.com/sile/libflate)
 - [FlatBuffers: Use in Rust](https://google.github.io/flatbuffers/flatbuffers_guide_use_rust.html) - Memory Efficient Serialization Library
 - [Cap'n Proto for Rust](https://github.com/capnproto/capnproto-rust) - serialization/RPC system
+- [maidsafe-utilities](https://github.com/maidsafe/maidsafe-utilities) - Utility functions
+- [maidsafe/ffi-utils](https://github.com/maidsafe/ffi-utils)
