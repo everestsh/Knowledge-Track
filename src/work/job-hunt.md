@@ -1,6 +1,6 @@
 # 求职
 
-定期更新[个人简历](https://mubu.com/doc/9a23cw-pv0)是审视当下工作与未来规划的一种方式。
+定期更新[个人简历](https://binlogo.github.io/Resume-Track/print.html)是审视当下工作与未来规划的一种方式。
 
 > 辞职、跳槽，应该是出于对未来发展的考量，而不是对现下纷杂事务的逃避。
 
