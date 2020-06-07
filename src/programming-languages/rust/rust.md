@@ -59,3 +59,4 @@ ssh-add -K ~/.ssh/id_rsa
 - [Cap'n Proto for Rust](https://github.com/capnproto/capnproto-rust) - serialization/RPC system
 - [maidsafe-utilities](https://github.com/maidsafe/maidsafe-utilities) - Utility functions
 - [maidsafe/ffi-utils](https://github.com/maidsafe/ffi-utils)
+- [getditto/safer_ffi](https://github.com/getditto/safer_ffi) - 更安全地写 FFI 代码
