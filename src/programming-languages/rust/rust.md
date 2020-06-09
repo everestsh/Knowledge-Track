@@ -40,6 +40,19 @@ Caused by:
 ssh-add -K ~/.ssh/id_rsa
 ```
 
+- Cargo build 时报`Blocking waiting for file lock on package cache`.
+
+```
+cargo build --verbose
+    Blocking waiting for file lock on package cache
+```
+
+解决办法：
+
+```
+rm -r ~/.cargo/.package-cache
+```
+
 ## 链接
 
 - [Book - The Rust Programming Language](https://doc.rust-lang.org/book/)
