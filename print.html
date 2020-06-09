@@ -666,6 +666,15 @@ Caused by:
 <p>解决办法：</p>
 <pre><code class="language-sh">ssh-add -K ~/.ssh/id_rsa
 </code></pre>
+<ul>
+<li>Cargo build 时报<code>Blocking waiting for file lock on package cache</code>.</li>
+</ul>
+<pre><code>cargo build --verbose
+    Blocking waiting for file lock on package cache
+</code></pre>
+<p>解决办法：</p>
+<pre><code>rm -r ~/.cargo/.package-cache
+</code></pre>
 <h2><a class="header" href="#链接-8" id="链接-8">链接</a></h2>
 <ul>
 <li><a href="https://doc.rust-lang.org/book/">Book - The Rust Programming Language</a></li>
