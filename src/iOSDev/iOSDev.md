@@ -47,6 +47,7 @@ while (alive) {
 - [Kernal Programming Guide](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/About/About.html#//apple_ref/doc/uid/TP30000905-CH204-TPXREF101)
 - [Creating and Distributing an iOS Binary Framework](https://instabug.com/blog/ios-binary-framework/)
 - [Optimize your iOS projects creating binaries Frameworks](https://medium.com/@cristianarielbarril/optimize-your-ios-projects-creating-binaries-frameworks-f83cb848f59f)
+- [LinkMap解析工具](https://github.com/huanxsd/LinkMap) - 检查每个类占用大小
 
 ### 库
 
