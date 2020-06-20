@@ -60,6 +60,7 @@ rm -r ~/.cargo/.package-cache
 - [Book - The Rust Programming Language](https://doc.rust-lang.org/book/)
 - [Rust Platform Support](https://forge.rust-lang.org/release/platform-support.html)
 - [Closures: Magic Functions](https://rustyyato.github.io/rust/syntactic/sugar/2019/01/17/Closures-Magic-Functions.html)
+- [Rust 编程语言](https://learnku.com/docs/rust-lang/2018) - 官方的《The Rust Programming Language》翻译
 
 ### Rust 移动端跨平台
 
