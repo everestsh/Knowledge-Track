@@ -63,6 +63,7 @@ rm -r ~/.cargo/.package-cache
 - [Rust 编程语言](https://learnku.com/docs/rust-lang/2018) - 官方的《The Rust Programming Language》翻译
 - [What is Rust and why is it so popular?](https://stackoverflow.blog/2020/01/20/what-is-rust-and-why-is-it-so-popular/)
 - [Rust: A Language for the Next 40 Years - Carol Nichols](https://www.youtube.com/watch?v=A3AdN7U24iU)
+- [Rust异步浅谈](https://leaxoy.github.io/2020/03/rust-async-runtime/)
 
 ### Rust 移动端跨平台
 
