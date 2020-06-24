@@ -7,12 +7,19 @@
         
         <meta name="robots" content="noindex" />
         
+        
+
+
+        <!-- Custom HTML head -->
+        
+
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
+        <link rel="icon" href="favicon.svg">
         <link rel="shortcut icon" href="favicon.png">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
@@ -21,8 +28,9 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
 
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="highlight.css">
@@ -715,8 +723,8 @@ Caused by:
 <p>In programming languages, a closure is <strong>a function or reference to a function</strong> together with <strong>a referencing environment</strong>—a table storing a reference to each of the non-local variables (also called free variables or upvalues) of that function.</p>
 </blockquote>
 <p>即，闭包就是<strong>一个函数指针</strong>和<strong>该函数所处上下文环境</strong>。其中，函数指针不能理解，最关键也是闭包和常规函数最大的区别就是，闭包捕获上下文环境的特性了。</p>
-<pre><pre class="playpen"><code class="language-rust">
-<span class="boring">#![allow(unused_variables)]
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>let hi = &quot;Hi!&quot;.to_string();
 let closure = || println!(&quot;{}&quot;, hi);
@@ -734,8 +742,8 @@ fn normal_function() {
 </blockquote>
 <p>那么闭包是如何做到捕获上下文的呢？要回答这个问题，一是要理解闭包的定义，二是要知道闭包的使用是函数+上下文环境捕获的语法糖。</p>
 <h2><a class="header" href="#三种不同特性的函数声明-trait-fn" id="三种不同特性的函数声明-trait-fn">三种不同特性的函数声明 <code>trait Fn* </code></a></h2>
-<pre><pre class="playpen"><code class="language-rust">
-<span class="boring">#![allow(unused_variables)]
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>pub trait FnOnce&lt;Args&gt; {
     type Output;
@@ -757,8 +765,8 @@ pub trait Fn&lt;Args&gt;: FnMut&lt;Args&gt; {
 <ul>
 <li><code>Args</code>：泛型的传入参数，对于闭包的实现，<code>Args </code>都是元组，以便同时传入多个参数</li>
 </ul>
-<pre><pre class="playpen"><code class="language-rust">
-<span class="boring">#![allow(unused_variables)]
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>let zero_args_closure = || &quot;hi&quot;;              // type Args = ()
 let one_args_closure = |a: u32| ();           // type Args = (u32,)
@@ -768,8 +776,8 @@ let two_args_closure = |a: u32, b: String| a; // type Args = (u32, String)
 <ul>
 <li><code>Output</code>：泛型的返回参数</li>
 </ul>
-<pre><pre class="playpen"><code class="language-rust">
-<span class="boring">#![allow(unused_variables)]
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>let zero_args_closure = || &quot;hi&quot;;              // type Output = &amp;`static str
 let one_args_closure = |a: u32| ();           // type Output = ()
@@ -789,16 +797,16 @@ let two_args_closure = |a: u32, b: String| a; // type OUtput = u32
 <p>针对不同类型的闭包，试着由简单到复杂初步采用 <a href="https://doc.rust-lang.org/unstable-book/library-features/fn-traits.html"><code>fn_traits</code></a> 进行去语法糖实现。 </p>
 <h3><a class="header" href="#无参数无返回值" id="无参数无返回值">无参数无返回值</a></h3>
 <p>先来看看无参数传入也无参数返回的一个空闭包：</p>
-<pre><pre class="playpen"><code class="language-rust">
-<span class="boring">#![allow(unused_variables)]
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>let non_capture = || ();
 non_capture();
 <span class="boring">}
 </span></code></pre></pre>
 <p>采用 <code>trait Fn*</code> 的去糖实现：</p>
-<pre><pre class="playpen"><code class="language-rust">
-<span class="boring">#![allow(unused_variables)]
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
 </span>#![feature(unboxed_closures, fn_traits)]
 
 <span class="boring">fn main() {
@@ -835,8 +843,8 @@ non_capture();
 <hr />
 <h3><a class="header" href="#捕获上下文环境变量的引用" id="捕获上下文环境变量的引用">捕获上下文环境变量的引用</a></h3>
 <p>接下来，试试捕获1个上下文环境变量</p>
-<pre><pre class="playpen"><code class="language-rust">
-<span class="boring">#![allow(unused_variables)]
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>let message = &quot;Hi&quot;.to_string();
 let capture_message = || println!(&quot;{}&quot;, message);
@@ -844,8 +852,8 @@ capture_message();
 <span class="boring">}
 </span></code></pre></pre>
 <p>采用 <code>trait Fn*</code> 的去糖实现：</p>
-<pre><pre class="playpen"><code class="language-rust">
-<span class="boring">#![allow(unused_variables)]
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[derive(Clone, Copy)]
 pub struct __capture_message_block__&lt;'a&gt; {
@@ -883,8 +891,8 @@ capture_message()
 <hr />
 <h3><a class="header" href="#捕获上下文环境变量并取得所有权" id="捕获上下文环境变量并取得所有权">捕获上下文环境变量并取得所有权</a></h3>
 <p>采用 <code>move</code> 的方式捕获环境上下文</p>
-<pre><pre class="playpen"><code class="language-rust">
-<span class="boring">#![allow(unused_variables)]
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>let name = &quot;Dylan&quot;.to_string();
 let move_capture = move |message| println!(&quot;{}, {}&quot;, name, message);
@@ -892,8 +900,8 @@ move_capture(&quot;You are awessome!&quot;);
 <span class="boring">}
 </span></code></pre></pre>
 <p>去糖实现：</p>
-<pre><pre class="playpen"><code class="language-rust">
-<span class="boring">#![allow(unused_variables)]
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>#[derive(Clone)]
 pub struct __move_capture_block__ {
@@ -931,8 +939,8 @@ move_capture(&quot;You are awessome!&quot;);
 <hr />
 <h3><a class="header" href="#返回值" id="返回值">返回值</a></h3>
 <p>继续尝试如何返回值</p>
-<pre><pre class="playpen"><code class="language-rust">
-<span class="boring">#![allow(unused_variables)]
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>let mut counter: u32 = 0;
 let delta: u32 = 0;
@@ -948,8 +956,8 @@ assert_eq!(next(), 6);
 <span class="boring">}
 </span></code></pre></pre>
 <p>去糖实现：</p>
-<pre><pre class="playpen"><code class="language-rust">
-<span class="boring">#![allow(unused_variables)]
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>pub struct __return__caputure_block__&lt;'a, 'b&gt; {
     pub counter: &amp;'a mut u32,
@@ -987,8 +995,8 @@ assert_eq!(FnMut::call_mut(&amp;mut next, ()), 6);
 <li><code>type Output</code> 指定泛型参数最终类型，并在实现 <code>call*</code> 方法时实际返回即可</li>
 </ul>
 <h3><a class="header" href="#获取上下文环境变量所有权并返回值" id="获取上下文环境变量所有权并返回值">获取上下文环境变量所有权并返回值</a></h3>
-<pre><pre class="playpen"><code class="language-rust">
-<span class="boring">#![allow(unused_variables)]
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>let a = vec![0, 1, 2, 3, 4, 5];
 let transform = || {
@@ -1000,8 +1008,8 @@ println!(&quot;{}&quot;, transform());
 <span class="boring">}
 </span></code></pre></pre>
 <p>去糖实现：</p>
-<pre><pre class="playpen"><code class="language-rust">
-<span class="boring">#![allow(unused_variables)]
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>pub struct __consume_capture_block__ {
     pub a: Vec&lt;u32&gt;,
@@ -1100,6 +1108,7 @@ impl FnOnce&lt;()&gt; for __consume_capture_block__ {
 <h3><a class="header" href="#库-1" id="库-1">库</a></h3>
 <ul>
 <li><a href="https://github.com/Flinesoft/BartyCrouch">Flinesoft/BartyCrouch</a> - 增量更新的文案国际化方式</li>
+<li><a href="https://github.com/SwiftyBeaver/SwiftyBeaver">SwiftyBeaver</a> - Swift 编写的日志库</li>
 </ul>
 <h1><a class="header" href="#架构设计" id="架构设计">架构设计</a></h1>
 <p>从小茅屋到一座大厦。</p>
@@ -2108,10 +2117,10 @@ typedef struct __CFRuntimeBase {
         
 
         
-        
+
         
         <script type="text/javascript">
-            window.playpen_copyable = true;
+            window.playground_copyable = true;
         </script>
         
 
