@@ -53,6 +53,7 @@ while (alive) {
 - [Creating and Distributing an iOS Binary Framework](https://instabug.com/blog/ios-binary-framework/)
 - [Optimize your iOS projects creating binaries Frameworks](https://medium.com/@cristianarielbarril/optimize-your-ios-projects-creating-binaries-frameworks-f83cb848f59f)
 - [LinkMap解析工具](https://github.com/huanxsd/LinkMap) - 检查每个类占用大小
+- [faceboook/Chisel](https://github.com/facebook/chisel) - LLDB 命令工具集
 
 ### 库
 
