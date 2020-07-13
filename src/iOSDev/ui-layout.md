@@ -11,3 +11,7 @@
 - [Visly - Stretch](https://vislyhq.github.io/stretch/) - 跨平台 Flexbox 布局（rust）
 - [LinkedIn - LayoutKit](https://github.com/linkedin/LayoutKit) - 快速视图布局库，声明式，写法类似 Flexbox（但不是，基于原生 frame）
 - [TextureGroup - Texture](https://github.com/TextureGroup/Texture) - 异步布局库
+
+### 视图组件库
+
+- [QMUI iOS](https://github.com/QMUI/QMUI_iOS/) - 腾讯开源的“致力于提高项目 UI 开发效率的解决方案”
