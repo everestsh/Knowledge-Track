@@ -33,6 +33,10 @@ pod setup
 
 ## Q&A 速查
 
+- 如何快速清理 Time Machine 备份
+
+  [清理 Time Machine 备份脚本](https://gist.github.com/Binlogo/6d309300e7d9afca91c93ff6d8fa453d)
+
 - MacBook Pro 2018 款连接iPhone或iPad设备频繁连续断开问题
 
   ```sh
