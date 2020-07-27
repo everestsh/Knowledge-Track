@@ -10,6 +10,10 @@
 
 - 打开"截屏"。按下 Shift-Command-5 以查看屏幕上的控件。
 
+## 前置网络环境配置
+
+- [ShadowsocksX-NG](https://github.com/shadowsocks/ShadowsocksX-NG)
+
 ## 开发环境配置
 
 - [Homebrew](https://brew.sh/)
