@@ -12,6 +12,7 @@
 
 ## 前置网络环境配置
 
+- [ClashX](https://github.com/yichengchen/clashX)
 - [ShadowsocksX-NG](https://github.com/shadowsocks/ShadowsocksX-NG)
 
 ## 开发环境配置
