@@ -31,6 +31,24 @@
 
   </details>
 
+- [Adopting Common Protocols](https://developer.apple.com/documentation/swift/adopting_common_protocols) - 采用通用协议
+
+  <details>
+    <summary>笔记概览</summary>
+
+    - Conform Automatically to Equatable and Hashable
+    - Conform Manually to Equatable and Hashable
+      - Use All Significant Properties for Equatable and Hashable
+    - Customize NSObject Subclass Behavior
+        > If you override one of these declarations, you must also override the other to maintain that guarantee.
+    
+    > ⚠️ Important
+    > 
+    > Always use the same properties in both your == and hash(into:) methods. 
+    > Using different groups of properties in the two methods can lead to unexpected behavior or performance when using your custom type in sets and dictionaries.
+
+  </details>
+
 ## 链接
 
 - [What's new in Swift?](https://www.whatsnewinswift.com/)
