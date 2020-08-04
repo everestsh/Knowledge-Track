@@ -16,20 +16,6 @@
 - [SwiftUI Tutorials](https://developer.apple.com/tutorials/swiftui) - Apple 官方教程
 - [Mastering SwiftUI by AppCoda](https://www.appcoda.com/learnswiftui/)
 
-## Swift
-
-- [Preventing Timing Problems When Using Closures](https://developer.apple.com/documentation/swift/preventing_timing_problems_when_using_closures) - 使用闭包时防止时序问题
-
-  <details>
-    <summary>笔记概览</summary>
-
-    - 了解同步和异步调用的结果（`@escaping` ?)
-    - 不要在多次调用的闭包中编写进行一次性更改的代码（e.g: `FileHandle.close`)
-    - 不要将关键代码置于可能不被调用的闭包中
-
-  </details>
-
-
 ## 性能优化
 
 - [WWDC - Measuring Performance Using Logging](https://developer.apple.com/videos/play/wwdc2018/405)
