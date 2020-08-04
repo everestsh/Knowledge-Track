@@ -608,6 +608,32 @@ Potpourri</li>
 <li><a href="https://swiftdoc.org/">SwiftDoc.org</a> - Swift 开源文档查询</li>
 <li><a href="https://github.com/TannerJin/Swift-MemoryLayout">Swift-MemoryLayout</a> - Swift 内存布局</li>
 </ul>
+<h2><a class="header" href="#apple-文档" id="apple-文档">Apple 文档</a></h2>
+<ul>
+<li>
+<p><a href="https://developer.apple.com/documentation/swift/preventing_timing_problems_when_using_closures">Preventing Timing Problems When Using Closures</a> - 使用闭包时防止时序问题</p>
+<details>
+  <summary>笔记概览</summary>
+<ul>
+<li>了解同步和异步调用的结果（<code>@escaping</code> ?)</li>
+<li>不要在多次调用的闭包中编写进行一次性更改的代码（e.g: <code>FileHandle.close</code>)</li>
+<li>不要将关键代码置于可能不被调用的闭包中</li>
+</ul>
+</details>
+</li>
+<li>
+<p><a href="https://developer.apple.com/documentation/swift/choosing_between_structures_and_classes">Choosing Between Structures and Classes</a></p>
+<details>
+  <summary>笔记概览</summary>
+<ul>
+<li>Use structures by default.</li>
+<li>Use classes when you need Objective-C interoperability.</li>
+<li>Use classes when you need to control the identity of the data you're modeling.</li>
+<li>Use structures along with protocols to adopt behavior by sharing implementations.</li>
+</ul>
+</details>
+</li>
+</ul>
 <h2><a class="header" href="#链接-8" id="链接-8">链接</a></h2>
 <ul>
 <li><a href="https://www.whatsnewinswift.com/">What's new in Swift?</a></li>
@@ -1080,20 +1106,6 @@ impl FnOnce&lt;()&gt; for __consume_capture_block__ {
 <ul>
 <li><a href="https://developer.apple.com/tutorials/swiftui">SwiftUI Tutorials</a> - Apple 官方教程</li>
 <li><a href="https://www.appcoda.com/learnswiftui/">Mastering SwiftUI by AppCoda</a></li>
-</ul>
-<h2><a class="header" href="#swift-1" id="swift-1">Swift</a></h2>
-<ul>
-<li>
-<p><a href="https://developer.apple.com/documentation/swift/preventing_timing_problems_when_using_closures">Preventing Timing Problems When Using Closures</a> - 使用闭包时防止时序问题</p>
-<details>
-  <summary>笔记概览</summary>
-<ul>
-<li>了解同步和异步调用的结果（<code>@escaping</code> ?)</li>
-<li>不要在多次调用的闭包中编写进行一次性更改的代码（e.g: <code>FileHandle.close</code>)</li>
-<li>不要将关键代码置于可能不被调用的闭包中</li>
-</ul>
-</details>
-</li>
 </ul>
 <h2><a class="header" href="#性能优化" id="性能优化">性能优化</a></h2>
 <ul>
