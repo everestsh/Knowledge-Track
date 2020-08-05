@@ -5,6 +5,39 @@
 - [Swift Style Guide within Google](https://google.github.io/swift/)
 - [SwiftDoc.org](https://swiftdoc.org/) - Swift 开源文档查询
 - [Swift-MemoryLayout](https://github.com/TannerJin/Swift-MemoryLayout) - Swift 内存布局
+- [Swift: Attributes](https://docs.swift.org/swift-book/ReferenceManual/Attributes.html)
+  <details>
+    <summary>笔记概览</summary>
+    
+    - Declaration Attributes
+      - available
+      - discardableResult
+      - dynamicCallable
+      - dynamicMemberLookup
+      - frozen
+      - GKInspectable
+      - inlinable
+      - main
+      - nonobjc
+      - NSApplicationMain
+      - NSCopying
+      - NSManaged
+      - objc
+      - objcMembers
+      - propertyWrapper
+      - requires_stored_property_inits
+      - testable
+      - UIApplicationMain
+      - usableFromInline
+      - warn_unqualified_access
+      - Declaration Attributes Used by Interface Builder
+    - Type Attributes
+      - autoclosure
+      - convention
+      - escaping
+    - Switch Case Attributes
+      - unknown
+  </details>
 
 ## Apple 文档
 
