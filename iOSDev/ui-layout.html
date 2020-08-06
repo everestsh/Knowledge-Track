@@ -175,6 +175,47 @@
 <ul>
 <li><a href="https://github.com/QMUI/QMUI_iOS/">QMUI iOS</a> - 腾讯开源的“致力于提高项目 UI 开发效率的解决方案”</li>
 </ul>
+<h2><a class="header" href="#qa" id="qa">Q&amp;A</a></h2>
+<ol>
+<li>Layout feedback loop 导致 OOM 问题的排查与解决？ </li>
+</ol>
+<ul>
+<li>
+<p><a href="https://www.appcoda.com/layout-feedback-loop/">Debugging Out of Memory Issues: Catching Layout Feedback Loop with the Runtime Magic</a></p>
+<ul>
+<li><a href="https://github.com/rsrbk/LayoutLoopHunter">代码</a></li>
+</ul>
+<details>
+  <summary>笔记概览</summary>
+  OOM 常见原因：
+<ul>
+<li>retain cycles;</li>
+<li>race conditions;</li>
+<li>abandoned threads;</li>
+<li>deadlocks;</li>
+<li>layout feedback loop.</li>
+</ul>
+<p>一般解决办法：</p>
+<ul>
+<li>Allocations and Leaks instruments for resolving retain cycles and other types of leaks</li>
+<li>Memory Debugger which has been introduced in Xcode 8 and replaces some functionality from Allocations and Leaks instruments</li>
+<li>Thread Sanitizers help you find race conditions, abandoned threads or deadlocks</li>
+</ul>
+</details>
+</li>
+<li>
+<p><a href="https://www.hackingwithswift.com/articles/59/debugging-auto-layout-feedback-loops">Debugging Auto Layout feedback loops</a></p>
+<details>
+  <summary>笔记概览</summary>
+<ol>
+<li>Go to the Product menu, hold down Option, and choose “Run…”</li>
+<li>Select the Arguments tab, and click + to add a new entry</li>
+<li>For iOS apps enter <code>-UIViewLayoutFeedbackLoopDebuggingThreshold 100</code></li>
+<li>For macOS apps enter <code>-NSViewLayoutFeedbackLoopDebuggingThreshold 100</code></li>
+</ol>
+</details>
+</li>
+</ul>
 
                     </main>
 
