@@ -2,6 +2,13 @@
 
 假装「黑客」一样行事直到不希望被发现。😜
 
+## Alias
+
+```
+alias workspace="open -a Xcode *.xcworkspace"
+alias project="open -a Xcode *.xcodeproj"
+```
+
 ## 链接
 
 - [Docker 命令行快捷指南](https://devhints.io/docker)

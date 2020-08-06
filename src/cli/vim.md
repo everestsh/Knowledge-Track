@@ -1,3 +1,29 @@
+# Vim 技巧
+
+`gd` - Go Definition 跳转符号定义
+`i`/`I`/`a`/`A` - （行首/行尾）插入/追加
+`C` - 删除到行尾
+`dt` + "特定字符" - 删除到特定字符
+`f` + "特定字符" - 当前行查找并跳到特定字符
+`#`/`*` + `zz`/`zt`/`zb` - 符号间跳转 + 当前光标居中
+`ctrl` + `w` + `h,j,k,l` - 窗口间切换
+`yy` + `p` - 复制某一行 + 粘贴改行至选定区域
+
+## XVim 配置
+
+```
+imap jk <Esc>
+imap kj <Esc>
+imap jj <Esc>
+imap kk <Esc>
+
+map <C-k> 5k
+map <C-j> 5j
+
+map <C-K> 10k
+map <C-J> 10j
+```
+
 ### 一、移动光标
 
 h,j,k,l 上，下，左，右
