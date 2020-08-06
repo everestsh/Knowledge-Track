@@ -159,7 +159,28 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h3><a class="header" href="#一移动光标" id="一移动光标">一、移动光标</a></h3>
+                        <h1><a class="header" href="#vim-技巧" id="vim-技巧">Vim 技巧</a></h1>
+<p><code>gd</code> - Go Definition 跳转符号定义
+<code>i</code>/<code>I</code>/<code>a</code>/<code>A</code> - （行首/行尾）插入/追加
+<code>C</code> - 删除到行尾
+<code>dt</code> + &quot;特定字符&quot; - 删除到特定字符
+<code>f</code> + &quot;特定字符&quot; - 当前行查找并跳到特定字符
+<code>#</code>/<code>*</code> + <code>zz</code>/<code>zt</code>/<code>zb</code> - 符号间跳转 + 当前光标居中
+<code>ctrl</code> + <code>w</code> + <code>h,j,k,l</code> - 窗口间切换
+<code>yy</code> + <code>p</code> - 复制某一行 + 粘贴改行至选定区域</p>
+<h2><a class="header" href="#xvim-配置" id="xvim-配置">XVim 配置</a></h2>
+<pre><code>imap jk &lt;Esc&gt;
+imap kj &lt;Esc&gt;
+imap jj &lt;Esc&gt;
+imap kk &lt;Esc&gt;
+
+map &lt;C-k&gt; 5k
+map &lt;C-j&gt; 5j
+
+map &lt;C-K&gt; 10k
+map &lt;C-J&gt; 10j
+</code></pre>
+<h3><a class="header" href="#一移动光标" id="一移动光标">一、移动光标</a></h3>
 <p>h,j,k,l 上，下，左，右</p>
 <p>ctrl-e 移动页面</p>
 <p>ctrl-f 上翻一页</p>
