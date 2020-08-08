@@ -64,6 +64,7 @@ while (alive) {
 
 - [Flinesoft/BartyCrouch](https://github.com/Flinesoft/BartyCrouch) - 增量更新的文案国际化方式
 - [SwiftyBeaver](https://github.com/SwiftyBeaver/SwiftyBeaver) - Swift 编写的日志库
+- [SPPermissions](https://github.com/ivanvorobei/SPPermissions) - 友好的权限获取控件
 
 ## Q&A
 
