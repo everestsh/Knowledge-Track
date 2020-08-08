@@ -15,6 +15,7 @@
 
 - [SwiftUI Tutorials](https://developer.apple.com/tutorials/swiftui) - Apple 官方教程
 - [Mastering SwiftUI by AppCoda](https://www.appcoda.com/learnswiftui/)
+- [ivanvorobei/SwiftUI](https://github.com/ivanvorobei/SwiftUI) - SwiftUI 示例项目集合
 
 ## 性能优化
 
@@ -65,6 +66,8 @@ while (alive) {
 - [Flinesoft/BartyCrouch](https://github.com/Flinesoft/BartyCrouch) - 增量更新的文案国际化方式
 - [SwiftyBeaver](https://github.com/SwiftyBeaver/SwiftyBeaver) - Swift 编写的日志库
 - [SPPermissions](https://github.com/ivanvorobei/SPPermissions) - 友好的权限获取控件
+- [NSLogger](https://github.com/fpillet/NSLogger) - 高性能日志库
+- [Starscream](https://github.com/daltoniam/starscream) - Swift 编写的 Websocket 库
 
 ## Q&A
 
