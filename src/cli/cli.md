@@ -16,7 +16,23 @@ alias project="open -a Xcode *.xcodeproj"
 
 ### Git 版本控制
 
-* [Pro Git](https://git-scm.com/book/zh/v2)
-* [Tower- Learn Version Control with Git](https://www.git-tower.com/learn/git/ebook/cn/command-line/introduction)
-* [图解Git](http://marklodato.github.io/visual-git-guide/index-zh-cn.html)
+- [Pro Git](https://git-scm.com/book/zh/v2)
+- [Tower- Learn Version Control with Git](https://www.git-tower.com/learn/git/ebook/cn/command-line/introduction)
+- [图解Git](http://marklodato.github.io/visual-git-guide/index-zh-cn.html)
+- [gitignore.io cli](https://docs.gitignore.io/install/command-line)
 
+  <details><summary>速览</summary>
+
+  安装：
+
+  zhs
+  ```sh
+  echo "function gi() { curl -sLw "\n" https://www.toptal.com/  developers/gitignore/api/\$@ ;}" >> \
+  ~/.zshrc && source ~/.zshrc
+  ```
+
+  使用：
+
+  - `gi ios,swift >> .gitignore`
+  - `gi list`
+  </details>
