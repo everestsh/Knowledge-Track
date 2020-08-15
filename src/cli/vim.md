@@ -8,6 +8,7 @@
 `#`/`*` + `zz`/`zt`/`zb` - 符号间跳转 + 当前光标居中
 `ctrl` + `w` + `h,j,k,l` - 窗口间切换
 `yy` + `p` - 复制某一行 + 粘贴改行至选定区域
+`v`/`V`/`ctrl + v` 
 
 ## XVim 配置
 
@@ -23,6 +24,9 @@ map <C-j> 5j
 map <C-K> 10k
 map <C-J> 10j
 ```
+
+## 链接
+- [./missing-semester - Vim](https://missing-semester-cn.github.io/2020/editors/)
 
 ### 一、移动光标
 
