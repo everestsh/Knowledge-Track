@@ -36,3 +36,4 @@ alias project="open -a Xcode *.xcodeproj"
   - `gi ios,swift >> .gitignore`
   - `gi list`
   </details>
+- [Reduce repository size](https://docs.gitlab.com/ee/user/project/repository/reducing_the_repo_size_using_git.html)
