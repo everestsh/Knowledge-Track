@@ -47,6 +47,8 @@
 
   - [iOS 应用](./iOSDev/apps.md)
 
+- [网络](./networking/networking.md)
+
 - [开源世界](./open-source/open-source.md)
 
   - [遇见天才](./open-source/meet-geniuses.md)
@@ -70,4 +72,4 @@
 
   - [《能力陷阱》](./reading/act-like-a-leader.md)
 
-- [网络](./networking/networking.md)
+- [故事](./stories/stories.md)
