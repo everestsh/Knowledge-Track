@@ -30,6 +30,7 @@
   - [Rust](./programming-languages/rust/rust.md)
 
     - [化解神奇的闭包](./programming-languages/rust/closure.md)
+    - [《Rust 编程之道》阅读纪要](./programming-languages/rust/tao-of-rust.md)
 
 - [iOS 开发](./iOSDev/iOSDev.md)
 
