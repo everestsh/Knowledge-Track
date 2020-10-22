@@ -66,7 +66,8 @@ L0（low-level knowledge)
 
 ## 链接 
 
-* [职场人士应该学什么以及学习方法（编码领域）](https://jingwei.link/2020/04/05/learning-methodology.html)
+- [职场人士应该学什么以及学习方法（编码领域）](https://jingwei.link/2020/04/05/learning-methodology.html)
+- [我们如何获取信息，组织知识](https://mp.weixin.qq.com/s/0tLF_cTbLGgQr1_-kNPFXg) - by 产品沉思录
 
 ### 其他大脑传送带
 
