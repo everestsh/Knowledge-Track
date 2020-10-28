@@ -17,6 +17,14 @@
 
 ## 开发环境配置
 
+> [Dotfiles 配置仓库](https://github.com/Binlogo/Dotfiles)
+
+- [Oh My Zsh](https://ohmyz.sh/#install)
+
+```sh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
 - [Homebrew](https://brew.sh/)
 
 ```sh
