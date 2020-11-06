@@ -20,6 +20,8 @@
 
 - [Alfred](./alfred.md) - 快捷打开任意应用或工作流
 
+- [Contexts](./contexts.md) - 快速窗口切换
+
 - [SnippetsLab](./snippetsLab.md) - 代码片段库，支持 iCloud 备份 + [GitHub Gist](https://gist.github.com/Binlogo) 同步
 
 - [Cleaner for Xcode](https://apps.apple.com/cn/app/cleaner-for-xcode/id1296084683?mt=12) - [开源](https://github.com/waylybaye/XcodeCleaner-SwiftUI)的 Xcode 清理应用

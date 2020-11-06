@@ -12,6 +12,7 @@
 
     - [Alfred](./macOS/alfred.md)
     - [SnippetsLab](./macOS/snippetsLab.md)
+    - [Contexts](./macOS/contexts.md)
 
 - [计算机科学基础](./cs/cs.md)
 
