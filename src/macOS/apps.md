@@ -26,6 +26,10 @@
 
 - [Cleaner for Xcode](https://apps.apple.com/cn/app/cleaner-for-xcode/id1296084683?mt=12) - [开源](https://github.com/waylybaye/XcodeCleaner-SwiftUI)的 Xcode 清理应用
 
+- [Kap](https://getkap.co/)
+
+- [IINA](https://iina.io/)
+
 ## 链接
 
 - [Notable.md](https://notable.md/) - 另一个简洁易用的 markdown 编辑器，旧有版本开源(TypeScript)。
