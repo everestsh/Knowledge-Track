@@ -34,6 +34,7 @@
 ### Catalyst
 
 - [terhechte/CatalystMaterial](https://github.com/terhechte/CatalystMaterial)
+- [The Missing Guide for Mac Catalyst Apps](https://www.craft.do/maccatalyst-guide) - Craft 的 Catalyst 应用开发指南
 
 ## 链接
 
