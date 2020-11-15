@@ -11,12 +11,6 @@
   - [Run Loops](./threading-programming/run-loops.md)
   - [线程同步](./threading-programming/synchronization.md)
 
-## SwiftUI
-
-- [SwiftUI Tutorials](https://developer.apple.com/tutorials/swiftui) - Apple 官方教程
-- [Mastering SwiftUI by AppCoda](https://www.appcoda.com/learnswiftui/)
-- [ivanvorobei/SwiftUI](https://github.com/ivanvorobei/SwiftUI) - SwiftUI 示例项目集合
-
 ## 性能优化
 
 - [WWDC - Measuring Performance Using Logging](https://developer.apple.com/videos/play/wwdc2018/405)
