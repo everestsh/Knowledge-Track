@@ -79,3 +79,4 @@ rm -r ~/.cargo/.package-cache
 - [maidsafe-utilities](https://github.com/maidsafe/maidsafe-utilities) - Utility functions
 - [maidsafe/ffi-utils](https://github.com/maidsafe/ffi-utils)
 - [getditto/safer_ffi](https://github.com/getditto/safer_ffi) - 更安全地写 FFI 代码
+- [rayon-rs/rayon](https://github.com/rayon-rs/rayon) - 数据并发
