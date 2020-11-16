@@ -57,6 +57,7 @@ while (alive) {
 - [faceboook/Chisel](https://github.com/facebook/chisel) - LLDB 命令工具集
 - [Xcode Project Renamer](https://github.com/appculture/xcode-project-renamer) - Xcode 项目重命名脚本
 - [What is NSUserDefaults?](http://dscoder.com/defaults.html) - 深入理解 NSUserDefault（由 Cocoa 开发者撰写）
+- [peripheryapp/periphery: A tool to identify unused code in Swift projects.](https://github.com/peripheryapp/periphery)
 
 ### 库
 
