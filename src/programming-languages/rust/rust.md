@@ -64,6 +64,8 @@ rm -r ~/.cargo/.package-cache
 - [What is Rust and why is it so popular?](https://stackoverflow.blog/2020/01/20/what-is-rust-and-why-is-it-so-popular/)
 - [Rust: A Language for the Next 40 Years - Carol Nichols](https://www.youtube.com/watch?v=A3AdN7U24iU)
 - [Rust异步浅谈](https://leaxoy.github.io/2020/03/rust-async-runtime/)
+- [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/) - Rust 优秀实践示例集锦
+- [The Rust Performance Book](https://nnethercote.github.io/perf-book/) - Rust 性能之书
 
 ### Rust 移动端跨平台
 
@@ -80,3 +82,7 @@ rm -r ~/.cargo/.package-cache
 - [maidsafe/ffi-utils](https://github.com/maidsafe/ffi-utils)
 - [getditto/safer_ffi](https://github.com/getditto/safer_ffi) - 更安全地写 FFI 代码
 - [rayon-rs/rayon](https://github.com/rayon-rs/rayon) - 数据并发
+
+### 视频教程
+
+- [Rust Stream: Ownership, Closures, and Threads - Oh My!](https://www.youtube.com/watch?v=2mwwYbBRJSo)
