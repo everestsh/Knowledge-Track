@@ -1,10 +1,12 @@
 希望这里将会是我真正意义上的第二大脑。
 
+> 弱水三千，取一瓢饮。
+
 # 笔记流程
 
 > Input -> Process -> Output
 
-印象笔记输入，幕布加工，GitHub 输出
+滴答清单输入，幕布加工，GitHub 输出
 
 # 内容结构
 
@@ -17,9 +19,12 @@
 # 搭建、记录与发布
 
 - [VS Code](https://code.visualstudio.com/) + [Typora](https://typora.io/) 书写 ✍️
+
 - [mdBook](https://github.com/rust-lang/mdBook) 生成 🧰
 
 - [GitHub Pages](https://pages.github.com/) 发布 🌏
+
+> 采用**免费的** [GitHub Actions](https://github.com/features/actions) 自动化部署
 
 # 知识体系
 
@@ -60,9 +65,11 @@ L0（low-level knowledge)
 
 ![构建第二大脑](./assets/building_second_brain_methodology.jpg)
 
+关键字：**记录**、**链接**、**激发**
+
 ![第一大脑](./assets/first_brain_for_situational_awareness.jpg)
 
-
+关键字：**洞察**、**判断**、**觉知**
 
 ## 链接 
 
