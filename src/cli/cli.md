@@ -16,6 +16,7 @@ alias project="open -a Xcode *.xcodeproj"
 
 ### Git 版本控制
 
+- [Git 常用命令速查清单](./git-quick-checklist.md)
 - [Pro Git](https://git-scm.com/book/zh/v2)
 - [Tower- Learn Version Control with Git](https://www.git-tower.com/learn/git/ebook/cn/command-line/introduction)
 - [图解Git](http://marklodato.github.io/visual-git-guide/index-zh-cn.html)

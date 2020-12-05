@@ -73,6 +73,7 @@
 - [命令行](./cli/cli.md)
   
   - [Vim](./cli/vim.md)
+  - [Git 常用命令速查清单](./cli/git-quick-checklist.md)
 
 - [Linux](./linux/linux.md)
 
