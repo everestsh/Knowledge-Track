@@ -1,8 +1,10 @@
 # 开发社区
 
-- [Ray Wenderlich](https://www.raywenderlich.com/)
+> 许多新鲜的坑往往只有在比较活跃的社区才会提及和讨论
 
-  - 会员订阅到期日：2020.5.8
+- [Apple Developer forums](https://developer.apple.com/forums/)
+
+- [Ray Wenderlich](https://www.raywenderlich.com/)
 
 - [nshipster.com](https://nshipster.com/)
 
