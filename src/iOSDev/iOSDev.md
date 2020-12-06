@@ -78,3 +78,9 @@ while (alive) {
   - source 'https://github.com/CocoaPods/Specs.git'
   + source 'https://cdn.cocoapods.org/'
   ```
+
+- 如何解决 Xcode 不支持最新 iOS 系统真机设备调试？
+
+  下载 [iPhoneOSDeviceSupport](https://github.com/filsv/iPhoneOSDeviceSupport) 对应版本支持文件，解压拷贝到以下路径：
+  
+  `/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/DeviceSupport/`
