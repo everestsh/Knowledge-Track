@@ -219,6 +219,11 @@ pod setup
 </code></pre>
 <p>会引发新问题：连接的设备会显示「不在充电」（也是解决问题的原因）</p>
 </li>
+<li>
+<p>系统迁移之前，如何删除所有无用<code>node_modules</code>等目录</p>
+<pre><code class="language-sh">find . -name &quot;node_modules&quot; -type d -prune -exec rm -rf '{}' +
+</code></pre>
+</li>
 </ul>
 <h2><a class="header" href="#链接" id="链接">链接</a></h2>
 <ul>
