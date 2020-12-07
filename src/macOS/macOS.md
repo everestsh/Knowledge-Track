@@ -62,6 +62,12 @@ pod setup
 
   会引发新问题：连接的设备会显示「不在充电」（也是解决问题的原因）
 
+- 系统迁移之前，如何删除所有无用`node_modules`等目录
+
+  ```sh
+  find . -name "node_modules" -type d -prune -exec rm -rf '{}' +
+  ```
+
 ## 链接
 
 - [Apple Teacher Learning Center](https://appleteacher.apple.com/#/home/resources)
