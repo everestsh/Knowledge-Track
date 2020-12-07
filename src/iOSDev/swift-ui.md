@@ -11,6 +11,7 @@
 - [About-SwiftUI](https://github.com/Juanpe/About-SwiftUI) - SwiftUI 资源集锦
 - [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui) - SwiftUI 100 天挑战
 - [Fucking SwiftUI - Cheat Sheet](https://fuckingswiftui.com) - SwiftUI 常用 API 备忘
+- [小组件编程临摹课程](https://developer.apple.com/cn/news/?id=yv6so7ie)
 
 ## Tips 
 
