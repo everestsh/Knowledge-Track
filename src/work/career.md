@@ -1,7 +1,14 @@
 # 职场发展
 
 - [《能力陷阱》](../reading/act-like-a-leader.md)
+
 - [如何清单：技术评审要点](https://share.mubu.com/doc/e5QaMhsRX0)
+
+- [工程师的个人发展规划](https://developer.apple.com/cn/news/?id=yv6so7ie) - Wu Duoyi @nwind, 百度
+
+    > 此生理想、近期计划、今日功课
+
+- [平侠-研习录：高效工作](https://www.yuque.com/zenany/up/high_productivity_work)
 
 ## 链接
 
