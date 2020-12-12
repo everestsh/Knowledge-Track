@@ -16,6 +16,8 @@
 
 - [pointfree.co](https://www.pointfree.co/) - Swift ❤️ 函数式编程
 
+- [LibHut - Awesome Swift](https://swift.libhunt.com/)
+
 ## 订阅
 
 - [iOS Dev Weekly](https://iosdevweekly.com/)
