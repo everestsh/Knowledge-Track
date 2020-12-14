@@ -64,6 +64,8 @@
 
 - [语言学习](./language/language.md)
 
+- [教育](./education/education.md)
+
 - [工作](./work/work.md)
 
   - [求职](./work/job-hunt.md)
