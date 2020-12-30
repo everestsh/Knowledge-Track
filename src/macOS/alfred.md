@@ -7,6 +7,10 @@ macOS 杀手级应用，快捷操作 macOS 的各项事务 + [工作流](https:/
 - [Dash](https://github.com/Kapeli/Dash-Alfred-Workflow)
 - [alfred-open-with-vscode](https://github.com/iamstevendao/alfred-open-with-vscode)
 
+**配置项**
+
+- [开启 Web Bookmarks](https://www.alfredapp.com/help/features/bookmarks/) - 快速打开浏览器收藏夹中的链接
+
 ## 基本快捷键
 
 `⌃ + 空格` 全局唤起 Alfred
