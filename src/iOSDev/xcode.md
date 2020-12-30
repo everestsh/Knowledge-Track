@@ -58,3 +58,4 @@
     - -Xfrontend -warn-long-function-bodies=400 (apple/swift GitHub)
     - -Xfrontend -debug-time-function-bodies
     </details>
+- [Xcode Build Settings](https://xcodebuildsettings.com/) - 查询各种 Xcode 编译设置项描述定义 🎉
