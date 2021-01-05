@@ -66,6 +66,7 @@ rm -r ~/.cargo/.package-cache
 - [Rust异步浅谈](https://leaxoy.github.io/2020/03/rust-async-runtime/)
 - [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/) - Rust 优秀实践示例集锦
 - [The Rust Performance Book](https://nnethercote.github.io/perf-book/) - Rust 性能之书
+- [Rustlings](https://github.com/rust-lang/rustlings) - 官方的命令行交互式练习 🌟🌟🌟🌟🌟
 
 ### Rust 移动端跨平台
 
