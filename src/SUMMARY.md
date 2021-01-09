@@ -28,6 +28,7 @@
   - [Swift](./programming-languages/swift/swift.md)
 
     - [《Swift 进阶》阅读纪要](./programming-languages/swift/advanced-swift.md)
+    - [Swift 方法派发纪要](./programming-languages/swift/swift-method-dispatch-notes.md)
 
   - [Rust](./programming-languages/rust/rust.md)
 

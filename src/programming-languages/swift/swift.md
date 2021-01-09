@@ -2,6 +2,7 @@
 
 - [标准库的源码](https://github.com/apple/swift/tree/master/stdlib/public/core)
 - [Swift进阶](./advanced-swift.md)
+- [Swift 方法派发纪要](./programming-languages/swift/swift-method-dispatch-notes.md)
 - [Swift Style Guide within Google](https://google.github.io/swift/)
 - [SwiftDoc.org](https://swiftdoc.org/) - Swift 开源文档查询
 - [Swift-MemoryLayout](https://github.com/TannerJin/Swift-MemoryLayout) - Swift 内存布局
