@@ -27,6 +27,7 @@ map <C-J> 10j
 
 ## 链接
 - [./missing-semester - Vim](https://missing-semester-cn.github.io/2020/editors/)
+- [Vim Cheat Sheet](./assets/vim_cheat_sheet.png)
 
 ### 一、移动光标
 
