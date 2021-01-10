@@ -26,3 +26,4 @@
     </detail>
 - [[半佛×张颖]从废柴变大佬，「顶流投资人」的反转人生 | Rebuild 2020](https://www.bilibili.com/video/BV1Zv411q7nT)
     > 经纬张颖：极致的去重视自己的时间，才能被财富眷顾
+- [2020 年终总结 - Randy's Blog](https://lutaonan.com/blog/2020-summary)
