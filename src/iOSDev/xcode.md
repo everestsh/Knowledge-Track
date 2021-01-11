@@ -49,6 +49,7 @@
 ## 链接
 
 - [安裝 Xcode 的正確姿勢](https://www.notion.so/Xcode-dfbe2d934ff84b2d84e34ffceef56fe0)
+    - [XcodeUpdates macOS App](https://github.com/art-divin/XcodeUpdates)
 - [Xcode 快速鍵與技巧](https://www.notion.so/ff93434e1b954702a8e552014f119a6b?v=4d88ab84fe8a4551b26d5a1ac13b213b)
 - [Improve build times in Swift with Xcode](https://tomasznazarenko.com/improve-build-times-in-swift-with-xcode/) - 优化编译速度
     <details>
