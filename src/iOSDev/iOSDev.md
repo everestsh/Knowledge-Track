@@ -20,6 +20,14 @@
 - [Find and fix hitches in the commit phase - Tech Talks - Videos - Apple Developer](https://developer.apple.com/videos/play/tech-talks/10856)
 - [Demystify and eliminate hitches in the render phase - Tech Talks - Videos - Apple Developer](https://developer.apple.com/videos/play/tech-talks/10857)
 
+## 编译
+
+- [Bazel - a fast, scalable, multi-language and extensible build system](https://bazel.build/) - 支持多种语言的编译系统
+
+## 调试
+
+- [libimobiledevice](https://libimobiledevice.org/) - iOS 设备调试命令行工具集
+
 ##  特性
 
 ### iOS 13
@@ -64,7 +72,6 @@ while (alive) {
 - [What is NSUserDefaults?](http://dscoder.com/defaults.html) - 深入理解 NSUserDefault（由 Cocoa 开发者撰写）
 - [peripheryapp/periphery: A tool to identify unused code in Swift projects.](https://github.com/peripheryapp/periphery)
 - [Code Signing Guide for Teams](https://codesigning.guide/) - 代码签名团队指南
-- [libimobiledevice](https://libimobiledevice.org/) - iOS 设备调试命令行工具集
 
 ### 库
 
