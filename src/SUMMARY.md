@@ -45,11 +45,15 @@
     - [Run Loops](./iOSDev/threading-programming/run-loops.md)
     - [线程同步](./iOSDev/threading-programming/synchronization.md)
 
+  - [性能优化](./iOSDev/performance.md)
+
   - [视图布局](./iOSDev/ui-layout.md)
+
+  - [SwiftUI](./iOSDev/swift-ui.md)
 
   - [数据库](./iOSDev/database.md)
 
-  - [SwiftUI](./iOSDev/swift-ui.md)
+
 
   - [开发社区](./iOSDev/community.md)
 

@@ -6,19 +6,12 @@
 - [《iOS 开发高手课》笔记](https://mubu.com/doc/5Iio_eHpUPE)
 - [图片储存与展示性能优化](https://mubu.com/doc/fPEZGSYGr0)
 - [设计模式 - Swift 示例](https://github.com/Binlogo/Design-Patterns-In-Swift-CN)
+- [性能优化](./performance.md)
 - [多线程编程](./threading-programming/threading-programming.md)
 
   - [线程管理](./threading-programming/thread-management.md)
   - [Run Loops](./threading-programming/run-loops.md)
   - [线程同步](./threading-programming/synchronization.md)
-
-## 性能优化
-
-- [WWDC - Measuring Performance Using Logging](https://developer.apple.com/videos/play/wwdc2018/405)
-
-- [Explore UI animation hitches and the render loop - Tech Talks - Videos - Apple Developer](https://developer.apple.com/videos/play/tech-talks/10855/)
-- [Find and fix hitches in the commit phase - Tech Talks - Videos - Apple Developer](https://developer.apple.com/videos/play/tech-talks/10856)
-- [Demystify and eliminate hitches in the render phase - Tech Talks - Videos - Apple Developer](https://developer.apple.com/videos/play/tech-talks/10857)
 
 ## 编译
 
