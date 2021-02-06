@@ -80,6 +80,12 @@ rm -r ~/.cargo/.package-cache
 - [深度探索：前端中的后端](https://mp.weixin.qq.com/s/W-EvvKzmj1A8VsNKFYkuhQ)
 - [深度分析：前端中的后端-实现篇](https://mp.weixin.qq.com/s/5FfSRpRG-F8Y8X3BX9mJ-Q)
 
+### 音视频领域实践
+
+- [Ian Hobson - An introduction to Rust for audio developers](https://www.youtube.com/watch?v=Yom9E-67bdI&ab_channel=JUCE) - Rust 在音频开发的介绍与实践
+  - [Sample Code](https://github.com/irh/freeverb-rs)
+  - 🆕 [JUCE.com](https://juce.com/) - 音频开发工具
+
 ### 库
 
 - [A Rust implementation of DEFLATE algorithm and related formats (ZLIB, GZIP)](https://github.com/sile/libflate)
