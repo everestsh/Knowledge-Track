@@ -167,11 +167,11 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#run-loops" id="run-loops">Run Loops</a></h1>
+                        <h1 id="run-loops"><a class="header" href="#run-loops">Run Loops</a></h1>
 <p>Run Loop 作为线程相关基础设施的一部分，充当着<strong>循环处理</strong>、<strong>调度事件/消息</strong>的角色。它使得线程不会执行完单个任务后就立刻结束，而是让线程在没有任务时保持休眠状态，在需要处理消息时被立刻唤醒。</p>
 <p>Run Loop 其实是个对象，但不需要主动去创建它，而且<strong>每个线程都有对应的 run loop 对象</strong>。Run Loop 的管理机制并不完全是自动的，有时需要设计好 run loop 的运行时间和事件处理回调。<strong>次级线程需要开发者手动去配置并运行它的 run loop</strong>，在应用启动过程中<strong>主线程的 run loop 已经自动配置并运行</strong>了。</p>
 <p>Run Loop 作为苹果提供的 <a href="https://en.wikipedia.org/wiki/Event_loop">Event Loop</a> 机制的实现方案，在 Cocoa 和 Core Foundation 有两个对应的类：<a href="https://developer.apple.com/documentation/foundation/runloop"><code>RunLoop</code></a> 和 <a href="https://developer.apple.com/documentation/corefoundation/cfrunloop"><code>CFRunLoop</code></a>。</p>
-<h2><a class="header" href="#run-loop-剖析" id="run-loop-剖析">Run Loop 剖析</a></h2>
+<h2 id="run-loop-剖析"><a class="header" href="#run-loop-剖析">Run Loop 剖析</a></h2>
 <p>Run Loop 可能需要开发者自己写 <code>while</code> 或 <code>for</code> 循环，并在里面驱动 run loop 对象运行，每轮运行都会处理接收到事件的回调。</p>
 <p>Run Loop 接收的<strong>事件来源 (source)</strong> 有两种。</p>
 <ul>
@@ -183,7 +183,7 @@
 <p>Run Loop 的一些行为会发通知，开发者可以注册成为 run-loop 观察者 (observer)。</p>
 <p>Input Source, Timer Source, Run Loop Observer 统称为 Mode Item，这里的 Mode 指的是 Run Loop Mode。一个 Run Loop 包含若干个 Mode，每个 Mode 又包含若干个 Item。Item 与 Mode 是多对多的关系，没有 Item 的 Model 会立刻退出。</p>
 <p>下面几节会详细讲述上面提到的这些概念。</p>
-<h4><a class="header" href="#run-loop-modes" id="run-loop-modes">Run Loop Modes</a></h4>
+<h4 id="run-loop-modes"><a class="header" href="#run-loop-modes">Run Loop Modes</a></h4>
 <p>Run Loop Mode 包含了<strong>需要被监听的 input source 和 timer 集合，以及需要接收通知的 observer 集合</strong>。Run loop 的每次运行都会处在某个特定模式下，而且<strong>只有这个模式所包含的 item 集合才会参与发送事件(被监听)和接收通知</strong>。</p>
 <p>开发者使用 run loop mode 时直接指定名字就行，Cocoa 和 Core Foundation 定义了一些默认和常用的 Mode。Run Loop Mode 对应的类是 <code>CFRunLoopModeRef</code>，但是并没有作为公有 API 开放出来，但可以通过 Core Foundation <a href="https://github.com/apple/swift-corelibs-foundation/blob/master/CoreFoundation/RunLoop.subproj/CFRunLoop.c#L658">源码</a>了解下:</p>
 <pre><code class="language-c">typedef struct __CFRunLoopMode *CFRunLoopModeRef;
@@ -242,7 +242,7 @@ typedef struct __CFRuntimeBase {
 <tr><td align="left">Event tracking</td><td align="left">NSEventTrackingRunLoopMode (Cocoa), UITrackingRunLoopMode (Cocoa Touch)</td><td align="left">Cocoa 用它限定鼠标拖拽事件之类的用户交互轨迹</td></tr>
 <tr><td align="left">Common modes</td><td align="left">NSRunLoopCommonModes (Cocoa), kCFRunLoopCommonModes (Core Foundation)</td><td align="left">可配置的通用模式集合，将某个 Input Source 关联到此 Mode 也会将其关联到集合中所有 Mode。Cocoa 框架中的 Common modes 默认包含 Default, Modal, Event tracking 三种 Mode；CF 框架起初只包含 Default，可以使用 <code>CFRunLoopAddCommonMode</code>函数向集合中添加自定义 Mode。</td></tr>
 </tbody></table>
-<h4><a class="header" href="#input-sources" id="input-sources">Input Sources</a></h4>
+<h4 id="input-sources"><a class="header" href="#input-sources">Input Sources</a></h4>
 <p>Input Sources 有两种实现：</p>
 <ul>
 <li>基于端口(Port-based)</li>
@@ -250,13 +250,13 @@ typedef struct __CFRuntimeBase {
 </ul>
 <p>它们<strong>都向线程异步分发事件</strong>，而<strong>唯一的不同就是分发信号（signal）的方式</strong>。基于端口的事件源会<strong>自动由内核发信号</strong>，自定义事件源需要<strong>被其他线程手动发信号</strong>。</p>
 <p>Input Source 会被添加到一些 Mode 中，<strong>如果某个 input source 不在当前的 Mode 中，那么它生成的事件在 run loop 处于正确的 mode 之前会先被 hold 住</strong>。</p>
-<h5><a class="header" href="#port-based-sourcessource1" id="port-based-sourcessource1">Port-Based Sources(Source1)</a></h5>
+<h5 id="port-based-sourcessource1"><a class="header" href="#port-based-sourcessource1">Port-Based Sources(Source1)</a></h5>
 <p>Cocoa 和 Core Foundation 使用<strong>端口相关的对象和函数提供了对创建基于端口的事件源的内建支持</strong>。比如在 Cocoa 中，只需创建一个端口对象并使用 <a href="https://developer.apple.com/documentation/foundation/port"><code>Port</code></a> 的方法来向 run loop 添加端口。端口对象为你处理好了创建和配置 input source 的事情。</p>
 <p>在 Core Foundation 中需要手动创建端口和 run loop source。涉及到的 API 有 <a href="https://developer.apple.com/documentation/corefoundation/cfmachport-rsc"><code>CFMachPort</code></a>, <a href="https://developer.apple.com/documentation/corefoundation/cfmessageport-rs2"><code>CFMessagePort</code></a> , <a href="https://developer.apple.com/documentation/corefoundation/cfsocket-rg7"><code>CFSocketRef</code></a> 。</p>
-<h5><a class="header" href="#custom-input-sourcessource0" id="custom-input-sourcessource0">Custom Input Sources(Source0)</a></h5>
+<h5 id="custom-input-sourcessource0"><a class="header" href="#custom-input-sourcessource0">Custom Input Sources(Source0)</a></h5>
 <p>只能使用 Core Foundation 中的 <a href="https://developer.apple.com/documentation/corefoundation/cfrunloopsource-rhr"><code>CFRunLoopSource</code></a> 相关函数来创建自定义事件源。在处理到来的事件、从 run loop 移除 source 后都会有函数回调，可以通过实现这些回调函数来配置 source。</p>
 <p>除此之外还需定义事件分发机制。source 有一部分是在单独的线程运行的，负责为 input source 提供数据，并在数据准备好后对 source 发信号。事件分发机制取决于开发者，但别弄得太过复杂。</p>
-<h5><a class="header" href="#cocoa-perform-selector-sources" id="cocoa-perform-selector-sources">Cocoa Perform Selector Sources</a></h5>
+<h5 id="cocoa-perform-selector-sources"><a class="header" href="#cocoa-perform-selector-sources">Cocoa Perform Selector Sources</a></h5>
 <p>Cocoa 定义了一种在任何线程执行 <code>selector</code> 的 custom input source。与基于端口的事件源相同之处是在目标线程依次执行 <code>selector</code>，缓解了一条线程运行多个方法时可能发生的同步问题；不同之处在于 <code>selector</code> 执行后会将 source 从 run loop 挪走。</p>
 <p>在任意线程 perform selector 的前置条件是线程必须有一个活跃的 run loop。对于自己创建的线程，<code>selector</code> 直到启动 run loop 之后才会运行；主线程会自动配置并运行 run loop，然而要在应用的 <code>applicationDidFinishLaunching:</code> delegate 方法调用后才生效。Run Loop <strong>每次循环会处理队列中所有的 <code>selector</code>，而不是循环一次处理一个</strong>。</p>
 <p>下表中列出了 <code>NSObject</code> 类提供的在任何线程执行 <code>selector</code> 的 API。在任何线程下，只要能拿到 Objective-C 对象就能使用下面的 API，包括 POSIX 线程。这些方法并不会为了执行 <code>selector</code> 真的去创建一个新线程。</p>
@@ -266,12 +266,12 @@ typedef struct __CFRuntimeBase {
 <tr><td align="left"><code>performSelector:withObject:afterDelay:</code>, <code>performSelector:withObject:afterDelay:inModes:</code></td><td align="left">在当前线程 run loop 的下次循环延迟一段时间执行 <code>selector</code>。因为需要等到下次 run loop 循环才会依次执行队列中的 <code>selector</code>，所以本身就会有一点延时。</td></tr>
 <tr><td align="left"><code>cancelPreviousPerformRequestsWithTarget:</code>, <code>cancelPreviousPerformRequestsWithTarget:selector:object:</code></td><td align="left">取消 <code>performSelector:withObject:afterDelay:</code> 或 <code>performSelector:withObject:afterDelay:inModes:</code> 方法向当前线程发送的消息。</td></tr>
 </tbody></table>
-<h4><a class="header" href="#timer-sources" id="timer-sources">Timer Sources</a></h4>
+<h4 id="timer-sources"><a class="header" href="#timer-sources">Timer Sources</a></h4>
 <p>Timer source 会在未来一个预定时间向线程同步分发事件。线程可以用 Timer 来通知自己做一些事情。比如用户在搜索栏输入一连串字符之后的某个时间自动搜索一次结果。正是因为有了个延时，才让用户有机会在自动搜索发生前尽可能打出想要的搜索字符串。</p>
 <p>Timer 并不是实时的，会有误差。如果一个 timer 不在正在运行的 run loop 监控的 mode 中，需要一直等到 run loop 运行在一个支持这个 timer 的 mode 时，timer 才会触发。如果一个 timer 触发的时候恰巧 run loop 正忙于执行某个 handler 程序，这个 timer 的 handler 程序需要等到下次才会通过 run loop 执行。如果 run loop 根本不在运行，timer 永远都不会触发。</p>
 <p>可以配置 timer 只生成一次或重复多次事件。重复的 timer 每次会根据已经编排的触发时间自动重新编排。如果实际的触发时间太过于延迟，甚至是晚了一个或多个周期，那么也只会触发一次，而非连续多次。之后会重新编排下次触发时间。</p>
 <p><a href="https://developer.apple.com/documentation/foundation/timer"><code>Timer</code></a> 和 <a href="https://developer.apple.com/documentation/corefoundation/cfrunlooptimer-rhk"><code>CFRunLoopTimer</code></a> 是 <a href="https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFDesignConcepts/Articles/tollFreeBridgedTypes.html#//apple_ref/doc/uid/TP40010677">toll-free bridged</a> 的，设置好时间和回调函数后加到正在运行的 run loop 中即可。</p>
-<h4><a class="header" href="#run-loop-observers" id="run-loop-observers">Run Loop Observers</a></h4>
+<h4 id="run-loop-observers"><a class="header" href="#run-loop-observers">Run Loop Observers</a></h4>
 <p>不同于 source 在同步或异步事件发生时触发，observer 会在 run loop 运行期间的某些特殊地方触发。这些 run loop 中『特殊』的地方列举如下：</p>
 <ol>
 <li>进入 run loop</li>
@@ -282,7 +282,7 @@ typedef struct __CFRuntimeBase {
 <li>退出 run loop</li>
 </ol>
 <p>可以使用 Core Foundation 的 <a href="https://developer.apple.com/documentation/corefoundation/cfrunloopobserver-ri3"><code>CFRunLoopObserver</code></a> 类创建 run loop observer。<code>CFRunLoopObserver</code> 记录了回调函数和关注的事件类型（上面 6 种时间的掩码），它跟 timer 一样可以在创建的时候选择只触发一次或重复触发。</p>
-<h4><a class="header" href="#run-loop-事件顺序" id="run-loop-事件顺序">Run Loop 事件顺序</a></h4>
+<h4 id="run-loop-事件顺序"><a class="header" href="#run-loop-事件顺序">Run Loop 事件顺序</a></h4>
 <p>线程的 run loop 每次运行都会处理待决的事件，并为绑定的所有 observer 生成通知。次序如下：</p>
 <ol>
 <li>通知 observer 已经进入 run loop</li>
@@ -312,7 +312,7 @@ typedef struct __CFRuntimeBase {
 <p>由于 timer 和 input source 对 observer 的通知是在事件真正发生前就已经发出，所以这之间会有时间间隔。如果对事件时间的掌控很严格，可以使用休眠和唤醒的通知帮你关联实际事件的时机。</p>
 <p>由于 timer 和其他周期性事件是在运行 run loop 的时候发送的，<strong>绕过 loop 会打断这些事件的发送</strong>。典型的案例就是在实现鼠标追踪程序中写了个不断从应用请求事件的循环逻辑，按理说应该是让应用正常地分发这些事件，而不是主动抓取。这就导致 timer 被开发者写的循环逻辑阻塞而一直无法触发。</p>
 <p>可以使用 run loop 对象将其手动唤醒，其他事件也可能导致 run loop 被唤醒。比如添加另一个非基于端口的 input source 唤醒 run loop，input source 就能立刻被处理，而不是一直等到其他事件发生。</p>
-<h3><a class="header" href="#该何时使用-run-loop" id="该何时使用-run-loop">该何时使用 Run Loop？</a></h3>
+<h3 id="该何时使用-run-loop"><a class="header" href="#该何时使用-run-loop">该何时使用 Run Loop？</a></h3>
 <p>需要手动运行 run loop 的场景只有一个，那就是你创建次级线程的时候。应用主线程的 run loop 是基础设施中至关重要的部分。应用框架会把自动运行主线程 run loop 的程序写好，比如 <code>UIApplication</code> 或 <code>NSApplication</code> 中的 <code>run</code>。如果使用 Xcode 带的模板创建工程，千万不要去调用这些方法。</p>
 <p>对于次级线程是否有必要手动开启 run loop，那要看实际情况了。比如使用线程执行一些预先设定好的运行时间较长的任务，可能就不需要开启 run loop 了。Run Loop 是为**『想要与线程更多交互』**的场景准备的，例如：</p>
 <ul>
@@ -322,16 +322,16 @@ typedef struct __CFRuntimeBase {
 <li>让线程执行周期性任务</li>
 </ul>
 <p>如果选择使用 run loop，配置和启动是很简单的。可是对所有的线程编程而言，应该计划好在合适的场景下退出次级线程，这比强行退出要好。</p>
-<h3><a class="header" href="#使用-run-loop-对象" id="使用-run-loop-对象">使用 Run Loop 对象</a></h3>
+<h3 id="使用-run-loop-对象"><a class="header" href="#使用-run-loop-对象">使用 Run Loop 对象</a></h3>
 <p>Run Loop 对象提供了向 run loop 中添加 input source、timer 和 run-loop observer 的主要接口，并运行起来。**每个线程都关联一个单独的 run loop。**在 Cocoa 中，Run Loop 对象是个 <code>RunLoop</code> 类的实例，在 Core Foundation 中是 <code>CFRunLoop</code> 指针。但它们不是 toll-free bridge 的。</p>
-<h4><a class="header" href="#获取-run-loop-对象" id="获取-run-loop-对象">获取 Run Loop 对象</a></h4>
+<h4 id="获取-run-loop-对象"><a class="header" href="#获取-run-loop-对象">获取 Run Loop 对象</a></h4>
 <p>获取当前线程的 run loop 对象有两种方式：</p>
 <ul>
 <li>Cocoa 框架 <code>RunLoop</code> 的类属性 <a href="https://developer.apple.com/documentation/foundation/runloop/1412291-current"><code>current</code></a></li>
 <li><code>CFRunLoopGetCurrent</code> 函数</li>
 </ul>
 <p>可以从 <code>RunLoop</code> 对象的 <code>getCFRunLoop</code> 方法获取到 <code>CFRunLoop</code>，这样就可以传给 Core Foundation 程序使用了。二者都指向同一个 run loop，所以可以混用。</p>
-<h4><a class="header" href="#配置-run-loop" id="配置-run-loop">配置 Run Loop</a></h4>
+<h4 id="配置-run-loop"><a class="header" href="#配置-run-loop">配置 Run Loop</a></h4>
 <p>在次级线程运行 run loop 之前，必须向其添加至少一个 input source 或 timer，否则 run loop 会因没有可监控的 source 而在运行后立刻退出。</p>
 <p>除了用 source 外，还可以用 run loop observer 观察 run loop 的各种运行阶段。做法是创建一个 <code>CFRunLoopObserver</code> 类型的对象并用 <code>CFRunLoopAddObserver</code> 函数将其添加到 run loop 中。注意的是只能用 Core Foundation 创建 run loop observer，Cocoa 框架无能为力。</p>
 <p>下面的示例代码在线程入口函数中创建了 run loop observer 并将其添加到 run loop 中。observer 监听了 run loop 所有的活动，并省略了回调函数 <code>myRunLoopObserver</code> 的实现。</p>
@@ -365,7 +365,7 @@ typedef struct __CFRuntimeBase {
     CFStringRef	(*copyDescription)(const void *info);
 } CFRunLoopObserverContext;
 </code></pre>
-<h4><a class="header" href="#启动-run-loop" id="启动-run-loop">启动 Run Loop</a></h4>
+<h4 id="启动-run-loop"><a class="header" href="#启动-run-loop">启动 Run Loop</a></h4>
 <p>只有在应用的次级线程才需要启动 run loop，而且需要有至少一个 input source 或 timer，否则 run loop 启动后会立刻退出。</p>
 <p>启动 run loop 的几种方式包括：</p>
 <ul>
@@ -407,7 +407,7 @@ typedef struct __CFRuntimeBase {
 </code></pre>
 <p>其实上面这段调用 <code>CFRunLoopRunInMode()</code> 的逻辑跟 <code>CFRunLoopRun()</code> 差不多。</p>
 <p>可以递归启动 run loop。也就是说可以在 input source 或 timer 的回调处理函数中调用 <code>CFRunLoopRun</code>, <code>CFRunLoopRunInMode</code> 或上面提到的 <code>NSRunLoop</code> 的三个方法，而且嵌套的 run loop 可以在任意 Mode 下运行。</p>
-<h4><a class="header" href="#退出-run-loop" id="退出-run-loop">退出 Run Loop</a></h4>
+<h4 id="退出-run-loop"><a class="header" href="#退出-run-loop">退出 Run Loop</a></h4>
 <p>在 run loop 已经将事件处理之前有两种退出的方式：</p>
 <ol>
 <li>给 run loop 配置 timeout 值</li>
@@ -416,7 +416,7 @@ typedef struct __CFRuntimeBase {
 <p><strong>推荐第一种方法</strong>，因为它会让 run loop 完成一切正常的处理，包括在退出前向 observer 发通知。</p>
 <p>使用 <code>CFRunLoopStop</code> 函数停止 run loop 的结果跟第一种方式差不多，run loop 会把剩下的通知发出去，然后退出。不同点在于可以用这个函数停止以无条件方式（<code>run</code> 方法）启动的 run loop。<strong>要注意的是 <code>CFRunLoopStop</code> 只会停止对 <code>CFRunLoopRun</code> 和 <code>CFRunLoopRunInMode</code> 的调用，对于 Cocoa 框架相当于只停止一次 <code>runMode:beforeDate:</code> 的调用，而不是退出 run loop。stop 一次运行和 exit 整个 run loop 是不一样的</strong>。</p>
 <p>虽然移除 run loop 的 input source 和 timer 也会导致其退出，但<strong>这种方法不可靠</strong>。因为<strong>有些系统程序会向 run loop 中添加 input source，开发者根本不知道有这回事</strong>，移除的时候就会漏掉，自然就不会导致 run loop 退出。</p>
-<h4><a class="header" href="#线程安全和-run-loop-对象" id="线程安全和-run-loop-对象">线程安全和 Run Loop 对象</a></h4>
+<h4 id="线程安全和-run-loop-对象"><a class="header" href="#线程安全和-run-loop-对象">线程安全和 Run Loop 对象</a></h4>
 <p>使用 Core Foundation 中的函数操作 run loop 对象一般都是线程安全的，可以在任何线程调用。如果要更改 run loop 的配置，尽可能在 run loop 自己的线程操作。</p>
 <p>Cocoa 中对应的 <code>NSRunLoop</code> 内部并不是线程安全的，必须在 run loop 所在的线程修改它。向其他线程的 run loop 添加 input source 或 timer 都会导致 crash 或异常行为。</p>
 <p>// TODO:</p>

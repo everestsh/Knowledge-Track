@@ -167,7 +167,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#vim-技巧" id="vim-技巧">Vim 技巧</a></h1>
+                        <h1 id="vim-技巧"><a class="header" href="#vim-技巧">Vim 技巧</a></h1>
 <p><code>gd</code> - Go Definition 跳转符号定义
 <code>i</code>/<code>I</code>/<code>a</code>/<code>A</code> - （行首/行尾）插入/追加
 <code>C</code> - 删除到行尾
@@ -177,7 +177,7 @@
 <code>ctrl</code> + <code>w</code> + <code>h,j,k,l</code> - 窗口间切换
 <code>yy</code> + <code>p</code> - 复制某一行 + 粘贴改行至选定区域
 <code>v</code>/<code>V</code>/<code>ctrl + v</code> </p>
-<h2><a class="header" href="#xvim-配置" id="xvim-配置">XVim 配置</a></h2>
+<h2 id="xvim-配置"><a class="header" href="#xvim-配置">XVim 配置</a></h2>
 <pre><code>imap jk &lt;Esc&gt;
 imap kj &lt;Esc&gt;
 imap jj &lt;Esc&gt;
@@ -189,12 +189,12 @@ map &lt;C-j&gt; 5j
 map &lt;C-K&gt; 10k
 map &lt;C-J&gt; 10j
 </code></pre>
-<h2><a class="header" href="#链接" id="链接">链接</a></h2>
+<h2 id="链接"><a class="header" href="#链接">链接</a></h2>
 <ul>
 <li><a href="https://missing-semester-cn.github.io/2020/editors/">./missing-semester - Vim</a></li>
 <li><a href="./assets/vim_cheat_sheet.png">Vim Cheat Sheet</a></li>
 </ul>
-<h3><a class="header" href="#一移动光标" id="一移动光标">一、移动光标</a></h3>
+<h3 id="一移动光标"><a class="header" href="#一移动光标">一、移动光标</a></h3>
 <p>h,j,k,l 上，下，左，右</p>
 <p>ctrl-e 移动页面</p>
 <p>ctrl-f 上翻一页</p>
@@ -218,13 +218,13 @@ map &lt;C-J&gt; 10j
 <p>; 重复上一个f命令，而不用重复的输入fx</p>
 <p>* 查找光标所在处的单词，向下查找</p>
 <p># 查找光标所在处的单词，向上查找</p>
-<h2><a class="header" href="#二删除复制" id="二删除复制">二、删除复制</a></h2>
+<h2 id="二删除复制"><a class="header" href="#二删除复制">二、删除复制</a></h2>
 <p>dd 删除光标所在行</p>
 <p>dw 删除一个字(word)</p>
 <p>d/D删除到行末x删除当前字符X删除前一个字符yy复制一行yw复制一个字y/D删除到行末x删除当前字符X删除前一个字符yy复制一行yw复制一个字y/Y 复制到行末</p>
 <p>p 粘贴粘贴板的内容到当前行的下面</p>
 <p>P 粘贴粘贴板的内容到当前行的上面</p>
-<h2><a class="header" href="#三插入模式" id="三插入模式">三、插入模式</a></h2>
+<h2 id="三插入模式"><a class="header" href="#三插入模式">三、插入模式</a></h2>
 <p>i 从当前光标处进入插入模式</p>
 <p>I 进入插入模式，并置光标于行首</p>
 <p>a 追加模式，置光标于当前光标之后</p>
@@ -232,7 +232,7 @@ map &lt;C-J&gt; 10j
 <p>o 在当前行之下新加一行，并进入插入模式</p>
 <p>O 在当前行之上新加一行，并进入插入模式</p>
 <p>Esc 退出插入模式</p>
-<h2><a class="header" href="#四编辑" id="四编辑">四、编辑</a></h2>
+<h2 id="四编辑"><a class="header" href="#四编辑">四、编辑</a></h2>
 <p>J 将下一行和当前行连接为一行</p>
 <p>cc 删除当前行并进入编辑模式</p>
 <p>cw 删除当前字，并进入编辑模式</p>
@@ -246,7 +246,7 @@ map &lt;C-J&gt; 10j
 <p>&gt;&gt; 将当前行右移一个单位</p>
 <p>&lt;&lt; 将当前行左移一个单位(一个tab符)</p>
 <p>== 自动缩进当前行</p>
-<h2><a class="header" href="#五查找替换" id="五查找替换">五、查找替换</a></h2>
+<h2 id="五查找替换"><a class="header" href="#五查找替换">五、查找替换</a></h2>
 <p>/pattern 向后搜索字符串pattern</p>
 <p>?pattern 向前搜索字符串pattern</p>
 <p>&quot;\c&quot; 忽略大小写</p>
@@ -255,13 +255,13 @@ map &lt;C-J&gt; 10j
 <p>N 上一个匹配(同上)</p>
 <p>:%s/old/new/g 搜索整个文件，将所有的old替换为new</p>
 <p>:%s/old/new/gc 搜索整个文件，将所有的old替换为new，每次都要你确认是否替换</p>
-<h2><a class="header" href="#六退出编辑器" id="六退出编辑器">六、退出编辑器</a></h2>
+<h2 id="六退出编辑器"><a class="header" href="#六退出编辑器">六、退出编辑器</a></h2>
 <p>:w 将缓冲区写入文件，即保存修改</p>
 <p>:wq 保存修改并退出</p>
 <p>:x 保存修改并退出</p>
 <p>:q 退出，如果对缓冲区进行过修改，则会提示</p>
 <p>:q! 强制退出，放弃修改</p>
-<h2><a class="header" href="#七多文件编辑" id="七多文件编辑">七、多文件编辑</a></h2>
+<h2 id="七多文件编辑"><a class="header" href="#七多文件编辑">七、多文件编辑</a></h2>
 <p>vim file1.. 同时打开多个文件</p>
 <p>:args 显示当前编辑文件</p>
 <p>:next 切换到下个文件</p>
@@ -291,7 +291,7 @@ map &lt;C-J&gt; 10j
 <p>ctrl-w l 跳转到右边的窗口</p>
 <p>ctrl-w t 跳转到最顶上的窗口</p>
 <p>ctrl-w b 跳转到最底下的窗口</p>
-<h2><a class="header" href="#八多标签编辑" id="八多标签编辑">八、多标签编辑</a></h2>
+<h2 id="八多标签编辑"><a class="header" href="#八多标签编辑">八、多标签编辑</a></h2>
 <p>:tabedit file 在新标签中打开文件file</p>
 <p>:tab split file 在新标签中打开文件file</p>
 <p>:tabp 切换到前一个标签</p>
@@ -302,20 +302,20 @@ map &lt;C-J&gt; 10j
 <p>gT 到上一个tab</p>
 <p>0gt 跳到第一个tab</p>
 <p>5gt 跳到第五个tab</p>
-<h2><a class="header" href="#九执行shell命令" id="九执行shell命令">九、执行shell命令</a></h2>
+<h2 id="九执行shell命令"><a class="header" href="#九执行shell命令">九、执行shell命令</a></h2>
 <p>1、在命令模式下输入&quot;:sh&quot;，可以运行相当于在字符模式下，到输入结束想回到VIM编辑器中用exit，ctrl+D返回VIM编辑器</p>
 <p>2、可以&quot;!command&quot;，运行结束后自动回到VIM编辑器中</p>
 <p>3、用“Ctrl+Z“回到shell，用fg返回编辑</p>
 <p>4、:!make -&gt; 直接在当前目录下运行make指令</p>
-<h2><a class="header" href="#十vim启动项" id="十vim启动项">十、VIM启动项</a></h2>
+<h2 id="十vim启动项"><a class="header" href="#十vim启动项">十、VIM启动项</a></h2>
 <p>-o[n] 以水平分屏的方式打开多个文件</p>
 <p>-O[n] 以垂直分屏的方式打开多个文件</p>
-<h2><a class="header" href="#十一自动排版" id="十一自动排版">十一、自动排版</a></h2>
+<h2 id="十一自动排版"><a class="header" href="#十一自动排版">十一、自动排版</a></h2>
 <p>在粘贴了一些代码之后，vim变得比较乱，只要执行gg=G就能搞定</p>
-<h2><a class="header" href="#十二如何在vim中编译程序" id="十二如何在vim中编译程序">十二、如何在vim中编译程序</a></h2>
+<h2 id="十二如何在vim中编译程序"><a class="header" href="#十二如何在vim中编译程序">十二、如何在vim中编译程序</a></h2>
 <p>在vim中可以完成make,而且可以将编译的结果也显示在vim里，先执行 :copen 命令，将结果输出的窗口打开，然后执行 :make</p>
 <p>编译后的结果就显示在了copen打开的小窗口里了，而且用鼠标双击错误信息，就会跳转到发生错误的行。</p>
-<h2><a class="header" href="#十三buffer操作" id="十三buffer操作">十三、buffer操作</a></h2>
+<h2 id="十三buffer操作"><a class="header" href="#十三buffer操作">十三、buffer操作</a></h2>
 <p>1、buffer状态</p>
 <p>- （非活动的缓冲区）</p>
 <p>a （当前被激活缓冲区）</p>
@@ -324,7 +324,7 @@ map &lt;C-J&gt; 10j
 <p># （交换缓冲区）</p>
 <p>= （只读缓冲区）</p>
 <p>+ （已经更改的缓冲区）</p>
-<h2><a class="header" href="#十四-vim-操作目录" id="十四-vim-操作目录">十四、 VIM 操作目录</a></h2>
+<h2 id="十四-vim-操作目录"><a class="header" href="#十四-vim-操作目录">十四、 VIM 操作目录</a></h2>
 <p>1.打开目录</p>
 <p>vim .</p>
 <p>vim a-path/</p>

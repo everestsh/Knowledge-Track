@@ -167,7 +167,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#swift-方法派发纪要" id="swift-方法派发纪要">Swift 方法派发纪要</a></h1>
+                        <h1 id="swift-方法派发纪要"><a class="header" href="#swift-方法派发纪要">Swift 方法派发纪要</a></h1>
 <table><thead><tr><th>类型</th><th>说明</th><th></th></tr></thead><tbody>
 <tr><td>Value 类型</td><td>struct, enum 这样的值类型不支持继承，所以无需动态派发，所有的方法调用（包括遵守的协议方法），都是直接调用<br />虽然不支持继承，但值类型还是可以通过 extension 和 Protocol 可以实现扩展</td><td></td></tr>
 <tr><td>纯 Swift Class 类型</td><td>默认使用函数表派发，影响它方法调用的关键字有 final、dynamic 和 extension<br /> - 函数如果被标记成 final，编译器就会知道这个方法不会被 override，并把它的调用方式标记成直接调用。<br /> - 当一个方法被标记为 dymanic，你必须同时把它标记上@objc，此时这个方法会使用 Message 调用，依赖 Objc runtime。<br /> - 因为定义在 extension 中的方法目前还不支持 override，所以定义在其中的方法都是直接派发的<br /> - 对于未标记成 final 并在 class 内部（非 extension）中定义的方法，Swit 会用一种叫作 Virtual Table 的机制来在运行时查找到这个方法并进行调用。</td><td></td></tr>
@@ -175,7 +175,7 @@
 </tbody></table>
 <p><img src="./assets/swift_method_dispatch_type_graph.png" alt="类型差异" /></p>
 <p><img src="./assets/swift_method_dispatch_declare_graph.png" alt="声明差异" /></p>
-<h2><a class="header" href="#swift-派发原理" id="swift-派发原理">Swift 派发原理</a></h2>
+<h2 id="swift-派发原理"><a class="header" href="#swift-派发原理">Swift 派发原理</a></h2>
 <ul>
 <li>Dispatch
 <ul>
@@ -199,18 +199,18 @@
 <p>Swift 应对不同的情巧妙的使用了这三种方法</p>
 </li>
 </ul>
-<h3><a class="header" href="#direct-dispatch-直接派发" id="direct-dispatch-直接派发">Direct Dispatch 直接派发</a></h3>
+<h3 id="direct-dispatch-直接派发"><a class="header" href="#direct-dispatch-直接派发">Direct Dispatch 直接派发</a></h3>
 <ul>
 <li>又叫：静态派发。因为它的汇编命令少，且可以应用很多编译器进行优化，比如 inline 优化</li>
 <li>不过这种方式局限性最大，因为不够动态而无法支持子类。</li>
 </ul>
-<h3><a class="header" href="#table函数表派发" id="table函数表派发">Table(函数表)派发</a></h3>
+<h3 id="table函数表派发"><a class="header" href="#table函数表派发">Table(函数表)派发</a></h3>
 <p>基于 Table 的派发机制是编译语言最常用的方式。</p>
 <p>Table 一般是用函数地址的数组来存储每个类的声明（Vtable），不过 Swift 中还有术语叫做 Witness Table (Wtable）是服务于 Protocol 的。</p>
 <p>每个子类都会有自己的 Vtable 副本，子类中 override 的方法指针也会被替换成新的，子类新添加的方法则会被添加在 Table 的尾部。程序会在运行时确定每个函数具体的地址。</p>
 <p>表的查找就实现而言非常简单，而且性能可以预测，不过还是比直接派发更慢一些。这种方法多了两步查找和一步跳转，这些都是开销。而且，这种方法没法使用一些编译器的优化方法。</p>
 <p>另一个缺点在于，这种基于数组的派发让 extension 没法扩展这个 table。因为在子类添加方法列表到尾部后，extension 就没有一个安全的 index 可以添加他的方法到  table</p>
-<h2><a class="header" href="#链接" id="链接">链接</a></h2>
+<h2 id="链接"><a class="header" href="#链接">链接</a></h2>
 <ul>
 <li><a href="https://www.rightpoint.com/rplabs/switch-method-dispatch-table">Method Dispatch in Swift</a></li>
 </ul>

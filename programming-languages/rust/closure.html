@@ -167,7 +167,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#化解神奇的闭包" id="化解神奇的闭包">化解神奇的闭包</a></h1>
+                        <h1 id="化解神奇的闭包"><a class="header" href="#化解神奇的闭包">化解神奇的闭包</a></h1>
 <p>本文将通过拆解 Rust 中的闭包语法糖，来理解编程语言中闭包（Closure）的本质。</p>
 <p>首先理解闭包（Closures）的含义：</p>
 <blockquote>
@@ -192,7 +192,7 @@ fn normal_function() {
 <p>这点与 Swift 中的内嵌函数声明不太一样，Swift 中的内嵌函数本质上就是闭包，和函数已经不太一样了。</p>
 </blockquote>
 <p>那么闭包是如何做到捕获上下文的呢？要回答这个问题，一是要理解闭包的定义，二是要知道闭包的使用是函数+上下文环境捕获的语法糖。</p>
-<h2><a class="header" href="#三种不同特性的函数声明-trait-fn" id="三种不同特性的函数声明-trait-fn">三种不同特性的函数声明 <code>trait Fn* </code></a></h2>
+<h2 id="三种不同特性的函数声明-trait-fn"><a class="header" href="#三种不同特性的函数声明-trait-fn">三种不同特性的函数声明 <code>trait Fn* </code></a></h2>
 <pre><pre class="playground"><code class="language-rust">
 <span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
@@ -244,9 +244,9 @@ let two_args_closure = |a: u32, b: String| a; // type OUtput = u32
 </ul>
 </li>
 </ul>
-<h2><a class="header" href="#卸下闭包的糖衣" id="卸下闭包的糖衣">卸下闭包的糖衣</a></h2>
+<h2 id="卸下闭包的糖衣"><a class="header" href="#卸下闭包的糖衣">卸下闭包的糖衣</a></h2>
 <p>针对不同类型的闭包，试着由简单到复杂初步采用 <a href="https://doc.rust-lang.org/unstable-book/library-features/fn-traits.html"><code>fn_traits</code></a> 进行去语法糖实现。 </p>
-<h3><a class="header" href="#无参数无返回值" id="无参数无返回值">无参数无返回值</a></h3>
+<h3 id="无参数无返回值"><a class="header" href="#无参数无返回值">无参数无返回值</a></h3>
 <p>先来看看无参数传入也无参数返回的一个空闭包：</p>
 <pre><pre class="playground"><code class="language-rust">
 <span class="boring">#![allow(unused)]
@@ -292,7 +292,7 @@ non_capture();
 </li>
 </ul>
 <hr />
-<h3><a class="header" href="#捕获上下文环境变量的引用" id="捕获上下文环境变量的引用">捕获上下文环境变量的引用</a></h3>
+<h3 id="捕获上下文环境变量的引用"><a class="header" href="#捕获上下文环境变量的引用">捕获上下文环境变量的引用</a></h3>
 <p>接下来，试试捕获1个上下文环境变量</p>
 <pre><pre class="playground"><code class="language-rust">
 <span class="boring">#![allow(unused)]
@@ -340,7 +340,7 @@ capture_message()
 <li><code>__capture_message_block__</code> 捕获 <code>message</code>，并维护一致的生命周期</li>
 </ul>
 <hr />
-<h3><a class="header" href="#捕获上下文环境变量并取得所有权" id="捕获上下文环境变量并取得所有权">捕获上下文环境变量并取得所有权</a></h3>
+<h3 id="捕获上下文环境变量并取得所有权"><a class="header" href="#捕获上下文环境变量并取得所有权">捕获上下文环境变量并取得所有权</a></h3>
 <p>采用 <code>move</code> 的方式捕获环境上下文</p>
 <pre><pre class="playground"><code class="language-rust">
 <span class="boring">#![allow(unused)]
@@ -388,7 +388,7 @@ move_capture(&quot;You are awessome!&quot;);
 <li><code>call*</code> 的输入参数为 <code>(message,): (&amp;'a str,)</code>，对应闭包接受一个与闭包同声明周期的 <code>str</code> 类型参数，并使用元组做一层封包</li>
 </ul>
 <hr />
-<h3><a class="header" href="#返回值" id="返回值">返回值</a></h3>
+<h3 id="返回值"><a class="header" href="#返回值">返回值</a></h3>
 <p>继续尝试如何返回值</p>
 <pre><pre class="playground"><code class="language-rust">
 <span class="boring">#![allow(unused)]
@@ -445,7 +445,7 @@ assert_eq!(FnMut::call_mut(&amp;mut next, ()), 6);
 <ul>
 <li><code>type Output</code> 指定泛型参数最终类型，并在实现 <code>call*</code> 方法时实际返回即可</li>
 </ul>
-<h3><a class="header" href="#获取上下文环境变量所有权并返回值" id="获取上下文环境变量所有权并返回值">获取上下文环境变量所有权并返回值</a></h3>
+<h3 id="获取上下文环境变量所有权并返回值"><a class="header" href="#获取上下文环境变量所有权并返回值">获取上下文环境变量所有权并返回值</a></h3>
 <pre><pre class="playground"><code class="language-rust">
 <span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
@@ -479,7 +479,7 @@ impl FnOnce&lt;()&gt; for __consume_capture_block__ {
 <ul>
 <li>由于获取了环境变量所有权进行消费，因此仅实现<code>FnOnce</code>以符合语意</li>
 </ul>
-<h2><a class="header" href="#更多参考" id="更多参考">更多参考</a></h2>
+<h2 id="更多参考"><a class="header" href="#更多参考">更多参考</a></h2>
 <p>可上手实际代码，或了解更多其他语言的闭包</p>
 <ul>
 <li>
