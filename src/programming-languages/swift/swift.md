@@ -97,6 +97,10 @@
 - [DeclarativeHub/ReactiveKit](https://github.com/DeclarativeHub/ReactiveKit)
 - [DeclarativeHub/Bond](https://github.com/DeclarativeHub/Bond)
 
+### 设计模式
+
+- [Swift 常用设计模式](https://refactoringguru.cn/design-patterns/swift)
+
 ## Q&A
 
 - 踩坑：iOS10 Swift KVO 的 Crash 问题如何解决与避免
