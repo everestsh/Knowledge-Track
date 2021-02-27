@@ -12,6 +12,8 @@
 - [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui) - SwiftUI 100 天挑战
 - [Fucking SwiftUI - Cheat Sheet](https://fuckingswiftui.com) - SwiftUI 常用 API 备忘
 - [小组件编程临摹课程](https://developer.apple.com/cn/news/?id=yv6so7ie)
+- [AppKit is Done](https://kean.blog/post/appkit-is-done) - SwiftUI macOS 开发经验分享
+  - 源码：[Pulse](https://github.com/kean/Pulse), 结构化日志应用
 
 ## Tips 
 
