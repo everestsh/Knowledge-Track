@@ -65,6 +65,7 @@ while (alive) {
 - [What is NSUserDefaults?](http://dscoder.com/defaults.html) - 深入理解 NSUserDefault（由 Cocoa 开发者撰写）
 - [peripheryapp/periphery: A tool to identify unused code in Swift projects.](https://github.com/peripheryapp/periphery)
 - [Code Signing Guide for Teams](https://codesigning.guide/) - 代码签名团队指南
+- [iOS Crash Dump Analysis, Second Edition](https://faisalmemon.github.io/ios-crash-dump-analysis-book/zh/) - iOS 崩溃分析
 
 ### 库
 
