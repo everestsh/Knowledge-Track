@@ -53,8 +53,6 @@
 
   - [数据库](./iOSDev/database.md)
 
-
-
   - [开发社区](./iOSDev/community.md)
 
   - [Xcode](./iOSDev/xcode.md)
@@ -90,3 +88,5 @@
   - [《能力陷阱》](./reading/act-like-a-leader.md)
 
 - [故事](./stories/stories.md)
+
+- [设计](./design/design.md)
