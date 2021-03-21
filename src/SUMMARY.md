@@ -80,6 +80,7 @@
   
   - [Vim](./cli/vim.md)
   - [Git 常用命令速查清单](./cli/git-quick-checklist.md)
+  - [Homebrew](./cli/homebrew.md)
 
 - [Linux](./linux/linux.md)
 
