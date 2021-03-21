@@ -2,6 +2,10 @@
 
 假装「黑客」一样行事直到不希望被发现。😜
 
+## 工具
+
+- [`bat`](https://github.com/sharkdp/bat) - A cat(1) clone with syntax highlighting and Git integration.
+
 ## Alias
 
 ```
