@@ -16,6 +16,7 @@
 ## 编译
 
 - [Bazel - a fast, scalable, multi-language and extensible build system](https://bazel.build/) - 支持多种语言的编译系统
+- [Behind the Scenes of the Xcode Build Process - WWDC 2018](https://developer.apple.com/videos/play/wwdc2018/415/)
 
 ## 调试
 
