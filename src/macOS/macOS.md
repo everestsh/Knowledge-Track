@@ -41,6 +41,12 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 brew install git
 ```
 
+- [rbenv](https://github.com/rbenv/rbenv) - ruby 环境管理工具
+
+```sh
+brew install rbenv
+```
+
 - [CocoaPods](https://cocoapods.org/)
 
 ```shell
