@@ -12,3 +12,4 @@
 ### 音视频
 
 - [AudioKit](https://github.com/AudioKit/AudioKit) - Apple 平台音频开发框架
+- [AVFoundation](https://developer.apple.com/av-foundation/) - Apple 开发者官网 AVFoundation 资源
