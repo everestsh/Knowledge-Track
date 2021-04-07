@@ -1,0 +1,735 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>《全新思维》 - 棒棒彬的第二大脑</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../Introduction.html"><strong aria-hidden="true">1.</strong> 首页</a></li><li class="chapter-item expanded "><a href="../meta/meta.html"><strong aria-hidden="true">2.</strong> 知识体系元</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../meta/anki.html"><strong aria-hidden="true">2.1.</strong> Anki</a></li><li class="chapter-item expanded "><a href="../meta/second-brain-podcast.html"><strong aria-hidden="true">2.2.</strong> 构建第二大脑播客</a></li></ol></li><li class="chapter-item expanded "><a href="../reading/reading.html"><strong aria-hidden="true">3.</strong> 阅读</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../reading/a-whole-new-mind.html" class="active"><strong aria-hidden="true">3.1.</strong> 《全新思维》</a></li><li class="chapter-item expanded "><a href="../reading/act-like-a-leader.html"><strong aria-hidden="true">3.2.</strong> 《能力陷阱》</a></li></ol></li><li class="chapter-item expanded "><a href="../macOS/macOS.html"><strong aria-hidden="true">4.</strong> macOS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../macOS/apps.html"><strong aria-hidden="true">4.1.</strong> macOS 应用</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../macOS/alfred.html"><strong aria-hidden="true">4.1.1.</strong> Alfred</a></li><li class="chapter-item expanded "><a href="../macOS/snippetsLab.html"><strong aria-hidden="true">4.1.2.</strong> SnippetsLab</a></li><li class="chapter-item expanded "><a href="../macOS/contexts.html"><strong aria-hidden="true">4.1.3.</strong> Contexts</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../iOSDev/iOSDev.html"><strong aria-hidden="true">5.</strong> iOS 开发</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../iOSDev/architecture.html"><strong aria-hidden="true">5.1.</strong> 架构设计</a></li><li class="chapter-item expanded "><a href="../iOSDev/threading-programming/threading-programming.html"><strong aria-hidden="true">5.2.</strong> 多线程编程</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../iOSDev/threading-programming/about.html"><strong aria-hidden="true">5.2.1.</strong> 关于多线程编程</a></li><li class="chapter-item expanded "><a href="../iOSDev/threading-programming/thread-management.html"><strong aria-hidden="true">5.2.2.</strong> 线程管理</a></li><li class="chapter-item expanded "><a href="../iOSDev/threading-programming/run-loops.html"><strong aria-hidden="true">5.2.3.</strong> Run Loops</a></li><li class="chapter-item expanded "><a href="../iOSDev/threading-programming/synchronization.html"><strong aria-hidden="true">5.2.4.</strong> 线程同步</a></li></ol></li><li class="chapter-item expanded "><a href="../iOSDev/performance.html"><strong aria-hidden="true">5.3.</strong> 性能优化</a></li><li class="chapter-item expanded "><a href="../iOSDev/ui-layout.html"><strong aria-hidden="true">5.4.</strong> 视图布局</a></li><li class="chapter-item expanded "><a href="../iOSDev/swift-ui.html"><strong aria-hidden="true">5.5.</strong> SwiftUI</a></li><li class="chapter-item expanded "><a href="../iOSDev/database.html"><strong aria-hidden="true">5.6.</strong> 数据库</a></li><li class="chapter-item expanded "><a href="../iOSDev/av.html"><strong aria-hidden="true">5.7.</strong> 音视频</a></li><li class="chapter-item expanded "><a href="../iOSDev/community.html"><strong aria-hidden="true">5.8.</strong> 开发社区</a></li><li class="chapter-item expanded "><a href="../iOSDev/xcode.html"><strong aria-hidden="true">5.9.</strong> Xcode</a></li><li class="chapter-item expanded "><a href="../iOSDev/apps.html"><strong aria-hidden="true">5.10.</strong> iOS 应用</a></li></ol></li><li class="chapter-item expanded "><a href="../cs/cs.html"><strong aria-hidden="true">6.</strong> 计算机科学基础</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cs/algrithoms.html"><strong aria-hidden="true">6.1.</strong> 数据结构与算法</a></li><li class="chapter-item expanded "><a href="../cs/terminology.html"><strong aria-hidden="true">6.2.</strong> 术语汇总</a></li></ol></li><li class="chapter-item expanded "><a href="../software-engineering/software-engineering.html"><strong aria-hidden="true">7.</strong> 软件工程</a></li><li class="chapter-item expanded "><a href="../software-development/software-development.html"><strong aria-hidden="true">8.</strong> 软件开发</a></li><li class="chapter-item expanded "><a href="../programming-languages/programming-languages.html"><strong aria-hidden="true">9.</strong> 编程语言</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../programming-languages/swift/swift.html"><strong aria-hidden="true">9.1.</strong> Swift</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../programming-languages/swift/advanced-swift.html"><strong aria-hidden="true">9.1.1.</strong> 《Swift 进阶》阅读纪要</a></li><li class="chapter-item expanded "><a href="../programming-languages/swift/swift-method-dispatch-notes.html"><strong aria-hidden="true">9.1.2.</strong> Swift 方法派发纪要</a></li></ol></li><li class="chapter-item expanded "><a href="../programming-languages/rust/rust.html"><strong aria-hidden="true">9.2.</strong> Rust</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../programming-languages/rust/closure.html"><strong aria-hidden="true">9.2.1.</strong> 化解神奇的闭包</a></li><li class="chapter-item expanded "><a href="../programming-languages/rust/tao-of-rust.html"><strong aria-hidden="true">9.2.2.</strong> 《Rust 编程之道》阅读纪要</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../networking/networking.html"><strong aria-hidden="true">10.</strong> 网络</a></li><li class="chapter-item expanded "><a href="../open-source/open-source.html"><strong aria-hidden="true">11.</strong> 开源世界</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../open-source/meet-geniuses.html"><strong aria-hidden="true">11.1.</strong> 遇见天才</a></li></ol></li><li class="chapter-item expanded "><a href="../language/language.html"><strong aria-hidden="true">12.</strong> 语言学习</a></li><li class="chapter-item expanded "><a href="../education/education.html"><strong aria-hidden="true">13.</strong> 教育</a></li><li class="chapter-item expanded "><a href="../work/work.html"><strong aria-hidden="true">14.</strong> 工作</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../work/job-hunt.html"><strong aria-hidden="true">14.1.</strong> 求职</a></li><li class="chapter-item expanded "><a href="../work/career.html"><strong aria-hidden="true">14.2.</strong> 职场发展</a></li><li class="chapter-item expanded "><a href="../work/remote.html"><strong aria-hidden="true">14.3.</strong> 远程工作</a></li><li class="chapter-item expanded "><a href="../work/slashie.html"><strong aria-hidden="true">14.4.</strong> 斜杠/生活</a></li></ol></li><li class="chapter-item expanded "><a href="../cli/cli.html"><strong aria-hidden="true">15.</strong> 命令行</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cli/vim.html"><strong aria-hidden="true">15.1.</strong> Vim</a></li><li class="chapter-item expanded "><a href="../cli/git-quick-checklist.html"><strong aria-hidden="true">15.2.</strong> Git 常用命令速查清单</a></li><li class="chapter-item expanded "><a href="../cli/homebrew.html"><strong aria-hidden="true">15.3.</strong> Homebrew</a></li></ol></li><li class="chapter-item expanded "><a href="../linux/linux.html"><strong aria-hidden="true">16.</strong> Linux</a></li><li class="chapter-item expanded "><a href="../stories/stories.html"><strong aria-hidden="true">17.</strong> 故事</a></li><li class="chapter-item expanded "><a href="../design/design.html"><strong aria-hidden="true">18.</strong> 设计</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">棒棒彬的第二大脑</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        <a href="https://github.com/Binlogo/Knowledge-Track" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="全新思维决胜未来的6大能力-阅读书摘"><a class="header" href="#全新思维决胜未来的6大能力-阅读书摘">《全新思维：决胜未来的6大能力》 阅读书摘</a></h1>
+<p><a href="https://share.mubu.com/doc/4AWsCnsqDO8">幕布思维导图版</a></p>
+<h2 id="第一部分-为什么要拥有全新思维"><a class="header" href="#第一部分-为什么要拥有全新思维">第一部分 为什么要拥有全新思维</a></h2>
+<h3 id="01-概念时代右脑思维的崛起"><a class="header" href="#01-概念时代右脑思维的崛起">01 概念时代，右脑思维的崛起</a></h3>
+<ul>
+<li>
+<p><strong>左脑思维</strong>：具有典型的左脑特征，即<strong>顺序性</strong>、<strong>表面性</strong>、<strong>功能性</strong>、<strong>文本性</strong>和<strong>分析性</strong>。这一思维方式在信息时代广受欢迎，得到了严肃机构和学校的高度重视，其典型代表是电脑程序员。</p>
+</li>
+<li>
+<p><strong>右脑思维</strong>：具有典型的右脑特征，即<strong>同步性</strong>、<strong>隐语性</strong>、<strong>审美性</strong>、<strong>语境性</strong>和<strong>综合性</strong>。这一思维方式在信息时代并未得到足够重视，被各个机构和学校所忽略，其典型代表是发明家和护理员。</p>
+</li>
+<li>
+<p>左脑负责顺序推理，擅长分析和文字处理；而右脑负责整体推理、模式识别以及领会各种情绪和非语言类表达。</p>
+</li>
+<li>
+<p>狐狸知道很多事情，而刺猬只知道一件大事。</p>
+</li>
+<li>
+<p>左脑尤其擅长识别连续事件，即一个接一个发生的事件，以及控制行为发生的次序，还擅长控制序列行为，比如语言活动中的说话、理解他人的话语以及阅读和写作。</p>
+</li>
+<li>
+<p>左脑专注于理解字面含义，而右脑专注于领会情境、语境。</p>
+</li>
+<li>
+<p>左脑控制说什么，而右脑控制如何说</p>
+</li>
+<li>
+<p>左脑分析细节，右脑综观全局。</p>
+</li>
+<li>
+<p>即便有着不同的文化背景，大多数人也都是用相同的表情表达相同的情感。</p>
+</li>
+<li>
+<p>左脑知道如何控制逻辑能力，而右脑负责综观全局。把左右脑结合在一起，人们就拥有了强大的思考能力。单独使用任一半脑都会十分怪异而荒谬。</p>
+</li>
+</ul>
+<h3 id="02-右脑思维的3大推动力"><a class="header" href="#02-右脑思维的3大推动力">02 右脑思维的3大推动力</a></h3>
+<ul>
+<li>
+<p>知识工作者是“把所学<strong>知识应用于实践</strong>而取得报酬的人，而非出卖体力或手工劳动的人”。</p>
+</li>
+<li>
+<p><strong>原因</strong>：物质财富的极大充裕、亚洲的崛起和自动化。</p>
+</li>
+<li>
+<p><strong>结果</strong>：左脑思维的重要性日渐减弱，右脑思维的重要性日益增强。</p>
+</li>
+<li>
+<p>左脑思维在取得重大胜利的同时也削弱了自身的重要性。左脑思维带来了繁荣，也使人们更加重视非理性的右脑感知，如美观、精神性和情感。对各个企业而言，只生产价格合理、功能齐全的产品已远远不够，还要求产品外表美观、款式独特、意义深远</p>
+</li>
+<li>
+<p>“非请莫入，违者雇用之。”😂</p>
+</li>
+<li>
+<p>发挥右脑能力构建关系而不是处理事务，应对新挑战而不是解决常规问题，综观全局而不是分析单一要素。</p>
+</li>
+<li>
+<p>约翰·亨利的逝世成为工业时代的一则寓言：现在，机器可以比人类做得更好，但却牺牲了人类的尊严。</p>
+</li>
+<li>
+<p>任何常规工作都将面临风险，可能被精简为一套规则或机械性操作</p>
+</li>
+<li>
+<p>工程师和程序员将不得不掌握其他能力，这些能力所依赖的是<strong>创造力</strong>而非技能，是<strong>隐形知识</strong>而非技术规范，是<strong>把握全局</strong>而非纠缠细节。</p>
+</li>
+</ul>
+<h3 id="03-高概念与高感性知识不再是力量"><a class="header" href="#03-高概念与高感性知识不再是力量">03 高概念与高感性，知识不再是力量</a></h3>
+<ul>
+<li>
+<p>第三幕是概念时代，当今，物质财富的充裕、亚洲的崛起和自动化的影响在不断深化，其影响力越来越大，第三幕正渐渐拉开帷幕。我们把这一幕称为概念时代。这一幕的主角是创造者和共情者，其特征是擅长右脑思维。</p>
+</li>
+<li>
+<p>当今社会，你完成工作的成本不能高于外包人员，工作效率不能低于强大的电脑，要能满足人们非物质性的超凡欲望，才能在这个时代求得生存。</p>
+</li>
+<li>
+<p>高概念能力包括：创造艺术美和情感美，辨析各种模式，发现各种机会，创造令人满意的故事，以及将看似无关的观点组合成某种新观点。高感性能力包括：理解他人，了解人际交往的微妙，找到自己的快乐并感染他人，以及打破常规、探寻生活的目标和意义。</p>
+</li>
+<li>
+<p>艺术家的高概念能力，通常比商学院毕业生易于模仿的左脑能力更有价值。</p>
+</li>
+<li>
+<p>在概念时代，软件行业将更为关注产品的创新和独特之处</p>
+</li>
+<li>
+<p>在各个机构内，最具领导力的管理者往往幽默风趣，他们令员工开怀一笑的次数是其他高管的3倍。第8章我会谈到，幽默感在很大程度上取决于右脑。</p>
+</li>
+<li>
+<p>情商：主要是指人在情绪、情感、意志、挫折、耐受力等方面的品质。总的来讲，人与人之间的情商并无明显的先天差别，更多的是与后天的培养息息相关。这是近年来心理学家们提出的与智力和智商相对应的概念。</p>
+</li>
+<li>
+<p>人们的认知模式逐渐趋于具向化（右脑导向），而不是抽象化（左脑导向），因此人们的现实感更强、情感更丰富、更能感觉到人与人之间的紧密联系。</p>
+</li>
+<li>
+<p>全新思维时代的6大必备能力，即6大高概念、高感性能力——设计感、故事力、交响力、共情力、娱乐感和意义感，这些能力已经成为新时代不可或缺的一部分。</p>
+</li>
+</ul>
+<h2 id="第二部分-全新思维的6大能力"><a class="header" href="#第二部分-全新思维的6大能力">第二部分 全新思维的6大能力</a></h2>
+<p>开篇</p>
+<ol>
+<li>
+<p>不仅要实用，还要有设计感</p>
+</li>
+<li>
+<p>不仅要讲论据，还要有故事力</p>
+</li>
+<li>
+<p>不仅要专业，还要有交响力</p>
+</li>
+<li>
+<p>不仅要有逻辑力，还要有共情力</p>
+</li>
+<li>
+<p>不仅要严肃，还要有娱乐感</p>
+</li>
+<li>
+<p>不仅要追求财富，还要追求意义感</p>
+</li>
+</ol>
+<h3 id="04-设计感-人人都是设计大师"><a class="header" href="#04-设计感-人人都是设计大师">04 设计感 人人都是设计大师</a></h3>
+<ul>
+<li>
+<p>一切都是经过设计的</p>
+</li>
+<li>
+<p><strong>设计感</strong>：即蕴涵意义的实用性，是典型的全新思维能力，即人类以自然界史无前例的方式塑造和改善着我们所处的环境，以满足我们的需求，并使生活充满意义的能力。</p>
+</li>
+<li>
+<p>在这个物质财富极大充裕的时代，设计感对大部分现代企业而言都相当重要，因为<strong>设计感可以使自己与众不同</strong>，开拓新的市场</p>
+</li>
+<li>
+<p>设计课程是现代博雅教育的一种形式</p>
+<ul>
+<li>“博雅”的拉丁文原意是“适合自由人”</li>
+</ul>
+</li>
+<li>
+<p>设计是每个人每天都会做的活动</p>
+</li>
+<li>
+<p>人们为设计埋单，而不是物品</p>
+</li>
+<li>
+<p>吸引人的是风格，而不是物品本身</p>
+</li>
+<li>
+<p>艺术：是能<strong>引发他人思考和情绪</strong>的思想及情感表达，比如富有创造性的语言、方式、方法及事物。</p>
+</li>
+<li>
+<p>激发设计灵感</p>
+<ul>
+<li>
+<p>把你的设计创意记下来</p>
+</li>
+<li>
+<p>阅读设计杂志</p>
+</li>
+<li>
+<p>让设计感融入生活</p>
+</li>
+<li>
+<p>做一名设计侦探</p>
+</li>
+<li>
+<p>参与到“第三次工业革命”中去</p>
+</li>
+<li>
+<p>参观创意博物馆</p>
+</li>
+<li>
+<p>牢记设计的4大基本原则</p>
+<ul>
+<li>对比、重复、校准、邻近原则</li>
+</ul>
+</li>
+<li>
+<p>选择激发情感的设计</p>
+</li>
+<li>
+<p>生活中要讲究和挑剔</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="05-故事力-做生活的策划者"><a class="header" href="#05-故事力-做生活的策划者">05 故事力 做生活的策划者</a></h3>
+<blockquote>
+<p>倾听别人的故事，让人生存下去的不是食物，而是故事</p>
+</blockquote>
+<ul>
+<li>
+<p>人类大脑的“故事语法”将整个世界理解为一个一个的经历，而不是一套逻辑命题</p>
+</li>
+<li>
+<p>故事力：存在于高概念和高感性的交汇处，是一种高概念和高感性能力，它通过<strong>将一件事置于另一种情境</strong>的方式来加深我们的理解。</p>
+</li>
+<li>
+<p>故事力本质，即<strong>情感化的情境</strong>：信息时时处处可得，因而价值也就相对减小。因此，把这些信息置于某一情境之中，使之具有某种情感冲击力的能力越来越重要。</p>
+</li>
+<li>
+<p>故事力能够精确地捕捉到正式的决策方法未曾提及的因素。逻辑能力是要进行归纳总结，脱离特定的情境作出决策，不能带任何主观情感因素。而<strong>故事力能够捕捉情境和情感</strong>，是重要的认知行为，能够对信息、知识、情境和情感进行整合。</p>
+</li>
+<li>
+<p>追寻生活的意义，我们采用的方式也往往是讲述故事。</p>
+</li>
+<li>
+<p>人类的大脑总是倾向于<strong>把各种经历编成故事</strong>，而打动观众的关键，不是抵制这种冲动，而是接受它。</p>
+</li>
+<li>
+<p>故事化并不会取代分析型思维，它能让我们从新的视角看待问题，让我们看到一个不同的世界，它是分析型思维的有益补充。<strong>用贴切的故事来解释抽象的分析</strong>，更加有易于理解。</p>
+</li>
+<li>
+<p>“组织讲故事”运动，发掘故事商机</p>
+<ul>
+<li>
+<p>3M 公司为高管开设讲故事培训班</p>
+</li>
+<li>
+<p>NASA 将故事用于知识管理方案</p>
+</li>
+<li>
+<p>施乐公司收集故事并组建“尤里卡”经验数据库</p>
+</li>
+</ul>
+</li>
+<li>
+<p>叙事医学课程的目标是培养共情力</p>
+</li>
+<li>
+<p>成为故事大师</p>
+<ul>
+<li>
+<p>写迷你小说</p>
+</li>
+<li>
+<p>记录彼此的故事</p>
+</li>
+<li>
+<p>学会使用录音机</p>
+<ul>
+<li>
+<p>你和你的伴侣是怎么认识的？</p>
+</li>
+<li>
+<p>你的第一份工作是什么？</p>
+</li>
+<li>
+<p>你第一次在外面过夜是什么时候？</p>
+</li>
+<li>
+<p>你见过的最不称职的老师是谁？</p>
+</li>
+<li>
+<p>生命中最开心的一天是哪一天？</p>
+</li>
+<li>
+<p>最伤心的是哪一天？</p>
+</li>
+<li>
+<p>最可怕的又是哪一天？</p>
+</li>
+<li>
+<p>你做过的最正确的决定是什么？</p>
+</li>
+</ul>
+</li>
+<li>
+<p>参加故事节</p>
+</li>
+<li>
+<p>复述开篇句</p>
+</li>
+<li>
+<p>用图片激发故事灵感</p>
+</li>
+<li>
+<p>利用数码设备讲故事</p>
+</li>
+<li>
+<p>问问自己：“这些人都是谁？”</p>
+<ul>
+<li>公共场所无聊时，观察周围的陌生人，给其中几个人编故事</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="06-交响力-发现系统与整合之美"><a class="header" href="#06-交响力-发现系统与整合之美">06 交响力 发现系统与整合之美</a></h3>
+<blockquote>
+<p>“发明第一个车轮的人是个白痴，而发明其他三个车轮的人却是一位天才”</p>
+</blockquote>
+<ul>
+<li>
+<p>精通某一领域已不再是成功的保证，能取得最大回报的，是那些<strong>在迥然不同的领域也能游刃有余</strong>的人</p>
+</li>
+<li>
+<p>交响思维是作曲家和指挥家所具备的显著能力</p>
+</li>
+<li>
+<p>模式辨别、超越常规发现事物隐藏的关联，纵观全局、辨别本质</p>
+</li>
+<li>
+<p><strong>绘画</strong>，提升交响力的最佳方式</p>
+</li>
+<li>
+<p>最具影响力的创意，只是把别人认为无法合并的两个想法结合在一起</p>
+</li>
+<li>
+<p>有突破性想法的人，一般都具备跳跃性思维</p>
+</li>
+<li>
+<p>“让你感到困难的，是对事物的准确描述”</p>
+<ul>
+<li>&gt; <a href="https://mubu.com/doc5YM9sdBdE98">如何认识事物</a></li>
+</ul>
+</li>
+<li>
+<p>当左脑还在云里雾里时，右脑就可以自由地去辨认事物之间的联系，整合成一个整体</p>
+</li>
+<li>
+<p>有三类人在这个时代会有更好的机遇：<strong>跨领域</strong>的人、<strong>发明</strong>家和<strong>善作比喻</strong>的人。</p>
+</li>
+<li>
+<p>心理上兼具两性特征的人反应能力会更强，他们有更多各种各样的机会同世界进行交流</p>
+</li>
+<li>
+<p>敢于进行大胆、创新式的整合，并<strong>敢于犯错</strong>，因为在追逐灵感的过程中，犯错是不可避免的</p>
+</li>
+<li>
+<p>比喻被认知科学家称为“富于想象力的理性”，掌握这一全新思维能力在这个错综复杂的世界极具价值。</p>
+</li>
+<li>
+<p>从很大程度上来说，自我认识就是寻找合适的比喻以领悟生活意义的过程</p>
+</li>
+<li>
+<p>完形思维：是指人们利用已有的知识、经验、认知习惯等对事物残缺内容作补充性理解的一种思维方式。</p>
+</li>
+<li>
+<p>模式识别：是指人把输入刺激（模式）的信息与长时记忆中的信息进行匹配，并辨认出该刺激属于什么范畴的过程。</p>
+</li>
+<li>
+<p>提升你的交响力</p>
+<ul>
+<li>
+<p>聆听伟大的交响乐：《欢乐颂》、《哈夫纳交响曲》、马勒G大调第四交响曲、柴可夫斯基1812序曲、海顿G大调第九十四交响曲</p>
+</li>
+<li>
+<p>逛书报亭
+看自己之前从未留意过的，偶尔翻阅，启发思路</p>
+</li>
+<li>
+<p>学习绘画
+绘画就是观察事物之间的联系，然后再把这些联系组合成一个整体</p>
+</li>
+<li>
+<p>准备一个比喻记录本</p>
+</li>
+<li>
+<p>跟踪链接</p>
+</li>
+<li>
+<p>在发现问题的过程中找到解决问题的方法</p>
+</li>
+<li>
+<p>制作一个灵感记录板</p>
+</li>
+<li>
+<p>来一场真正的头脑风暴</p>
+<ul>
+<li>
+<p>追求质量</p>
+</li>
+<li>
+<p>鼓励大胆的想法</p>
+</li>
+<li>
+<p>注重视觉效果</p>
+</li>
+<li>
+<p>延缓评判</p>
+</li>
+<li>
+<p>一次只要一个人陈述</p>
+</li>
+</ul>
+</li>
+<li>
+<p>去做自己做不到的事情</p>
+</li>
+<li>
+<p>寻找负空间</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="07-共情力-与他人产生共鸣"><a class="header" href="#07-共情力-与他人产生共鸣">07 共情力 与他人产生共鸣</a></h3>
+<ul>
+<li>
+<p>共情，是深入他人的思想从他人的角度体验世界</p>
+</li>
+<li>
+<p>共情力：是站在别人的立场、凭直觉感知他人的感受，即<strong>设身处地</strong>地用他们的眼光来看待问题，体会他们的感受。</p>
+</li>
+<li>
+<p>情感表达的主要方式就是<strong>面部表情</strong></p>
+</li>
+<li>
+<p>左脑受损的人反而更善于解读表情</p>
+</li>
+<li>
+<p>共鸣：是指思想上或感情上相互感染而产生的情绪。</p>
+</li>
+<li>
+<p>虚假的微笑只会牵动颧大肌。因为我们可以控制颧大肌，但不能控制眼轮匝肌。</p>
+</li>
+<li>
+<p>细微表情：通常是指某种表情的微小端倪，或者是未能隐藏好这一情感而表露出来的细小表情，也就是“表达不全的表情”。</p>
+</li>
+<li>
+<p>微观表情：是指当一个人刻意掩饰情感时在脸上浮现出的表情，它一闪即逝，所持续的时间还不到1/5秒。</p>
+</li>
+<li>
+<p>女性通常更擅长领会面部表情和识别谎言</p>
+</li>
+<li>
+<p>人也不是一成不变的，昨天令她开心的事情未必明天也会令她开心。</p>
+</li>
+<li>
+<p>概念时代的人，是兼具两性思维的人</p>
+</li>
+<li>
+<p>学会理解他人</p>
+<ul>
+<li>
+<p>自我共情力测试</p>
+</li>
+<li>
+<p>“偷听”他人说话
+从他人的立场、以他人的眼光来审视世界</p>
+</li>
+<li>
+<p>玩“谁的生活”游戏</p>
+</li>
+<li>
+<p>在工作中发挥共情</p>
+</li>
+<li>
+<p>学习表演</p>
+</li>
+<li>
+<p>不要将自己的共情力移交给别人</p>
+</li>
+<li>
+<p>做社区志愿者</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="相关内容"><a class="header" href="#相关内容">相关内容：</a></h2>
+<ul>
+<li>
+<p><a href="http://www.ater.org.tw/journal/article/7-1/free/18.pdf">全球移動力 GLOBAL 模式之初探</a></p>
+</li>
+<li>
+<p>(一) G 公民力(Global citizenship)：具有全球公民素養且關懷世界的宏觀思維。</p>
+</li>
+<li>
+<p>(二) L 語文力(Language ability)：具有外語溝通且能夠同理他國文化之外語溝通能力。</p>
+</li>
+<li>
+<p>(三) O 專業力(Occupation)：具有國際視野且能應地制宜的跨域專業實踐能力。</p>
+</li>
+<li>
+<p>(四) B 人際力(Befriend capital)：具有橋接資源與經營人脈以及敦親睦鄰之社交能力。</p>
+</li>
+<li>
+<p>(五) A 文化力(acculturation)：具文化理解且能夠入境隨俗之文化融合能力。</p>
+</li>
+<li>
+<p>(六) L 生活力(Lifestyle)：具有正向心理功能且適應不同環境之健康生活型態。</p>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../reading/reading.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../reading/act-like-a-leader.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../reading/reading.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../reading/act-like-a-leader.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+        <!-- Google Analytics Tag -->
+        <script type="text/javascript">
+            var localAddrs = ["localhost", "127.0.0.1", ""];
+
+            // make sure we don't activate google analytics if the developer is
+            // inspecting the book locally...
+            if (localAddrs.indexOf(document.location.hostname) === -1) {
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-160717450-2', 'auto');
+                ga('send', 'pageview');
+            }
+        </script>
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
