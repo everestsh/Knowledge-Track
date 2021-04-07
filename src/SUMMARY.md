@@ -1,10 +1,16 @@
 # Summary
 
 - [首页](./Introduction.md)
+
 - [知识体系元](./meta/meta.md)
 
   - [Anki](./meta/anki.md)
   - [构建第二大脑播客](./meta/second-brain-podcast.md)
+
+- [阅读](./reading/reading.md)
+
+  - [《全新思维》](./reading/a-whole-new-mind.md)
+  - [《能力陷阱》](./reading/act-like-a-leader.md)
 
 - [macOS](./macOS/macOS.md)
 
@@ -85,10 +91,6 @@
   - [Homebrew](./cli/homebrew.md)
 
 - [Linux](./linux/linux.md)
-
-- [阅读](./reading/reading.md)
-
-  - [《能力陷阱》](./reading/act-like-a-leader.md)
 
 - [故事](./stories/stories.md)
 
