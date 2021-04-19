@@ -62,3 +62,4 @@
 - [Xcode Build Settings](https://xcodebuildsettings.com/) - 查询各种 Xcode 编译设置项描述定义 🎉
     - TODO: Xcode Build Settings 变量的3种查看技巧
 - [‎RocketSim for Xcode](https://apps.apple.com/cn/app/rocketsim-for-xcode/id1504940162)
+- [Xcode Releases | xcodereleases.com](https://xcodereleases.com/) - Xcode 版本信息合集
