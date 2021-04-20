@@ -79,6 +79,7 @@ rm -r ~/.cargo/.package-cache
 - [High performance flexbox implementation written in rust](https://github.com/vislyhq/stretch)
 - [深度探索：前端中的后端](https://mp.weixin.qq.com/s/W-EvvKzmj1A8VsNKFYkuhQ)
 - [深度分析：前端中的后端-实现篇](https://mp.weixin.qq.com/s/5FfSRpRG-F8Y8X3BX9mJ-Q)
+- [mozilla/uniffi-rs](https://github.com/mozilla/uniffi-rs) - Rust 跨平台交互代码生成器
 
 #### 跨平台开源项目
 
