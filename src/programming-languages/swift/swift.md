@@ -93,15 +93,17 @@
 
   <details>
     <summary>笔记概览</summary>
+
     - 开启编译优化选项: `-Onone` `-O` `-Osize`
     - 开启 WMO 编译选项：`-whole-module-optimization`
     - 减少动态派发：`final` `private/fileprivate` `internal`
     - 高效使用容器集合类型: `ContiguousArray`、尽可能修改原容器对象、在集合中使用值类型（「深拷贝耗能的大对象」除外）
     - 非溢出封装计算操作：`&+`, `&-`, `&*`
     - 范型的声明和使用在同一个模块内，以便编译时特化
-    - 深拷贝耗性能的值类型采用`须时拷贝`语义封装。[Code](https://gist.github.com/Binlogo/533e357c8ea6260e4c2b2e786dc522d4)
+    - 深拷贝耗性能的值类型采用`需时拷贝`（COW）语义封装。[Code](https://gist.github.com/Binlogo/533e357c8ea6260e4c2b2e786dc522d4)
     - 仅供类对象实现的协议显式标注：AnyObject
     - 非逃逸闭包采用参数传递，避免上下文捕获
+
   </details>
 
 ## 链接
