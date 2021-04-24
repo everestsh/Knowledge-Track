@@ -2388,15 +2388,17 @@ Using different groups of properties in the two methods can lead to unexpected b
 <p><a href="https://github.com/apple/swift/blob/main/docs/OptimizationTips.rst">Writing High-Performance Swift Code</a></p>
 <details>
   <summary>笔记概览</summary>
-  - 开启编译优化选项: `-Onone` `-O` `-Osize`
-  - 开启 WMO 编译选项：`-whole-module-optimization`
-  - 减少动态派发：`final` `private/fileprivate` `internal`
-  - 高效使用容器集合类型: `ContiguousArray`、尽可能修改原容器对象、在集合中使用值类型（「深拷贝耗能的大对象」除外）
-  - 非溢出封装计算操作：`&+`, `&-`, `&*`
-  - 范型的声明和使用在同一个模块内，以便编译时特化
-  - 深拷贝耗性能的值类型采用`须时拷贝`语义封装。[Code](https://gist.github.com/Binlogo/533e357c8ea6260e4c2b2e786dc522d4)
-  - 仅供类对象实现的协议显式标注：AnyObject
-  - 非逃逸闭包采用参数传递，避免上下文捕获
+<ul>
+<li>开启编译优化选项: <code>-Onone</code> <code>-O</code> <code>-Osize</code></li>
+<li>开启 WMO 编译选项：<code>-whole-module-optimization</code></li>
+<li>减少动态派发：<code>final</code> <code>private/fileprivate</code> <code>internal</code></li>
+<li>高效使用容器集合类型: <code>ContiguousArray</code>、尽可能修改原容器对象、在集合中使用值类型（「深拷贝耗能的大对象」除外）</li>
+<li>非溢出封装计算操作：<code>&amp;+</code>, <code>&amp;-</code>, <code>&amp;*</code></li>
+<li>范型的声明和使用在同一个模块内，以便编译时特化</li>
+<li>深拷贝耗性能的值类型采用<code>需时拷贝</code>（COW）语义封装。<a href="https://gist.github.com/Binlogo/533e357c8ea6260e4c2b2e786dc522d4">Code</a></li>
+<li>仅供类对象实现的协议显式标注：AnyObject</li>
+<li>非逃逸闭包采用参数传递，避免上下文捕获</li>
+</ul>
 </details>
 </li>
 </ul>
