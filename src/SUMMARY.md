@@ -58,7 +58,7 @@
 - [编程语言](./programming-languages/programming-languages.md)
 
   - [Swift](./programming-languages/swift/swift.md)
-
+    - [Swift 5.4 新特性速查](./programming-languages/swift/what's-new-5-4.md)
     - [《Swift 进阶》阅读纪要](./programming-languages/swift/advanced-swift.md)
     - [Swift 方法派发纪要](./programming-languages/swift/swift-method-dispatch-notes.md)
 
