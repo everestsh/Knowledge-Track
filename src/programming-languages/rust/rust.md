@@ -65,6 +65,7 @@ rm -r ~/.cargo/.package-cache
 - [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/) - Rust 优秀实践示例集锦
 - [The Rust Performance Book](https://nnethercote.github.io/perf-book/) - Rust 性能之书
 - [Rustlings](https://github.com/rust-lang/rustlings) - 官方的命令行交互式练习 🌟🌟🌟🌟🌟
+- [Rust Design Patterns](https://rust-unofficial.github.io/patterns/)
 
 ### 实践经验分享
 
