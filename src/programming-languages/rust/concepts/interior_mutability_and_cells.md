@@ -159,4 +159,8 @@ Rust中的可变或不可变主要是针对一个变量绑定而言的。对于�
 - 内部可变性，单线程使用`Cell <T>`和`RefCell <T>`。
 - 内部可变性，多线程使用`Mutex<T>`，`RwLock<T>`。
 
+### 更多链接
+
+- [OnceCell](https://github.com/matklad/once_cell) - single assignment cells and lazy statics without macros
+
 > 原文：https://rustcc.cn/article?id=37d1cb4f-5cc9-4adc-b41a-dbe4914bf4b5
