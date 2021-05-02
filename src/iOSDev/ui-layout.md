@@ -11,6 +11,7 @@
 - [Visly - Stretch](https://vislyhq.github.io/stretch/) - 跨平台 Flexbox 布局（rust）
 - [LinkedIn - LayoutKit](https://github.com/linkedin/LayoutKit) - 快速视图布局库，声明式，写法类似 Flexbox（但不是，基于原生 frame）
 - [TextureGroup - Texture](https://github.com/TextureGroup/Texture) - 异步布局库
+- [square/Paralayout](https://github.com/square/Paralayout) - 精细布局工具集
 
 ### 视图组件库
 
