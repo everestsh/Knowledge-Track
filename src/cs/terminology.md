@@ -8,3 +8,9 @@
     > 在图论中，如果一个有向图从任意顶点出发无法经过若干条边回到该点，则这个图是一个有向无环图（DAG,directed acyclic graph）
 
     - 引用来源：[Square/Cleanse](https://github.com/square/Cleanse#using-cleanse)
+
+- [CRDT - Conflict-free Replicated Data Types](https://arxiv.org/pdf/1805.06358.pdf)
+    
+    > 无冲突复制数据类型
+    
+    - 引用来源：[Xi-Editor 设计说明文档](https://xi-editor.io/docs/crdt.html)
