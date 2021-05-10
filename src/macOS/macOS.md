@@ -74,6 +74,10 @@ pod setup
   find . -name "node_modules" -type d -prune -exec rm -rf '{}' +
   ```
 
+- 加速 Chrome 浏览器内置下载速度
+  
+ - 地址栏输入并回车：`chrome://flags/#enable-parallel-downloading`, 将 Default 改为 Enabled 即可
+
 ## 链接
 
 - [Apple Teacher Learning Center](https://appleteacher.apple.com/#/home/resources)
