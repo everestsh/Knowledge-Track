@@ -17,6 +17,7 @@
 
 - [Bazel - a fast, scalable, multi-language and extensible build system](https://bazel.build/) - 支持多种语言的编译系统
 - [Behind the Scenes of the Xcode Build Process - WWDC 2018](https://developer.apple.com/videos/play/wwdc2018/415/)
+- [从预编译的角度理解Swift与Objective-C及混编机制 - 美团技术团队](https://tech.meituan.com/2021/02/25/swift-objective-c.html) - 对 Swift/Objective-C 混编机制讲述得非常细致全面
 
 ## 调试
 
