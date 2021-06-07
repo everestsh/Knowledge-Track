@@ -23,3 +23,5 @@
   - [GPU 加速下的图像处理](https://objccn.io/issue-21-7)  ✅
   - [GPU 加速下的图像视觉](https://objccn.io/issue-21-8)  ✅
   - [基于 OpenCV 的人脸识别](https://objccn.io/issue-21-9)  
+
+- [《揭秘微视——视频特效与非线性编辑技术内幕》](https://zhuanlan.zhihu.com/p/38469443) ✅
