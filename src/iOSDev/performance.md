@@ -17,3 +17,9 @@
 ## Instrument 百宝箱
 
 - [Instruments Help](https://help.apple.com/instruments/mac/current/)
+
+## 链接
+
+- [移动芯片性能排行榜](https://www.socpk.com/)
+
+![移动芯片综合天梯图](./assets/移动芯片综合天梯图.webp)
