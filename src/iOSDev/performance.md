@@ -8,6 +8,7 @@
 - [Explore UI animation hitches and the render loop - Tech Talks - Videos - Apple Developer](https://developer.apple.com/videos/play/tech-talks/10855/)
 - [Find and fix hitches in the commit phase - Tech Talks - Videos - Apple Developer](https://developer.apple.com/videos/play/tech-talks/10856)
 - [Demystify and eliminate hitches in the render phase - Tech Talks - Videos - Apple Developer](https://developer.apple.com/videos/play/tech-talks/10857)
+- [Reducing Your App’s Size](https://developer.apple.com/documentation/xcode/reducing-your-app-s-size)
 
 ## 书籍
 
