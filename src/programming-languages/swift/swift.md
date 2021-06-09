@@ -106,6 +106,13 @@
 
   </details>
 
+### Packages
+
+- [Swift Collections](https://github.com/apple/swift-collections)
+- [Swfit Algorithms](https://github.com/apple/swift-algorithms)
+- [Swift System](https://github.com/apple/swift-system)
+- [Swift Numerics](https://github.com/apple/swift-numerics)
+- [Swift Argument Parser](https://github.com/apple/swift-argument-parser)
 ## 链接
 
 - [What's new in Swift?](https://www.whatsnewinswift.com/)
