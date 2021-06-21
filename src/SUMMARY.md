@@ -61,6 +61,7 @@
     - [Swift 5.4 新特性速查](./programming-languages/swift/what's-new-5-4.md)
     - [《Swift 进阶》阅读纪要](./programming-languages/swift/advanced-swift.md)
     - [Swift 方法派发纪要](./programming-languages/swift/swift-method-dispatch-notes.md)
+    - [Concurrency](./programming-languages/swift/concurrency.md)
 
   - [Rust](./programming-languages/rust/rust.md)
     - [概念速查]()
