@@ -23,6 +23,14 @@
 
 - `⌘ + ;/:` 快速检查拼写和语法/展示改正建议
 
+## 工具集
+
+- [notarytool](https://developer.apple.com/wwdc21/10261) - macOS App 分发验证服务
+    ```sh
+    // with notarytool
+    notarytool submit path/to/submission.zip --wait
+        --key "$KEY_PATH" --key-id "$KEY_ID" --issuer "$ISSUER"
+    ```
 
 ## 技巧
 
