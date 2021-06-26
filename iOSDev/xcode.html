@@ -180,6 +180,15 @@
 <p><code>⌘ + ;/:</code> 快速检查拼写和语法/展示改正建议</p>
 </li>
 </ul>
+<h2 id="工具集"><a class="header" href="#工具集">工具集</a></h2>
+<ul>
+<li><a href="https://developer.apple.com/wwdc21/10261">notarytool</a> - macOS App 分发验证服务
+<pre><code class="language-sh">// with notarytool
+notarytool submit path/to/submission.zip --wait
+    --key &quot;$KEY_PATH&quot; --key-id &quot;$KEY_ID&quot; --issuer &quot;$ISSUER&quot;
+</code></pre>
+</li>
+</ul>
 <h2 id="技巧"><a class="header" href="#技巧">技巧</a></h2>
 <ul>
 <li>
