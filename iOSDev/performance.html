@@ -168,6 +168,59 @@
 <p><a href="https://developer.apple.com/documentation/xcode/reducing-your-app-s-size">Reducing Your App’s Size</a></p>
 </li>
 </ul>
+<h3 id="内存"><a class="header" href="#内存">内存</a></h3>
+<ul>
+<li>
+<p><a href="https://developer.apple.com/videos/play/wwdc2021/10180/">Detect and diagnose memory issues - WWDC21</a></p>
+<ul>
+<li>Perfermance XCTests collections
+<ul>
+<li>Ktrace files</li>
+<li>Memory graph</li>
+</ul>
+</li>
+<li>MetricKit &amp; Xcode Orgernizer</li>
+<li>Issues to look
+<ul>
+<li>Leaks</li>
+<li>Heap size issues
+<ul>
+<li>Heap allocation regression
+<ul>
+<li><code>vmmap -summary ./PathToXXXXX.memgraph</code></li>
+<li><code>heap -diffFrom=PathToXXXPre.memgraph PathToXXXPost.memgraph</code></li>
+<li><code>heap -addresses=non-object[500k-] PathToXXX.memgraph</code></li>
+<li><code>leaks --trackTree=0x1138XXXX PathToXXX.memgraph</code></li>
+<li><code>leaks --referenceTree --groupByType PathToXXX.memgraph</code></li>
+<li><code>malloc_history -fullStacks PathToXXX.memgraph 0x1138XXXX</code></li>
+</ul>
+</li>
+<li>Fragmentation
+<ul>
+<li>Allocate object with similar lifetimes close to each other</li>
+<li>Aim for 25% fragmentation or less</li>
+<li>Use autorelease pools</li>
+<li>Pay extra attention to long running processes</li>
+<li>Use allocations track in Instruments
+<ul>
+<li>ref: Getting Started with Instruments</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://developer.apple.com/videos/play/wwdc2019/411">Getting Started with Instruments - WWDC19</a></p>
+</li>
+<li>
+<p><a href="https://developer.apple.com/videos/play/wwdc2018/416">iOS Memory Deep Dive - WWDC18</a></p>
+</li>
+</ul>
 <h2 id="书籍"><a class="header" href="#书籍">书籍</a></h2>
 <ul>
 <li>《高性能 iOS 应用开发》- 各方面的性能衡量到工程实践
