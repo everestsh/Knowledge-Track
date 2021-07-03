@@ -10,6 +10,34 @@
 - [Demystify and eliminate hitches in the render phase - Tech Talks - Videos - Apple Developer](https://developer.apple.com/videos/play/tech-talks/10857)
 - [Reducing Your App’s Size](https://developer.apple.com/documentation/xcode/reducing-your-app-s-size)
 
+### 内存
+
+- [Detect and diagnose memory issues - WWDC21](https://developer.apple.com/videos/play/wwdc2021/10180/)
+    - Perfermance XCTests collections
+        - Ktrace files
+        - Memory graph
+    - MetricKit & Xcode Orgernizer
+    - Issues to look
+        - Leaks
+        - Heap size issues
+            * Heap allocation regression
+                - `vmmap -summary ./PathToXXXXX.memgraph`
+                - `heap -diffFrom=PathToXXXPre.memgraph PathToXXXPost.memgraph`
+                - `heap -addresses=non-object[500k-] PathToXXX.memgraph`
+                - `leaks --trackTree=0x1138XXXX PathToXXX.memgraph`
+                - `leaks --referenceTree --groupByType PathToXXX.memgraph`
+                - `malloc_history -fullStacks PathToXXX.memgraph 0x1138XXXX`
+            * Fragmentation
+                - Allocate object with similar lifetimes close to each other
+                - Aim for 25% fragmentation or less
+                - Use autorelease pools
+                - Pay extra attention to long running processes
+                - Use allocations track in Instruments
+                    - ref: Getting Started with Instruments
+
+- [Getting Started with Instruments - WWDC19](https://developer.apple.com/videos/play/wwdc2019/411)
+- [iOS Memory Deep Dive - WWDC18](https://developer.apple.com/videos/play/wwdc2018/416)
+
 ## 书籍
 
 - 《高性能 iOS 应用开发》- 各方面的性能衡量到工程实践
