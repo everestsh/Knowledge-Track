@@ -24,6 +24,7 @@
 | `git clean -df`                              | 删除全部未跟踪的文件和文件夹                 |
 | `git checkout -- .`                          | 重置本地全部更改                             |
 | `git reset HEAD <myfile>`                    | 移除缓冲区中的某个文件                       |
+| `git reset $(git merge-base master feaure/x)` | 把 MR 的分支的合并记录移除，压缩为一条提交    |
 | **标签**                                     |                                              |
 | `git tag`                                    | 列出全部标签                                 |
 | `git tag -a <tag_name> -m "tag message"`     | 创建新标签                                   |
