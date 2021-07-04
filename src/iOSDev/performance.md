@@ -38,6 +38,9 @@
 - [Getting Started with Instruments - WWDC19](https://developer.apple.com/videos/play/wwdc2019/411)
 - [iOS Memory Deep Dive - WWDC18](https://developer.apple.com/videos/play/wwdc2018/416)
 
+### 包大小
+
+- [ImageOptim](https://imageoptim.com/howto.html) - 图片资源大小、加载优化工具
 ## 书籍
 
 - 《高性能 iOS 应用开发》- 各方面的性能衡量到工程实践
