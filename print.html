@@ -1934,6 +1934,10 @@ typedef struct __CFRuntimeBase {
 <p><a href="https://developer.apple.com/videos/play/wwdc2018/416">iOS Memory Deep Dive - WWDC18</a></p>
 </li>
 </ul>
+<h3 id="包大小"><a class="header" href="#包大小">包大小</a></h3>
+<ul>
+<li><a href="https://imageoptim.com/howto.html">ImageOptim</a> - 图片资源大小、加载优化工具</li>
+</ul>
 <h2 id="书籍"><a class="header" href="#书籍">书籍</a></h2>
 <ul>
 <li>《高性能 iOS 应用开发》- 各方面的性能衡量到工程实践
@@ -3986,6 +3990,7 @@ map &lt;C-J&gt; 10j
 <tr><td><code>git clean -df</code></td><td>删除全部未跟踪的文件和文件夹</td></tr>
 <tr><td><code>git checkout -- .</code></td><td>重置本地全部更改</td></tr>
 <tr><td><code>git reset HEAD &lt;myfile&gt;</code></td><td>移除缓冲区中的某个文件</td></tr>
+<tr><td><code>git reset $(git merge-base master feaure/x)</code></td><td>把 MR 的分支的合并记录移除，压缩为一条提交</td></tr>
 <tr><td><strong>标签</strong></td><td></td></tr>
 <tr><td><code>git tag</code></td><td>列出全部标签</td></tr>
 <tr><td><code>git tag -a &lt;tag_name&gt; -m &quot;tag message&quot;</code></td><td>创建新标签</td></tr>

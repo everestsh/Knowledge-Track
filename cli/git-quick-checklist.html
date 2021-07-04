@@ -170,6 +170,7 @@
 <tr><td><code>git clean -df</code></td><td>删除全部未跟踪的文件和文件夹</td></tr>
 <tr><td><code>git checkout -- .</code></td><td>重置本地全部更改</td></tr>
 <tr><td><code>git reset HEAD &lt;myfile&gt;</code></td><td>移除缓冲区中的某个文件</td></tr>
+<tr><td><code>git reset $(git merge-base master feaure/x)</code></td><td>把 MR 的分支的合并记录移除，压缩为一条提交</td></tr>
 <tr><td><strong>标签</strong></td><td></td></tr>
 <tr><td><code>git tag</code></td><td>列出全部标签</td></tr>
 <tr><td><code>git tag -a &lt;tag_name&gt; -m &quot;tag message&quot;</code></td><td>创建新标签</td></tr>
