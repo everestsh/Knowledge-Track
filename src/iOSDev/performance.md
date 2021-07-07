@@ -49,6 +49,7 @@
 ## Instrument 百宝箱
 
 - [Instruments Help](https://help.apple.com/instruments/mac/current/)
+- [Xcode Organizer](https://developer.apple.com/videos/play/wwdc2020/10076)
 
 ## 链接
 
