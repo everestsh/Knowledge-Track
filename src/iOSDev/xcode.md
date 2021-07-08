@@ -53,6 +53,16 @@
 - Xcode 与模拟器已经支持左右分屏
 
 - 自动补全提示窗口大小支持拉伸
+
+### 调试
+
+- [Discover breakpoint improvements - WWDC21](https://developer.apple.com/videos/play/wwdc2021/10209)
+    - 列断点&符号断点
+    - 断点 LLDB 符号查找
+        `image lookup -rn funcName ModuleName`
+    - Runtime Issues Breakpoint
+- [LLDB: Beyond "po" - WWDC19](https://developer.apple.com/videos/play/wwdc2019/429/)
+- [Advanced Debugging with Xcode and LLDB - WWDC18](https://developer.apple.com/videos/play/wwdc2018/412)
     
 ## 链接
 
