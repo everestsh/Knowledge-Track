@@ -96,4 +96,6 @@
 
 - [故事](./stories/stories.md)
 
+- [产品](./product/product.md)
+
 - [设计](./design/design.md)
