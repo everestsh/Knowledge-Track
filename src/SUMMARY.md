@@ -47,7 +47,8 @@
   - [iOS 应用](./iOSDev/apps.md)
 
 - [计算机科学基础](./cs/cs.md)
-
+  - [课程记录]()
+    - [CS 110L: Safety in Systems Programming](./cs/class/cs110l.md)
   - [数据结构与算法](./cs/algrithoms.md)
   - [术语汇总](./cs/terminology.md)
 
