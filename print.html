@@ -2375,8 +2375,45 @@ Potpourri</li>
 <ul>
 <li><input disabled="" type="checkbox" checked=""/>
 <a href="https://web.stanford.edu/class/cs110l/slides/lecture-01.pdf">#01: Welcome to CS 110L</a></li>
+<li><input disabled="" type="checkbox" checked=""/>
+<a href="https://web.stanford.edu/class/cs110l/slides/lecture-02.pdf">#02: Program Analysis</a>
+<ul>
+<li>动态分析（Dynamic Analysis）
+<ul>
+<li>Fuzzing，模糊测试</li>
+<li><a href="https://llvm.org/docs/LibFuzzer.html">llvm - libFuzzer</a></li>
+<li><a href="https://github.com/google/oss-fuzz">Google - OSS-Fuzz</a></li>
+</ul>
+</li>
+<li>静态分析（Static Analysis）
+<ul>
+<li>&quot;linting&quot;, <a href="https://clang.llvm.org/extra/clang-tidy/">llvm - clang-tidy</a></li>
+<li>数据流（Dataflow）分析，分支判断</li>
+<li>局限：上下文有限，实际场景下很多问题都无法被发现</li>
+</ul>
+</li>
+<li>Precondition &amp; Postcondition, 一致性维护，e.g: <code>strncpy()</code>
+<ul>
+<li>C/C++ 语言中，这种一致性维护保证取决于开发者，是否能够让编译器/静态分析器保证？</li>
+<li>关键：C 语言诸多条件无法表达</li>
+</ul>
+</li>
+<li>类型系统（Type System）
+<ul>
+<li>C 语言类型系统：<strong>Simple != easy</strong></li>
+<li>如何通过类型系统在代码中表达&amp;维护前/后置条件？</li>
+<li>Next：Meet <a href="cs/class/../../programming-languages/rust/rust.html">Rust 🦀️</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><input disabled="" type="checkbox"/>
-<a href="https://web.stanford.edu/class/cs110l/slides/lecture-02.pdf">#02: Program Analysis</a></li>
+<a href="https://web.stanford.edu/class/cs110l/slides/lecture-03.pdf">#03: Memory Safety</a>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<a href="https://web.stanford.edu/class/cs110l/lecture-notes/lecture-03/">Lecture notes</a></li>
+</ul>
+</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="数据结构与算法"><a class="header" href="#数据结构与算法">数据结构与算法</a></h1>
 <p>基础中的基础，无用之用。</p>
