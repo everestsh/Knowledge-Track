@@ -214,17 +214,20 @@
 </li>
 </ul>
 </li>
-<li><input disabled="" type="checkbox"/>
-<a href="https://web.stanford.edu/class/cs110l/slides/lecture-03.pdf">#03: Memory Safety</a>
+<li>[🚀] <a href="https://web.stanford.edu/class/cs110l/slides/lecture-03.pdf">#03: Memory Safety</a>
 <ul>
-<li><input disabled="" type="checkbox"/>
+<li><input disabled="" type="checkbox" checked=""/>
 <a href="https://web.stanford.edu/class/cs110l/lecture-notes/lecture-03/">Lecture notes</a></li>
+<li>内存泄漏（Memory Leaks）：扩容时，旧数据内存没有释放</li>
+<li>重复释放（Double Free）：数据内存缓冲区被多次释放</li>
+<li>悬垂指针（Dangling Pointers）： 返回栈上的指针，但指向的内存已被释放</li>
 </ul>
 </li>
 </ul>
 <h2 id="随堂练习"><a class="header" href="#随堂练习">随堂练习</a></h2>
 <ul>
-<li>[🚀] <a href="https://web.stanford.edu/class/cs110l/assignments/week-1-exercises/">Week 1 Exercises</a>
+<li><input disabled="" type="checkbox" checked=""/>
+<a href="https://web.stanford.edu/class/cs110l/assignments/week-1-exercises/">Week 1 Exercises</a>
 <ul>
 <li>认识 C/C++ 中代码分析工具的局限性</li>
 <li>Static analysis: <code>clang-tidy</code></li>
@@ -246,7 +249,16 @@
 <li>晦涩、艰深，但可行。有更多现代编译系统替代。</li>
 </ul>
 </li>
-<li>更新 Makefile 支持 sanitizers</li>
+<li>更新 Makefile 支持 sanitizers
+<ul>
+<li><code>-fsanitize=address,leak,undefined</code> flag</li>
+</ul>
+</li>
+<li>模糊测试，开启 libFuzzer
+<ul>
+<li><code>-fsanitize=fuzzer,address,leak,undefined</code> flag</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
