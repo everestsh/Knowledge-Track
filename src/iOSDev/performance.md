@@ -41,6 +41,7 @@
 ### 包大小
 
 - [ImageOptim](https://imageoptim.com/howto.html) - 图片资源大小、加载优化工具
+- [WBBlades](https://github.com/wuba/WBBlades) - 基于 Mach-O文件 解析的工具集，包括无用代码检测、包大小分析等
 ## 书籍
 
 - 《高性能 iOS 应用开发》- 各方面的性能衡量到工程实践
