@@ -2414,7 +2414,16 @@ Potpourri</li>
 <a href="https://web.stanford.edu/class/cs110l/lecture-notes/lecture-03/">Lecture notes</a></li>
 <li>内存泄漏（Memory Leaks）：扩容时，旧数据内存没有释放</li>
 <li>重复释放（Double Free）：数据内存缓冲区被多次释放</li>
-<li>悬垂指针（Dangling Pointers）： 返回栈上的指针，但指向的内存已被释放</li>
+<li>悬垂指针（Dangling Pointers）： 返回栈上的指针，但指向的内存已被释放
+<ul>
+<li>迭代器失效（Iterator Invalidation）：旧容器指针由于扩容等原因被释放</li>
+</ul>
+</li>
+<li>什么是良好的代码？
+<ul>
+<li>前置/后置条件对于将代码分解为具有明确定义的接口的小块至关重要</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
