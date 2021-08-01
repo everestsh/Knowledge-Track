@@ -6,8 +6,6 @@
         <title>棒棒彬的第二大脑</title>
         <meta name="robots" content="noindex" />
         <!-- Custom HTML head -->
-        
-
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -86,7 +84,6 @@
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                
                 <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky bordered">
                     <div class="left-buttons">
@@ -2470,12 +2467,28 @@ Potpourri</li>
 </li>
 </ul>
 </li>
-<li>[🚀] <a href="https://web.stanford.edu/class/cs110l/slides/lecture-04.pdf">#04: Ownership continued</a>
+<li><input disabled="" type="checkbox" checked=""/>
+<a href="https://web.stanford.edu/class/cs110l/slides/lecture-04.pdf">#04: Ownership continued</a>
 <ul>
+<li>Ownership in Memory
+<ul>
+<li><code>Drop</code>特性</li>
+<li>转移所有权时浅拷贝变量「Shadow copy」,并将之前的变量弃用,避免「Double free」</li>
+<li>深拷贝,采用<code>clone</code>方法</li>
 <li>Rust 中部分类型的值直接在栈上存储,不用堆(integer types (u32), booleans)</li>
 <li>这些类型通常都默认实现了<code>Copy</code>特性</li>
 <li>如果拥有了<code>Copy</code>特性,则不能同时拥有<code>Drop</code>特性</li>
 <li>没有<code>Copy</code>特性,则默认所有权将转移</li>
+</ul>
+</li>
+<li>Borrowing++
+<ul>
+<li>Rust 中的变量默认不可变,须<code>mut</code>指定可变</li>
+<li><code>&amp;</code>(Borrowing)创建引用类型(Reference)</li>
+<li>引用规则:多个不可变引用或仅有一个可变引用</li>
+</ul>
+</li>
+<li>所有权机制和借用规则,可在编译时避免诸多内存问题</li>
 </ul>
 </li>
 </ul>
