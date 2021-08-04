@@ -85,3 +85,4 @@
 - [‎RocketSim for Xcode](https://apps.apple.com/cn/app/rocketsim-for-xcode/id1504940162)
 - [Xcode Releases | xcodereleases.com](https://xcodereleases.com/) - Xcode 版本信息合集
 - [XCMetrics](https://xcmetrics.io/) - 监测追踪 Xcode 编译性能指标
+- [Xcode Tips](http://xcodetips.com/)
