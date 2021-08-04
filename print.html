@@ -2511,7 +2511,45 @@ Potpourri</li>
 <li>Rust 中的<code>null</code>空值处理：<code>enum Option&lt;T&gt;</code></li>
 </ul>
 </li>
+<li><input disabled="" type="checkbox" checked=""/>
+<a href="https://web.stanford.edu/class/cs110l/lecture-notes/lecture-06/">#06: Custom Types I</a>
+<ul>
+<li>实现链表数据结构</li>
 </ul>
+</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust">struct Node {
+    value: i32,
+    next: Option&lt;Box&lt;Node&gt;&gt;,
+}
+
+fn main() {
+    let mut first = Box::new(Node {
+        value: 1,
+        next: None,
+    });
+    let mut second = Box::new(Node {
+        value: 2,
+        next: None,
+    });
+    let third = Box::new(Node {
+        value: 3,
+        next: None,
+    });
+
+    second.next = Some(third);
+    first.next = Some(second);
+
+    let mut curr: Option&lt;&amp;Box&lt;Node&gt;&gt; = Some(&amp;first);
+    while curr.is_some() {
+        // we can unwrap the Option because we know for sure that curr is Some
+        println!(&quot;{}&quot;, curr.unwrap().value);
+        let next: &amp;Option&lt;Box&lt;Node&gt;&gt; = &amp;curr.unwrap().next;
+        // Get an Option with a reference to the next element
+        curr = next.as_ref();
+    }
+}
+</code></pre></pre>
 <h2 id="随堂练习"><a class="header" href="#随堂练习">随堂练习</a></h2>
 <ul>
 <li><input disabled="" type="checkbox" checked=""/>
