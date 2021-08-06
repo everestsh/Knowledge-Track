@@ -71,6 +71,8 @@
       - [Move&Copy&Borrow 可视化](./programming-languages/rust/concepts/move_copy_borrow.md)
     - [《Rust 编程之道》阅读纪要](./programming-languages/rust/tao-of-rust.md)
 
+  - [C/C++/Objective-C](./programming-languages/c-style/c-style.md)
+
 - [网络](./networking/networking.md)
 
 - [开源世界](./open-source/open-source.md)
