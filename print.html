@@ -2550,6 +2550,37 @@ fn main() {
     }
 }
 </code></pre></pre>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+<a href="https://web.stanford.edu/class/cs110l/slides/lecture-07.pdf">#07: Custom Types II - Garbage collection</a>
+<ul>
+<li>思考：为什么 Rust 实现链表相比类似 Python 等语言看起来更复杂？</li>
+<li>C/C++ 面临的问题：什么时候合理释放内存？</li>
+<li>Rust 的解决方案：类型系统&amp;所有权&amp;借用机制</li>
+<li>更传统的内存安全机制：垃圾回收（Garbage collection）
+<ul>
+<li>无须关心内存释放</li>
+<li>运行时，系统会检测内存使用情况并适时回收释放</li>
+</ul>
+</li>
+<li>垃圾回收的缺点：
+<ul>
+<li>不可避免有一定运行时开销</li>
+<li>系统回收的运行打断</li>
+<li>回收时机不确定</li>
+<li>难以手动优化</li>
+</ul>
+</li>
+<li>总结
+<ul>
+<li>必要时使用支持垃圾回收的编程语言，但需要了解其局限性</li>
+<li>资源有限或对延时敏感的情况下，垃圾回收的编程语言不是好的选择</li>
+</ul>
+</li>
+<li>More：Rust 不仅仅是内存安全</li>
+</ul>
+</li>
+</ul>
 <h2 id="随堂练习"><a class="header" href="#随堂练习">随堂练习</a></h2>
 <ul>
 <li><input disabled="" type="checkbox" checked=""/>
