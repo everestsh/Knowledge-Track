@@ -453,7 +453,13 @@ fn main() {
 <span class="boring">}
 </span></code></pre></pre>
 </li>
-<li>[🚀] <a href="https://web.stanford.edu/class/cs110l/slides/lecture-11.pdf">#10 &amp; #11: Pitfalls in Multiprocessing &amp; II</a>
+</ul>
+<blockquote>
+<p>先修：<a href="http://web.stanford.edu/class/cs110">CS 110: Principles of Computer Systems</a></p>
+</blockquote>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+<a href="https://web.stanford.edu/class/cs110l/slides/lecture-11.pdf">#10 &amp; #11: Pitfalls in Multiprocessing &amp; II</a> ❓
 <ul>
 <li>
 <blockquote>
@@ -466,6 +472,8 @@ fn main() {
 <li>调用系统的外部功能</li>
 </ul>
 </li>
+<li>针对并发执行场景
+<ul>
 <li>可能出错的情况：
 <ul>
 <li>生成多个子进程时意外嵌套</li>
@@ -474,6 +482,29 @@ fn main() {
 <li>释放问题（僵尸进程）</li>
 </ul>
 </li>
+<li>最好将想要并发执行的任务放在单独的可执行文件</li>
+</ul>
+</li>
+<li>针对调用系统的外部功能场景
+<ul>
+<li>fork() &amp; exec()</li>
+</ul>
+</li>
+<li>Rust中的<code>Command</code></li>
+</ul>
+</li>
+<li>
+<blockquote>
+<p>不要调用<code>pipe()</code></p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>不要调用<code>signal()</code></p>
+</blockquote>
+<ul>
+<li>了解异步安全函数</li>
+<li><a href="https://github.com/Detegr/rust-ctrlc">Rust-CtrlC</a></li>
 </ul>
 </li>
 </ul>
