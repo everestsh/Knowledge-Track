@@ -2706,7 +2706,7 @@ fn main() {
 </li>
 </ul>
 </li>
-<li><input disabled="" type="checkbox"/>
+<li><input disabled="" type="checkbox" checked=""/>
 <a href="https://web.stanford.edu/class/cs110l/slides/lecture-12.pdf">#12: Chrome and Firefox</a>
 <ul>
 <li>进程间通讯
@@ -2737,6 +2737,27 @@ fn main() {
 <li>硬件接口</li>
 <li>运行 WebAssembly</li>
 <li>甚至是运行 Windows95：https://win95.ajf.me/</li>
+</ul>
+</li>
+<li>Chrome 设计
+<ul>
+<li>架构图
+<img src="cs/class/./cs110_assets/browserui.png" alt="Chrome 架构图" /></li>
+<li>70% 严重的安全问题由内存问题引起</li>
+<li>多进程沙盒隔离机制的问题：资源消耗</li>
+</ul>
+</li>
+<li>新方向：Servo
+<ul>
+<li><input disabled="" type="checkbox"/>
+<a href="https://www.youtube.com/watch?v=an5abNFba4Q">Servo 架构</a></li>
+<li>Rust 重构的限制：
+<ul>
+<li>完全重写不实际，大部分已有代码还将是 C++</li>
+<li>重写意味着会引入新 bug</li>
+<li>Rust 也还是有 unsafe 的部分</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
