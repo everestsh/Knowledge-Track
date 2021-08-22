@@ -586,9 +586,34 @@ fn main() {
 <a href="https://blog.rust-lang.org/2015/04/10/Fearless-Concurrency.html">Fearless Concurrency with Rust</a></li>
 </ul>
 </li>
+<li>代码示例</li>
 </ul>
 </li>
 </ul>
+<pre><pre class="playground"><code class="language-rust">extern crate rand;
+
+use rand::Rng;
+use std::{thread, time};
+
+const NUM_THREADS: u32 = 20;
+
+fn main() {
+    let mut threads = Vec::new();
+    println!(&quot;Spawning {} threads...&quot;, NUM_THREADS);
+    for _ in 0..NUM_THREADS {
+        threads.push(thread::spawn(|| {
+            let mut rng = rand::thread_rng();
+            thread::sleep(time::Duration::from_millis(rng.gen_range(0..=5000)));
+            println!(&quot;Thread finished running!&quot;);
+        }));
+    }
+    // wait for all the threads to finish
+    for handle in threads {
+        handle.join().expect(&quot;Panic happened inside of a thread!&quot;);
+    }
+    println!(&quot;All threads finished!&quot;);
+}
+</code></pre></pre>
 <h2 id="随堂练习"><a class="header" href="#随堂练习">随堂练习</a></h2>
 <ul>
 <li><input disabled="" type="checkbox" checked=""/>
