@@ -2763,7 +2763,7 @@ fn main() {
 </li>
 </ul>
 </li>
-<li><input disabled="" type="checkbox"/>
+<li><input disabled="" type="checkbox" checked=""/>
 <a href="https://web.stanford.edu/class/cs110l/slides/lecture-13.pdf">#13: Intro to Multithreading</a>
 <ul>
 <li>并发编程的注意点：
@@ -2812,6 +2812,10 @@ fn main() {
     println!(&quot;All threads finished!&quot;);
 }
 </code></pre></pre>
+<pre><code>- 共享所有权
+    - 不同线程共享所有权通过引用计数
+    - 使用 Mutex 协同不同线程对共享所有权的资源访问
+</code></pre>
 <h2 id="随堂练习"><a class="header" href="#随堂练习">随堂练习</a></h2>
 <ul>
 <li><input disabled="" type="checkbox" checked=""/>
