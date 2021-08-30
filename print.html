@@ -2816,6 +2816,67 @@ fn main() {
     - 不同线程共享所有权通过引用计数
     - 使用 Mutex 协同不同线程对共享所有权的资源访问
 </code></pre>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<a href="https://web.stanford.edu/class/cs110l/lecture-notes/lecture-14/">#14: Multithreading Practice</a></li>
+</ul>
+<pre><pre class="playground"><code class="language-rust">extern crate reqwest;
+extern crate select;
+#[macro_use]
+extern crate error_chain;
+
+use select::document::Document;
+use select::predicate::Name;
+
+error_chain! {
+   foreign_links {
+       ReqError(reqwest::Error);
+       IoError(std::io::Error);
+   }
+}
+
+const TARGET_PAGE: &amp;str = &quot;https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)&quot;;
+
+fn get_linked_pages(html_body: &amp;str) -&gt; Result&lt;Vec&lt;String&gt;&gt; {
+    Ok(Document::from_read(html_body.as_bytes())?
+        .find(Name(&quot;a&quot;))
+        .filter_map(|n| {
+            if let Some(link_str) = n.attr(&quot;href&quot;) {
+                if link_str.starts_with(&quot;/wiki/&quot;) {
+                    Some(format!(&quot;{}/{}&quot;, &quot;https://en.wikipedia.org&quot;, &amp;link_str[1..]))
+                } else {
+                    None
+                }
+            } else {
+                None
+            }
+        })
+        .collect::&lt;Vec&lt;String&gt;&gt;())
+}
+
+// Adapted from https://rust-lang-nursery.github.io/rust-cookbook/web/scraping.html
+fn main() -&gt; Result&lt;()&gt; {
+    let html_body = reqwest::blocking::get(TARGET_PAGE)?.text()?;
+    // Identify all linked wikipedia pages
+    let links = get_linked_pages(&amp;html_body)?;
+
+    let mut longest_article_url = &quot;&quot;.to_string();
+    let mut longest_article_len = 0;
+    for link in &amp;links {
+        let body = reqwest::blocking::get(link)?.text()?;
+        let curr_len = body.len();
+        if curr_len &gt; longest_article_len {
+            longest_article_len = curr_len;
+            longest_article_url = link.to_string();
+        }
+    }
+    println!(
+        &quot;{} was the longest article with length {}&quot;,
+        longest_article_url, longest_article_len
+    );
+    Ok(())
+}
+</code></pre></pre>
 <h2 id="随堂练习"><a class="header" href="#随堂练习">随堂练习</a></h2>
 <ul>
 <li><input disabled="" type="checkbox" checked=""/>
