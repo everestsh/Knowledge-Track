@@ -2817,7 +2817,7 @@ fn main() {
     - 使用 Mutex 协同不同线程对共享所有权的资源访问
 </code></pre>
 <ul>
-<li><input disabled="" type="checkbox"/>
+<li><input disabled="" type="checkbox" checked=""/>
 <a href="https://web.stanford.edu/class/cs110l/lecture-notes/lecture-14/">#14: Multithreading Practice</a></li>
 </ul>
 <pre><pre class="playground"><code class="language-rust">extern crate reqwest;
@@ -2877,6 +2877,28 @@ fn main() -&gt; Result&lt;()&gt; {
     Ok(())
 }
 </code></pre></pre>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<a href="https://web.stanford.edu/class/cs110l/slides/lecture-15.pdf">#15: Channels</a>
+<ul>
+<li>多线程的特点：
+<ul>
+<li>优点：
+<ul>
+<li>快速（相比多进程更少上下文切换）</li>
+<li>简单（共享内存可以方便地共用数据）</li>
+</ul>
+</li>
+<li>缺点：
+<ul>
+<li>容易造成数据竞态，且难以排查</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h2 id="随堂练习"><a class="header" href="#随堂练习">随堂练习</a></h2>
 <ul>
 <li><input disabled="" type="checkbox" checked=""/>
