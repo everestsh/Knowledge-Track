@@ -680,7 +680,7 @@ fn main() -&gt; Result&lt;()&gt; {
 }
 </code></pre></pre>
 <ul>
-<li><input disabled="" type="checkbox"/>
+<li><input disabled="" type="checkbox" checked=""/>
 <a href="https://web.stanford.edu/class/cs110l/slides/lecture-15.pdf">#15: Channels</a>
 <ul>
 <li>多线程的特点：
@@ -693,9 +693,38 @@ fn main() -&gt; Result&lt;()&gt; {
 </li>
 <li>缺点：
 <ul>
-<li>容易造成数据竞态，且难以排查</li>
+<li>容易造成数据竞态，且难以排查'</li>
 </ul>
 </li>
+</ul>
+</li>
+<li>如果不共享内存？
+<ul>
+<li>Golang：“Do not communicate by sharing memory; instead, share memory by communicating.”</li>
+<li>消息传递：各线程/进程通过互相消息传递进行交互</li>
+</ul>
+</li>
+<li>Channels：类似信号量（Semaphores)
+<ul>
+<li><code>let struct = receive_end.recv().unwrap()</code></li>
+<li><code>send_end.send(struct).unwrap()</code></li>
+</ul>
+</li>
+<li>Channels：类似强类型管道</li>
+<li>消息传递是否影响性能？
+<ul>
+<li>部分内存共享+浅拷贝</li>
+</ul>
+</li>
+<li>Channels API 和实现
+<ul>
+<li>MPMC (multi-producer, multi-consumer) channel</li>
+<li>The <a href="https://docs.rs/crossbeam">crossbeam</a> crate</li>
+</ul>
+</li>
+<li>Channels
+<ul>
+<li>对于全局变量值场景，channels 不合适</li>
 </ul>
 </li>
 </ul>
