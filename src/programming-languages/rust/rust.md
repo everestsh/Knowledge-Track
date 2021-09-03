@@ -51,6 +51,15 @@ cargo build --verbose
 rm -r ~/.cargo/.package-cache
 ```
 
+### 工具集
+
+- VSCode 扩展插件
+  - rust-analyzer
+  - rust syntax
+  - crates
+  - better toml
+  - Tabnine
+
 ## 链接
 
 - [PingCAP - Talent Plan](https://github.com/pingcap/talent-plan) - PingCAP 的 Rust 学习资源
