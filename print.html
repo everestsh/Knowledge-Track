@@ -2927,7 +2927,7 @@ fn main() -&gt; Result&lt;()&gt; {
 </li>
 </ul>
 </li>
-<li><input disabled="" type="checkbox"/>
+<li><input disabled="" type="checkbox" checked=""/>
 <a href="https://web.stanford.edu/class/cs110l/slides/lecture-16.pdf">#16: Scalability and Availability</a> ⭐️
 <ul>
 <li>网络基础知识（略：IP、DNS 解析……; 讲义中大量详尽的图解）
@@ -2942,6 +2942,44 @@ fn main() -&gt; Result&lt;()&gt; {
 </ul>
 </li>
 <li>可扩展性和可用性</li>
+<li>配置一个简单的服务
+<ul>
+<li>是否可扩展？
+<ul>
+<li>单机不具备可扩展性
+<ul>
+<li>单机提升性能要比多台机器扩展提升性能成本要高很多</li>
+</ul>
+</li>
+<li>横向扩展，而不是依赖单机性能提升</li>
+</ul>
+</li>
+<li>是否可用？
+<ul>
+<li>单机的资源随着负载增加会逐渐消耗资源</li>
+<li>单机会造成单点故障导致不可用（系统崩溃、硬件故障、网络异常等）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>分布式系统
+<ul>
+<li>将系统功能部署在分布式集群，来达到高可扩展和高可用</li>
+<li>分布式集群中的机器通过网络通信协作</li>
+</ul>
+</li>
+<li>横向扩展
+<ul>
+<li>分布式数据库</li>
+<li>负载均衡
+<ul>
+<li>「负载均衡的负载均衡」: DNS、IP Anycast
+<img src="cs/class/./cs110_assets/ditributed_system.png" alt="分布式系统" /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>面向失败设计</li>
 </ul>
 </li>
 </ul>
