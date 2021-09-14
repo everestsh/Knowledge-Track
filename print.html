@@ -3011,7 +3011,7 @@ fn main() -&gt; Result&lt;()&gt; {
 </li>
 </ul>
 </li>
-<li><input disabled="" type="checkbox"/>
+<li><input disabled="" type="checkbox" checked=""/>
 <a href="https://reberhardt.com/cs110l/spring-2021/slides/lecture-18.pdf">#18: Event-Driven Programming I</a>
 <ul>
 <li>思考：如何比多线程做得更好？</li>
@@ -3038,7 +3038,44 @@ fn main() -&gt; Result&lt;()&gt; {
 </li>
 </ul>
 </li>
-<li></li>
+<li>非阻塞 I/O
+<ul>
+<li>epoll</li>
+<li>挑战：状态管理
+<ul>
+<li>Future</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>trait Future { // This is a simplified version of the Future definition
+    type Output;
+    fn poll(&amp;mut self, cx: &amp;mut Context) -&gt; Poll&lt;Self::Output&gt;;
+    }
+    enum Poll&lt;T&gt; {
+        Ready(T),
+        Pending,
+}
+<span class="boring">}
+</span></code></pre></pre>
+</li>
+<li>executors</li>
+</ul>
+</li>
+<li>资料阅读
+<ul>
+<li><input disabled="" type="checkbox"/>
+<a href="https://www.youtube.com/watch?v=lJ3NC-R3gSI">Rust's Journey to Async/Await</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="https://www.youtube.com/watch?v=NNwK5ZPAJCk">The Talk You've Been Await-ing for</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="https://docs.rs/futures">The Rust Docs on Future</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="https://www.viget.com/articles/understanding-futures-in-rust-part-1/">Understanding Futures In Rust</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="https://stanford-cs242.github.io/f19/assignments/assign7/">CS242-Assignment 7: Futures</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
