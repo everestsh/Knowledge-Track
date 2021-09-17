@@ -879,7 +879,7 @@ fn main() -&gt; Result&lt;()&gt; {
 </li>
 </ul>
 </li>
-<li><input disabled="" type="checkbox"/>
+<li><input disabled="" type="checkbox" checked=""/>
 <a href="https://reberhardt.com/cs110l/spring-2021/slides/lecture-19.pdf">#19: Event-Driven Programming II</a>
 <ul>
 <li>Future 是什么？- https://docs.rs/futures
@@ -900,7 +900,28 @@ fn main() -&gt; Result&lt;()&gt; {
 <li>性能无影响</li>
 </ul>
 </li>
-<li>何时该写 Async 风格的代码？</li>
+<li>何时该写 Async 风格的代码？
+<ul>
+<li>回想下：最初是为了解决多线程的什么问题？
+<ul>
+<li>堆栈增加占用过多内存</li>
+<li>非必要的上下文切换开销</li>
+</ul>
+</li>
+<li>因此：考虑以下因素
+<ul>
+<li>超高并发场景</li>
+<li>I/O 密集型场景</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Async 风格代码指引
+<ul>
+<li>永远不要阻塞 async 代码</li>
+<li>仅在 async 方法中使用 await</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
