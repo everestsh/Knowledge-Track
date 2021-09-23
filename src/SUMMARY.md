@@ -32,6 +32,8 @@
 
   - [性能优化](./iOSDev/performance.md)
 
+  - [编译优化](./iOSDev/build-optimization.md)
+
   - [视图布局](./iOSDev/ui-layout.md)
 
   - [SwiftUI](./iOSDev/swift-ui.md)
