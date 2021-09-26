@@ -60,6 +60,8 @@ rm -r ~/.cargo/.package-cache
   - better toml
   - Tabnine
 
+- [cargo-xtask](https://github.com/matklad/cargo-xtask/) - （rust-analyzer [在用](https://rust-analyzer.github.io/rust-analyzer/xtask/index.html)的）构建辅助工具
+
 ## 链接
 
 - [PingCAP - Talent Plan](https://github.com/pingcap/talent-plan) - PingCAP 的 Rust 学习资源
