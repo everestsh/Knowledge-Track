@@ -25,6 +25,7 @@
 
 ## 工具集
 
+- [Tuist 🔧](https://docs.tuist.io/) - Xcode 工程生成、维护、交互的命令行工具
 - [notarytool](https://developer.apple.com/wwdc21/10261) - macOS App 分发验证服务
     ```sh
     // with notarytool
