@@ -2,6 +2,14 @@
 
 Meet geniuses. They are awesome.
 
+## iOS · Swift · Rust
+
+- **Nikolai Vazquez**：iOS + Rust @fullstory
+
+  - GitHub: https://github.com/nvzqz
+  - Twitter: https://twitter.com/NikolaiVazquez
+  - Other: https://github.com/rustswift
+
 ## iOS Dev related field
 
 - **Sergej Jaskiewicz**：Compiler engineer and iOS developer
