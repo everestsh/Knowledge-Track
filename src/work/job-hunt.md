@@ -6,6 +6,8 @@
 
 ## 链接
 
+- [Get your first software developer job · GitHub](https://github.com/readme/guides/first-job-in-tech) - GitHub Readme 项目出品：如何找到第一份开发者工作，非常适合新人。
+  - [ ] 结合国内环境翻译整理
 - [iOS Interview Questions for Senior Developers in 2020](https://iosinterviewguide.com/ios-interview-questions-for-senior-developers-in-2020)
 - [冷熊简历](https://cv.ftqq.com/) - Markdown 编写简历
 
