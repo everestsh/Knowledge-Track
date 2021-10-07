@@ -25,3 +25,27 @@
   - [基于 OpenCV 的人脸识别](https://objccn.io/issue-21-9)  
 
 - [《揭秘微视——视频特效与非线性编辑技术内幕》](https://zhuanlan.zhihu.com/p/38469443) ✅
+
+- [Dispatches From Darkroom - Medium](https://medium.com/the-bergen-company) - Darkroom 博客专栏
+  - [Improving Your Darkroom Editing Experience](https://medium.com/the-bergen-company/improving-your-darkroom-editing-experience-f0ddb66b689e)
+    <details>
+            <summary>笔记概览</summary>
+  
+    - **图片加载**
+      - 性能优化
+      - 通过预加载，避免不必要的低分辨预览图展示
+      - 交互上明确体现相册本地加载和 iCloud 下载的差异
+      - 其他优化：
+        - 编辑图片时，暂停图片库操作，提供更流畅的交互体验
+        - 所有图片视图共享同一个图片加载器，确保实时更新、资源共享与性能
+        - 降低缓存层内存占用量
+    - **RAW + JPG 图片支持**
+      - 提供默认加载选项
+      - 角标标识 RAW 或 JPG
+    - **裁切和变换**
+      - 优化横纵比选项
+    - **相册应用扩展**
+      - 导出性能优化
+      - 视频支持 HDR & 缩略图优化
+      - UI 交互优化：双击图片直接添加
+    </details>
