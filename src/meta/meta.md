@@ -16,6 +16,17 @@
 4. 记录正文
 5. 链接
 
+## 笔记概要
+
+部分精华内容阅读后，可采用以下方式进行摘要记录，内容支持展开或折叠。
+```html
+<details>
+  <summary>笔记概览</summary>
+  
+  记录笔记内容
+</details>
+```
+
 # 搭建、记录与发布
 
 - [VS Code](https://code.visualstudio.com/) + [Typora](https://typora.io/) 书写 ✍️
