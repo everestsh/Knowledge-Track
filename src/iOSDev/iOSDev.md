@@ -16,6 +16,8 @@
 ## Meta
 
 - [Apple Developer Documentation](https://developer.apple.com/documentation/)
+- [Apple Developer Documentation Archive](https://developer.apple.com/library/archive/navigation) —— 2018 年及之前的历史开发文档说明
+  - [What's New in iOS](https://developer.apple.com/library/archive/releasenotes/General/WhatsNewIniOS/Introduction/Introduction.html) —— iOS 11.0 及之前的更新说明
 
 ## 编译
 
