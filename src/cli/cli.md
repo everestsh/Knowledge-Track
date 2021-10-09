@@ -4,6 +4,7 @@
 
 ## 工具
 
+- [`tree`]() - 文件目录展示工具
 - [`bat`](https://github.com/sharkdp/bat) - A cat(1) clone with syntax highlighting and Git integration.
 - [`tokei`](https://github.com/XAMPPRocky/tokei) - 代码量统计工具
 
