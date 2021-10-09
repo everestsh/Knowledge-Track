@@ -1,7 +1,9 @@
 # 产品
 
 > 产品经理：能够**独当一面**做好让**用户**满意的**产品**的人
+>   - 核心工作：决定什么是“正确的事”，推动做好“正确的事”
 
 ## 视频剪辑
 
+- [Height](https://height.app/) - 项目管理协同工具
 - [Frame.io | Video Review and Collaboration Software](https://www.frame.io/) - 视频剪辑工作流协同工具
