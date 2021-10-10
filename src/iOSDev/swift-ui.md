@@ -20,6 +20,13 @@
 - [AppKit is Done](https://kean.blog/post/appkit-is-done) - SwiftUI macOS 开发经验分享
   - 源码：[Pulse](https://github.com/kean/Pulse), 结构化日志应用
 
+### WWDC
+
+- SwiftUI on the Mac - WWDC21 编程临摹课程，开发 macOS App 变得更易上手了
+  - 10062: [SwiftUI on the Mac: Build the Fundamentals](https://developer.apple.com/wwdc21/10062/)
+  - 10289: [SwiftUI on the Mac: The Finishing Touches](https://developer.apple.com/wwdc21/10289/)
+  - 示例代码：Building a Great Mac App with SwiftUI
+
 ## Tips 
 
 - 了解 SwiftUI 更多的接口细节
