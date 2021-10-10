@@ -85,6 +85,8 @@
 
 - [教育](./education/education.md)
 
+- [生活](./life/life.md)
+
 - [工作](./work/work.md)
 
   - [求职](./work/job-hunt.md)
