@@ -230,6 +230,53 @@ notarytool submit path/to/submission.zip --wait
 <li><a href="https://developer.apple.com/videos/play/wwdc2019/429/">LLDB: Beyond &quot;po&quot; - WWDC19</a></li>
 <li><a href="https://developer.apple.com/videos/play/wwdc2018/412">Advanced Debugging with Xcode and LLDB - WWDC18</a></li>
 </ul>
+<h3 id="自定义文件顶部注释"><a class="header" href="#自定义文件顶部注释">自定义文件顶部注释</a></h3>
+<ul>
+<li>模板（MIT License）</li>
+</ul>
+<pre><code class="language-plist">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;
+&lt;plist version=&quot;1.0&quot;&gt;
+&lt;dict&gt;
+	&lt;key&gt;FILEHEADER&lt;/key&gt;
+	&lt;string&gt;
+//  ___FILENAME___
+//  ___PROJECTNAME___
+//
+//  Copyright © ___YEAR___ ___FULLUSERNAME___
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the &amp;quot;Software&amp;quot;), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in all
+//  copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED &amp;quot;AS IS&amp;quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//  SOFTWARE.
+//&lt;/string&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;
+</code></pre>
+<ul>
+<li>放置位置
+<ul>
+<li><code>&lt;ProjectName&gt;.xcodeproj/xcuserdata/[username].xcuserdatad/IDETemplateMacros.plist</code></li>
+<li><code>&lt;ProjectName&gt;.xcodeproj/xcshareddata/IDETemplateMacros.plist</code></li>
+<li><code>&lt;WorkspaceName&gt;.xcworkspace/xcuserdata/[username].xcuserdatad/IDETemplateMacros.plist</code></li>
+<li><code>&lt;WorkspaceName&gt;.xcworkspace/xcshareddata/IDETemplateMacros.plist</code></li>
+<li><code>~/Library/Developer/Xcode/UserData/IDETemplateMacros.plist</code></li>
+</ul>
+</li>
+</ul>
 <h2 id="链接"><a class="header" href="#链接">链接</a></h2>
 <ul>
 <li>
