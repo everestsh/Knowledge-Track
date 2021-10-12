@@ -64,6 +64,21 @@
     - Runtime Issues Breakpoint
 - [LLDB: Beyond "po" - WWDC19](https://developer.apple.com/videos/play/wwdc2019/429/)
 - [Advanced Debugging with Xcode and LLDB - WWDC18](https://developer.apple.com/videos/play/wwdc2018/412)
+
+### 自定义文件顶部注释
+
+- 模板（MIT License）
+
+```plist
+{{#include ./assets/IDETemplateMacros.plist}}
+```
+
+- 放置位置
+    - `<ProjectName>.xcodeproj/xcuserdata/[username].xcuserdatad/IDETemplateMacros.plist`
+    - `<ProjectName>.xcodeproj/xcshareddata/IDETemplateMacros.plist`
+    - `<WorkspaceName>.xcworkspace/xcuserdata/[username].xcuserdatad/IDETemplateMacros.plist`
+    - `<WorkspaceName>.xcworkspace/xcshareddata/IDETemplateMacros.plist`
+    - `~/Library/Developer/Xcode/UserData/IDETemplateMacros.plist`
     
 ## 链接
 
