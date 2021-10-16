@@ -61,6 +61,7 @@ rm -r ~/.cargo/.package-cache
   - Tabnine
 
 - [cargo-xtask](https://github.com/matklad/cargo-xtask/) - （rust-analyzer [在用](https://rust-analyzer.github.io/rust-analyzer/xtask/index.html)的）构建辅助工具
+- [JSON to Rust Serde](https://transform.tools/json-to-rust-serde) - 快速通过 JSON 生成 Rust Serde 代码
 
 ## 链接
 
