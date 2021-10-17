@@ -142,46 +142,9 @@
                     <main>
                         <h1 id="rust"><a class="header" href="#rust">Rust</a></h1>
 <blockquote>
-<p>性能、安全、抽象易用，向编译器学习（di tou）。</p>
+<p>性能、安全、抽象易用，向编译器学习（di tou🙈）。</p>
 </blockquote>
-<h2 id="qa-速查"><a class="header" href="#qa-速查">Q&amp;A 速查</a></h2>
-<ul>
-<li>如何加速 crates.io-index 更新速度？</li>
-</ul>
-<p>执行以下命令更换镜像源</p>
-<pre><code class="language-sh">tee $HOME/.cargo/config &lt;&lt;-'EOF'
-[source.crates-io]
-registry = &quot;https://github.com/rust-lang/crates.io-index&quot;
-replace-with = 'ustc'
-[source.ustc]
-registry = &quot;git://mirrors.ustc.edu.cn/crates.io-index&quot;
-EOF
-</code></pre>
-<ul>
-<li>私有库 ssh 下载失败如何解决？</li>
-</ul>
-<p>参考报错信息：</p>
-<pre><code>Caused by:
-  failed to authenticate when downloading repository
-attempted ssh-agent authentication, but none of the usernames `git` succeeded
-attempted to find username/password via git's `credential.helper` support, but failed
-
-Caused by:
-  failed to acquire username/password from local configuration
-</code></pre>
-<p>解决办法：</p>
-<pre><code class="language-sh">ssh-add -K ~/.ssh/id_rsa
-</code></pre>
-<ul>
-<li>Cargo build 时报<code>Blocking waiting for file lock on package cache</code>.</li>
-</ul>
-<pre><code>cargo build --verbose
-    Blocking waiting for file lock on package cache
-</code></pre>
-<p>解决办法：</p>
-<pre><code>rm -r ~/.cargo/.package-cache
-</code></pre>
-<h3 id="工具集"><a class="header" href="#工具集">工具集</a></h3>
+<h2 id="工具集"><a class="header" href="#工具集">工具集</a></h2>
 <ul>
 <li>
 <p>VSCode 扩展插件</p>
@@ -191,6 +154,7 @@ Caused by:
 <li>crates</li>
 <li>better toml</li>
 <li>Tabnine</li>
+<li>Error Lens</li>
 </ul>
 </li>
 <li>
@@ -198,6 +162,9 @@ Caused by:
 </li>
 <li>
 <p><a href="https://transform.tools/json-to-rust-serde">JSON to Rust Serde</a> - 快速通过 JSON 生成 Rust Serde 代码</p>
+</li>
+<li>
+<p><a href="https://cheats.rs/">Rust Cheat Sheet</a> - <a href="https://cheats.rs/rust_cheat_sheet.pdf">PDF</a> - 速查表</p>
 </li>
 </ul>
 <h2 id="链接"><a class="header" href="#链接">链接</a></h2>
@@ -211,7 +178,6 @@ Caused by:
 <li><a href="https://leaxoy.github.io/2020/03/rust-async-runtime/">Rust异步浅谈</a></li>
 <li><a href="https://rust-lang-nursery.github.io/rust-cookbook/">Rust Cookbook</a> - Rust 优秀实践示例集锦</li>
 <li><a href="https://nnethercote.github.io/perf-book/">The Rust Performance Book</a> - Rust 性能之书</li>
-<li><a href="https://github.com/rust-lang/rustlings">Rustlings</a> - 官方的命令行交互式练习 🌟🌟🌟🌟🌟</li>
 <li><a href="https://rust-unofficial.github.io/patterns/">Rust Design Patterns</a></li>
 </ul>
 <h3 id="实践经验分享"><a class="header" href="#实践经验分享">实践经验分享</a></h3>
@@ -256,16 +222,62 @@ Caused by:
 <li><a href="https://github.com/rayon-rs/rayon">rayon-rs/rayon</a> - 数据并发</li>
 <li><a href="https://github.com/dotenv-rs/dotenv">dotenv-rs/dotenv</a> - 通过<code>.env</code>文件配置与读取环境变量</li>
 </ul>
-<h3 id="视频教程"><a class="header" href="#视频教程">视频教程</a></h3>
+<h3 id="教程"><a class="header" href="#教程">教程</a></h3>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=QoatPlzc0-Y">Rust &amp; Tell Berlin September 2021 - Bastian Gruber: Learning Rust - One tutorial to rule them all</a> <img src="https://img.shields.io/badge/Progress-100%25-brightgreen" alt="Progress" />
+<li><input disabled="" type="checkbox" checked=""/>
+<a href="https://www.youtube.com/watch?v=QoatPlzc0-Y">Rust &amp; Tell Berlin September 2021 - Bastian Gruber: Learning Rust - One tutorial to rule them all</a> <img src="https://img.shields.io/badge/Progress-100%25-brightgreen" alt="Progress" />
 <ul>
 <li><a href="https://git.sr.ht/%7Egruberb/onetutorial/">OneTutorial</a> - Rust 快速实践（🌟 新手强烈推荐）</li>
 </ul>
 </li>
-<li><a href="https://docs.microsoft.com/en-us/learn/paths/rust-first-steps/">Take your first steps with Rust</a> - 微软学院出品的 Rust 学习路径 <img src="https://img.shields.io/badge/Progress-100%25-brightgreen" alt="Progress" /></li>
-<li><a href="https://www.youtube.com/watch?v=2mwwYbBRJSo">Rust Stream: Ownership, Closures, and Threads - Oh My!</a></li>
+<li><input disabled="" type="checkbox" checked=""/>
+<a href="https://docs.microsoft.com/en-us/learn/paths/rust-first-steps/">Take your first steps with Rust</a> - 微软学院出品的 Rust 学习路径 <img src="https://img.shields.io/badge/Progress-100%25-brightgreen" alt="Progress" /></li>
+<li><input disabled="" type="checkbox" checked=""/>
+<a href="https://github.com/rust-lang/rustlings">Rustlings</a> - 官方的命令行交互式练习 🌟🌟🌟🌟🌟 
+<ul>
+<li><a href="https://github.com/Binlogo/Rustlings-Track">Rustlings-Track</a> <img src="https://img.shields.io/badge/Progress-100%25-brightgreen" alt="Progress" /></li>
 </ul>
+</li>
+<li><input disabled="" type="checkbox"/>
+<a href="https://www.youtube.com/watch?v=2mwwYbBRJSo">Rust Stream: Ownership, Closures, and Threads - Oh My!</a></li>
+</ul>
+<h2 id="qa-速查"><a class="header" href="#qa-速查">Q&amp;A 速查</a></h2>
+<ul>
+<li>如何加速 crates.io-index 更新速度？</li>
+</ul>
+<p>执行以下命令更换镜像源</p>
+<pre><code class="language-sh">tee $HOME/.cargo/config &lt;&lt;-'EOF'
+[source.crates-io]
+registry = &quot;https://github.com/rust-lang/crates.io-index&quot;
+replace-with = 'ustc'
+[source.ustc]
+registry = &quot;git://mirrors.ustc.edu.cn/crates.io-index&quot;
+EOF
+</code></pre>
+<ul>
+<li>私有库 ssh 下载失败如何解决？</li>
+</ul>
+<p>参考报错信息：</p>
+<pre><code>Caused by:
+  failed to authenticate when downloading repository
+attempted ssh-agent authentication, but none of the usernames `git` succeeded
+attempted to find username/password via git's `credential.helper` support, but failed
+
+Caused by:
+  failed to acquire username/password from local configuration
+</code></pre>
+<p>解决办法：</p>
+<pre><code class="language-sh">ssh-add -K ~/.ssh/id_rsa
+</code></pre>
+<ul>
+<li>Cargo build 时报<code>Blocking waiting for file lock on package cache</code>.</li>
+</ul>
+<pre><code>cargo build --verbose
+    Blocking waiting for file lock on package cache
+</code></pre>
+<p>解决办法：</p>
+<pre><code>rm -r ~/.cargo/.package-cache
+</code></pre>
 
                     </main>
 
