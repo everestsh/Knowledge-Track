@@ -11,6 +11,10 @@
 - [NextLevel](https://github.com/NextLevel/NextLevel) - Rad Media Capture in Swift
 - [Professional Video Applications - Apple Developer Documentation](https://developer.apple.com/documentation/professional_video_applications)
 
+### 技术说明文档
+
+- [Incorporating HDR video with Dolby Vision into your apps](https://developer.apple.com/av-foundation/Incorporating-HDR-video-with-Dolby-Vision-into-your-apps.pdf) - 支持杜比视界的 HD
+
 ### 文章
 
 - [Camera and Photos](https://www.objc.io/issues/21-camera-and-photos/) - Objc.io 相机与照片（[中文](https://objccn.io/issue-21-0/)）
