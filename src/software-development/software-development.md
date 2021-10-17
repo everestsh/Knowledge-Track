@@ -8,6 +8,17 @@
 - [Kotlin Multiplatform Mobile](https://kotlinlang.org/lp/mobile/) - 采用 Kotlin 的官方移动端跨平台方案
 - [QuickType](https://quicktype.io/) - 快速将 JSON 转为各种语言的 Model
 - [GNU make manual](https://www.gnu.org/software/make/manual/html_node/index.html) - GNU make 手册
+- [The Laws of Magic - YouTube](https://www.youtube.com/watch?v=T9vRBioadYc) - 以魔法法则的方式介绍软件系统设计的一些原则
+    - [演讲 PDF](https://github.com/tryswift/tokyo2019slides/blob/master/DaveDeLong/The%20Laws%20of%20Magic.pdf)
+    <details>
+    <summary>笔记概览</summary>
+    
+    - 为什么说是魔法？
+        - 任何足够先进的技术都与魔法无异
+    - 魔法第一法则：作者用魔法解决问题的能力与读者对魔法的理解程度成正比
+    - 魔法第二法则：限制 > 权限
+    - 魔法第三法则：在添加新内容之前优先考虑扩展您已有的内容
+    </details>
 
 ### 音视频
 
