@@ -2,6 +2,22 @@
 
 讲述一个 `1 + 1 > 2` 的简单故事
 
+## 备忘
+
+### 常用特殊端口
+
+| 服务、协议或应用                     | 端口号 | TCP or UDP |
+| ------------------------------------ | ------ | ---------- |
+| FTP (File Transfer Protocol)         | 20，21 | TCP        |
+| SSH (Secure Shell Protocol)          | 22     | TCP        |
+| Telnet                               | 23     | TCP        |
+| SMTP (Simple Mail Transfer Protocol) | 25     | TCP        |
+| DNS (Domain Name System)             | 53     | UDP        |
+| HTTP                                 | 80     | TCP        |
+| POP3                                 | 110    | TCP        |
+| IMAP4                                | 143    | TCP        |
+| HTTPS                                | 443    | TCP        |
+
 ## 链接
 
 - [NATS.io 消息系统协议](https://docs.nats.io/)
