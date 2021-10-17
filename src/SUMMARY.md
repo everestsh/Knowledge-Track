@@ -71,6 +71,7 @@
       - [化解神奇的闭包](./programming-languages/rust/concepts/closure.md)
       - [Rust 中的可变与不可变以及 Cell 的使用](./programming-languages/rust/concepts/interior_mutability_and_cells.md)
       - [Move&Copy&Borrow 可视化](./programming-languages/rust/concepts/move_copy_borrow.md)
+      - [内存布局可视化](./programming-languages/rust/concepts/memory_layout.md)
     - [《Rust 编程之道》阅读纪要](./programming-languages/rust/tao-of-rust.md)
 
   - [C/C++/Objective-C](./programming-languages/c-style/c-style.md)
