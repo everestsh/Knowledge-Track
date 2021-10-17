@@ -88,6 +88,12 @@ L0（low-level knowledge)
 
 关键字：**洞察**、**判断**、**觉知**
 
+# 不断优化提升
+
+![优化提升示意图](./assets/improvement_cycle.png)
+
+> 源自: https://tyrchen.github.io/rust-training/rust-training-all-in-one-cn.html#4 
+
 ## 链接 
 
 - [职场人士应该学什么以及学习方法（编码领域）](https://jingwei.link/2020/04/05/learning-methodology.html)
