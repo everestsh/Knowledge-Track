@@ -2204,6 +2204,10 @@ typedef struct __CFRuntimeBase {
 <li><a href="https://github.com/NextLevel/NextLevel">NextLevel</a> - Rad Media Capture in Swift</li>
 <li><a href="https://developer.apple.com/documentation/professional_video_applications">Professional Video Applications - Apple Developer Documentation</a></li>
 </ul>
+<h3 id="技术说明文档"><a class="header" href="#技术说明文档">技术说明文档</a></h3>
+<ul>
+<li><a href="https://developer.apple.com/av-foundation/Incorporating-HDR-video-with-Dolby-Vision-into-your-apps.pdf">Incorporating HDR video with Dolby Vision into your apps</a> - 支持杜比视界的 HD</li>
+</ul>
 <h3 id="文章"><a class="header" href="#文章">文章</a></h3>
 <ul>
 <li>
@@ -3430,15 +3434,65 @@ fn main() -&gt; Result&lt;()&gt; {
 <p>赋能他人，适应环境，响应变化。</p>
 <h2 id="链接-18"><a class="header" href="#链接-18">链接</a></h2>
 <ul>
-<li><a href="https://www.gtk.org/">GTK.org - Create interfaces that users just love</a> - 创建跨平台 UI 界面</li>
-<li><a href="https://kotlinlang.org/lp/mobile/">Kotlin Multiplatform Mobile</a> - 采用 Kotlin 的官方移动端跨平台方案</li>
-<li><a href="https://quicktype.io/">QuickType</a> - 快速将 JSON 转为各种语言的 Model</li>
-<li><a href="https://www.gnu.org/software/make/manual/html_node/index.html">GNU make manual</a> - GNU make 手册</li>
+<li>
+<p><a href="https://www.gtk.org/">GTK.org - Create interfaces that users just love</a> - 创建跨平台 UI 界面</p>
+</li>
+<li>
+<p><a href="https://kotlinlang.org/lp/mobile/">Kotlin Multiplatform Mobile</a> - 采用 Kotlin 的官方移动端跨平台方案</p>
+</li>
+<li>
+<p><a href="https://quicktype.io/">QuickType</a> - 快速将 JSON 转为各种语言的 Model</p>
+</li>
+<li>
+<p><a href="https://www.gnu.org/software/make/manual/html_node/index.html">GNU make manual</a> - GNU make 手册</p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=T9vRBioadYc">The Laws of Magic - YouTube</a> - 以魔法法则的方式介绍软件系统设计的一些原则</p>
+<ul>
+<li><a href="https://github.com/tryswift/tokyo2019slides/blob/master/DaveDeLong/The%20Laws%20of%20Magic.pdf">演讲 PDF</a></li>
+</ul>
+<details>
+  <summary>笔记概览</summary>
+<ul>
+<li>为什么说是魔法？
+<ul>
+<li>任何足够先进的技术都与魔法无异</li>
+</ul>
+</li>
+<li>魔法第一法则：作者用魔法解决问题的能力与读者对魔法的理解程度成正比</li>
+<li>魔法第二法则：限制 &gt; 权限</li>
+<li>魔法第三法则：在添加新内容之前优先考虑扩展您已有的内容</li>
+</ul>
+</details>
+</li>
 </ul>
 <h3 id="音视频-1"><a class="header" href="#音视频-1">音视频</a></h3>
 <ul>
 <li><a href="https://github.com/AudioKit/AudioKit">AudioKit</a> - Apple 平台音频开发框架</li>
 <li><a href="https://developer.apple.com/av-foundation/">AVFoundation</a> - Apple 开发者官网 AVFoundation 资源</li>
+</ul>
+<h3 id="源码剖析"><a class="header" href="#源码剖析">源码剖析</a></h3>
+<ul>
+<li>Telegram-iOS 源码导读
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+<a href="https://hubo.dev/2020-05-07-source-code-walkthrough-of-telegram-ios-part-1/">Source Code Walkthrough of Telegram-iOS: Part 1</a></li>
+<li><input disabled="" type="checkbox" checked=""/>
+<a href="https://hubo.dev/2020-05-11-source-code-walkthrough-of-telegram-ios-part-2/">Source Code Walkthrough of Telegram-iOS Part 2: SSignalKit</a></li>
+<li><input disabled="" type="checkbox" checked=""/>
+<a href="https://hubo.dev/2020-05-15-source-code-walkthrough-of-telegram-ios-part-3/">Source Code Walkthrough of Telegram-iOS Part 3: Other Foundations</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="https://hubo.dev/2020-06-05-source-code-walkthrough-of-telegram-ios-part-4/">Source Code Walkthrough of Telegram-iOS Part 4: MTProto Connections</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="https://hubo.dev/2020-06-14-source-code-walkthrough-of-telegram-ios-part-5/">Source Code Walkthrough of Telegram-iOS Part 5: AsyncDisplayKit</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="https://hubo.dev/2020-06-22-source-code-walkthrough-of-telegram-ios-part-6/">Source Code Walkthrough of Telegram-iOS Part 6: Bubbles</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="https://hubo.dev/2020-07-12-source-code-walkthrough-of-telegram-ios-part-7/">Source Code Walkthrough of Telegram-iOS Part-7: Link Preview and Instant View</a></li>
+<li><input disabled="" type="checkbox"/>
+TODO: 精华摘要</li>
+</ul>
+</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="编程语言"><a class="header" href="#编程语言">编程语言</a></h1>
 <p>学习、应用并融汇贯通各种编程语言。</p>
@@ -4519,6 +4573,19 @@ pub const fn get(&amp;self) -&gt; *mut T {
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="网络"><a class="header" href="#网络">网络</a></h1>
 <p>讲述一个 <code>1 + 1 &gt; 2</code> 的简单故事</p>
+<h2 id="备忘"><a class="header" href="#备忘">备忘</a></h2>
+<h3 id="常用特殊端口"><a class="header" href="#常用特殊端口">常用特殊端口</a></h3>
+<table><thead><tr><th>服务、协议或应用</th><th>端口号</th><th>TCP or UDP</th></tr></thead><tbody>
+<tr><td>FTP (File Transfer Protocol)</td><td>20，21</td><td>TCP</td></tr>
+<tr><td>SSH (Secure Shell Protocol)</td><td>22</td><td>TCP</td></tr>
+<tr><td>Telnet</td><td>23</td><td>TCP</td></tr>
+<tr><td>SMTP (Simple Mail Transfer Protocol)</td><td>25</td><td>TCP</td></tr>
+<tr><td>DNS (Domain Name System)</td><td>53</td><td>UDP</td></tr>
+<tr><td>HTTP</td><td>80</td><td>TCP</td></tr>
+<tr><td>POP3</td><td>110</td><td>TCP</td></tr>
+<tr><td>IMAP4</td><td>143</td><td>TCP</td></tr>
+<tr><td>HTTPS</td><td>443</td><td>TCP</td></tr>
+</tbody></table>
 <h2 id="链接-23"><a class="header" href="#链接-23">链接</a></h2>
 <ul>
 <li>
@@ -4537,7 +4604,7 @@ pub const fn get(&amp;self) -&gt; *mut T {
 <blockquote>
 <p>雕刻互联网基石</p>
 </blockquote>
-<h2 id="备忘"><a class="header" href="#备忘">备忘</a></h2>
+<h2 id="备忘-1"><a class="header" href="#备忘-1">备忘</a></h2>
 <ul>
 <li><code>TCP_NODELAY</code>选项：
 <ul>
