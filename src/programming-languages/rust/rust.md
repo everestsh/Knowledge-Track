@@ -14,9 +14,10 @@
     - better toml
     - Tabnine
     - Error Lens
-   - 配置选项：
+  - 配置选项：
     - 括号对着色
     - 括号对指南
+- [Rust Search Extension](https://rust.extension.sh/) - 浏览器搜索扩展插件
 
 - [cargo-xtask](https://github.com/matklad/cargo-xtask/) - （rust-analyzer [在用](https://rust-analyzer.github.io/rust-analyzer/xtask/index.html)的）构建辅助工具
 - [JSON to Rust Serde](https://transform.tools/json-to-rust-serde) - 快速通过 JSON 生成 Rust Serde 代码
