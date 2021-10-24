@@ -74,6 +74,7 @@
 - [getditto/safer_ffi](https://github.com/getditto/safer_ffi) - 更安全地写 FFI 代码
 - [rayon-rs/rayon](https://github.com/rayon-rs/rayon) - 数据并发
 - [dotenv-rs/dotenv](https://github.com/dotenv-rs/dotenv) - 通过`.env`文件配置与读取环境变量
+- [BLAKE3-team/BLAKE3](https://github.com/BLAKE3-team/BLAKE3) - BLAKE3 加密哈希算法官方实现
 
 ### 教程
 
