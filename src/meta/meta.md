@@ -15,6 +15,9 @@
 3. 相关内容
 4. 记录正文
 5. 链接
+6. 评论交流
+
+> 评论系统采用 [giscus](https://giscus.app/) 搭建，基于 [GitHub Discussions](https://docs.github.com/discussions) 驱动
 
 ## 笔记概要
 
