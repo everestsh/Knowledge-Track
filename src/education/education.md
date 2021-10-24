@@ -16,5 +16,6 @@
 
 ### 计算机&互联网
 
+- [Exercism.org](https://exercism.org/) - 开源&非盈利的编程语言练习平台，导师代码评审
 - [微软 - Microsoft Learn](https://docs.microsoft.com/learn/)
 - [优达学城 - Udacity](https://www.udacity.com/) - 曾以「优达学城」的品牌在中国市场推广，似乎还是水土不服，不再中文本地化
