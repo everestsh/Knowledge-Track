@@ -192,7 +192,11 @@
 <li>相关内容</li>
 <li>记录正文</li>
 <li>链接</li>
+<li>评论交流</li>
 </ol>
+<blockquote>
+<p>评论系统采用 <a href="https://giscus.app/">giscus</a> 搭建，基于 <a href="https://docs.github.com/discussions">GitHub Discussions</a> 驱动</p>
+</blockquote>
 <h2 id="笔记概要"><a class="header" href="#笔记概要">笔记概要</a></h2>
 <p>部分精华内容阅读后，可采用以下方式进行摘要记录，内容支持展开或折叠。</p>
 <pre><code class="language-html">&lt;details&gt;
@@ -1098,6 +1102,9 @@ pod setup
 </li>
 <li>
 <p><a href="macOS/./alfred.html">Alfred</a> - 快捷打开任意应用或工作流</p>
+</li>
+<li>
+<p><a href="https://excalidraw.com/">Excalidraw</a> - 手绘风格的画图应用，适合流程图、架构图绘制与展示</p>
 </li>
 <li>
 <p><a href="macOS/./contexts.html">Contexts</a> - 快速窗口切换</p>
@@ -3663,6 +3670,7 @@ Using different groups of properties in the two methods can lead to unexpected b
 </ul>
 <h2 id="链接-19"><a class="header" href="#链接-19">链接</a></h2>
 <ul>
+<li><a href="https://ci.swift.org/">Swift CI</a> - Swift 官方的持续构建集成平台</li>
 <li><a href="https://www.whatsnewinswift.com/">What's new in Swift?</a></li>
 <li><a href="https://github.com/uber/swift-concurrency">Swift Concurrency by Uber</a> - Uber 开源的并发编程实用工具</li>
 <li><a href="https://github.com/guillermomuntaner/Burritos">Burritos</a> - Swift Property Wrappers 特性应用合集</li>
@@ -4011,8 +4019,6 @@ func test(_ a: [S]) {
 </ul>
 <h2 id="链接-21"><a class="header" href="#链接-21">链接</a></h2>
 <ul>
-<li><a href="https://github.com/pingcap/talent-plan">PingCAP - Talent Plan</a> - PingCAP 的 Rust 学习资源</li>
-<li><a href="https://github.com/ferrous-systems/teaching-material">Ferrous Teaching Material</a> - Rust 教学资源，非常全面</li>
 <li><a href="https://doc.rust-lang.org/book/">Book - The Rust Programming Language</a></li>
 <li><a href="https://forge.rust-lang.org/release/platform-support.html">Rust Platform Support</a></li>
 <li><a href="https://rustyyato.github.io/rust/syntactic/sugar/2019/01/17/Closures-Magic-Functions.html">Closures: Magic Functions</a></li>
@@ -4063,11 +4069,20 @@ func test(_ a: [S]) {
 <li><a href="https://github.com/getditto/safer_ffi">getditto/safer_ffi</a> - 更安全地写 FFI 代码</li>
 <li><a href="https://github.com/rayon-rs/rayon">rayon-rs/rayon</a> - 数据并发</li>
 <li><a href="https://github.com/dotenv-rs/dotenv">dotenv-rs/dotenv</a> - 通过<code>.env</code>文件配置与读取环境变量</li>
+<li><a href="https://github.com/BLAKE3-team/BLAKE3">BLAKE3-team/BLAKE3</a> - BLAKE3 加密哈希算法官方实现</li>
 </ul>
-<h3 id="教程"><a class="header" href="#教程">教程</a></h3>
+<h3 id="教程与参考"><a class="header" href="#教程与参考">教程与参考</a></h3>
 <ul>
 <li><input disabled="" type="checkbox"/>
-程序君的 Rust 培训课 by <a href="https://github.com/tyrchen">@TyrChen</a> 🌟🌟🌟🌟🌟  <img src="https://img.shields.io/badge/Progress-60%25-brightgreen" alt="Progress" />
+<a href="https://github.com/pingcap/talent-plan">PingCAP - Talent Plan</a> - PingCAP 的 Rust 学习资源</li>
+<li><input disabled="" type="checkbox"/>
+<a href="https://github.com/ferrous-systems/teaching-material">Ferrous Teaching Material</a> - Rust 教学资源，非常全面
+<ul>
+<li><a href="https://github.com/ferrous-systems/elements-of-rust">ferrous-systems/elements-of-rust</a> - Rust 风格与小技巧</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"/>
+程序君的 Rust 培训课 by <a href="https://github.com/tyrchen">@TyrChen</a> 🌟🌟🌟🌟🌟  <img src="https://img.shields.io/badge/Progress-80%25-brightgreen" alt="Progress" />
 <ul>
 <li><a href="https://tyrchen.github.io/rust-training/rust-training-all-in-one-cn.html">讲义</a> - 💡 可常温故参阅</li>
 <li><input disabled="" type="checkbox" checked=""/>
@@ -4719,6 +4734,11 @@ pub const fn get(&amp;self) -&gt; *mut T {
 </ul>
 <h2 id="链接-26"><a class="header" href="#链接-26">链接</a></h2>
 <ul>
+<li><a href="https://ferrous-systems.com/open-source/">Open Source at Ferrous Systems</a>
+<ul>
+<li>Ferrous Systems: 一个提供 Rust 专业咨询、培训服务的组织</li>
+</ul>
+</li>
 <li><a href="https://sourcegraph.com">SourceGraph</a> - 代码搜索引擎，Chrome 扩展支持 GitHub 代码跳转，超好用</li>
 <li><a href="https://github.com/readme">The ReadME project · GitHub</a> —— GitHub 出品的 ReadME 项目博客，发现更多开源项目背后的故事与方法论</li>
 <li><a href="https://www.bilibili.com/video/av92525472/">《尤雨溪创立vue的心路历程》 Vue.js - The Documentary</a></li>
@@ -4934,6 +4954,7 @@ pub const fn get(&amp;self) -&gt; *mut T {
 </ul>
 <h3 id="计算机互联网"><a class="header" href="#计算机互联网">计算机&amp;互联网</a></h3>
 <ul>
+<li><a href="https://exercism.org/">Exercism.org</a> - 开源&amp;非盈利的编程语言练习平台，导师代码评审</li>
 <li><a href="https://docs.microsoft.com/learn/">微软 - Microsoft Learn</a></li>
 <li><a href="https://www.udacity.com/">优达学城 - Udacity</a> - 曾以「优达学城」的品牌在中国市场推广，似乎还是水土不服，不再中文本地化</li>
 </ul>
