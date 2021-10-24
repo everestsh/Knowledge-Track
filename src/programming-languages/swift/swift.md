@@ -115,6 +115,7 @@
 - [Swift Argument Parser](https://github.com/apple/swift-argument-parser)
 ## 链接
 
+- [Swift CI](https://ci.swift.org/) - Swift 官方的持续构建集成平台
 - [What's new in Swift?](https://www.whatsnewinswift.com/)
 - [Swift Concurrency by Uber](https://github.com/uber/swift-concurrency) - Uber 开源的并发编程实用工具
 - [Burritos](https://github.com/guillermomuntaner/Burritos) - Swift Property Wrappers 特性应用合集
