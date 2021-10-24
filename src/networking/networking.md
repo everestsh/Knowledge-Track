@@ -6,6 +6,7 @@
 
 - [Google Public DNS](https://dns.google/) - Google 的 DNS 查询服务
   - [DNS-over-HTTPS (DoH)](https://developers.google.com/speed/public-dns/docs/doh)
+- [Cloudflare-Encrypt DNS traffic](https://developers.cloudflare.com/1.1.1.1/encrypted-dns) - Cloudflare 提供的 DNS 查询服务
 ## 备忘
 
 ### 常用特殊端口
