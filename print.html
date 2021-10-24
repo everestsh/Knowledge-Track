@@ -1299,6 +1299,7 @@ pod setup
 </ul>
 <h2 id="编译"><a class="header" href="#编译">编译</a></h2>
 <ul>
+<li><a href="https://www.youtube.com/watch?v=gVdkJu3QRA4">BazelCon 2019 Day 1: Porting iOS Apps to Bazel + Q&amp;A</a></li>
 <li><a href="https://bazel.build/">Bazel - a fast, scalable, multi-language and extensible build system</a> - 支持多种语言的编译系统</li>
 <li><a href="https://developer.apple.com/videos/play/wwdc2018/415/">Behind the Scenes of the Xcode Build Process - WWDC 2018</a></li>
 <li><a href="https://tech.meituan.com/2021/02/25/swift-objective-c.html">从预编译的角度理解Swift与Objective-C及混编机制 - 美团技术团队</a> - 对 Swift/Objective-C 混编机制讲述得非常细致全面</li>
@@ -3440,8 +3441,14 @@ fn main() -&gt; Result&lt;()&gt; {
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="软件工程"><a class="header" href="#软件工程">软件工程</a></h1>
 <p>明确目标，高效高质达成。✅</p>
+<h2 id="编译系统"><a class="header" href="#编译系统">编译系统</a></h2>
+<ul>
+<li><a href="https://flare.build/">FLARE.BUILD</a> - Bazel 编译系统支持服务</li>
+<li><a href="https://www.buildbuddy.io/">BuildBuddy | Bazel at Enterprise Scale</a> - Bazel 编译系统支持服务</li>
+</ul>
 <h2 id="链接-17"><a class="header" href="#链接-17">链接</a></h2>
 <ul>
+<li><a href="https://mozilla.github.io/firefox-browser-architecture/">Firefox Browser Architecture</a> - Firefox 架构组技术调研</li>
 <li><a href="https://github.com/google/eng-practices">Google Engineering Practices Documentation</a></li>
 <li><a href="https://increment.com/">《Increment》</a> - Stripe 出品的专注于软件开发的季刊杂志</li>
 </ul>
@@ -3496,8 +3503,12 @@ fn main() -&gt; Result&lt;()&gt; {
 <a href="https://hubo.dev/2020-05-11-source-code-walkthrough-of-telegram-ios-part-2/">Source Code Walkthrough of Telegram-iOS Part 2: SSignalKit</a></li>
 <li><input disabled="" type="checkbox" checked=""/>
 <a href="https://hubo.dev/2020-05-15-source-code-walkthrough-of-telegram-ios-part-3/">Source Code Walkthrough of Telegram-iOS Part 3: Other Foundations</a></li>
-<li><input disabled="" type="checkbox"/>
-<a href="https://hubo.dev/2020-06-05-source-code-walkthrough-of-telegram-ios-part-4/">Source Code Walkthrough of Telegram-iOS Part 4: MTProto Connections</a></li>
+<li><input disabled="" type="checkbox" checked=""/>
+<a href="https://hubo.dev/2020-06-05-source-code-walkthrough-of-telegram-ios-part-4/">Source Code Walkthrough of Telegram-iOS Part 4: MTProto Connections</a>
+<ul>
+<li><a href="https://github.com/tdlib/td">TDLib (Telegram Database library) </a> - Telegram 客户端跨平台 C++ 库</li>
+</ul>
+</li>
 <li><input disabled="" type="checkbox"/>
 <a href="https://hubo.dev/2020-06-14-source-code-walkthrough-of-telegram-ios-part-5/">Source Code Walkthrough of Telegram-iOS Part 5: AsyncDisplayKit</a></li>
 <li><input disabled="" type="checkbox"/>
@@ -4657,6 +4668,15 @@ pub const fn get(&amp;self) -&gt; *mut T {
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="网络"><a class="header" href="#网络">网络</a></h1>
 <p>讲述一个 <code>1 + 1 &gt; 2</code> 的简单故事</p>
+<h2 id="工具集-2"><a class="header" href="#工具集-2">工具集</a></h2>
+<ul>
+<li><a href="https://dns.google/">Google Public DNS</a> - Google 的 DNS 查询服务
+<ul>
+<li><a href="https://developers.google.com/speed/public-dns/docs/doh">DNS-over-HTTPS (DoH)</a></li>
+</ul>
+</li>
+<li><a href="https://developers.cloudflare.com/1.1.1.1/encrypted-dns">Cloudflare-Encrypt DNS traffic</a> - Cloudflare 提供的 DNS 查询服务</li>
+</ul>
 <h2 id="备忘"><a class="header" href="#备忘">备忘</a></h2>
 <h3 id="常用特殊端口"><a class="header" href="#常用特殊端口">常用特殊端口</a></h3>
 <table><thead><tr><th>服务、协议或应用</th><th>端口号</th><th>TCP or UDP</th></tr></thead><tbody>
@@ -5029,7 +5049,69 @@ pub const fn get(&amp;self) -&gt; *mut T {
 </ul>
 <h2 id="链接-31"><a class="header" href="#链接-31">链接</a></h2>
 <ul>
-<li><a href="https://github.com/VGraupera/1on1-questions">1 on 1 Meeting Questions</a> - One-One 沟通话题集锦，也可以是日常工作和思考的一些问题
+<li>
+<p><a href="https://mp.weixin.qq.com/s/oCEE82Cah2vsE1ivfuLXzg">美团人的写作基本功是如何练成的</a></p>
+<details>
+      <summary>笔记概览</summary>
+<blockquote>
+<p>写作是我要带头苦练的基本功，是非常基本的能力。因为一个事情要积累的话，就得书面化。写作看起来和业务没什么关系，但这是一个非常共通的、极其基础的、每天都在发生的事情。大家认为有很多事情不统一、不稳定，没有足够书面化是原因之一。写作是广泛使用的，它适用于每个职能和业务。另一个角度，你要对外传播就得写下来，你想不清楚，就写不出来，或者写出来也觉得很不满意，真正靠即兴发挥是不太靠谱的，要把东西写出来，首先要想的清楚。—— 王兴</p>
+</blockquote>
+<ul>
+<li>什么是写作？（xie zuo，协作😄）
+<ul>
+<li>用文字去达到合作、说服、调动、拒绝、通知、解释的目的</li>
+</ul>
+</li>
+<li>为什么要写作？
+<ul>
+<li>高效写作能力，是澄清问题和达成共识的工具</li>
+<li>【短期来看】写作可以提升工作开展的效率
+<ul>
+<li>(1)帮助结构化思维，以更有逻辑的方式去梳理并呈工作成果。</li>
+<li>(2)帮助各方迅速对齐信息，再做更有深度的讨论与决策。</li>
+<li>(3)会议纪要向各相关方传达，推动下一步工作，落实具体事项。</li>
+</ul>
+</li>
+<li>【长期来看】写作是公司和个人发展与迭代的制胜法宝
+<ul>
+<li>(1)文档积累：是反思与自我提升的基础，可以经常复盘。</li>
+<li>(2)沉淀方法论：这些思考与经验，为团队新人、新事提供很好的教材与发展基础。</li>
+<li>(3)决策依据：长期保留的会议纪要，一方面避免相关方决策后出现反复，另一方面可以作为未来复盘战略决策或业务思考的重要依据。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>什么情况下要求写作？
+<ul>
+<li>(1)会议活动</li>
+<li>(2)工作汇报：系统化地复盘、总结工作进展或思考，以日志、周报、述职、专题复盘、主题分享等形式，留存宝贵的经验教训。</li>
+<li>(3)客户沟通</li>
+<li>(4)项目专题：项目设置文档负责人，负责最终项目产出的工作文档，记录每一个阶段SMART的目标并将文档留存，完成后进行整体输出</li>
+</ul>
+</li>
+<li>写作要遵循哪些原则？
+<ul>
+<li>原则一：Don't Make Me Think</li>
+<li>原则二：规范</li>
+<li>原则三：结构化</li>
+<li>原则四：简洁（KISS：Keep It Short and Simple）</li>
+</ul>
+</li>
+<li>写作有哪些步骤和要点？
+<ul>
+<li>构思 -&gt; 写作 -&gt; 修改</li>
+<li>
+<blockquote>
+<p>原文查看更多</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</details>
+</li>
+<li>
+<p><a href="https://github.com/VGraupera/1on1-questions">1 on 1 Meeting Questions</a> - One-One 沟通话题集锦，也可以是日常工作和思考的一些问题</p>
 <ul>
 <li>TODO：可添加到格志日记提示库</li>
 <li>TODO：暂未找到中文版本</li>
