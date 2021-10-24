@@ -2,6 +2,10 @@
 
 讲述一个 `1 + 1 > 2` 的简单故事
 
+## 工具集
+
+- [Google Public DNS](https://dns.google/) - Google 的 DNS 查询服务
+  - [DNS-over-HTTPS (DoH)](https://developers.google.com/speed/public-dns/docs/doh)
 ## 备忘
 
 ### 常用特殊端口
