@@ -23,6 +23,8 @@
 
 ## 链接
 
+- [Open Source at Ferrous Systems](https://ferrous-systems.com/open-source/)
+  - Ferrous Systems: 一个提供 Rust 专业咨询、培训服务的组织
 - [SourceGraph](https://sourcegraph.com) - 代码搜索引擎，Chrome 扩展支持 GitHub 代码跳转，超好用
 - [The ReadME project · GitHub](https://github.com/readme) —— GitHub 出品的 ReadME 项目博客，发现更多开源项目背后的故事与方法论
 - [《尤雨溪创立vue的心路历程》 Vue.js - The Documentary](https://www.bilibili.com/video/av92525472/)

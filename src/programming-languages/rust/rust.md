@@ -25,8 +25,6 @@
 
 ## 链接
 
-- [PingCAP - Talent Plan](https://github.com/pingcap/talent-plan) - PingCAP 的 Rust 学习资源
-- [Ferrous Teaching Material](https://github.com/ferrous-systems/teaching-material) - Rust 教学资源，非常全面
 - [Book - The Rust Programming Language](https://doc.rust-lang.org/book/)
 - [Rust Platform Support](https://forge.rust-lang.org/release/platform-support.html)
 - [Closures: Magic Functions](https://rustyyato.github.io/rust/syntactic/sugar/2019/01/17/Closures-Magic-Functions.html)
@@ -76,9 +74,12 @@
 - [dotenv-rs/dotenv](https://github.com/dotenv-rs/dotenv) - 通过`.env`文件配置与读取环境变量
 - [BLAKE3-team/BLAKE3](https://github.com/BLAKE3-team/BLAKE3) - BLAKE3 加密哈希算法官方实现
 
-### 教程
+### 教程与参考
 
-- [ ] 程序君的 Rust 培训课 by [@TyrChen](https://github.com/tyrchen) 🌟🌟🌟🌟🌟  ![Progress](https://img.shields.io/badge/Progress-60%25-brightgreen)
+- [ ] [PingCAP - Talent Plan](https://github.com/pingcap/talent-plan) - PingCAP 的 Rust 学习资源
+- [ ] [Ferrous Teaching Material](https://github.com/ferrous-systems/teaching-material) - Rust 教学资源，非常全面
+  - [ferrous-systems/elements-of-rust](https://github.com/ferrous-systems/elements-of-rust) - Rust 风格与小技巧
+- [ ] 程序君的 Rust 培训课 by [@TyrChen](https://github.com/tyrchen) 🌟🌟🌟🌟🌟  ![Progress](https://img.shields.io/badge/Progress-80%25-brightgreen)
   - [讲义](https://tyrchen.github.io/rust-training/rust-training-all-in-one-cn.html) - 💡 可常温故参阅
   - [x] [上](https://www.bilibili.com/video/BV19b4y1o7Lt)
   - [ ] [下](https://www.bilibili.com/video/BV1h64y197G3)
