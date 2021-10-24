@@ -31,7 +31,8 @@
     - [x] [Source Code Walkthrough of Telegram-iOS: Part 1](https://hubo.dev/2020-05-07-source-code-walkthrough-of-telegram-ios-part-1/)
     - [x] [Source Code Walkthrough of Telegram-iOS Part 2: SSignalKit](https://hubo.dev/2020-05-11-source-code-walkthrough-of-telegram-ios-part-2/)
     - [x] [Source Code Walkthrough of Telegram-iOS Part 3: Other Foundations](https://hubo.dev/2020-05-15-source-code-walkthrough-of-telegram-ios-part-3/)
-    - [ ] [Source Code Walkthrough of Telegram-iOS Part 4: MTProto Connections](https://hubo.dev/2020-06-05-source-code-walkthrough-of-telegram-ios-part-4/)
+    - [x] [Source Code Walkthrough of Telegram-iOS Part 4: MTProto Connections](https://hubo.dev/2020-06-05-source-code-walkthrough-of-telegram-ios-part-4/)
+        - [TDLib (Telegram Database library) ](https://github.com/tdlib/td) - Telegram 客户端跨平台 C++ 库
     - [ ] [Source Code Walkthrough of Telegram-iOS Part 5: AsyncDisplayKit](https://hubo.dev/2020-06-14-source-code-walkthrough-of-telegram-ios-part-5/)
     - [ ] [Source Code Walkthrough of Telegram-iOS Part 6: Bubbles](https://hubo.dev/2020-06-22-source-code-walkthrough-of-telegram-ios-part-6/)
     - [ ] [Source Code Walkthrough of Telegram-iOS Part-7: Link Preview and Instant View](https://hubo.dev/2020-07-12-source-code-walkthrough-of-telegram-ios-part-7/)
