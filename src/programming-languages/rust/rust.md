@@ -74,6 +74,10 @@
 - [dotenv-rs/dotenv](https://github.com/dotenv-rs/dotenv) - 通过`.env`文件配置与读取环境变量
 - [BLAKE3-team/BLAKE3](https://github.com/BLAKE3-team/BLAKE3) - BLAKE3 加密哈希算法官方实现
 
+#### 错误处理
+
+- [thiserror](https://github.com/dtolnay/thiserror) - 提供宏派生的方式简化错误定义
+- [anyhow](https://github.com/dtolnay/anyhow) - 灵活处理实现了`trait Error`的错误类型转换
 ### 教程与参考
 
 - [ ] [PingCAP - Talent Plan](https://github.com/pingcap/talent-plan) - PingCAP 的 Rust 学习资源
