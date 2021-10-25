@@ -23,6 +23,13 @@
 - [JSON to Rust Serde](https://transform.tools/json-to-rust-serde) - 快速通过 JSON 生成 Rust Serde 代码
 - [Rust Cheat Sheet](https://cheats.rs/) - [PDF](https://cheats.rs/rust_cheat_sheet.pdf) - 速查表
 
+## 社区&协作
+
+> Rust 团队在工作流和团队协作方法论上也有诸多值得学习和借鉴的地方，在此记录
+
+- [Cross-Team Collaboration Fun Times](https://rust-ctcft.github.io/ctcft/) - Rust 「跨团队协作欢乐时光」会议
+  - [协作文档](https://hackmd.io/@rust-ctcft)
+
 ## 链接
 
 - [Book - The Rust Programming Language](https://doc.rust-lang.org/book/)
