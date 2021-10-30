@@ -6,6 +6,9 @@
 
 - [Rustup](https://rust-lang.github.io/rustup/index.html)
   - 自动补全安装指南：`rustup help completions`
+  - 版本信息：
+    - [Overrides-The toolchain file: `rust-toolchain`](https://rust-lang.github.io/rustup/overrides.html#the-toolchain-file)  
+    - [What Rust is it?](https://www.whatrustisit.com/)
 - VSCode
   - 扩展插件：
     - rust-analyzer
