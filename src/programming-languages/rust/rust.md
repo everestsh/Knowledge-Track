@@ -90,10 +90,10 @@
 - [ ] [PingCAP - Talent Plan](https://github.com/pingcap/talent-plan) - PingCAP 的 Rust 学习资源
 - [ ] [Ferrous Teaching Material](https://github.com/ferrous-systems/teaching-material) - Rust 教学资源，非常全面
   - [ferrous-systems/elements-of-rust](https://github.com/ferrous-systems/elements-of-rust) - Rust 风格与小技巧
-- [ ] 程序君的 Rust 培训课 by [@TyrChen](https://github.com/tyrchen) 🌟🌟🌟🌟🌟  ![Progress](https://img.shields.io/badge/Progress-80%25-brightgreen)
+- [x] 程序君的 Rust 培训课 by [@TyrChen](https://github.com/tyrchen) 🌟🌟🌟🌟🌟  ![Progress](https://img.shields.io/badge/Progress-100%25-brightgreen)
   - [讲义](https://tyrchen.github.io/rust-training/rust-training-all-in-one-cn.html) - 💡 可常温故参阅
   - [x] [上](https://www.bilibili.com/video/BV19b4y1o7Lt)
-  - [ ] [下](https://www.bilibili.com/video/BV1h64y197G3)
+  - [x] [下](https://www.bilibili.com/video/BV1h64y197G3)
 - [x] [Rust & Tell Berlin September 2021 - Bastian Gruber: Learning Rust - One tutorial to rule them all](https://www.youtube.com/watch?v=QoatPlzc0-Y) ![Progress](https://img.shields.io/badge/Progress-100%25-brightgreen)
   - [OneTutorial](https://git.sr.ht/~gruberb/onetutorial/) - Rust 快速实践（🌟 新手强烈推荐）
 - [x] [Take your first steps with Rust](https://docs.microsoft.com/en-us/learn/paths/rust-first-steps/) - 微软学院出品的 Rust 学习路径 ![Progress](https://img.shields.io/badge/Progress-100%25-brightgreen)
