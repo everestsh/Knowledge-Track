@@ -9,6 +9,10 @@
 >     - 大视野
 >     - 组建一个没有短板的团队
 
+## 团队协作
+
+- [OKR.com](https://www.okr.com/) - 理念与实践，一站式掌握 OKR。由字节跳动·飞书支持。
+
 ## 文档协作
 
 - [HackMD](https://hackmd.io/) - Markdown 协作知识库
