@@ -82,7 +82,7 @@
   - [TCP](./networking/tcp.md)
 
 - [开源世界](./open-source/open-source.md)
-
+  - [GitHub](./open-source/github.md)
   - [遇见天才](./open-source/meet-geniuses.md)
 
 - [语言学习](./language/language.md)
