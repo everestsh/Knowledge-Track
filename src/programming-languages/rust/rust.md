@@ -30,6 +30,7 @@
 
 > Rust 团队在工作流和团队协作方法论上也有诸多值得学习和借鉴的地方，在此记录
 
+- [Lib.rs — home for Rust crates](https://lib.rs/) - 三方库索引，[crates.io](https://crates.io/) 的补充
 - [Cross-Team Collaboration Fun Times](https://rust-ctcft.github.io/ctcft/) - Rust 「跨团队协作欢乐时光」会议
   - [协作文档](https://hackmd.io/@rust-ctcft)
 
