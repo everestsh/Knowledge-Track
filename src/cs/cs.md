@@ -22,3 +22,6 @@
   - [ ] Potpourri
 
 - [斯坦福大学：系统编程的安全性](./class/cs110l.md)
+
+## 链接
+- [HOW TO LEARN COMPILERS: LLVM EDITION](https://lowlevelbits.org/how-to-learn-compilers-llvm-edition/) - 编译器学习路径推荐
