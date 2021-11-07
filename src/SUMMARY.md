@@ -96,6 +96,7 @@
   - [求职](./work/job-hunt.md)
   - [职场发展](./work/career.md)
   - [远程工作](./work/remote.md)
+    - [如何通过英文写作找到国外的远程工作机会](./work/articles/how-to-get-a-remote-job-by-writing-in-english.md)
   - [斜杠/生活](./work/slashie.md)
 
 - [命令行](./cli/cli.md)
