@@ -105,3 +105,5 @@ pod setup
         - 苹果对软硬件/上下游的掌握便发挥出巨大优势
         
   </details>
+
+  - [M1 Pro and M1 Max Xcode Build and Test Benchmarks](https://blog.swiftpackageindex.com/posts/m1-pro-and-m1-max-build-and-test-benchmarks)
