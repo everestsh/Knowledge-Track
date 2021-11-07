@@ -107,6 +107,7 @@
 - [x] [Rustlings](https://github.com/rust-lang/rustlings) - 官方的命令行交互式练习 🌟🌟🌟🌟🌟 
   - [Rustlings-Track](https://github.com/Binlogo/Rustlings-Track) ![Progress](https://img.shields.io/badge/Progress-100%25-brightgreen)
 - [ ] [Rust Stream: Ownership, Closures, and Threads - Oh My!](https://www.youtube.com/watch?v=2mwwYbBRJSo)
+- [x] [Build Your Text Editor With Rust!](https://medium.com/@otukof/build-your-text-editor-with-rust-678a463f968b) - 使用 Rust 写一个类似 vim 的命令行编辑器 ![Progress](https://img.shields.io/badge/Progress-100%25-brightgreen)
 
 ## Q&A 速查
 
