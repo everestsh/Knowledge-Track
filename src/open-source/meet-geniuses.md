@@ -4,6 +4,11 @@ Meet geniuses. They are awesome.
 
 ## Rust related field
 
+- **Amos**: rust & systems programming, writing a great tech blog about rust.
+  - Website: https://fasterthanli.me/
+  - GitHub: https://github.com/fasterthanlime
+  - Twitter: https://twitter.com/fasterthanlime
+
 - **陈天（TyrChen）**：Tech VP @Tubi Inc.
   - GitHub: https://github.com/tyrchen
   - 知乎：https://zhuanlan.zhihu.com/prattle
