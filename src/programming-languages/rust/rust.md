@@ -92,6 +92,8 @@
 - [anyhow](https://github.com/dtolnay/anyhow) - 灵活处理实现了`trait Error`的错误类型转换
 ### 教程与参考
 
+- [ ] [Rust Quiz - David Tolnay](https://github.com/dtolnay/rust-quiz) - 中等难度以上的小测试 ![Progress](https://img.shields.io/badge/Progress-5%25-brightgreen)
+  - TODO: Rust-Quiz-Track
 - [ ] [PingCAP - Talent Plan](https://github.com/pingcap/talent-plan) - PingCAP 的 Rust 学习资源
 - [ ] [Ferrous Teaching Material](https://github.com/ferrous-systems/teaching-material) - Rust 教学资源，非常全面
   - [ferrous-systems/elements-of-rust](https://github.com/ferrous-systems/elements-of-rust) - Rust 风格与小技巧
