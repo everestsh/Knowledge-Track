@@ -1,0 +1,370 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>如何通过英文写作找到国外的远程工作机会 - 棒棒彬的第二大脑</title>
+    <!-- Custom HTML head -->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="icon" href="../../favicon.svg">
+    <link rel="shortcut icon" href="../../favicon.png">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/general.css">
+    <link rel="stylesheet" href="../../css/chrome.css">
+    <link rel="stylesheet" href="../../css/print.css" media="print">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../../fonts/fonts.css">
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" href="../../highlight.css">
+    <link rel="stylesheet" href="../../tomorrow-night.css">
+    <link rel="stylesheet" href="../../ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+</head>
+
+<body>
+    <!-- Provide site root to javascript -->
+    <script type="text/javascript">
+        var path_to_root = "../../";
+        var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+    </script>
+
+    <!-- Work around some values being stored in localStorage wrapped in quotes -->
+    <script type="text/javascript">
+        try {
+            var theme = localStorage.getItem('mdbook-theme');
+            var sidebar = localStorage.getItem('mdbook-sidebar');
+
+            if (theme.startsWith('"') && theme.endsWith('"')) {
+                localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+            }
+
+            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+    </script>
+
+    <!-- Set the theme before any content is loaded, prevents flash -->
+    <script type="text/javascript">
+        var theme;
+        try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+        if (theme === null || theme === undefined) { theme = default_theme; }
+        var html = document.querySelector('html');
+        html.classList.remove('no-js')
+        html.classList.remove('light')
+        html.classList.add(theme);
+        html.classList.add('js');
+    </script>
+
+    <!-- Hide / unhide sidebar before it is displayed -->
+    <script type="text/javascript">
+        var html = document.querySelector('html');
+        var sidebar = 'hidden';
+        if (document.body.clientWidth >= 1080) {
+            try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+            sidebar = sidebar || 'visible';
+        }
+        html.classList.remove('sidebar-visible');
+        html.classList.add("sidebar-" + sidebar);
+    </script>
+
+    <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+        <div class="sidebar-scrollbox">
+            <ol class="chapter"><li class="chapter-item expanded "><a href="../../Introduction.html">首页</a></li><li class="chapter-item expanded "><a href="../../meta/meta.html">知识体系元</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../meta/anki.html">Anki</a></li><li class="chapter-item expanded "><a href="../../meta/second-brain-podcast.html">构建第二大脑播客</a></li></ol></li><li class="chapter-item expanded "><a href="../../reading/reading.html">阅读</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../reading/a-whole-new-mind.html">《全新思维》</a></li><li class="chapter-item expanded "><a href="../../reading/act-like-a-leader.html">《能力陷阱》</a></li></ol></li><li class="chapter-item expanded "><a href="../../macOS/macOS.html">macOS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../macOS/apps.html">macOS 应用</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../macOS/alfred.html">Alfred</a></li><li class="chapter-item expanded "><a href="../../macOS/snippetsLab.html">SnippetsLab</a></li><li class="chapter-item expanded "><a href="../../macOS/contexts.html">Contexts</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../iOSDev/iOSDev.html">iOS 开发</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../iOSDev/architecture.html">架构设计</a></li><li class="chapter-item expanded "><a href="../../iOSDev/threading-programming/threading-programming.html">多线程编程</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../iOSDev/threading-programming/about.html">关于多线程编程</a></li><li class="chapter-item expanded "><a href="../../iOSDev/threading-programming/thread-management.html">线程管理</a></li><li class="chapter-item expanded "><a href="../../iOSDev/threading-programming/run-loops.html">Run Loops</a></li><li class="chapter-item expanded "><a href="../../iOSDev/threading-programming/synchronization.html">线程同步</a></li></ol></li><li class="chapter-item expanded "><a href="../../iOSDev/performance.html">性能优化</a></li><li class="chapter-item expanded "><a href="../../iOSDev/build-optimization.html">编译优化</a></li><li class="chapter-item expanded "><a href="../../iOSDev/ui-layout.html">视图布局</a></li><li class="chapter-item expanded "><a href="../../iOSDev/swift-ui.html">SwiftUI</a></li><li class="chapter-item expanded "><a href="../../iOSDev/database.html">数据库</a></li><li class="chapter-item expanded "><a href="../../iOSDev/av.html">音视频</a></li><li class="chapter-item expanded "><a href="../../iOSDev/community.html">开发社区</a></li><li class="chapter-item expanded "><a href="../../iOSDev/xcode.html">Xcode</a></li><li class="chapter-item expanded "><a href="../../iOSDev/apps.html">iOS 应用</a></li></ol></li><li class="chapter-item expanded "><a href="../../cs/cs.html">计算机科学基础</a></li><li><ol class="section"><li class="chapter-item expanded "><div>课程记录</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../cs/class/cs110l.html">CS 110L: Safety in Systems Programming</a></li></ol></li><li class="chapter-item expanded "><a href="../../cs/algrithoms.html">数据结构与算法</a></li><li class="chapter-item expanded "><a href="../../cs/terminology.html">术语汇总</a></li></ol></li><li class="chapter-item expanded "><a href="../../software-engineering/software-engineering.html">软件工程</a></li><li class="chapter-item expanded "><a href="../../software-development/software-development.html">软件开发</a></li><li class="chapter-item expanded "><a href="../../programming-languages/programming-languages.html">编程语言</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../programming-languages/swift/swift.html">Swift</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../programming-languages/swift/what's-new-5-4.html">Swift 5.4 新特性速查</a></li><li class="chapter-item expanded "><a href="../../programming-languages/swift/advanced-swift.html">《Swift 进阶》阅读纪要</a></li><li class="chapter-item expanded "><a href="../../programming-languages/swift/swift-method-dispatch-notes.html">Swift 方法派发纪要</a></li><li class="chapter-item expanded "><a href="../../programming-languages/swift/concurrency.html">Concurrency</a></li></ol></li><li class="chapter-item expanded "><a href="../../programming-languages/rust/rust.html">Rust</a></li><li><ol class="section"><li class="chapter-item expanded "><div>概念速查</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../programming-languages/rust/concepts/closure.html">化解神奇的闭包</a></li><li class="chapter-item expanded "><a href="../../programming-languages/rust/concepts/interior_mutability_and_cells.html">Rust 中的可变与不可变以及 Cell 的使用</a></li><li class="chapter-item expanded "><a href="../../programming-languages/rust/concepts/move_copy_borrow.html">Move&amp;Copy&amp;Borrow 可视化</a></li><li class="chapter-item expanded "><a href="../../programming-languages/rust/concepts/memory_layout.html">内存布局可视化</a></li><li class="chapter-item expanded "><a href="../../programming-languages/rust/concepts/async_await.html">Async/Await</a></li><li class="chapter-item expanded "><a href="../../programming-languages/rust/concepts/pin_unpin.html">Pin/Unpin</a></li></ol></li><li class="chapter-item expanded "><a href="../../programming-languages/rust/tao-of-rust.html">《Rust 编程之道》阅读纪要</a></li></ol></li><li class="chapter-item expanded "><a href="../../programming-languages/c-style/c-style.html">C/C++/Objective-C</a></li></ol></li><li class="chapter-item expanded "><a href="../../networking/networking.html">网络</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../networking/tcp.html">TCP</a></li></ol></li><li class="chapter-item expanded "><a href="../../open-source/open-source.html">开源世界</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../open-source/github.html">GitHub</a></li><li class="chapter-item expanded "><a href="../../open-source/meet-geniuses.html">遇见天才</a></li></ol></li><li class="chapter-item expanded "><a href="../../language/language.html">语言学习</a></li><li class="chapter-item expanded "><a href="../../education/education.html">教育</a></li><li class="chapter-item expanded "><a href="../../life/life.html">生活</a></li><li class="chapter-item expanded "><a href="../../work/work.html">工作</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../work/job-hunt.html">求职</a></li><li class="chapter-item expanded "><a href="../../work/career.html">职场发展</a></li><li class="chapter-item expanded "><a href="../../work/remote.html">远程工作</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../work/articles/how-to-get-a-remote-job-by-writing-in-english.html" class="active">如何通过英文写作找到国外的远程工作机会</a></li></ol></li><li class="chapter-item expanded "><a href="../../work/slashie.html">斜杠/生活</a></li></ol></li><li class="chapter-item expanded "><a href="../../cli/cli.html">命令行</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../cli/vim.html">Vim</a></li><li class="chapter-item expanded "><a href="../../cli/git-quick-checklist.html">Git 常用命令速查清单</a></li><li class="chapter-item expanded "><a href="../../cli/homebrew.html">Homebrew</a></li></ol></li><li class="chapter-item expanded "><a href="../../linux/linux.html">Linux</a></li><li class="chapter-item expanded "><a href="../../stories/stories.html">故事</a></li><li class="chapter-item expanded "><a href="../../product/product.html">产品</a></li><li class="chapter-item expanded "><a href="../../design/design.html">设计</a></li></ol>
+        </div>
+        <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+    </nav>
+
+    <div id="page-wrapper" class="page-wrapper">
+
+        <div class="page">
+            <div id="menu-bar-hover-placeholder"></div>
+            <div id="menu-bar" class="menu-bar sticky bordered">
+                <div class="left-buttons">
+                    <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents"
+                        aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <button id="theme-toggle" class="icon-button" type="button" title="Change theme"
+                        aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                        <i class="fa fa-paint-brush"></i>
+                    </button>
+                    <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                        <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button>
+                        </li>
+                    </ul>
+                    <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
+                        aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S"
+                        aria-controls="searchbar">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+
+                <h1 class="menu-title">棒棒彬的第二大脑</h1>
+
+                <div class="right-buttons">
+                    <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                        <i id="print-button" class="fa fa-print"></i>
+                    </a>
+                    <a href="https://github.com/Binlogo/Knowledge-Track" title="Git repository" aria-label="Git repository">
+                        <i id="git-repository-button" class="fa fa-github"></i>
+                    </a>
+                    <a href="https://github.com/Binlogo/Knowledge-Track/edit/main/src/work/articles/how-to-get-a-remote-job-by-writing-in-english.md" title="Suggest an edit" aria-label="Suggest an edit">
+                        <i id="git-edit-button" class="fa fa-edit"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div id="search-wrapper" class="hidden">
+                <form id="searchbar-outer" class="searchbar-outer">
+                    <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..."
+                        aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                </form>
+                <div id="searchresults-outer" class="searchresults-outer hidden">
+                    <div id="searchresults-header" class="searchresults-header"></div>
+                    <ul id="searchresults">
+                    </ul>
+                </div>
+            </div>
+            <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+            <script type="text/javascript">
+                document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                    link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                });
+            </script>
+
+            <div id="content" class="content">
+                <main>
+                    <h1 id="如何通过英文写作找到国外的远程工作机会"><a class="header" href="#如何通过英文写作找到国外的远程工作机会">如何通过英文写作找到国外的远程工作机会</a></h1>
+<blockquote>
+<p>说明：本文来自<a href="https://www.yuanchengzheshuo.com">远程者说</a>，作者：Michael。如需任何授权，请联系原文作者</p>
+<p>阅读后非常受启发，为避免未来原文链接失效仅出于学习与分享目的在此记录。</p>
+</blockquote>
+<h2 id="中国人从事国外远程工作的困境"><a class="header" href="#中国人从事国外远程工作的困境">中国人从事国外远程工作的困境</a></h2>
+<p><strong>找到国外的远程工作不是一件容易的事</strong>，我在很多地方也看到过类似的言论。</p>
+<p>一般来说，那些想找但是没找到国外远程工作的人，主要会抱怨这么几点</p>
+<ol>
+<li>很多人觉得英语不是自己的母语，而且自己英语很差，又没有国外工作和留学的经验，找远程工作面试是一个很大问题</li>
+<li>没有拿的出手的项目或者开源项目。</li>
+<li>在一些国外外包平台上尝试过竞标，但是失败了。</li>
+</ol>
+<h2 id="中国人从事国外远程工作的优势"><a class="header" href="#中国人从事国外远程工作的优势">中国人从事国外远程工作的优势</a></h2>
+<p>虽然问题确实存在，但是中国人从事国外远程工作，也还是有一些优势的。</p>
+<p>国内的IT产业最近几十年飞速发展，IT行业内的工程师普遍技术都很过硬，而且对新技术的接受也很快。</p>
+<blockquote>
+<p>脱口秀大会-呼兰： 我之前在美国要干两周的活，一问这边的团队，说要三天。我说啊？？？团队说，加加班，两天也行……</p>
+</blockquote>
+<p>经过国内996的洗礼，即使有些时候外国客户偶尔要求你加个班，国内的工程师认为那都不叫事儿，所以服务态度上，国内工程师很受好评。</p>
+<p>欧美的员工由于平均薪资普遍较高，并且有着较好的福利待遇，所以对用人企业来说，人力成本相对中国来说其实是比较高的，所以在成本这块，国内的工程师也是有优势的。</p>
+<p>所以如果一个中国工程师技术不错，服务态度好，并且能够降低企业用人成本的话，请问国外的企业有什么理由不雇佣他呢？</p>
+<h2 id="为什么国外的工作机会可能更好"><a class="header" href="#为什么国外的工作机会可能更好">为什么国外的工作机会可能更好</a></h2>
+<p>上面我从用人企业的角度分析了国内工程师的优势，下面我从工程师的角度出发，为什么国外的工作机会可能更好。</p>
+<p>首先说第一点，薪资，这里我们具体一点，做几个简单的算数吧。</p>
+<p>如何在国内通过远程工作稳定的月入2w+</p>
+<p>你可以先翻翻国内远程招聘的帖子，看看有多少工作机会能达到这个数 (这也跟国内远程接受度比较低有关，但是事实就是这样的工作机会非常少)</p>
+<p>如果你是国外远程工作机会，很简单，我们来做算数，朝九晚五，中间一个小时吃饭休息，实际工作时间我们每天按7小时算。</p>
+<p>时薪$20在远程工作里面在平均水准以下，让我们就就拿这个数字来算，汇率按7算，一个小时140RMB, 一天7个小时就是980，一个月按20工作日算就是19600。</p>
+<p>如果我们按$15算，一个月就是14700，也很不错是不是！</p>
+<p>这意味着什么，意味着如果你远程工作拿的是比较低的时薪标准，一个月到手也比很多国内远程工作的薪水高。</p>
+<p>剩下的时间我可以自由支配，也可以做自己喜欢的side project，将时薪继续提高。</p>
+<p><strong>所以有的时候，努力很重要，但是选择也很重要。</strong></p>
+<p>我们已经说了薪资，在继续说另一点，发展机会以及整个生态</p>
+<ol>
+<li>国外比国内有着更成熟的远程工作文化，有很多小团队开发效率非常高，有机会加入其中可以学习很多东西。</li>
+<li>国外的远程机会相对国内来说是非常多的，你可以回老家买个大房子，并且将远程工作这个事情持续做下去。</li>
+</ol>
+<h2 id="为什么通过英文技术写作能获得远程工作"><a class="header" href="#为什么通过英文技术写作能获得远程工作">为什么通过英文技术写作能获得远程工作</a></h2>
+<blockquote>
+<p>通过输出有质量的原创技术文章，可以让读者相信你的技术能力和做事态度，从而将部分读者转化为你的客户</p>
+</blockquote>
+<p>首先你要明白的是，大多数人要找的远程工作并不是Top-Tech岗位，很多国外公司要求你具有扎实的技术技能，扎实的做事能力。而这些东西可以通过什么展示出来呢？</p>
+<ol>
+<li>文字，你可以通过技术写作来展示专业性，同时，文字输出仅仅是要求你具有英文读写能力，对听说能力没有太高的要求。</li>
+<li>音频，视频，这两个对英文听说能力也有要求</li>
+<li>个人项目，开源项目。我不是很赞成初学者宅在家里做个人项目或者开源项目来得到工作机会，因为大多数初学者对需求的把握不是很准，很容易做出一个纯炫技产品。</li>
+</ol>
+<p>综合考虑，其实<strong>英文技术写作是一个对新手友好，门槛较低的方法</strong>, 只不过很多人一直没有意识到而已</p>
+<p>还有很多人说，写作太费事情了，我可以直接去外包平台投标来获得工作机会。</p>
+<p>其实外包平台一个很大的问题就是<strong>高质量客户的获取</strong>越来越难，你的客户会不停的压价导致你的利润越来越薄。</p>
+<p>你或许能在上面接到好项目，但是千万不要指望靠着平台活下去。</p>
+<p>综上所述，我们的目的是</p>
+<ol>
+<li>通过英文技术文章的写作，展示自己在相关领域的专业度，获取潜在客户信任，进而获得工作机会。</li>
+<li>通过英文技术文章的写作，提高自己的英语读写能力，从而为后续的国外远程工作打下比较扎实的基础。想象一下，如果你需要回复客户的一个紧急Github issue, 费时费力写半天，时间浪费了，也给客户能力不好的印象</li>
+</ol>
+<p>接下来我将就英文技术写作这个话题展开。</p>
+<h2 id="第一步细分领域"><a class="header" href="#第一步细分领域">第一步：细分领域</a></h2>
+<p>现在你决定通过写作来尝试获取远程工作机会，</p>
+<p>那么你应该写一些什么呢？</p>
+<p>这里，需要引出一个比较重要的概念，<strong>细分领域</strong>。</p>
+<p>很多人刚开始尝试远程工作的的时候，很焦虑而且饥不择食，很多时候是别人有什么项目找自己，自己就做什么，或者看到别人发什么项目自己就投什么，完全没有规划，其实这样是很浪费精力和时间的。</p>
+<blockquote>
+<p>你应该把所有精力和时间放到某一个细分领域，通过一段时间不断的学习，工作和总结成为细分领域的专家，打造口碑并尽量成为细分行业的头部</p>
+</blockquote>
+<p>现在，你需要确定你所专注的细分领域，确定以后，你以后的文章需要和这个细分领域相关，你以后获得的工作机会也会和这个细分领域相关，你以后将会成为这个细分领域的专家。</p>
+<p>不过，细分领域一般都是一个比较相对的概念，比如，前端开发相对于软件开发是一个细分领域，前端开发中的Web组件开发相对于前端开发又是一个细分领域。</p>
+<p>这里我提供两种思路:</p>
+<ol>
+<li>从技术出发，比如你对某个技术特别有经验，或者很看好某个技术以后会火，可以围绕这个技术来挑选细分领域。举例，你对React, Vue很熟悉，你的细分领域就是前端开发</li>
+<li>从业务出发，比如你对某个业务领域很有经验，可以围绕这个业务领域来选细分领域。比如，你对第三方支付和支付流程相关很熟悉，你的细分领域就是支付集成。</li>
+</ol>
+<p>细分领域强迫你审视自己从而聚焦，很多人觉得范围太小了客户很少，其实不必担心。<strong>因为你的客户可以来自全球很多国家，巨大的基数是可以养活你和你的小团队的</strong>。</p>
+<p>当你在细分领域站稳脚跟后，可以在以后扩大自己的细分领域。</p>
+<h2 id="第二步topic"><a class="header" href="#第二步topic">第二步：Topic</a></h2>
+<p>当你选择了自己的细分领域，接下来就是选择你写作的Topic了。</p>
+<p>你的细分领域当前肯定存在一些问题，人们在工作中试图解决它，所以编程语言，编程框架，各种产品，等等被开发出来。</p>
+<p>但是这个过程中肯定是有做的不完美的地方</p>
+<ol>
+<li>比如某个解决方案有一些问题，你能不能提出更好的方案</li>
+<li>某个框架的文档哪里写的不清楚，你能不能从另外一个角度重新写一篇？</li>
+<li>你能不能针对某个框架写一篇好的新手教程？</li>
+</ol>
+<p>这些都是可以做的地方，如果你不知道写什么，也可以去一些论坛或者问答社区去看看人们一般都有一些什么问题。这可以称之为为你的<code>产品</code>(文章)，做需求分析了。</p>
+<ol>
+<li>Stackoverflow</li>
+<li>Google</li>
+<li>quora</li>
+<li>Twitter</li>
+</ol>
+<p>通过以上的分析，其实你可以很清晰的知道当前细分领域的客户存在哪些问题，哪些Topic你写出来，用户会感兴趣。</p>
+<p>你可以将Topic做成一个有层次的列表，顶层是一个比较宽泛的Topic, 然后展开很多小Topic，然后把你所有的内容输出都通过一个虚拟的树状图联系起来。</p>
+<h2 id="第三步title"><a class="header" href="#第三步title">第三步：Title</a></h2>
+<p>当你有了一系列的Topic后，你可以开始写标题了</p>
+<p>当别人在社交媒体或者搜索引擎上看到你的内容输出的时候，一开始看到的比较多的都是标题，而且标题在搜索引擎中仍然占据比较重要的比重所以这里我专门说一下。</p>
+<ol>
+<li>标题应该简短并且意思明确</li>
+<li>标题中出现的比较关键的词汇应该也在你的文中多次出现，避免别人和搜索引擎认为你挂羊头卖狗肉。</li>
+</ol>
+<p>一般的文章标题其实是有一些固定格式的，比如<code>How to</code>, <code>xxx Guide</code>类似这种，你平时可以多留意。</p>
+<p>这里我推荐大家可以去看看Digital Ocean里面的教程文章，它的标题和文章结构值得初学者学习。</p>
+<h2 id="第四步文章框架"><a class="header" href="#第四步文章框架">第四步：文章框架</a></h2>
+<p>当你有了一个标题后，接下来就是需要写文章了。</p>
+<p>在写作之前，你应该先构思一个文章大纲，并且确保子标题清晰易懂，文章结构逻辑清晰。(你可以先把子标题完成，这样对整体结构会有一个比较好的把控)</p>
+<p>这里我给大家提供一个比较好的模板，你可以根据自己的需要进行修改。</p>
+<p>https://github.com/do-community/do-article-templates</p>
+<p>这是DigitalOcean的文章模板，很清晰直白，很适合新手学习写文章。</p>
+<p>Note: step 1, step 2这样的子标题能让读者很清晰的知道每一步该做什么，如果你之前没有这样做过，不妨一试。</p>
+<h2 id="第五步写作"><a class="header" href="#第五步写作">第五步：写作</a></h2>
+<p>当你刚开始写的时候，很多语句会不知道表达，不要着急，慢慢写就好了，就好像小朋友学说话，说着说着就流利了。</p>
+<p>这里没有太多的技巧性的东西，不过我可以像大家分享一些我认为不错的工具。</p>
+<ol>
+<li>https://ludwig.guru/ https://linggle.com/ 这两个工具可以在你弄不清楚句子短语如何写的时候帮助你。</li>
+<li>https://app.grammarly.com/ 这个会查找纠正你的语法错误，错别字，一般你可以在文章的Review阶段使用它。</li>
+</ol>
+<p>另外就是当你开始写作之后，有时间也要养成看其他英文文章的习惯，有时候会发现自己不会写的句子原来可以这样写，然后一下子就会记住，下次就不知不觉写出来了。</p>
+<p>熟能生巧，经过一段时间的联系，平时跟客户文字沟通的时候，你会发现你的英语会流畅很多，如果时间再久一点，你会发现写作其实对你的听说能力也有很大的帮助。</p>
+<p>写作的字数可以慢慢试着增加，让读者5-10分钟左右读完是一个比较不错的字数区间，但是也要切记不要为了堆砌字数而加废话。</p>
+<h2 id="第六步渠道"><a class="header" href="#第六步渠道">第六步：渠道</a></h2>
+<p>当你写完了文章以后，你要把文章发布出去。</p>
+<p>你可以在Github上放一个静态博客，这个博客里面只有你的英文技术文章，博客主题挑个自己觉得看着顺眼的，如果哪里觉得不满意，想改代码，暂且先放一放，内容才是这里的核心。</p>
+<p>当你把文章写出来后，你可以放到自己博客上，然后把博客的链接分享在一些国外的社交媒体上。</p>
+<p>这里我不具体列出哪些社交媒体，如果你自己稍作搜索，就能找到答案。</p>
+<h2 id="第七步读者反馈"><a class="header" href="#第七步读者反馈">第七步：读者反馈</a></h2>
+<p>你需要提供一种用户反馈的方式，这些方式不仅限于。</p>
+<ol>
+<li>留言, 比如Disqus</li>
+<li>你的个人邮箱，或者邮件列表</li>
+<li>你的社交账号，比如Github, Twitter</li>
+</ol>
+<p>这里有若干tips</p>
+<ol>
+<li>注意倾听你的读者反馈，而不是把他们当成一个访客数字。如果你这一步做的好其实可以很准确的把握一些潜在需求，从而获取工作机会。</li>
+<li>聚焦你的细分领域，不要提供超出你的细分领域之外的帮助（至少初始阶段请这样做，避免分散精力）</li>
+</ol>
+<h2 id="第八步坚持"><a class="header" href="#第八步坚持">第八步：坚持</a></h2>
+<p>开始阶段，由于英语的不熟练，写作进度会很慢，一段时间看不到效果，很多人心里也会打退堂鼓。</p>
+<p>而且搜索引擎对于新的网站，有一个类似试用期的机制，等过了这段时期，相关的自然搜索流量就会上来。</p>
+<p>所以你需要做的是坚持写作，这也是这个方法最<strong>难</strong>的地方。</p>
+<h2 id="第八步收获"><a class="header" href="#第八步收获">第八步：收获</a></h2>
+<p>当你写了一段时间后，搜索引擎和社交引擎积累了一定的数据，确定你的文章都是原创并且质量很高，就会更多的展示给其他读者。</p>
+<p>与此同时，你的联系人里面，邮件列表里面有了很多人，你可以从他们身上获取很多有用的反馈，促使你继续写出更好的文章。</p>
+<p>你的英语水平慢慢提升，已经足以应付日常的英语交流。</p>
+<p>另外一些读者，会询问能否雇佣你你帮助做一些项目，慢慢的，你的远程生涯通过写作开始了。。。</p>
+<h2 id="总结"><a class="header" href="#总结">总结</a></h2>
+<p>这篇文章我详细的讲了如何通过技术写作来获得国外远程工作的机会，希望通过这篇文章帮助更多的开发者出海</p>
+<p>找到国外远程工作的方法很多，不止这一个，但是这个方法几乎所有人都可以使用，而且效果还很不错。</p>
+<p>不经历风雨，怎能见彩虹，希望所有的远程开发者都能靠自己的努力过上自己理想的生活</p>
+
+                    <!-- Comments powered by giscus.app -->
+                    <div id="comments" class="giscus">
+                        <script src="https://giscus.app/client.js" data-repo="Binlogo/Knowledge-Track"
+                            data-repo-id="MDEwOlJlcG9zaXRvcnkyNDc1MTA2ODg=" data-category="Announcements"
+                            data-category-id="DIC_kwDODsC2oM4B_hm2" data-mapping="pathname" data-reactions-enabled="1"
+                            data-emit-metadata="0" data-theme="light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </main>
+
+                <nav class="nav-wrapper" aria-label="Page navigation">
+                    <!-- Mobile navigation buttons -->
+                    <a rel="prev" href="../../work/remote.html" class="mobile-nav-chapters previous"
+                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../work/slashie.html" class="mobile-nav-chapters next"
+                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                    <div style="clear: both"></div>
+                </nav>
+            </div>
+        </div>
+
+        <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            <a rel="prev" href="../../work/remote.html" class="nav-chapters previous" title="Previous chapter"
+                aria-label="Previous chapter" aria-keyshortcuts="Left">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a rel="next" href="../../work/slashie.html" class="nav-chapters next" title="Next chapter"
+                aria-label="Next chapter" aria-keyshortcuts="Right">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </nav>
+
+    </div>
+
+    <!-- Google Analytics Tag -->
+    <script type="text/javascript">
+        var localAddrs = ["localhost", "127.0.0.1", ""];
+
+        // make sure we don't activate google analytics if the developer is
+        // inspecting the book locally...
+        if (localAddrs.indexOf(document.location.hostname) === -1) {
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-160717450-2', 'auto');
+            ga('send', 'pageview');
+        }
+    </script>
+    <script type="text/javascript">
+        window.playground_copyable = true;
+    </script>
+    <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- Custom JS scripts -->
+</body>
+
+</html>
