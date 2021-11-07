@@ -2,6 +2,8 @@
 
 Meet geniuses. They are awesome.
 
+- **Brian**: GitHub 的产品设计师
+  - Website: https://brianlovin.com/ - 十分特别的一个博客，打磨得像是应用级的产品。
 ## Rust related field
 
 - **Amos**: rust & systems programming, writing a great tech blog about rust.
