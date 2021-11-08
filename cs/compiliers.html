@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>编译原理 - 棒棒彬的第二大脑</title>
+    <!-- Custom HTML head -->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="icon" href="../favicon.svg">
+    <link rel="shortcut icon" href="../favicon.png">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/chrome.css">
+    <link rel="stylesheet" href="../css/print.css" media="print">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../fonts/fonts.css">
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" href="../highlight.css">
+    <link rel="stylesheet" href="../tomorrow-night.css">
+    <link rel="stylesheet" href="../ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+</head>
+
+<body>
+    <!-- Provide site root to javascript -->
+    <script type="text/javascript">
+        var path_to_root = "../";
+        var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+    </script>
+
+    <!-- Work around some values being stored in localStorage wrapped in quotes -->
+    <script type="text/javascript">
+        try {
+            var theme = localStorage.getItem('mdbook-theme');
+            var sidebar = localStorage.getItem('mdbook-sidebar');
+
+            if (theme.startsWith('"') && theme.endsWith('"')) {
+                localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+            }
+
+            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+    </script>
+
+    <!-- Set the theme before any content is loaded, prevents flash -->
+    <script type="text/javascript">
+        var theme;
+        try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+        if (theme === null || theme === undefined) { theme = default_theme; }
+        var html = document.querySelector('html');
+        html.classList.remove('no-js')
+        html.classList.remove('light')
+        html.classList.add(theme);
+        html.classList.add('js');
+    </script>
+
+    <!-- Hide / unhide sidebar before it is displayed -->
+    <script type="text/javascript">
+        var html = document.querySelector('html');
+        var sidebar = 'hidden';
+        if (document.body.clientWidth >= 1080) {
+            try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+            sidebar = sidebar || 'visible';
+        }
+        html.classList.remove('sidebar-visible');
+        html.classList.add("sidebar-" + sidebar);
+    </script>
+
+    <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+        <div class="sidebar-scrollbox">
+            <ol class="chapter"><li class="chapter-item expanded "><a href="../Introduction.html">首页</a></li><li class="chapter-item expanded "><a href="../meta/meta.html">知识体系元</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../meta/anki.html">Anki</a></li><li class="chapter-item expanded "><a href="../meta/second-brain-podcast.html">构建第二大脑播客</a></li></ol></li><li class="chapter-item expanded "><a href="../reading/reading.html">阅读</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../reading/a-whole-new-mind.html">《全新思维》</a></li><li class="chapter-item expanded "><a href="../reading/act-like-a-leader.html">《能力陷阱》</a></li></ol></li><li class="chapter-item expanded "><a href="../macOS/macOS.html">macOS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../macOS/apps.html">macOS 应用</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../macOS/alfred.html">Alfred</a></li><li class="chapter-item expanded "><a href="../macOS/snippetsLab.html">SnippetsLab</a></li><li class="chapter-item expanded "><a href="../macOS/contexts.html">Contexts</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../cs/cs.html">计算机科学基础</a></li><li><ol class="section"><li class="chapter-item expanded "><div>课程记录</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cs/class/cs110l.html">CS 110L: Safety in Systems Programming</a></li></ol></li><li class="chapter-item expanded "><a href="../cs/algrithoms.html">数据结构与算法</a></li><li class="chapter-item expanded "><a href="../cs/compiliers.html" class="active">编译原理</a></li><li class="chapter-item expanded "><a href="../cs/terminology.html">术语汇总</a></li></ol></li><li class="chapter-item expanded "><a href="../software-engineering/software-engineering.html">软件工程</a></li><li class="chapter-item expanded "><a href="../software-development/software-development.html">软件开发</a></li><li class="chapter-item expanded "><a href="../programming-languages/programming-languages.html">编程语言</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../programming-languages/swift/swift.html">Swift</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../programming-languages/swift/what's-new-5-4.html">Swift 5.4 新特性速查</a></li><li class="chapter-item expanded "><a href="../programming-languages/swift/advanced-swift.html">《Swift 进阶》阅读纪要</a></li><li class="chapter-item expanded "><a href="../programming-languages/swift/swift-method-dispatch-notes.html">Swift 方法派发纪要</a></li><li class="chapter-item expanded "><a href="../programming-languages/swift/concurrency.html">Concurrency</a></li></ol></li><li class="chapter-item expanded "><a href="../programming-languages/rust/rust.html">Rust</a></li><li><ol class="section"><li class="chapter-item expanded "><div>概念速查</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../programming-languages/rust/concepts/closure.html">化解神奇的闭包</a></li><li class="chapter-item expanded "><a href="../programming-languages/rust/concepts/interior_mutability_and_cells.html">Rust 中的可变与不可变以及 Cell 的使用</a></li><li class="chapter-item expanded "><a href="../programming-languages/rust/concepts/move_copy_borrow.html">Move&amp;Copy&amp;Borrow 可视化</a></li><li class="chapter-item expanded "><a href="../programming-languages/rust/concepts/memory_layout.html">内存布局可视化</a></li><li class="chapter-item expanded "><a href="../programming-languages/rust/concepts/async_await.html">Async/Await</a></li><li class="chapter-item expanded "><a href="../programming-languages/rust/concepts/pin_unpin.html">Pin/Unpin</a></li></ol></li><li class="chapter-item expanded "><a href="../programming-languages/rust/tao-of-rust.html">《Rust 编程之道》阅读纪要</a></li></ol></li><li class="chapter-item expanded "><a href="../programming-languages/c-style/c-style.html">C/C++/Objective-C</a></li></ol></li><li class="chapter-item expanded "><a href="../networking/networking.html">网络</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../networking/tcp.html">TCP</a></li></ol></li><li class="chapter-item expanded "><a href="../open-source/open-source.html">开源世界</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../open-source/github.html">GitHub</a></li><li class="chapter-item expanded "><a href="../open-source/meet-geniuses.html">遇见天才</a></li></ol></li><li class="chapter-item expanded "><a href="../language/language.html">语言学习</a></li><li class="chapter-item expanded "><a href="../education/education.html">教育</a></li><li class="chapter-item expanded "><a href="../life/life.html">生活</a></li><li class="chapter-item expanded "><a href="../work/work.html">工作</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../work/job-hunt.html">求职</a></li><li class="chapter-item expanded "><a href="../work/career.html">职场发展</a></li><li class="chapter-item expanded "><a href="../work/remote.html">远程工作</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../work/articles/how-to-get-a-remote-job-by-writing-in-english.html">如何通过英文写作找到国外的远程工作机会</a></li></ol></li><li class="chapter-item expanded "><a href="../work/slashie.html">斜杠/生活</a></li></ol></li><li class="chapter-item expanded "><a href="../cli/cli.html">命令行</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cli/vim.html">Vim</a></li><li class="chapter-item expanded "><a href="../cli/git-quick-checklist.html">Git 常用命令速查清单</a></li><li class="chapter-item expanded "><a href="../cli/homebrew.html">Homebrew</a></li></ol></li><li class="chapter-item expanded "><a href="../linux/linux.html">Linux</a></li><li class="chapter-item expanded "><a href="../stories/stories.html">故事</a></li><li class="chapter-item expanded "><a href="../product/product.html">产品</a></li><li class="chapter-item expanded "><a href="../design/design.html">设计</a></li><li class="chapter-item expanded "><a href="../iOSDev/iOSDev.html">iOS 开发</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../iOSDev/architecture.html">架构设计</a></li><li class="chapter-item expanded "><a href="../iOSDev/threading-programming/threading-programming.html">多线程编程</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../iOSDev/threading-programming/about.html">关于多线程编程</a></li><li class="chapter-item expanded "><a href="../iOSDev/threading-programming/thread-management.html">线程管理</a></li><li class="chapter-item expanded "><a href="../iOSDev/threading-programming/run-loops.html">Run Loops</a></li><li class="chapter-item expanded "><a href="../iOSDev/threading-programming/synchronization.html">线程同步</a></li></ol></li><li class="chapter-item expanded "><a href="../iOSDev/performance.html">性能优化</a></li><li class="chapter-item expanded "><a href="../iOSDev/build-optimization.html">编译优化</a></li><li class="chapter-item expanded "><a href="../iOSDev/ui-layout.html">视图布局</a></li><li class="chapter-item expanded "><a href="../iOSDev/swift-ui.html">SwiftUI</a></li><li class="chapter-item expanded "><a href="../iOSDev/database.html">数据库</a></li><li class="chapter-item expanded "><a href="../iOSDev/av.html">音视频</a></li><li class="chapter-item expanded "><a href="../iOSDev/community.html">开发社区</a></li><li class="chapter-item expanded "><a href="../iOSDev/xcode.html">Xcode</a></li><li class="chapter-item expanded "><a href="../iOSDev/apps.html">iOS 应用</a></li></ol></li></ol>
+        </div>
+        <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+    </nav>
+
+    <div id="page-wrapper" class="page-wrapper">
+
+        <div class="page">
+            <div id="menu-bar-hover-placeholder"></div>
+            <div id="menu-bar" class="menu-bar sticky bordered">
+                <div class="left-buttons">
+                    <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents"
+                        aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <button id="theme-toggle" class="icon-button" type="button" title="Change theme"
+                        aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                        <i class="fa fa-paint-brush"></i>
+                    </button>
+                    <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                        <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button>
+                        </li>
+                    </ul>
+                    <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
+                        aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S"
+                        aria-controls="searchbar">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+
+                <h1 class="menu-title">棒棒彬的第二大脑</h1>
+
+                <div class="right-buttons">
+                    <a href="../print.html" title="Print this book" aria-label="Print this book">
+                        <i id="print-button" class="fa fa-print"></i>
+                    </a>
+                    <a href="https://github.com/Binlogo/Knowledge-Track" title="Git repository" aria-label="Git repository">
+                        <i id="git-repository-button" class="fa fa-github"></i>
+                    </a>
+                    <a href="https://github.com/Binlogo/Knowledge-Track/edit/main/src/cs/compiliers.md" title="Suggest an edit" aria-label="Suggest an edit">
+                        <i id="git-edit-button" class="fa fa-edit"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div id="search-wrapper" class="hidden">
+                <form id="searchbar-outer" class="searchbar-outer">
+                    <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..."
+                        aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                </form>
+                <div id="searchresults-outer" class="searchresults-outer hidden">
+                    <div id="searchresults-header" class="searchresults-header"></div>
+                    <ul id="searchresults">
+                    </ul>
+                </div>
+            </div>
+            <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+            <script type="text/javascript">
+                document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                    link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                });
+            </script>
+
+            <div id="content" class="content">
+                <main>
+                    <h1 id="编译原理"><a class="header" href="#编译原理">编译原理</a></h1>
+<blockquote>
+<p>逆水行舟，鱼翔浅底。</p>
+</blockquote>
+<h2 id="通用理论导论"><a class="header" href="#通用理论导论">通用理论/导论</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<a href="https://aosabook.org/en/llvm.html">LLVM</a>：这是《<a href="https://aosabook.org/en/index.html">开源应用程序架构</a>》一书中的一章，由 Chris Lattner 编写，涵盖了 LLVM 架构设计</li>
+<li><input disabled="" type="checkbox"/>
+<a href="https://online.stanford.edu/courses/soe-ycscs1-compilers">编译器（Compilers）</a>：该课程由斯坦福大学出品，Alex Aiken 教授。在本课程中，从头开始为真正的编程语言构建一个编译器。它涵盖了整个编译流程：解析(parsing)、类型检查(type-checking)、优化(optimizations)、代码生成(code generation)。除了实践部分，它还深入研究了理论。</li>
+<li><input disabled="" type="checkbox"/>
+<a href="https://online.stanford.edu/courses/soe-ycsautomata-automata-theory">自动机理论（Automata Theory）</a>：该课程由由斯坦福大学出品， Jeffrey Ullman 教授。十分偏重理论基础。它从相对简单的主题开始，例如状态机和有限自动机。逐渐转向更复杂的事物，如图灵机、计算复杂性、著名的 P vs. NP 问题等。</li>
+<li><input disabled="" type="checkbox"/>
+<a href="https://ocw.mit.edu/courses/mathematics/18-404j-theory-of-computation-fall-2020/">计算理论（Theory of Computation）</a>：本课程由麻省理工大学出品，Michael Sipser 教授。它与上面的类似，但以不同的方式讲授，更详细地介绍了特定的主题。</li>
+</ul>
+<h2 id="前端front-end"><a class="header" href="#前端front-end">前端（Front-end）</a></h2>
+<p>编译器前端是与实际源代码进行交互的地方。编译器将源代码解析为抽象语法树 (AST)，进行语义分析和类型检查，并将其转换为中间表示 (IR)。</p>
+<p>以下是 Clang 相关：</p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<a href="https://jonasdevlieghere.com/understanding-the-clang-ast/">理解 Clang 抽象语法树（Understanding the Clang AST）</a>: 本文由 Jonas Devlieghere 撰写。它详细介绍了 Clang 的 AST 实现细节。也有很多很好的资源链接可以深入研究这个主题。</li>
+<li><input disabled="" type="checkbox"/>
+<a href="https://github.com/banach-space/clang-tutor/">clang-tutor</a>：该仓库由 Andrzej Warzyński 维护。它包含多个 Clang 插件，涵盖各种主题，从简单的 AST 遍历到更复杂的主题，例如自动重构和混淆。</li>
+</ul>
+<h2 id="中端middle-end"><a class="header" href="#中端middle-end">中端（Middle-End）</a></h2>
+<p>中端是进行各种优化的地方。通常，中端使用一些中间表示。 LLVM 的中间表示通常称为 LLVM IR 或 LLVM Bitcode。简而言之，它是一种用于伪机器的人类可读的汇编语言（即 IR 不针对任何特定的 CPU）。LLVM IR 保持某些属性：它采用静态单分配 (SSA) 形式，组织为控制流图 (CFG)。</p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<a href="https://www.youtube.com/watch?v=m8G_S5LwlTo">LLVM IR Tutorial - Phis, GEPs and other things, oh my!</a>. 这是 Vince Bridgers 和 Felipe de Azevedo Piovezan 的精彩演讲。</li>
+<li><input disabled="" type="checkbox"/>
+<a href="https://www.youtube.com/watch?v=J5xExRGaIIY">Introduction to LLVM</a>. 来自 Eric Christopher 和 Johannes Doerfert 的 LLVM 开发者会议的一小时演讲/教程。</li>
+<li><input disabled="" type="checkbox"/>
+<a href="https://www.cs.cornell.edu/courses/cs6120/2020fa/self-guided/">CS 6120: Advanced Compilers</a>. 该课程由康奈尔大学出品，阿德里安·桑普森教授。标题说“高级”，但它涵盖了人们对现代生产级编译器的基础部分：SSA、CFG、优化、各种分析。</li>
+<li><input disabled="" type="checkbox"/>
+<a href="https://lowlevelbits.org/bitcode-demystified/">Bitcode Demystified</a>(🔌). 文章介绍了 LLVM 位码是什么的描述。</li>
+<li><input disabled="" type="checkbox"/>
+<a href="https://github.com/banach-space/llvm-tutor">llvm-tutor</a>. 这个也是来自 Andrzej Warzyński。它涵盖了 LLVM 插件（所谓的 pass），允许人们分析和转换 LLVM IR 形式的程序。</li>
+</ul>
+<h2 id="后端back-end"><a class="header" href="#后端back-end">后端（Back-end）</a></h2>
+<p>编译的最后一个阶段是后端。这个阶段的目标是将中间表示转换为最终机器代码（零和一）。生成的 0 和 1 可以在 CPU 上运行。因此，要了解后端，需要了解机器代码和 CPU 的工作原理。</p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<a href="https://www.coursera.org/learn/build-a-computer">依据基本原理构建现代计算机：从与非门到俄罗斯方块</a>. 由希伯来大学出品，Shimon Schocken 和 Noam Nisan 授课。本课程是反着来的：首先，构建逻辑门（和、或、异或等），然后使用逻辑门构建算术逻辑单元 (ALU)，然后使用 ALU 构建 CPU。然后学习如何使用零和一（机器代码）控制 CPU，并最终开发汇编程序以将人类可读的程序代码转换为机器代码。</li>
+<li><input disabled="" type="checkbox"/>
+<a href="https://lowlevelbits.org/parsing-mach-o-files/">Parsing Mach-O files</a>(🔌). 文章介绍了如何在 macOS (Mach-O) 上解析目标文件。如果你使用的是 Linux 或 Windows，请分别搜索有关 elf 和 PE/COFF 文件的类似文章。</li>
+<li><input disabled="" type="checkbox"/>
+<a href="https://book.easyperf.net/perf_book">Performance Analysis and Tuning on Modern CPUs</a>. 丹尼斯·巴赫瓦洛夫的书。虽然它与性能有关，但它很好地介绍了 CPU 的工作原理。</li>
+</ul>
+<h2 id="链接"><a class="header" href="#链接">链接</a></h2>
+<ul>
+<li><a href="https://www.youtube.com/channel/UCv2_41bSAa5Y_8BacJUZfjQ">LLVM’s YouTube 频道</a>. 在这里可以找到很多来自开发者会议的演讲。</li>
+<li><a href="https://llvmweekly.org/">LLVM Weekly</a>. 由亚历克斯·布拉德伯里 (Alex Bradbury) 运营的每周通讯。这是我所知道的没有广告的纯粹时事通讯！</li>
+<li><a href="https://blog.llvm.org/">LLVM 博客</a>.</li>
+<li><a href="https://llvm.org/docs/tutorial/">LLVM 教程</a>.</li>
+<li><a href="https://blog.regehr.org/archives/category/compilers">Embedded in academia</a>. John Regehr 的博客有很多关于 LLVM 和编译器的好文章</li>
+</ul>
+
+                    <!-- Comments powered by giscus.app -->
+                    <div id="comments" class="giscus">
+                        <script src="https://giscus.app/client.js" data-repo="Binlogo/Knowledge-Track"
+                            data-repo-id="MDEwOlJlcG9zaXRvcnkyNDc1MTA2ODg=" data-category="Announcements"
+                            data-category-id="DIC_kwDODsC2oM4B_hm2" data-mapping="pathname" data-reactions-enabled="1"
+                            data-emit-metadata="0" data-theme="light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </main>
+
+                <nav class="nav-wrapper" aria-label="Page navigation">
+                    <!-- Mobile navigation buttons -->
+                    <a rel="prev" href="../cs/algrithoms.html" class="mobile-nav-chapters previous"
+                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../cs/terminology.html" class="mobile-nav-chapters next"
+                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                    <div style="clear: both"></div>
+                </nav>
+            </div>
+        </div>
+
+        <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            <a rel="prev" href="../cs/algrithoms.html" class="nav-chapters previous" title="Previous chapter"
+                aria-label="Previous chapter" aria-keyshortcuts="Left">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a rel="next" href="../cs/terminology.html" class="nav-chapters next" title="Next chapter"
+                aria-label="Next chapter" aria-keyshortcuts="Right">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </nav>
+
+    </div>
+
+    <!-- Google Analytics Tag -->
+    <script type="text/javascript">
+        var localAddrs = ["localhost", "127.0.0.1", ""];
+
+        // make sure we don't activate google analytics if the developer is
+        // inspecting the book locally...
+        if (localAddrs.indexOf(document.location.hostname) === -1) {
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-160717450-2', 'auto');
+            ga('send', 'pageview');
+        }
+    </script>
+    <script type="text/javascript">
+        window.playground_copyable = true;
+    </script>
+    <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- Custom JS scripts -->
+</body>
+
+</html>
