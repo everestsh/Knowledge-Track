@@ -20,38 +20,11 @@
     - [SnippetsLab](./macOS/snippetsLab.md)
     - [Contexts](./macOS/contexts.md)
 
-- [iOS 开发](./iOSDev/iOSDev.md)
-
-  - [架构设计](./iOSDev/architecture.md)
-  - [多线程编程](./iOSDev/threading-programming/threading-programming.md)
-
-    - [关于多线程编程](./iOSDev/threading-programming/about.md)
-    - [线程管理](./iOSDev/threading-programming/thread-management.md)
-    - [Run Loops](./iOSDev/threading-programming/run-loops.md)
-    - [线程同步](./iOSDev/threading-programming/synchronization.md)
-
-  - [性能优化](./iOSDev/performance.md)
-
-  - [编译优化](./iOSDev/build-optimization.md)
-
-  - [视图布局](./iOSDev/ui-layout.md)
-
-  - [SwiftUI](./iOSDev/swift-ui.md)
-
-  - [数据库](./iOSDev/database.md)
-
-  - [音视频](./iOSDev/av.md)
-
-  - [开发社区](./iOSDev/community.md)
-
-  - [Xcode](./iOSDev/xcode.md)
-
-  - [iOS 应用](./iOSDev/apps.md)
-
 - [计算机科学基础](./cs/cs.md)
   - [课程记录]()
     - [CS 110L: Safety in Systems Programming](./cs/class/cs110l.md)
   - [数据结构与算法](./cs/algrithoms.md)
+  - [编译原理](./cs/compiliers.md)
   - [术语汇总](./cs/terminology.md)
 
 - [软件工程](./software-engineering/software-engineering.md)
@@ -112,3 +85,31 @@
 - [产品](./product/product.md)
 
 - [设计](./design/design.md)
+
+- [iOS 开发](./iOSDev/iOSDev.md)
+
+  - [架构设计](./iOSDev/architecture.md)
+  - [多线程编程](./iOSDev/threading-programming/threading-programming.md)
+
+    - [关于多线程编程](./iOSDev/threading-programming/about.md)
+    - [线程管理](./iOSDev/threading-programming/thread-management.md)
+    - [Run Loops](./iOSDev/threading-programming/run-loops.md)
+    - [线程同步](./iOSDev/threading-programming/synchronization.md)
+
+  - [性能优化](./iOSDev/performance.md)
+
+  - [编译优化](./iOSDev/build-optimization.md)
+
+  - [视图布局](./iOSDev/ui-layout.md)
+
+  - [SwiftUI](./iOSDev/swift-ui.md)
+
+  - [数据库](./iOSDev/database.md)
+
+  - [音视频](./iOSDev/av.md)
+
+  - [开发社区](./iOSDev/community.md)
+
+  - [Xcode](./iOSDev/xcode.md)
+
+  - [iOS 应用](./iOSDev/apps.md)
