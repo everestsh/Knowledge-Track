@@ -113,7 +113,7 @@
 
 - 如何加速 crates.io-index 更新速度？
 
-执行以下命令更换镜像源
+执行以下命令更换镜像源（或字节跳动镜像源：https://rsproxy.cn/）
 
 ```sh
 tee $HOME/.cargo/config <<-'EOF'
