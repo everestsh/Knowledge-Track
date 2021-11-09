@@ -18,6 +18,10 @@
 - [HackMD](https://hackmd.io/) - Markdown 协作知识库
 - [Marp: Markdown Presentation Ecosystem](https://marp.app/) - Markdown 制作演示幻灯片
 
+## 创作平台
+
+- [Substack](https://substack.com/) - Newsletter 付费订阅平台
+
 ## 视频剪辑
 
 - [Height](https://height.app/) - 项目管理协同工具
