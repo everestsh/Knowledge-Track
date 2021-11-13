@@ -19,6 +19,10 @@
 
 - [雷霄骅的专栏](https://blog.csdn.net/leixiaohua1020) - 「中国传媒大学一个搞广播电视相关的视音频技术的学生」🌟🌟🌟
 - [音视频开发进阶](https://glumes.com/) - 一个抖音多媒体开发工程师的技术交流分享
+
+### 书籍
+
+- [ ] [《在线视频技术精要》](https://book.douban.com/subject/34947377/)
 ### 文章
 
 - [Camera and Photos](https://www.objc.io/issues/21-camera-and-photos/) - Objc.io 相机与照片（[中文](https://objccn.io/issue-21-0/)）
@@ -60,7 +64,8 @@
 
 ### 经验分享
 
-- [音视频开发工作经验分享](https://www.bilibili.com/video/BV1p54y1X7fY) - 分享从 Android 客户端转到字节跳动音视频 SDK 开发的经验
+- [x] [音视频开发工作经验分享](https://www.bilibili.com/video/BV1p54y1X7fY) - 分享从 Android 客户端转到字节跳动音视频 SDK 开发的经验
   - 音视频开发工作主要是做什么
   - 如何点亮音视频技能树
   - 音视频岗位的转行和面试
+    - ⚠️ 学习和转行是两回事
