@@ -38,3 +38,5 @@
     >   - C 端做用户增长，中小企业 + B 端做营收
     > - 满足痛点与需求，用户快速增长与传播，遇到安全隐患后直面问题去解决
     > - 市场重新开拓后，迎面巨头再度入场的挑战
+- [哈佛学生这可怕的超充实一天](https://youtu.be/XkFulQe9EVE)
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XkFulQe9EVE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
