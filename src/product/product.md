@@ -12,6 +12,7 @@
 ## 团队协作
 
 - [OKR.com](https://www.okr.com/) - 理念与实践，一站式掌握 OKR。由字节跳动·飞书支持。
+- [MentorCruise - Connecting Mentors & Mentees in Tech](https://mentorcruise.com/) - 连接导师的平台
 
 ## 文档协作
 
