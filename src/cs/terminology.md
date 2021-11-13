@@ -18,5 +18,10 @@
 - [消息中间件 - aka: 消息队列(Message queue)](https://zh.wikipedia.org/wiki/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97)
 
     > 一种进程间通信或同一进程的不同线程间的通信方式，提供了异步的通信协议
+    
+    > 为什么要用消息中间件？
+    >   1. 系统解耦
+    >   2. 异步调用
+    >   3. 流量削峰
 
     - 引用来源：[采用 Rust 实现 NATS](https://github.com/Binlogo/nats-rs)
