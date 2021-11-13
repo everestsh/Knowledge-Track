@@ -15,6 +15,10 @@
 
 - [Incorporating HDR video with Dolby Vision into your apps](https://developer.apple.com/av-foundation/Incorporating-HDR-video-with-Dolby-Vision-into-your-apps.pdf) - 支持杜比视界的 HD
 
+### 学习资源
+
+- [雷霄骅的专栏](https://blog.csdn.net/leixiaohua1020) - 「中国传媒大学一个搞广播电视相关的视音频技术的学生」🌟🌟🌟
+- [音视频开发进阶](https://glumes.com/) - 一个抖音多媒体开发工程师的技术交流分享
 ### 文章
 
 - [Camera and Photos](https://www.objc.io/issues/21-camera-and-photos/) - Objc.io 相机与照片（[中文](https://objccn.io/issue-21-0/)）
