@@ -101,6 +101,8 @@ L0（low-level knowledge)
 
 - [职场人士应该学什么以及学习方法（编码领域）](https://jingwei.link/2020/04/05/learning-methodology.html)
 - [我们如何获取信息，组织知识](https://mp.weixin.qq.com/s/0tLF_cTbLGgQr1_-kNPFXg) - by 产品沉思录
+- [我的阅读工作流(2021版)](https://mp.weixin.qq.com/s/lioyPd8RRv3XUyTkaJFDDQ) - by 潦草学者
+  ![阅读工作流](./assets/reading_flow.webp)
 
 ### 其他大脑传送带
 
