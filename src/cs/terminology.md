@@ -25,3 +25,11 @@
     >   3. 流量削峰
 
     - 引用来源：[采用 Rust 实现 NATS](https://github.com/Binlogo/nats-rs)
+
+- [并发和并行（Concurrency vs. Parallelism）](https://talks.golang.org/2012/waza.slide#8)
+
+    > - 并发是关于同时处理很多事情。
+    > - 并行是关于同时执行很多事情。
+    > - 并发是关于结构的，并行是关于执行的。
+    > - 并发提供了一种构建方式，以解决可能（但不一定）可并行化的问题。
+ 
