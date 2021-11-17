@@ -10,6 +10,10 @@
 
 - [multipass](https://multipass.run/) - 轻量的 Ubuntu 虚拟机
 
+### 系统库
+
+- [curses](https://en.wikipedia.org/wiki/Curses_(programming_library)) - 命令行控制库，用于构建 TUI(text user interface) 应用
+
 ### 社区
 
 - [CNCF](https://www.cncf.io/) - 云原生计算基金会, Linux 基金会的一部分
