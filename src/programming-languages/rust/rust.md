@@ -52,7 +52,7 @@
 - [Rust: A Language for the Next 40 Years - Carol Nichols](https://www.youtube.com/watch?v=A3AdN7U24iU)
 - [3K, 60fps, 130ms: achieving it with Rust - by Tonarino](https://blog.tonari.no/why-we-love-rust) - [中文](https://mp.weixin.qq.com/s/-YfdohRpJxURNYLSfo6G7w)
 - [Understanding Rust as a C++ developer](https://renoth.medium.com/understanding-rust-as-a-c-developer-69ee8ca76fd6)
-- [ ] [Building an (almost entirely) rust iOS app using uikit-sys. - Sebastian Imlay](https://simlay.net/posts/using-uikit-sys/) - 尝试几乎完全采用 Rust 构建 iOS 应用
+- [x] [Building an (almost entirely) rust iOS app using uikit-sys. - Sebastian Imlay](https://simlay.net/posts/using-uikit-sys/) - 尝试几乎完全采用 Rust 构建 iOS 应用
 
 ### Rust 移动端跨平台
 
@@ -62,6 +62,7 @@
 - [深度探索：前端中的后端](https://mp.weixin.qq.com/s/W-EvvKzmj1A8VsNKFYkuhQ)
 - [深度分析：前端中的后端-实现篇](https://mp.weixin.qq.com/s/5FfSRpRG-F8Y8X3BX9mJ-Q)
 - [mozilla/uniffi-rs](https://github.com/mozilla/uniffi-rs) - Rust 跨平台交互代码生成器
+- [rust-windowing/winit](https://github.com/rust-windowing/winit) - 跨平台窗口创建和管理
 
 #### 跨平台开源项目
 
