@@ -13,6 +13,7 @@
 
 - [OKR.com](https://www.okr.com/) - 理念与实践，一站式掌握 OKR。由字节跳动·飞书支持。
 - [MentorCruise - Connecting Mentors & Mentees in Tech](https://mentorcruise.com/) - 连接导师的平台
+- [Quire - Dream. Plan. Achieve.](https://quire.io/) - 任务协同
 
 ## 文档协作
 
