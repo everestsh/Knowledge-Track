@@ -32,6 +32,7 @@
     notarytool submit path/to/submission.zip --wait
         --key "$KEY_PATH" --key-id "$KEY_ID" --issuer "$ISSUER"
     ```
+- [simctl](https://nshipster.com/simctl/) - 模拟器控制
 
 ## 技巧
 
