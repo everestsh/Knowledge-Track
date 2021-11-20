@@ -23,6 +23,7 @@
 ## 创作平台
 
 - [Substack](https://substack.com/) - Newsletter 付费订阅平台
+- [Typefully - Twitter Threads Maker & Analytics](https://typefully.app/)
 
 ## 视频剪辑
 
