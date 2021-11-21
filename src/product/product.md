@@ -31,5 +31,6 @@
 - [Frame.io | Video Review and Collaboration Software](https://www.frame.io/) - 视频剪辑工作流协同工具
 
 ## ToB(B for business)
+- [x] [13000字的Figma研究笔记，聊聊Product-Led Growth的误区与思考](https://mp.weixin.qq.com/s/3C43vxrxbkMhNQAdojG0bg)
 - [Apple at Work](https://www.apple.com/business/) - Apple 的 ToB 服务
     - [Apple Business Essentials](https://www.apple.com/business/essentials/)
