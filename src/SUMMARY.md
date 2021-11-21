@@ -5,14 +5,17 @@
 
 --------
 
-- [macOS](./macOS/macOS.md)
-
-  - [macOS 应用](./macOS/apps.md)
-
+- [基础利器](./infrastructure/infrastructure.md)
+  - [macOS](./macOS/macOS.md)
     - [Alfred](./macOS/alfred.md)
     - [SnippetsLab](./macOS/snippetsLab.md)
     - [Contexts](./macOS/contexts.md)
-
+    - [Homebrew](./macOS/homebrew.md)
+  - [Linux](./linux/linux.md)
+  - [命令行](./cli/cli.md)
+    - [Vim](./cli/vim.md)
+    - [Git 常用命令速查清单](./cli/git-quick-checklist.md)
+    
 - [计算机科学](./cs/cs.md)
   - [课程记录]()
     - [CS 110L: Safety in Systems Programming](./cs/class/cs110l.md)
@@ -86,14 +89,6 @@
   - [远程工作](./work/remote.md)
     - [如何通过英文写作找到国外的远程工作机会](./work/articles/how-to-get-a-remote-job-by-writing-in-english.md)
   - [斜杠/生活](./work/slashie.md)
-
-- [命令行](./cli/cli.md)
-  
-  - [Vim](./cli/vim.md)
-  - [Git 常用命令速查清单](./cli/git-quick-checklist.md)
-  - [Homebrew](./cli/homebrew.md)
-
-- [Linux](./linux/linux.md)
 
 - [故事](./stories/stories.md)
 
