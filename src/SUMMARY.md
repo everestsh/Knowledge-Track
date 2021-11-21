@@ -70,7 +70,7 @@
   - [GitHub](./open-source/github.md)
   - [遇见天才](./open-source/meet-geniuses.md)
 
-- [终身学习&教育](./education/education.md)
+- [终身学习&通识教育](./education/education.md)
   - [通识阅读](./education/reading/reading.md)
     - [《全新思维》](./education/reading/a-whole-new-mind.md)
     - [《能力陷阱》](./education/reading/act-like-a-leader.md)
