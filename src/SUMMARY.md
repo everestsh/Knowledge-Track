@@ -5,6 +5,16 @@
 
 --------
 
+- [终身学习&通识教育](./education/education.md)
+  - [通识阅读](./education/reading/reading.md)
+    - [《全新思维》](./education/reading/a-whole-new-mind.md)
+    - [《能力陷阱》](./education/reading/act-like-a-leader.md)
+  - [世界语言](./education/language.md)
+  - [知识管理]()
+    - [Anki](./education/anki.md)
+    - [构建第二大脑播客](./education/second-brain-podcast.md)
+  - [时间管理]()
+
 - [基础利器](./infrastructure/infrastructure.md)
   - [macOS](./macOS/macOS.md)
     - [Alfred](./macOS/alfred.md)
@@ -61,32 +71,18 @@
     - [iOS 应用](./iOSDev/apps.md)
   - [Android 开发]()
 
-- [开源世界](./open-source/open-source.md)
-  - [GitHub](./open-source/github.md)
-  - [遇见天才](./open-source/meet-geniuses.md)
+- [丰富生活](./life/life.md)
+  - [故事](./life/stories.md)
 
-- [终身学习&通识教育](./education/education.md)
-  - [通识阅读](./education/reading/reading.md)
-    - [《全新思维》](./education/reading/a-whole-new-mind.md)
-    - [《能力陷阱》](./education/reading/act-like-a-leader.md)
-  - [世界语言](./education/language.md)
-  - [知识管理]()
-    - [Anki](./education/anki.md)
-    - [构建第二大脑播客](./education/second-brain-podcast.md)
-  - [时间管理]()
-
-- [生活](./life/life.md)
-
-- [工作](./work/work.md)
-
+- [积极工作](./work/work.md)
   - [求职](./work/job-hunt.md)
   - [职场发展](./work/career.md)
   - [远程工作](./work/remote.md)
     - [如何通过英文写作找到国外的远程工作机会](./work/articles/how-to-get-a-remote-job-by-writing-in-english.md)
-  - [斜杠/生活](./work/slashie.md)
+  - [延伸拓展](./work/slashie.md)
+    - [产品](./product/product.md)
+    - [设计](./design/design.md)
 
-- [故事](./stories/stories.md)
-
-- [产品](./product/product.md)
-
-- [设计](./design/design.md)
+- [开源世界](./open-source/open-source.md)
+  - [GitHub](./open-source/github.md)
+  - [遇见天才](./open-source/meet-geniuses.md)
