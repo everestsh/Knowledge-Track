@@ -12,6 +12,35 @@
 
 ## 链接
 
+- [自由与责任 —— Netflix 文化](https://jobs.netflix.com/culture?lang=%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+    <details>
+    <summary>笔记概览</summary>
+
+    1. 鼓励员工独立决策
+
+    2. 公开、广泛、谨慎地共享信息
+
+    3. 彼此之间坦诚相待
+
+    4. 只留下高效员工
+    
+    5. 拒绝墨守成规
+    
+    > 如果你想造一艘船，
+    > 
+    > 不要老催人去采木，
+    > 
+    > 忙着分配工作
+    > 
+    > 和发号施令。
+    >
+    > 而是要激起他们
+    >
+    > 对浩瀚无垠的
+    >
+    > 大海的向往。
+
+    </details>
 - [美团人的写作基本功是如何练成的](https://mp.weixin.qq.com/s/oCEE82Cah2vsE1ivfuLXzg)
     <details>
         <summary>笔记概览</summary>
