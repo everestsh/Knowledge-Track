@@ -21,6 +21,7 @@
     - [SnippetsLab](./macOS/snippetsLab.md)
     - [Contexts](./macOS/contexts.md)
     - [Homebrew](./macOS/homebrew.md)
+    - [CLion](./macOS/clion.md)
   - [Linux](./linux/linux.md)
   - [命令行](./cli/cli.md)
     - [Vim](./cli/vim.md)
