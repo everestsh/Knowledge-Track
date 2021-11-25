@@ -26,8 +26,9 @@
 ## 链接
 
 - [NATS.io 消息系统协议](https://docs.nats.io/)
-
   - [自己上手学习 Rust 的实现](https://github.com/Binlogo/nats-rs)
+- 边缘网络系列文章
+  - [x] [从网卡到应用以及Rust网络库实现](https://mp.weixin.qq.com/s/uIASAeayB7noOrBOzBc3_g)
 
 ### 网络协议与组织
 
