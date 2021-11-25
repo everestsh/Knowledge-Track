@@ -50,6 +50,7 @@
   - [编译原理](./cs/compiliers.md)
   - [网络](./cs/networking/networking.md)
     - [TCP](./cs/networking/tcp.md)
+  - [数据库](./cs/database.md)
   - [术语汇总](./cs/terminology.md)
 
 - [软件开发](./software-development/software-development.md)
