@@ -33,3 +33,8 @@
 - [readme-md-generator](https://github.com/kefranabg/readme-md-generator)
 - [开源软件指南](https://opensource.guide/zh-hans/)
 - [开源指北 - Gitee](https://gitee.com/opensource-guide/)
+
+### 工具
+
+- [Git.io](https://git.io/) - GitHub 的短链接服务
+  - Try it: https://git.io/JML4o
