@@ -24,3 +24,4 @@ Free & Open, OS.
 ### 社区
 
 - [CNCF](https://www.cncf.io/) - 云原生计算基金会, Linux 基金会的一部分
+- [Michael Kerrisk](https://man7.org/index.html) - 提供 Linux 培训服务与教学资源
