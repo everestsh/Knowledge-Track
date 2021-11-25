@@ -149,3 +149,14 @@ pod setup
   </details>
 
   - [M1 Pro and M1 Max Xcode Build and Test Benchmarks](https://blog.swiftpackageindex.com/posts/m1-pro-and-m1-max-build-and-test-benchmarks)
+
+- [Back to the Mac](https://backtomac.org/) - Mac 开发者在线会议
+  - 2021
+    - [x] The making of VimR
+    - [x] Automating Your Mac
+    - [ ] Shipping your app without the App Store
+  - 2020
+    - [ ] Building a screenshot search app
+    - [ ] Using XPC to execute Python code in your Mac app
+    - [ ] Notarization and your CI system
+    - [ ] Build a Mac app inside 30 minutes using nothing but SwiftUI
