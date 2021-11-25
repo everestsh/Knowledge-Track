@@ -44,6 +44,7 @@
 - [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/) - Rust 优秀实践示例集锦
 - [The Rust Performance Book](https://nnethercote.github.io/perf-book/) - Rust 性能之书
 - [Rust Design Patterns](https://rust-unofficial.github.io/patterns/)
+- [Rust 文档网 - Rust 官方文档中文教程](https://rustwiki.org/)
 
 ### 实践经验分享
 
