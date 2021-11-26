@@ -71,7 +71,7 @@
     - [开发社区](./iOSDev/community.md)
     - [Xcode](./iOSDev/xcode.md)
     - [iOS 应用](./iOSDev/apps.md)
-  - [Android 开发]()
+  - [Android 开发](./software-development/android.md)
 
 - [丰富生活](./life/life.md)
   - [故事](./life/stories.md)
