@@ -77,3 +77,5 @@
 - [1 on 1 Meeting Questions](https://github.com/VGraupera/1on1-questions) - One-One 沟通话题集锦，也可以是日常工作和思考的一些问题
     - TODO：可添加到格志日记提示库
     - TODO：暂未找到中文版本
+
+- [How Asynchronous Communication Is Transforming Work | Doist](https://blog.doist.com/asynchronous-communication/)
