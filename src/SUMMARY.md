@@ -30,6 +30,7 @@
 - [计算机科学](./cs/cs.md)
   - [课程记录]()
     - [CS 110L: Safety in Systems Programming](./cs/class/cs110l.md)
+    - [The Missing Semester of Your CS Education](./cs/class/missing-semester.md)
   - [编程语言](./programming-languages/programming-languages.md)
     - [Swift](./programming-languages/swift/swift.md)
       - [Swift 5.4 新特性速查](./programming-languages/swift/what's-new-5-4.md)

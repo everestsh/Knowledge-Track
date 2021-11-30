@@ -8,20 +8,8 @@
 
   - TODO: Keep up 整理幕布大纲
 
-- [The Missing Semester of Your CS Education](https://missing.csail.mit.edu/)
-
-  - [x] Course overview + the shell
-  - [ ] Shell Tools and Scripting
-  - [ ] Editors (Vim)
-  - [ ] Data Wrangling
-  - [ ] Command-line Environment
-  - [ ] Version Control (Git)
-  - [ ] Debugging and Profiling
-  - [ ] Metaprogramming
-  - [ ] Security and Cryptography
-  - [ ] Potpourri
-
 - [斯坦福大学：系统编程的安全性](./class/cs110l.md)
+- [麻省理工学院：计算机教育中缺失的一课](./class/missing-semester.md)
 
 ## 链接
 - [HOW TO LEARN COMPILERS: LLVM EDITION](https://lowlevelbits.org/how-to-learn-compilers-llvm-edition/) - 编译器学习路径推荐
