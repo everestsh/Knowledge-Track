@@ -7,6 +7,11 @@
 - [`tree`]() - 文件目录展示工具
 - [`bat`](https://github.com/sharkdp/bat) - A cat(1) clone with syntax highlighting and Git integration.
 - [`tokei`](https://github.com/XAMPPRocky/tokei) - 代码量统计工具
+- [`tmux`](https://github.com/tmux/tmux) - 终端复用
+	- [x] [A Quick and Easy Guide to tmux](https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/)
+	- [Tmux Cheat Sheet & Quick Reference](https://tmuxcheatsheet.com/)
+- [`fish`](https://fishshell.com/) - 交互更友好的 shell
+	- [awsm.fish](https://github.com/jorgebucaran/awsm.fish)
 
 ## Alias
 
