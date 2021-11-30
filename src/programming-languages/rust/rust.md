@@ -78,6 +78,10 @@
   - [Sample Code](https://github.com/irh/freeverb-rs)
   - 🆕 [JUCE.com](https://juce.com/) - 音频开发工具
 
+### 异步运行时
+
+- [x] [Diagnostics with Tracing | Tokio](https://tokio.rs/blog/2019-08-tracing)
+
 ### 库
 
 - [A Rust implementation of DEFLATE algorithm and related formats (ZLIB, GZIP)](https://github.com/sile/libflate)
