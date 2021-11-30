@@ -28,6 +28,12 @@ map <C-J> 10j
 ## 链接
 - [./missing-semester - Vim](https://missing-semester-cn.github.io/2020/editors/)
 - [Vim Cheat Sheet](./assets/vim_cheat_sheet.png)
+- [🎓 All things Vim!](https://github.com/mhinz/vim-galore)
+- [Vim Practice Sandbox](https://www.openvim.com/sandbox.html)
+- [ ] [Seven habits of effective text editing](https://www.moolenaar.net/habits.html)
+- [ ] [Learn Vimscript the Hard Way](https://learnvimscriptthehardway.stevelosh.com/)
+- [ ] [Vim Novice Videos](http://derekwyatt.org/vim/tutorials/novice/)
+- [ ] [Learning Vim in 2014](https://benmccormick.org/learning-vim-in-2014)
 
 ### 一、移动光标
 
