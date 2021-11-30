@@ -12,6 +12,7 @@
 	- [Tmux Cheat Sheet & Quick Reference](https://tmuxcheatsheet.com/)
 - [`fish`](https://fishshell.com/) - 交互更友好的 shell
 	- [awsm.fish](https://github.com/jorgebucaran/awsm.fish)
+- [asciinema](https://asciinema.org/) - Record and share your terminal sessions, the right way.
 
 ## Alias
 
