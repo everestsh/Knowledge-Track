@@ -20,6 +20,7 @@
 - [Design Patterns in Swift](https://github.com/ochococo/Design-Patterns-In-Swift) - Swift 示例实现的设计模式阐释
 - [Alamofire](https://github.com/Alamofire/Alamofire) - Swift 网络库
 - [LeetCode by Swift](https://github.com/soapyigu/LeetCode-Swift) - LeetCode 的 Swift 题解
+- [The Missing Semester of Your CS Education](https://github.com/missing-semester-cn/missing-semester-cn.github.io) - 计算机教育中缺失的一课·MIT
 
 ## 链接
 
