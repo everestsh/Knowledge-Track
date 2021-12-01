@@ -226,6 +226,86 @@ Potpourri</li>
 </ul>
 </li>
 </ul>
+<h2 id="shell-tools-and-scripting"><a class="header" href="#shell-tools-and-scripting">Shell Tools and Scripting</a></h2>
+<ul>
+<li>
+<p>Shell Scripting</p>
+<ul>
+<li>
+<p><code>foo=bar</code> differ from <code>foo = bar</code></p>
+</li>
+<li>
+<pre><code class="language-shell">foo=bar
+echo &quot;$foo&quot;
+# prints bar
+echo '$foo'
+# prints $foo
+</code></pre>
+</li>
+<li>
+<p><code>if</code>, <code>case</code>, <code>while</code> and <code>for</code> &amp; function</p>
+</li>
+<li>
+<pre><code class="language-shell">mcd () {
+    mkdir -p &quot;$1&quot;
+    cd &quot;$1&quot;
+}
+</code></pre>
+<ul>
+<li><code>$0</code> - Name of the script</li>
+<li><code>$1</code> to <code>$9</code> - Arguments to the script. <code>$1</code> is the first argument and so on.</li>
+<li><code>$@</code> - All the arguments</li>
+<li><code>$#</code> - Number of arguments</li>
+<li><code>$?</code> - Return code of the previous command</li>
+<li><code>$$</code> - Process identification number (PID) for the current script</li>
+<li><code>!!</code> - Entire last command, including arguments. A common pattern is to execute a command only for it to fail due to missing permissions; you can quickly re-execute the command with sudo by doing <code>sudo !!</code></li>
+<li><code>$_</code> - Last argument from the last command. If you are in an interactive shell, you can also quickly get this value by typing <code>Esc</code> followed by <code>.</code></li>
+<li>More info: <a href="https://tldp.org/LDP/abs/html/special-chars.html">Chapter 3. Special Characters</a></li>
+</ul>
+</li>
+<li>
+<p><code>&amp;&amp;</code> (and operator) and <code>||</code> (or operator)</p>
+</li>
+<li>
+<p><code>$( CMD )</code>, e.g: <code>for file in $(ls)</code></p>
+</li>
+<li>
+<p><code>&lt;( CMD )</code>, e.g: <code>diff &lt;(ls foo) &lt;(ls bar)</code></p>
+</li>
+<li>
+<p><a href="https://mywiki.wooledge.org/BashFAQ/031">What is the difference between test, <code>[</code> and <code>[[</code> ?</a></p>
+</li>
+<li>
+<p>shell <em>globbing</em>:</p>
+<ul>
+<li>Wildcards: <code>?</code> &amp; <code>*</code></li>
+<li>Curly braces: <code>{}</code>, expand, e.g: <code>convert image.{png,jpg}</code> =&gt; <code>convert image.png image.jpg</code></li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/koalaman/shellcheck">shellcheck</a> - A shell script static analysis tool</p>
+</li>
+<li>
+<p><code>#!/PATH/TO/PROGRAME/</code> - <a href="https://en.wikipedia.org/wiki/Shebang_(Unix)">&quot;shebang line(Unix)&quot;</a></p>
+<ul>
+<li>the <a href="https://www.man7.org/linux/man-pages/man1/env.1.html"><code>env</code></a> command</li>
+</ul>
+</li>
+<li>
+<p>differences between shell functions and scripts</p>
+</li>
+<li>
+<p>using <a href="https://www.man7.org/linux/man-pages/man1/export.1p.html"><code>export</code></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Shell Tools</p>
+<ul>
+<li>[WIP]</li>
+</ul>
+</li>
+</ul>
 
                     <!-- Comments powered by giscus.app -->
                     <div id="comments" class="giscus">
