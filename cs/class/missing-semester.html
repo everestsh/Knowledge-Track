@@ -153,7 +153,7 @@
 <ul>
 <li><input disabled="" type="checkbox" checked=""/>
 Course overview + the shell</li>
-<li><input disabled="" type="checkbox"/>
+<li><input disabled="" type="checkbox" checked=""/>
 Shell Tools and Scripting</li>
 <li><input disabled="" type="checkbox"/>
 Editors (Vim)</li>
@@ -343,12 +343,61 @@ find . -name '*.png' -exec convert {} {}.jpg \;
 <li>
 <p>Finding code</p>
 <ul>
-<li>[WIP]</li>
+<li>
+<p><a href="https://www.man7.org/linux/man-pages/man1/grep.1.html"><code>grep</code></a> - matching patterns from the input text</p>
+<ul>
+<li><code>-C</code> for getting <strong>C</strong>ontext around the matching line</li>
+<li><code>-v</code> for in<strong>v</strong>erting the match</li>
+<li>Alternative:  <a href="https://beyondgrep.com/">ack</a>, <a href="https://github.com/ggreer/the_silver_searcher">ag</a> and <a href="https://github.com/BurntSushi/ripgrep">rg</a>. </li>
 </ul>
+</li>
+<li>
+<pre><code class="language-shell">  # Find all python files where I used the requests library
+  rg -t py 'import requests'
+  # Find all files (including hidden files) without a shebang line
+  rg -u --files-without-match &quot;^#!&quot;
+  # Find all matches of foo and print the following 5 lines
+  rg foo -A 5
+  # Print statistics of matches (# of matched lines and files )
+  rg --stats PATTERN
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>Finding shell commands</p>
+<ul>
+<li><code>history</code></li>
+<li><code>Ctrl+R</code>, perform backwards search through your history
+<ul>
+<li>This can also be enabled with the UP/DOWN arrows in <a href="https://github.com/zsh-users/zsh-history-substring-search">zsh</a>. </li>
+<li>A nice addition on top of <code>Ctrl+R</code> comes with using <a href="https://github.com/junegunn/fzf/wiki/Configuring-shell-key-bindings#ctrl-r">fzf</a> bindings. </li>
+</ul>
+</li>
+<li>the <a href="https://fishshell.com/">fish</a> shell</li>
+<li><code>HISTCONTROL=ignorespace</code> to your <code>.bashrc</code> or <code>setopt HIST_IGNORE_SPACE</code> to your <code>.zshrc</code>. </li>
+<li>If you make the mistake of not adding the leading space, you can always manually remove the entry by editing your <code>.bash_history</code> or <code>.zhistory</code>.</li>
+</ul>
+</li>
+<li>
+<p>Directory Navigation</p>
+<ul>
+<li>writing shell aliases or creating symlinks with <a href="https://www.man7.org/linux/man-pages/man1/ln.1.html">ln -s</a></li>
+<li><a href="https://github.com/clvv/fasd"><code>fasd</code></a> and <a href="https://github.com/wting/autojump"><code>autojump</code></a>.</li>
+<li>get an overview of a directory structure: <a href="https://linux.die.net/man/1/tree"><code>tree</code></a>, <a href="https://github.com/Canop/broot"><code>broot</code></a> </li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.man7.org/linux/man-pages/man1/xargs.1.html"><code>xargs</code></a> command which will execute a command using STDIN as arguments</p>
+</li>
+<li>
+<p><a href="https://formulae.brew.sh/formula/coreutils">using brew</a>.</p>
 </li>
 </ul>
 </li>
 </ul>
+<h2 id="editors-vim"><a class="header" href="#editors-vim">Editors (Vim)</a></h2>
+<p>[WIP]</p>
 
                     <!-- Comments powered by giscus.app -->
                     <div id="comments" class="giscus">
