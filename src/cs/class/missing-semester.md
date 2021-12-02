@@ -3,7 +3,7 @@
 [计算机教育中缺失的一课](https://missing.csail.mit.edu/)
 
 - [x] Course overview + the shell
-- [ ] Shell Tools and Scripting
+- [x] Shell Tools and Scripting
 - [ ] Editors (Vim)
 - [ ] Data Wrangling
 - [ ] Command-line Environment
@@ -107,11 +107,11 @@
         -  [`man`](https://www.man7.org/linux/man-pages/man1/man.1.html) 
         - For interactive tools such as the ones based on ncurses, help for the commands can often be accessed within the program using the `:help` command or typing `?`.
         -  [TLDR pages](https://tldr.sh/) 
-    
+
     - Finding files
-    
+
         - [`find`](https://www.man7.org/linux/man-pages/man1/find.1.html) or => [`fd`](https://github.com/sharkdp/fd) (simple, fast, and user-friendly alternative, in rust) 
-    
+
         - ```shell
             # Find all directories named src
             find . -name src -type d
@@ -122,7 +122,7 @@
             # Find all zip files with size in range 500k to 10M
             find . -size +500k -size -10M -name '*.tar.gz'
             ```
-    
+
         - ```shell
           # Delete all files with .tmp extension
           find . -name '*.tmp' -exec rm {} \;
@@ -130,9 +130,49 @@
           find . -name '*.png' -exec convert {} {}.jpg \;
           
           ```
-    
+
         - [`locate`](https://www.man7.org/linux/man-pages/man1/locate.1.html) , ref: [locate vs find: usage, pros and cons of each other](https://unix.stackexchange.com/questions/60205/locate-vs-find-usage-pros-and-cons-of-each-other)
-    
+
     - Finding code
-    
-        - [WIP]
+
+        - [`grep`](https://www.man7.org/linux/man-pages/man1/grep.1.html) - matching patterns from the input text
+
+            -  `-C` for getting **C**ontext around the matching line
+            - `-v` for in**v**erting the match
+            - Alternative:  [ack](https://beyondgrep.com/), [ag](https://github.com/ggreer/the_silver_searcher) and [rg](https://github.com/BurntSushi/ripgrep). 
+
+        - ```shell
+            # Find all python files where I used the requests library
+            rg -t py 'import requests'
+            # Find all files (including hidden files) without a shebang line
+            rg -u --files-without-match "^#!"
+            # Find all matches of foo and print the following 5 lines
+            rg foo -A 5
+            # Print statistics of matches (# of matched lines and files )
+            rg --stats PATTERN
+            ```
+
+    - Finding shell commands
+
+        - `history`
+        - `Ctrl+R`, perform backwards search through your history
+            - This can also be enabled with the UP/DOWN arrows in [zsh](https://github.com/zsh-users/zsh-history-substring-search). 
+            - A nice addition on top of `Ctrl+R` comes with using [fzf](https://github.com/junegunn/fzf/wiki/Configuring-shell-key-bindings#ctrl-r) bindings. 
+        - the [fish](https://fishshell.com/) shell
+        -  `HISTCONTROL=ignorespace` to your `.bashrc` or `setopt HIST_IGNORE_SPACE` to your `.zshrc`. 
+        - If you make the mistake of not adding the leading space, you can always manually remove the entry by editing your `.bash_history` or `.zhistory`.
+
+    - Directory Navigation
+
+        - writing shell aliases or creating symlinks with [ln -s](https://www.man7.org/linux/man-pages/man1/ln.1.html)
+        - [`fasd`](https://github.com/clvv/fasd) and [`autojump`](https://github.com/wting/autojump).
+        - get an overview of a directory structure: [`tree`](https://linux.die.net/man/1/tree), [`broot`](https://github.com/Canop/broot) 
+
+    -  [`xargs`](https://www.man7.org/linux/man-pages/man1/xargs.1.html) command which will execute a command using STDIN as arguments
+
+    - [using brew](https://formulae.brew.sh/formula/coreutils).
+
+## Editors (Vim)
+
+[WIP]
+
