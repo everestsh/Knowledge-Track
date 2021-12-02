@@ -103,4 +103,36 @@
 
 - Shell Tools
 
-    - [WIP]
+    - Finding how to use commands
+        -  [`man`](https://www.man7.org/linux/man-pages/man1/man.1.html) 
+        - For interactive tools such as the ones based on ncurses, help for the commands can often be accessed within the program using the `:help` command or typing `?`.
+        -  [TLDR pages](https://tldr.sh/) 
+    
+    - Finding files
+    
+        - [`find`](https://www.man7.org/linux/man-pages/man1/find.1.html) or => [`fd`](https://github.com/sharkdp/fd) (simple, fast, and user-friendly alternative, in rust) 
+    
+        - ```shell
+            # Find all directories named src
+            find . -name src -type d
+            # Find all python files that have a folder named test in their path
+            find . -path '*/test/*.py' -type f
+            # Find all files modified in the last day
+            find . -mtime -1
+            # Find all zip files with size in range 500k to 10M
+            find . -size +500k -size -10M -name '*.tar.gz'
+            ```
+    
+        - ```shell
+          # Delete all files with .tmp extension
+          find . -name '*.tmp' -exec rm {} \;
+          # Find all PNG files and convert them to JPG
+          find . -name '*.png' -exec convert {} {}.jpg \;
+          
+          ```
+    
+        - [`locate`](https://www.man7.org/linux/man-pages/man1/locate.1.html) , ref: [locate vs find: usage, pros and cons of each other](https://unix.stackexchange.com/questions/60205/locate-vs-find-usage-pros-and-cons-of-each-other)
+    
+    - Finding code
+    
+        - [WIP]
