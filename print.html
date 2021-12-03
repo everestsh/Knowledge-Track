@@ -916,8 +916,7 @@ L0（low-level knowledge)
 <li>
 <p>开言英语</p>
 <ul>
-<li>
-<p>在学等级：</p>
+<li>在学等级：
 <ul>
 <li>B2 -&gt; C1 (Completed on 2019.04.12)</li>
 <li>C1 -&gt; C2 (In progress)</li>
@@ -928,6 +927,11 @@ L0（low-level knowledge)
 <li>
 <p>空中英语教室（杂志）</p>
 </li>
+</ul>
+<h2 id="完成"><a class="header" href="#完成">完成</a></h2>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+许岑的英语学习方法论</li>
 </ul>
 <h2 id="背单词的技巧"><a class="header" href="#背单词的技巧">背单词的技巧</a></h2>
 <ul>
@@ -2678,7 +2682,7 @@ fn main() -&gt; Result&lt;()&gt; {
 Course overview + the shell</li>
 <li><input disabled="" type="checkbox" checked=""/>
 Shell Tools and Scripting</li>
-<li><input disabled="" type="checkbox"/>
+<li><input disabled="" type="checkbox" checked=""/>
 Editors (Vim)</li>
 <li><input disabled="" type="checkbox"/>
 Data Wrangling</li>
@@ -2920,6 +2924,292 @@ find . -name '*.png' -exec convert {} {}.jpg \;
 </li>
 </ul>
 <h2 id="editors-vim"><a class="header" href="#editors-vim">Editors (Vim)</a></h2>
+<blockquote>
+<p>Here’s how you learn a new editor:</p>
+<ul>
+<li>Start with a tutorial (i.e. this lecture, plus resources that we point out)</li>
+<li>Stick with using the editor for all your text editing needs (even if it slows you down initially)</li>
+<li>Look things up as you go: if it seems like there should be a better way to do something, there probably is</li>
+</ul>
+</blockquote>
+<ul>
+<li>
+<p>Philosophy of Vim</p>
+<ul>
+<li>Vim is a <em>modal</em> editor: it has different <strong>modes</strong> for inserting text vs manipulating text. </li>
+<li>Vim is <strong>programmable</strong> (with Vimscript and also other languages like Python)</li>
+<li>Vim’s interface itself is a programming language: <strong>keystrokes</strong> (with mnemonic names) are commands, and these commands are composable.</li>
+<li>Vim avoids the use of the mouse, because it’s too slow; Vim even avoids using the arrow keys because it requires too much movement.</li>
+</ul>
+</li>
+<li>
+<p>Modal editing</p>
+<ul>
+<li>Vim has multiple operating modes.
+<ul>
+<li><strong>Normal</strong>: for moving around a file and making edits</li>
+<li><strong>Insert</strong>: for inserting text</li>
+<li><strong>Replace</strong>: for replacing text</li>
+<li><strong>Visual</strong> (plain, line, or block): for selecting blocks of text</li>
+<li><strong>Command-line</strong>: for running a command</li>
+</ul>
+</li>
+<li>change modes by pressing <code>&lt;ESC&gt;</code> (the escape key) to switch from any mode back to Normal mode. </li>
+<li>From Normal mode, 
+<ul>
+<li>enter Insert mode with <code>i</code>, </li>
+<li>Replace mode with <code>R</code>, </li>
+<li>Visual mode with <code>v</code>, </li>
+<li>Visual Line mode with <code>V</code>, </li>
+<li>Visual Block mode with <code>&lt;C-v&gt;</code> (Ctrl-V, sometimes also written <code>^V</code>), </li>
+<li>and Command-line mode with <code>:</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Basics</p>
+<ul>
+<li>Inserting text. (though not particularly efficiently, if you’re spending all your time editing from Insert mode).</li>
+<li>Buffers, tabs, and windows</li>
+<li>Command-line
+<ul>
+<li><code>:q</code> quit (close window)</li>
+<li><code>:w</code> save (“write”)</li>
+<li><code>:wq</code> save and quit</li>
+<li><code>:e {name of file}</code> open file for editing</li>
+<li><code>:ls</code> show open buffers</li>
+<li><code>:help {topic}</code> open help
+<ul>
+<li><code>:help :w</code> opens help for the <code>:w</code> command</li>
+<li><code>:help w</code> opens help for the <code>w</code> movement</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Vim’s interface is a programming language</p>
+<ul>
+<li>
+<p>Movement(&quot;nouns&quot;)</p>
+<ul>
+<li>Basic movement: <code>hjkl</code> (left, down, up, right)</li>
+<li>Words: <code>w</code> (next word), <code>b</code> (beginning of word), <code>e</code> (end of word)</li>
+<li>Lines: <code>0</code> (beginning of line), <code>^</code> (first non-blank character), <code>$</code> (end of line)</li>
+<li>Screen: <code>H</code> (top of screen), <code>M</code> (middle of screen), <code>L</code> (bottom of screen)</li>
+<li>Scroll: <code>Ctrl-u</code> (up), <code>Ctrl-d</code> (down)</li>
+<li>File: <code>gg</code> (beginning of file), <code>G</code> (end of file)</li>
+<li>Line numbers: <code>:{number}&lt;CR&gt;</code> or <code>{number}G</code> (line {number})</li>
+<li>Misc: <code>%</code> (corresponding item)</li>
+<li>Find: <code>f{character}</code>, <code>t{character}</code>, <code>F{character}</code>, <code>T{character}</code>
+<ul>
+<li>find/to forward/backward {character} on the current line</li>
+<li><code>,</code> / <code>;</code> for navigating matches</li>
+</ul>
+</li>
+<li>Search: <code>/{regex}</code>, <code>n</code> / <code>N</code> for navigating matches</li>
+</ul>
+</li>
+<li>
+<p>Selection</p>
+<ul>
+<li>Visual modes:
+<ul>
+<li>Visual: <code>v</code></li>
+<li>Visual Line: <code>V</code></li>
+<li>Visual Block: <code>Ctrl-v</code></li>
+</ul>
+</li>
+<li>Can use movement keys to make selection.</li>
+</ul>
+</li>
+<li>
+<p>Edits(&quot;verbs&quot;)</p>
+<ul>
+<li>
+<p><code>i</code> enter Insert mode</p>
+<ul>
+<li>but for manipulating/deleting text, want to use something more than backspace</li>
+</ul>
+</li>
+<li>
+<p><code>o</code> / <code>O</code> insert line below / above</p>
+</li>
+<li>
+<p><code>d{motion}</code> delete {motion}</p>
+<ul>
+<li>e.g. <code>dw</code> is delete word, <code>d$</code> is delete to end of line, <code>d0</code> is delete to beginning of line</li>
+</ul>
+</li>
+<li>
+<p><code>c{motion}</code> change {motion}</p>
+<ul>
+<li>e.g. <code>cw</code> is change word</li>
+<li>like <code>d{motion}</code> followed by <code>i</code></li>
+</ul>
+</li>
+<li>
+<p><code>x</code> delete character (equal do <code>dl</code>)</p>
+</li>
+<li>
+<p><code>s</code> substitute character (equal to <code>xi</code>)</p>
+</li>
+<li>
+<p>Visual mode + manipulation</p>
+<ul>
+<li>select text, <code>d</code> to delete it or <code>c</code> to change it</li>
+</ul>
+</li>
+<li>
+<p><code>u</code> to undo, <code>&lt;C-r&gt;</code> to redo</p>
+</li>
+<li>
+<p><code>y</code> to copy / “yank” (some other commands like <code>d</code> also copy)</p>
+</li>
+<li>
+<p><code>p</code> to paste</p>
+</li>
+<li>
+<p>Lots more to learn: e.g. <code>~</code> flips the case of a character</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Counts</p>
+<ul>
+<li>combine nouns and verbs with a count
+<ul>
+<li><code>3w</code> move 3 words forward</li>
+<li><code>5j</code> move 5 lines down</li>
+<li><code>7dw</code> delete 7 words</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Modifiers</p>
+<ul>
+<li>use modifiers to change the meaning of a noun. Some modifiers are <code>i</code>, which means “inner” or “inside”, and <code>a</code>, which means “around”.
+<ul>
+<li><code>ci(</code> change the contents inside the current pair of parentheses</li>
+<li><code>ci[</code> change the contents inside the current pair of square brackets</li>
+<li><code>da'</code> delete a single-quoted string, including the surrounding single quotes</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Customizing Vim</p>
+<ul>
+<li>Vim is customized through a plain-text configuration file in <code>~/.vimrc</code></li>
+<li><strong>Download our config <a href="https://missing.csail.mit.edu/2020/files/vimrc">here</a> and save it to <code>~/.vimrc</code>.</strong></li>
+<li>instructors’ Vim configs (<a href="https://github.com/anishathalye/dotfiles/blob/master/vimrc">Anish</a>, <a href="https://github.com/jonhoo/configs/blob/master/editor/.config/nvim/init.vim">Jon</a> (uses <a href="https://neovim.io/">neovim</a>), <a href="https://github.com/JJGO/dotfiles/blob/master/vim/.vimrc">Jose</a>)
+<ul>
+<li>Try not to copy-and-paste people’s full configuration, but read it, understand it, and <strong>take what you need</strong>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Extending Vim</p>
+<ul>
+<li>Simply create the directory <code>~/.vim/pack/vendor/start/</code>, and put plugins in there</li>
+<li>Here are some of our favorite plugins:
+<ul>
+<li><a href="https://github.com/ctrlpvim/ctrlp.vim">ctrlp.vim</a>: fuzzy file finder</li>
+<li><a href="https://github.com/mileszs/ack.vim">ack.vim</a>: code search</li>
+<li><a href="https://github.com/scrooloose/nerdtree">nerdtree</a>: file explorer</li>
+<li><a href="https://github.com/easymotion/vim-easymotion">vim-easymotion</a>: magic motions</li>
+<li>Check out <a href="https://vimawesome.com/">Vim Awesome</a> for more awesome Vim plugins</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Vim-mode in other programs</p>
+<ul>
+<li>Shell
+<ul>
+<li>If you’re a Bash user, use <code>set -o vi</code>. </li>
+<li>If you use Zsh, <code>bindkey -v</code>. </li>
+<li>For Fish, <code>fish_vi_key_bindings</code>. </li>
+<li>you can <code>export EDITOR=vim</code>. </li>
+</ul>
+</li>
+<li>Readline
+<ul>
+<li>the <a href="https://tiswww.case.edu/php/chet/readline/rltop.html">GNU Readline</a> library supports (basic) Vim emulation too, which can be enabled by adding the following line to the <code>~/.inputrc</code> file:<code>set editing-mode vi</code></li>
+</ul>
+</li>
+<li>Others
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=en">Vimium</a> for Google Chrome</li>
+<li>a <a href="https://reversed.top/2016-08-13/big-list-of-vim-like-software">long list</a> of software with vim-like keybindings.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Advanced Vim</p>
+<ul>
+<li>
+<p>Search and replace</p>
+<ul>
+<li>
+<p><code>:s</code> (substitute) command (<a href="http://vim.wikia.com/wiki/Search_and_replace">documentation</a>).</p>
+<ul>
+<li>
+<pre><code class="language-plaintext">%s/foo/bar/g
+</code></pre>
+<ul>
+<li>replace foo with bar globally in file</li>
+</ul>
+</li>
+<li>
+<pre><code class="language-plaintext">%s/\[.*\](\(.*\))/\1/g
+</code></pre>
+<ul>
+<li>replace named Markdown links with plain URLs</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Multiple windows</p>
+<ul>
+<li><code>:sp</code> / <code>:vsp</code> to split windows</li>
+<li>Can have multiple views of the same buffer.</li>
+</ul>
+</li>
+<li>
+<p>Macros (More Advanced)</p>
+<ul>
+<li>// To be continued</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Resources</p>
+<ul>
+<li><code>vimtutor</code> is a tutorial that comes installed with Vim - if Vim is installed, you should be able to run <code>vimtutor</code> from your shell</li>
+<li><a href="https://vim-adventures.com/">Vim Adventures</a> is a game to learn Vim</li>
+<li><a href="http://vim.wikia.com/wiki/Vim_Tips_Wiki">Vim Tips Wiki</a></li>
+<li><a href="https://vimways.org/2019/">Vim Advent Calendar</a> has various Vim tips</li>
+<li><a href="http://www.vimgolf.com/">Vim Golf</a> is <a href="https://en.wikipedia.org/wiki/Code_golf">code golf</a>, but where the programming language is Vim’s UI</li>
+<li><a href="https://vi.stackexchange.com/">Vi/Vim Stack Exchange</a></li>
+<li><a href="http://vimcasts.org/">Vim Screencasts</a></li>
+<li><a href="https://pragprog.com/titles/dnvim2/">Practical Vim</a> (book)</li>
+</ul>
+</li>
+</ul>
+<h2 id="data-wrangling"><a class="header" href="#data-wrangling">Data Wrangling</a></h2>
 <p>[WIP]</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="编程语言"><a class="header" href="#编程语言">编程语言</a></h1>
 <p>学习、应用并融汇贯通各种编程语言。</p>
