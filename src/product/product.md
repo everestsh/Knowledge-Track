@@ -14,6 +14,7 @@
 - [OKR.com](https://www.okr.com/) - 理念与实践，一站式掌握 OKR。由字节跳动·飞书支持。
 - [MentorCruise - Connecting Mentors & Mentees in Tech](https://mentorcruise.com/) - 连接导师的平台
 - [Quire - Dream. Plan. Achieve.](https://quire.io/) - 任务协同
+- [Height](https://height.app/) - 项目管理协同工具
 
 ## 文档协作
 
@@ -27,7 +28,7 @@
 
 ## 视频剪辑
 
-- [Height](https://height.app/) - 项目管理协同工具
+- [Clipchamp - free video editor & video maker](https://app.clipchamp.com/) - 微软旗下「视频云剪辑」
 - [Frame.io | Video Review and Collaboration Software](https://www.frame.io/) - 视频剪辑工作流协同工具
 
 ## ToB(B for business)
