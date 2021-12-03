@@ -157,7 +157,7 @@ Course overview + the shell</li>
 Shell Tools and Scripting</li>
 <li><input disabled="" type="checkbox" checked=""/>
 Editors (Vim)</li>
-<li><input disabled="" type="checkbox"/>
+<li><input disabled="" type="checkbox" checked=""/>
 Data Wrangling</li>
 <li><input disabled="" type="checkbox"/>
 Command-line Environment</li>
@@ -683,6 +683,104 @@ find . -name '*.png' -exec convert {} {}.jpg \;
 </li>
 </ul>
 <h2 id="data-wrangling"><a class="header" href="#data-wrangling">Data Wrangling</a></h2>
+<ul>
+<li>
+<p>Overview</p>
+<ul>
+<li><code>less</code> gives us a “pager” that allows us to scroll up and down through the long output. </li>
+<li><code>sed</code> is a “stream editor” that builds on top of the old <code>ed</code> editor. </li>
+</ul>
+</li>
+<li>
+<p>Regular expressions</p>
+<ul>
+<li>surrounded by <code>/</code>. </li>
+<li>Very common patterns are:
+<ul>
+<li><code>.</code> means “any single character” except newline</li>
+<li><code>*</code> zero or more of the preceding match</li>
+<li><code>+</code> one or more of the preceding match</li>
+<li><code>[abc]</code> any one character of <code>a</code>, <code>b</code>, and <code>c</code></li>
+<li><code>(RX1|RX2)</code> either something that matches <code>RX1</code> or <code>RX2</code></li>
+<li><code>^</code> the start of the line</li>
+<li><code>$</code> the end of the line</li>
+</ul>
+</li>
+<li>https://regex101.com/</li>
+<li>https://www.regular-expressions.info/</li>
+</ul>
+</li>
+<li>
+<p>Back to data wrangling</p>
+<ul>
+<li><code>uniq -c</code> will collapse consecutive lines that are the same into a single line</li>
+<li><code>sort</code> will, well, sort its input</li>
+<li><code>head</code> / <code>tail</code>.</li>
+</ul>
+</li>
+<li>
+<p>awk – another editor</p>
+<ul>
+<li>
+<p><code>awk</code> is a programming language that just happens to be really good at processing text streams.</p>
+</li>
+<li>
+<pre><code class="language-shell"> | awk '$1 == 1 &amp;&amp; $2 ~ /^c[^ ]*e$/ { print $2 }' | wc -l
+</code></pre>
+</li>
+<li>
+<pre><code class="language-shell">BEGIN { rows = 0 }
+$1 == 1 &amp;&amp; $2 ~ /^c[^ ]*e$/ { rows += $1 }
+END { print rows }
+</code></pre>
+</li>
+<li>
+<p><a href="https://backreference.org/2010/02/10/idiomatic-awk/">Idiomatic awk</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Analyzing data</p>
+<ul>
+<li><code>bc</code> - a calculator </li>
+<li>R is another (weird) programming language that’s great at data analysis and <a href="https://ggplot2.tidyverse.org/">plotting</a>. </li>
+</ul>
+</li>
+<li>
+<p>Data wrangling to make arguments</p>
+<ul>
+<li>
+<p><code>xargs</code> </p>
+</li>
+<li>
+<pre><code class="language-shell">rustup toolchain list | grep nightly | grep -vE &quot;nightly-x86&quot; | sed 's/-x86.*//' | xargs rustup toolchain uninstall
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>Wrangling binary data</p>
+<ul>
+<li>
+<p>use ffmpeg to capture an image from our camera, convert it to grayscale, compress it, send it to a remote machine over SSH, decompress it there, make a copy, and then display it.</p>
+</li>
+<li>
+<pre><code class="language-shell">ffmpeg -loglevel panic -i /dev/video0 -frames 1 -f image2 -
+ | convert - -colorspace gray -
+ | gzip
+ | ssh mymachine 'gzip -d | tee copy.jpg | env DISPLAY=:0 feh -'
+</code></pre>
+</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"/>
+<p>Take this <a href="https://regexone.com/">short interactive regex tutorial</a>.</p>
+</li>
+<li><input disabled="" type="checkbox"/>
+<p>For JSON data, try <a href="https://stedolan.github.io/jq/"><code>jq</code></a>.</p>
+</li>
+</ul>
+<h2 id="command-line-environment"><a class="header" href="#command-line-environment">Command-line Environment</a></h2>
 <p>[WIP]</p>
 
                     <!-- Comments powered by giscus.app -->
