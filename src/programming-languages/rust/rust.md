@@ -95,6 +95,7 @@
 - [BLAKE3-team/BLAKE3](https://github.com/BLAKE3-team/BLAKE3) - BLAKE3 加密哈希算法官方实现
 - [DashMap](https://github.com/xacrimon/dashmap) - 支持高速并发的 HashMap
   - to be a direct replacement for `RwLock<HashMap<K, V>>`
+- [parking_lot: Compact and efficient synchronization primitives for Rust.](https://github.com/Amanieu/parking_lot)
 
 #### 错误处理
 
