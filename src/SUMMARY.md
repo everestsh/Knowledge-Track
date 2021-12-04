@@ -13,7 +13,7 @@
   - [知识管理]()
     - [Anki](./education/anki.md)
     - [构建第二大脑播客](./education/second-brain-podcast.md)
-  - [时间管理]()
+  - [时间管理](./productivity/productivity.md)
 
 - [基础利器](./infrastructure/infrastructure.md)
   - [macOS](./macOS/macOS.md)
