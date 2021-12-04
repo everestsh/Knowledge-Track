@@ -34,6 +34,7 @@ map <C-J> 10j
 - [ ] [Learn Vimscript the Hard Way](https://learnvimscriptthehardway.stevelosh.com/)
 - [ ] [Vim Novice Videos](http://derekwyatt.org/vim/tutorials/novice/)
 - [ ] [Learning Vim in 2014](https://benmccormick.org/learning-vim-in-2014)
+- [neovide/neovide: No Nonsense Neovim Client in Rust](https://github.com/neovide/neovide)
 
 ### 一、移动光标
 
