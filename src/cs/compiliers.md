@@ -44,3 +44,4 @@
 - [LLVM 教程](https://llvm.org/docs/tutorial/).
 - [Embedded in academia](https://blog.regehr.org/archives/category/compilers). John Regehr 的博客有很多关于 LLVM 和编译器的好文章
 
+- [x] [HOW TO LEARN COMPILERS: LLVM EDITION](https://lowlevelbits.org/how-to-learn-compilers-llvm-edition/) - 编译器学习路径推荐

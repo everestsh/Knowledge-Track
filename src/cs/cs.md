@@ -12,4 +12,5 @@
 - [麻省理工学院：计算机教育中缺失的一课](./class/missing-semester.md)
 
 ## 链接
-- [HOW TO LEARN COMPILERS: LLVM EDITION](https://lowlevelbits.org/how-to-learn-compilers-llvm-edition/) - 编译器学习路径推荐
+
+- [MIT CSAIL Parallel and Distributed Operating Systems Group](https://pdos.csail.mit.edu/)
