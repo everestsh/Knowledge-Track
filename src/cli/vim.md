@@ -28,6 +28,7 @@ map <C-J> 10j
 ## 链接
 - [./missing-semester - Vim](https://missing-semester-cn.github.io/2020/editors/)
 - [Vim Cheat Sheet](./assets/vim_cheat_sheet.png)
+- [Vim Cheat Sheet](https://vim.rtorr.com/lang/zh_cn)
 - [🎓 All things Vim!](https://github.com/mhinz/vim-galore)
 - [Vim Practice Sandbox](https://www.openvim.com/sandbox.html)
 - [ ] [Seven habits of effective text editing](https://www.moolenaar.net/habits.html)
@@ -35,6 +36,9 @@ map <C-J> 10j
 - [ ] [Vim Novice Videos](http://derekwyatt.org/vim/tutorials/novice/)
 - [ ] [Learning Vim in 2014](https://benmccormick.org/learning-vim-in-2014)
 - [neovide/neovide: No Nonsense Neovim Client in Rust](https://github.com/neovide/neovide)
+- [Neovim and Rust :: sharksforarms](https://sharksforarms.dev/posts/neovim-rust/)
+    - [simrat39/rust-tools.nvim: Tools for better development in rust using neovim's builtin lsp](https://github.com/simrat39/rust-tools.nvim)
+- [junegunn/vim-plug: Minimalist Vim Plugin Manager](https://github.com/junegunn/vim-plug)
 
 ### 一、移动光标
 
