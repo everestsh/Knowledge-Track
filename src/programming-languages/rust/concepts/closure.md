@@ -301,4 +301,5 @@ impl FnOnce<()> for __consume_capture_block__ {
 * [Closures: Magic Functions](https://rustyyato.github.io/rust/syntactic/sugar/2019/01/17/Closures-Magic-Functions.html)
 * [谈Objective-C block的实现](https://blog.devtang.com/2013/07/28/a-look-inside-blocks/)
 * [Closures Capture Semantics: Catch them all!](https://alisoftware.github.io/swift/closures/2016/07/25/closure-capture-1/)
-
+* [深入了解 rust 闭包 | Rust 培养提高计划](https://www.bilibili.com/video/BV1Zf4y1J7jq)
+    - [Source Code](https://github.com/dongzerun/rust_closure)
