@@ -16,3 +16,4 @@
 - [Specifications for OpenTelemetry](https://github.com/open-telemetry/opentelemetry-specification) - 全链路协议 OpenTelemetry
     - [Dapper，大规模分布式系统的跟踪系统](https://bigbully.github.io/Dapper-translation/)
     - [CNCF Jaeger, a Distributed Tracing Platform](https://github.com/jaegertracing/jaeger)
+- [Blender Developer Wiki](https://wiki.blender.org/wiki/Main_Page)
