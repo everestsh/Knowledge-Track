@@ -13,3 +13,8 @@
 
 - [wg-async-foundations](https://rust-lang.github.io/wg-async-foundations/) - Async 工作组
     - [Async 里程碑与进展](https://rust-lang.github.io/async-fundamentals-initiative/)
+- [smol-rs/smol](https://github.com/smol-rs/smol) - A small and fast async runtime for Rust
+
+### Tokio 相关
+
+- [x] [Diagnostics with Tracing | Tokio](https://tokio.rs/blog/2019-08-tracing)
