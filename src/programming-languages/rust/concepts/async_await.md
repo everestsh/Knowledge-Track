@@ -28,5 +28,5 @@
     - [x] Framing
     - [x] Async in depth
     - [x] Select
-    - [ ] Streams
+    - [x] Streams
 - [x] [Diagnostics with Tracing | Tokio](https://tokio.rs/blog/2019-08-tracing)
