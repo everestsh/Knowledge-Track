@@ -2,6 +2,10 @@
 
 > 美好值得等待🧐
 
+## Future 异步编程模型
+
+![Future 异步编程模型](../assets/future_model.png)
+
 ## 链接
 
 - [x] [Rust & Tell Berlin September 2021 - Zeeshan Ali: Async/await: The good, bad and the ugly](https://youtu.be/x9D4pY-fkV0)
