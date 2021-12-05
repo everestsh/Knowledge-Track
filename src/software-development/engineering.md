@@ -6,6 +6,7 @@
 
 - [FLARE.BUILD](https://flare.build/) - Bazel 编译系统支持服务
 - [BuildBuddy | Bazel at Enterprise Scale](https://www.buildbuddy.io/) - Bazel 编译系统支持服务
+- [The Rust compiler has gotten faster again | Nicholas Nethercote](https://nnethercote.github.io/2021/11/12/the-rust-compiler-has-gotten-faster-again.html)
 
 ## 链接
 
