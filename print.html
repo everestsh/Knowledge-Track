@@ -3424,6 +3424,49 @@ END { print rows }
 </li>
 <li>
 <p>Terminal Multiplexers</p>
+<blockquote>
+<p>Terminal multiplexers like <a href="https://www.man7.org/linux/man-pages/man1/tmux.1.html"><code>tmux</code></a> allow you to multiplex terminal windows using panes and tabs so you can interact with multiple shell sessions.</p>
+</blockquote>
+<ul>
+<li>keybindings: the form <code>&lt;C-b&gt; x</code> where that means (1) press <code>Ctrl+b</code>, (2) release <code>Ctrl+b</code>, and then (3) press <code>x</code>. </li>
+<li>hierarchy of objects:
+<ul>
+<li><strong>Sessions</strong> - an independent workspace with one or more windows
+<ul>
+<li><code>tmux</code> starts a new session.</li>
+<li><code>tmux new -s NAME</code> starts it with that name.</li>
+<li><code>tmux ls</code> lists the current sessions</li>
+<li>Within <code>tmux</code> typing <code>&lt;C-b&gt; d</code> <strong>detaches</strong> the current session</li>
+<li><code>tmux a</code> <strong>attaches</strong> the last session. You can use <code>-t</code> flag to specify which</li>
+</ul>
+</li>
+<li><strong>Windows</strong> - tabs in editors or browsers, they are visually separate parts of the same session
+<ul>
+<li><code>&lt;C-b&gt; c</code> <strong>Creates</strong> a new window. To <strong>close</strong> it you can just terminate the shells doing <code>&lt;C-d&gt;</code></li>
+<li><code>&lt;C-b&gt; N</code> Go to the <em>N</em> th window. Note they are numbered</li>
+<li><code>&lt;C-b&gt; p</code> Goes to the previous window</li>
+<li><code>&lt;C-b&gt; n</code> Goes to the next window</li>
+<li><code>&lt;C-b&gt; ,</code> Rename the current window</li>
+<li><code>&lt;C-b&gt; w</code> List current windows</li>
+</ul>
+</li>
+<li><strong>Panes</strong> - Like vim splits, panes let you have multiple shells in the same visual display.
+<ul>
+<li><code>&lt;C-b&gt; &quot;</code> Split the current pane horizontally</li>
+<li><code>&lt;C-b&gt; %</code> Split the current pane vertically</li>
+<li><code>&lt;C-b&gt; &lt;direction&gt;</code> Move to the pane in the specified <em>direction</em>. Direction here means arrow keys.</li>
+<li><code>&lt;C-b&gt; z</code> Toggle zoom for the current pane</li>
+<li><code>&lt;C-b&gt; [</code> Start scrollback. You can then press <code>&lt;space&gt;</code> to start a selection and <code>&lt;enter&gt;</code> to copy that selection.</li>
+<li><code>&lt;C-b&gt; &lt;space&gt;</code> Cycle through pane arrangements.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/">here</a> is a quick tutorial on <code>tmux</code> and <a href="http://linuxcommand.org/lc3_adv_termmux.php">this</a> has a more detailed explanation that covers the original <code>screen</code> command.</li>
+</ul>
+</li>
+<li>
+<p>Aliases</p>
 <ul>
 <li>[WIP]</li>
 </ul>
