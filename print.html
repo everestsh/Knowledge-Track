@@ -3370,7 +3370,65 @@ END { print rows }
 </li>
 </ul>
 <h2 id="command-line-environment"><a class="header" href="#command-line-environment">Command-line Environment</a></h2>
-<p>[WIP]</p>
+<ul>
+<li>
+<p>Job Control</p>
+<ul>
+<li>
+<p>Killing a process</p>
+<ul>
+<li><code>Ctrl-C</code>: deliver a SIGINT signal to the process.</li>
+<li>use the SIGQUIT signal instead, by typing <code>Ctrl-\</code></li>
+<li>Note that <code>^</code> is how <code>Ctrl</code> is displayed when typed in the terminal.</li>
+<li>a more generic signal for asking a process to exit gracefully is the <code>SIGTERM</code> signal
+<ul>
+<li><code>kill -TERM &lt;PID&gt;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Pausing and backgrounding processes</p>
+<ul>
+<li>
+<p>typing <code>Ctrl-Z</code> will prompt the shell to send a <code>SIGTSTP</code> signal</p>
+</li>
+<li>
+<p>continue the paused job in the foreground or in the background using <a href="https://www.man7.org/linux/man-pages/man1/fg.1p.html"><code>fg</code></a> or <a href="http://man7.org/linux/man-pages/man1/bg.1p.html"><code>bg</code></a></p>
+</li>
+<li>
+<p>The <a href="https://www.man7.org/linux/man-pages/man1/jobs.1p.html"><code>jobs</code></a> command lists the unfinished jobs associated with the current terminal session.</p>
+<ul>
+<li>use <a href="https://www.man7.org/linux/man-pages/man1/pgrep.1.html"><code>pgrep</code></a> to find that out</li>
+</ul>
+</li>
+<li>
+<p>refer to the last backgrounded job you can use the <code>$!</code> special parameter</p>
+</li>
+<li>
+<p>the <code>&amp;</code> suffix in a command will run the command in the background</p>
+</li>
+<li>
+<p>To background an already running program you can do <code>Ctrl-Z</code> followed by <code>bg</code>.</p>
+<ul>
+<li><code>SIGHUP</code></li>
+<li><a href="https://www.man7.org/linux/man-pages/man1/nohup.1.html"><code>nohup</code></a> (a wrapper to ignore <code>SIGHUP</code>), or use <code>disown</code> if the process has already been started</li>
+</ul>
+</li>
+<li>
+<p>other signals <a href="https://en.wikipedia.org/wiki/Signal_(IPC)">here</a> or typing <a href="https://www.man7.org/linux/man-pages/man7/signal.7.html"><code>man signal</code></a> or <code>kill -l</code>.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Terminal Multiplexers</p>
+<ul>
+<li>[WIP]</li>
+</ul>
+</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="编程语言"><a class="header" href="#编程语言">编程语言</a></h1>
 <p>学习、应用并融汇贯通各种编程语言。</p>
 <ul>
