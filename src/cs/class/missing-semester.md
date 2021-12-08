@@ -417,5 +417,28 @@
 
 ## Command-line Environment
 
-[WIP]
+- Job Control
 
+  - Killing a process
+    - `Ctrl-C`: deliver a SIGINT signal to the process.
+    - use the SIGQUIT signal instead, by typing `Ctrl-\`
+    - Note that `^` is how `Ctrl` is displayed when typed in the terminal.
+    - a more generic signal for asking a process to exit gracefully is the `SIGTERM` signal
+      - `kill -TERM <PID>`
+    
+  - Pausing and backgrounding processes
+    - typing `Ctrl-Z` will prompt the shell to send a `SIGTSTP` signal
+    
+    - continue the paused job in the foreground or in the background using [`fg`](https://www.man7.org/linux/man-pages/man1/fg.1p.html) or [`bg`](http://man7.org/linux/man-pages/man1/bg.1p.html)
+    - The [`jobs`](https://www.man7.org/linux/man-pages/man1/jobs.1p.html) command lists the unfinished jobs associated with the current terminal session.
+      - use [`pgrep`](https://www.man7.org/linux/man-pages/man1/pgrep.1.html) to find that out
+    - refer to the last backgrounded job you can use the `$!` special parameter
+    - the `&` suffix in a command will run the command in the background
+    - To background an already running program you can do `Ctrl-Z` followed by `bg`.
+      - `SIGHUP`
+      -  [`nohup`](https://www.man7.org/linux/man-pages/man1/nohup.1.html) (a wrapper to ignore `SIGHUP`), or use `disown` if the process has already been started
+    - other signals [here](https://en.wikipedia.org/wiki/Signal_(IPC)) or typing [`man signal`](https://www.man7.org/linux/man-pages/man7/signal.7.html) or `kill -l`.
+
+- Terminal Multiplexers
+
+  - [WIP]
