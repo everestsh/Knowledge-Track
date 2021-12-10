@@ -469,6 +469,87 @@
 
 - Aliases
 
-  - [WIP]
+  - Aliases have many convenient features:
 
+  - ```
+    # Make shorthands for common flags
+    alias ll="ls -lh"
+    
+    # Save a lot of typing for common commands
+    alias gs="git status"
+    alias gc="git commit"
+    alias v="vim"
+    
+    # Save you from mistyping
+    alias sl=ls
+    
+    # Overwrite existing commands for better defaults
+    alias mv="mv -i"           # -i prompts before overwrite
+    alias mkdir="mkdir -p"     # -p make parent dirs as needed
+    alias df="df -h"           # -h prints human readable format
+    
+    # Alias can be composed
+    alias la="ls -A"
+    alias lla="la -l"
+    
+    # To ignore an alias run it prepended with \
+    \ls
+    # Or disable an alias altogether with unalias
+    unalias la
+    
+    # To get an alias definition just call it with alias
+    alias ll
+    # Will print ll='ls -lh'
+    ```
+
+  - include it in shell startup files, like `.bashrc` or `.zshrc`, 
+
+- Dotfiles
+
+  - For `bash`, editing your `.bashrc` or `.bash_profile` will work in most systems.
+    - `PATH` environment, like `export PATH="$PATH:/path/to/program/bin"`
+
+  - `git` - `~/.gitconfig`
+  - `vim` - `~/.vimrc` and the `~/.vim` folder
+  - `ssh` - `~/.ssh/config`
+  - `tmux` - `~/.tmux.conf`
+  - in their own folder, under version control, and **symlinked** into place using a script
+  - Portability
+
+- Remote Machines
+
+  - SSH is highly configurable so it is worth learning about it.
+
+  - SSH Keys:  `~/.ssh/id_rsa`
+
+    - Key generation:  run [`ssh-keygen`](https://www.man7.org/linux/man-pages/man1/ssh-keygen.1.html).
+
+      - ```shell
+        ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519
+        ```
+
+    - Key based authentication
+      - `ssh` will look into `.ssh/authorized_keys` to determine which clients it should let in
+      - `ssh-copy-id`
+
+  - Copying files over SSH
+
+    - `ssh+tee`
+    - [`scp`](https://www.man7.org/linux/man-pages/man1/scp.1.html) when copying large amounts of files/directories
+    - [`rsync`](https://www.man7.org/linux/man-pages/man1/rsync.1.html) improves upon `scp` by detecting identical files in local and remote, and preventing copying them again.
+
+  - Port Forwarding
+
+    - SSH Configuration
+
+    - ```
+      alias my_server="ssh -i ~/.id_ed25519 --port 2222 -L 9999:localhost:8888 foobar@remote_server
+      ```
+
+      - a better alternative using `~/.ssh/config`.
+      - be thoughtful about sharing your SSH configuration.
+
+- Shells & Frameworks
+
+  - [WIP]
 
