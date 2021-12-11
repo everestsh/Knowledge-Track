@@ -6,7 +6,7 @@
 - [x] Shell Tools and Scripting
 - [x] Editors (Vim)
 - [x] Data Wrangling
-- [ ] Command-line Environment
+- [x] Command-line Environment
 - [ ] Version Control (Git)
 - [ ] Debugging and Profiling
 - [ ] Metaprogramming
@@ -551,5 +551,22 @@
 
 - Shells & Frameworks
 
-  - [WIP]
+  - `bash`, `zsh`/ [fish](https://fishshell.com/)/
+  - general frameworks are [prezto](https://github.com/sorin-ionescu/prezto) or [oh-my-zsh](https://ohmyz.sh/)
+  -  [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) or [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)
+  - One thing to note when using these frameworks is that they may slow down your shell
+
+- Terminal Emulators
+
+  - Font choice
+  - Color Scheme
+  - Keyboard shortcuts
+  - Tab/Pane support
+  - Scrollback configuration
+  - Performance (some newer terminals like [Alacritty](https://github.com/jwilm/alacritty) or [kitty](https://sw.kovidgoyal.net/kitty/) offer GPU acceleration).
+
+
+## Version Control (Git)
+
+🚧
 
