@@ -2750,7 +2750,7 @@ Editors (Vim)</li>
 Data Wrangling</li>
 <li><input disabled="" type="checkbox" checked=""/>
 Command-line Environment</li>
-<li><input disabled="" type="checkbox"/>
+<li><input disabled="" type="checkbox" checked=""/>
 Version Control (Git)</li>
 <li><input disabled="" type="checkbox"/>
 Debugging and Profiling</li>
@@ -3611,7 +3611,239 @@ alias ll
 </li>
 </ul>
 <h2 id="version-control-git"><a class="header" href="#version-control-git">Version Control (Git)</a></h2>
-<p>🚧</p>
+<ul>
+<li>
+<p>Git’s data model</p>
+<ul>
+<li>
+<p>Snapshots</p>
+<ul>
+<li>
+<p>a file is called a “blob”</p>
+</li>
+<li>
+<p>A directory is called a “tree”</p>
+</li>
+<li>
+<p>A snapshot is the <strong>top-level tree</strong> that is being tracked</p>
+</li>
+<li>
+<pre><code>&lt;root&gt; (tree)
+|
++- foo (tree)
+|  |
+|  + bar.txt (blob, contents = &quot;hello world&quot;)
+|
++- baz.txt (blob, contents = &quot;git is wonderful&quot;)
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>Modeling history: relating snapshots</p>
+<ul>
+<li>In Git, a history is a directed acyclic graph (DAG) of snapshots.</li>
+<li>Commits in Git are immutable. </li>
+</ul>
+</li>
+<li>
+<p>Data model, as pseudocode</p>
+<ul>
+<li>
+<pre><code>// a file is a bunch of bytes
+type blob = array&lt;byte&gt;
+
+// a directory contains named files and directories
+type tree = map&lt;string, tree | blob&gt;
+
+// a commit has parents, metadata, and the top-level tree
+type commit = struct {
+    parents: array&lt;commit&gt;
+    author: string
+    message: string
+    snapshot: tree
+}
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>Objects and content-addressing</p>
+<ul>
+<li>
+<p>An “object” is a blob, tree, or commit:</p>
+</li>
+<li>
+<pre><code>type object = blob | tree | commit
+</code></pre>
+</li>
+<li>
+<p>In Git data store, all objects are content-addressed by their <a href="https://en.wikipedia.org/wiki/SHA-1">SHA-1 hash</a>.</p>
+</li>
+<li>
+<pre><code>objects = map&lt;string, object&gt;
+
+def store(object):
+    id = sha1(object)
+    objects[id] = object
+
+def load(id):
+    return objects[id]
+</code></pre>
+</li>
+<li>
+<p><code>git cat-file</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>References</p>
+<ul>
+<li>
+<p>all snapshots can be identified by their SHA-1 hashes</p>
+</li>
+<li>
+<p>human-readable names for SHA-1 hashes, called “references”</p>
+</li>
+<li>
+<p>references are mutable (can be updated to point to a new commit)</p>
+</li>
+<li>
+<pre><code>references = map&lt;string, string&gt;
+
+def update_reference(name, id):
+    references[name] = id
+
+def read_reference(name):
+    return references[name]
+
+def load_reference(name_or_id):
+    if name_or_id in references:
+        return load(references[name_or_id])
+    else:
+        return load(name_or_id)
+</code></pre>
+</li>
+<li>
+<p>In Git, that “where we currently are” is a special reference called “HEAD”.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Repositories</p>
+<ul>
+<li>define what (roughly) is a Git <em>repository</em>: it is the data <code>objects</code> and <code>references</code>.</li>
+<li>All <code>git</code> commands map to some manipulation of the commit DAG by adding objects and adding/updating references.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Staging area</p>
+<ul>
+<li>allowing you to specify which modifications should be included in the next snapshot through a mechanism called the “staging area”.</li>
+</ul>
+</li>
+<li>
+<p>Git command-line interface</p>
+<ul>
+<li>Basics
+<ul>
+<li><code>git help &lt;command&gt;</code>: get help for a git command</li>
+<li><code>git init</code>: creates a new git repo, with data stored in the <code>.git</code> directory</li>
+<li><code>git status</code>: tells you what’s going on</li>
+<li><code>git add &lt;filename&gt;</code>: adds files to staging area</li>
+<li><code>git commit</code>: creates a new commit
+<ul>
+<li>Write <a href="https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">good commit messages</a>!</li>
+<li>Even more reasons to write <a href="https://chris.beams.io/posts/git-commit/">good commit messages</a>!</li>
+</ul>
+</li>
+<li><code>git log</code>: shows a flattened log of history</li>
+<li><code>git log --all --graph --decorate</code>: visualizes history as a DAG</li>
+<li><code>git diff &lt;filename&gt;</code>: show changes you made relative to the staging area</li>
+<li><code>git diff &lt;revision&gt; &lt;filename&gt;</code>: shows differences in a file between snapshots</li>
+<li><code>git checkout &lt;revision&gt;</code>: updates HEAD and current branch</li>
+</ul>
+</li>
+<li>Branching and merging
+<ul>
+<li><code>git branch</code>: shows branches</li>
+<li><code>git branch &lt;name&gt;</code>: creates a branch</li>
+<li><code>git checkout -b &lt;name&gt;</code>: creates a branch and switches to it
+<ul>
+<li>same as <code>git branch &lt;name&gt;; git checkout &lt;name&gt;</code></li>
+</ul>
+</li>
+<li><code>git merge &lt;revision&gt;</code>: merges into current branch</li>
+<li><code>git mergetool</code>: use a fancy tool to help resolve merge conflicts</li>
+<li><code>git rebase</code>: rebase set of patches onto a new base</li>
+</ul>
+</li>
+<li>Remotes
+<ul>
+<li><code>git remote</code>: list remotes</li>
+<li><code>git remote add &lt;name&gt; &lt;url&gt;</code>: add a remote</li>
+<li><code>git push &lt;remote&gt; &lt;local branch&gt;:&lt;remote branch&gt;</code>: send objects to remote, and update remote reference</li>
+<li><code>git branch --set-upstream-to=&lt;remote&gt;/&lt;remote branch&gt;</code>: set up correspondence between local and remote branch</li>
+<li><code>git fetch</code>: retrieve objects/references from a remote</li>
+<li><code>git pull</code>: same as <code>git fetch; git merge</code></li>
+<li><code>git clone</code>: download repository from remote</li>
+</ul>
+</li>
+<li>Undo
+<ul>
+<li><code>git commit --amend</code>: edit a commit’s contents/message</li>
+<li><code>git reset HEAD &lt;file&gt;</code>: unstage a file</li>
+<li><code>git checkout -- &lt;file&gt;</code>: discard changes</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Advanced Git</p>
+<ul>
+<li><code>git config</code>: Git is <a href="https://git-scm.com/docs/git-config">highly customizable</a></li>
+<li><code>git clone --depth=1</code>: shallow clone, without entire version history</li>
+<li><code>git add -p</code>: interactive staging</li>
+<li><code>git rebase -i</code>: interactive rebasing</li>
+<li><code>git blame</code>: show who last edited which line</li>
+<li><code>git stash</code>: temporarily remove modifications to working directory</li>
+<li><code>git bisect</code>: binary search history (e.g. for regressions)</li>
+<li><code>.gitignore</code>: <a href="https://git-scm.com/docs/gitignore">specify</a> intentionally untracked files to ignore</li>
+</ul>
+</li>
+<li>
+<p>Miscellaneous</p>
+<ul>
+<li><strong>GUIs</strong>: there are many <a href="https://git-scm.com/downloads/guis">GUI clients</a> out there for Git. We personally don’t use them and use the command-line interface instead.</li>
+<li><strong>Shell integration</strong>: it’s super handy to have a Git status as part of your shell prompt (<a href="https://github.com/olivierverdier/zsh-git-prompt">zsh</a>, <a href="https://github.com/magicmonty/bash-git-prompt">bash</a>). Often included in frameworks like <a href="https://github.com/ohmyzsh/ohmyzsh">Oh My Zsh</a>.</li>
+<li><strong>Editor integration</strong>: similarly to the above, handy integrations with many features. <a href="https://github.com/tpope/vim-fugitive">fugitive.vim</a> is the standard one for Vim.</li>
+<li><strong>Workflows</strong>: we taught you the data model, plus some basic commands; we didn’t tell you what practices to follow when working on big projects (and there are <a href="https://nvie.com/posts/a-successful-git-branching-model/">many</a> <a href="https://www.endoflineblog.com/gitflow-considered-harmful">different</a> <a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow">approaches</a>).</li>
+<li><strong>GitHub</strong>: Git is not GitHub. GitHub has a specific way of contributing code to other projects, called <a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests">pull requests</a>.</li>
+<li><strong>Other Git providers</strong>: GitHub is not special: there are many Git repository hosts, like <a href="https://about.gitlab.com/">GitLab</a> and <a href="https://bitbucket.org/">BitBucket</a>.</li>
+</ul>
+</li>
+<li>
+<p>Resources</p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<a href="https://git-scm.com/book/en/v2">Pro Git</a> is <strong>highly recommended reading</strong>. Going through Chapters 1–5 should teach you most of what you need to use Git proficiently, now that you understand the data model. The later chapters have some interesting, advanced material.</li>
+<li><input disabled="" type="checkbox"/>
+<a href="https://ohshitgit.com/">Oh Shit, Git!?!</a> is a short guide on how to recover from some common Git mistakes.</li>
+<li><input disabled="" type="checkbox"/>
+<a href="https://eagain.net/articles/git-for-computer-scientists/">Git for Computer Scientists</a> is a short explanation of Git’s data model, with less pseudocode and more fancy diagrams than these lecture notes.</li>
+<li><input disabled="" type="checkbox"/>
+<a href="https://jwiegley.github.io/git-from-the-bottom-up/">Git from the Bottom Up</a> is a detailed explanation of Git’s implementation details beyond just the data model, for the curious.</li>
+<li><input disabled="" type="checkbox"/>
+<a href="https://smusamashah.github.io/blog/2017/10/14/explain-git-in-simple-words">How to explain git in simple words</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="https://learngitbranching.js.org/">Learn Git Branching</a> is a browser-based game that teaches you Git.</li>
+</ul>
+</li>
+</ul>
+<h2 id="debugging-and-profiling"><a class="header" href="#debugging-and-profiling">Debugging and Profiling</a></h2>
+<p>🚧 </p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="编程语言"><a class="header" href="#编程语言">编程语言</a></h1>
 <p>学习、应用并融汇贯通各种编程语言。</p>
 <ul>
