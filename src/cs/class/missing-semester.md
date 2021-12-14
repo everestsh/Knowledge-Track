@@ -736,4 +736,39 @@
 
 ## Debugging and Profiling
 
-🚧 
+- Debugging
+
+  - Printf debugging and Logging
+
+    - Logging is better than regular print statements for several reasons：
+      - You can log to files, sockets or even remote servers instead of standard output.
+      - Logging supports **severity levels** (such as INFO, DEBUG, WARN, ERROR, &c), that allow you to filter the output accordingly.
+      - For new issues, there’s a fair chance that your logs will contain enough information to detect what is going wrong.
+    - color code them
+      - executing `echo -e "\e[38;2;255;0;0mThis is red\e[0m"` prints the message `This is red` in red on your terminal, as long as it supports true color. 
+
+  - Third party logs
+
+    - In UNIX systems, logs commonplace: `/var/log`
+
+    - In most Linux: `systemd` & `journalctl` 
+
+    - on macOS there is still `/var/log/system.log`, `log show`
+
+    - On most UNIX systems, use the `dmesg` to access the kernel log.
+
+    - use `logger` to logging under system log:
+
+    - ```sh
+      logger "Hello Logs"
+      # On macOS
+      log show --last 1m | grep Hello
+      # On Linux
+      journalctl --since "1m ago" | grep Hello
+      ```
+
+    - tools like [`lnav`](http://lnav.org/), that provide an improved presentation and navigation for log files.
+
+  - Debuggers
+
+    - 🚧 
