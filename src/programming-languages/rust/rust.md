@@ -54,6 +54,7 @@
 - [3K, 60fps, 130ms: achieving it with Rust - by Tonarino](https://blog.tonari.no/why-we-love-rust) - [中文](https://mp.weixin.qq.com/s/-YfdohRpJxURNYLSfo6G7w)
 - [Understanding Rust as a C++ developer](https://renoth.medium.com/understanding-rust-as-a-c-developer-69ee8ca76fd6)
 - [x] [Building an (almost entirely) rust iOS app using uikit-sys. - Sebastian Imlay](https://simlay.net/posts/using-uikit-sys/) - 尝试几乎完全采用 Rust 构建 iOS 应用
+- [x] [How we built Appflowy with Flutter and Rust](https://blog-appflowy.ghost.io/tech-design-flutter-rust/) ⭐️
 
 ### Rust 移动端跨平台
 
