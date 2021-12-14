@@ -14,5 +14,8 @@ git-repository-icon = "fa-github"
 edit-url-template = "https://github.com/Binlogo/Knowledge-Track/edit/main/{path}"
 
 [output.html.fold]
-enable = true
+enable = false
 level = 0
+
+[output.html.search]
+limit-results = 15
