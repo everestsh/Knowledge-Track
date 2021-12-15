@@ -771,4 +771,42 @@
 
   - Debuggers
 
+    - Debuggers are programs that let you interact with the execution of a program:
+      - Halt execution of the program when it reaches a certain line.
+      - Step through the program one instruction at a time.
+      - Inspect values of variables after the program crashed.
+      - Conditionally halt the execution when a given condition is met.
+      - And many more advanced features
+    - Python Debugger [`pdb`](https://docs.python.org/3/library/pdb.html).
+    -  [`ipdb`](https://pypi.org/project/ipdb/) is an improved `pdb` that uses the [`IPython`](https://ipython.org/) REPL
+      - tab completion, 
+      - syntax highlighting, 
+      - better tracebacks, and better introspection 
+      - retaining the same interface as the `pdb` module.
+    - more low level programming you will probably want to look into [`gdb`](https://www.gnu.org/software/gdb/) (and its quality of life modification [`pwndbg`](https://github.com/pwndbg/pwndbg)) and [`lldb`](https://lldb.llvm.org/). 
+
+  - Specialized Tools
+
+    - black box binary
+
+    - trace the syscalls your program makes
+
+    - In Linux there’s [`strace`](https://www.man7.org/linux/man-pages/man1/strace.1.html) and macOS and BSD have [`dtrace`](http://dtrace.org/blogs/about/).
+
+    - ```sh
+      # On Linux
+      sudo strace -e lstat ls -l > /dev/null
+      4
+      # On macOS
+      sudo dtruss -t lstat64_extended ls -l > /dev/null
+      ```
+
+    - look at the network packets
+
+      - Tools like [`tcpdump`](https://www.man7.org/linux/man-pages/man1/tcpdump.1.html) and [Wireshark](https://www.wireshark.org/) are network packet analyzers
+
+    - For web development, the Chrome/Firefox developer tools
+
+  - Static Analysis
+
     - 🚧 
