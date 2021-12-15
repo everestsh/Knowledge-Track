@@ -35,6 +35,8 @@
 - [x] [13000字的Figma研究笔记，聊聊Product-Led Growth的误区与思考](https://mp.weixin.qq.com/s/3C43vxrxbkMhNQAdojG0bg)
 - [Apple at Work](https://www.apple.com/business/) - Apple 的 ToB 服务
     - [Apple Business Essentials](https://www.apple.com/business/essentials/)
+- [Canny: Customer Feedback Management Tool](https://canny.io/) - 客户反馈管理工具
+    - 来源与示例：https://cubox.canny.io/
 
 ## 搜索引擎
 
