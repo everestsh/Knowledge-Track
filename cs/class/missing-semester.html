@@ -1309,6 +1309,58 @@ journalctl --since &quot;1m ago&quot; | grep Hello
 <li>
 <p>Debuggers</p>
 <ul>
+<li>Debuggers are programs that let you interact with the execution of a program:
+<ul>
+<li>Halt execution of the program when it reaches a certain line.</li>
+<li>Step through the program one instruction at a time.</li>
+<li>Inspect values of variables after the program crashed.</li>
+<li>Conditionally halt the execution when a given condition is met.</li>
+<li>And many more advanced features</li>
+</ul>
+</li>
+<li>Python Debugger <a href="https://docs.python.org/3/library/pdb.html"><code>pdb</code></a>.</li>
+<li><a href="https://pypi.org/project/ipdb/"><code>ipdb</code></a> is an improved <code>pdb</code> that uses the <a href="https://ipython.org/"><code>IPython</code></a> REPL</li>
+<li>tab completion, </li>
+<li>syntax highlighting, </li>
+<li>better tracebacks, and better introspection </li>
+<li>retaining the same interface as the <code>pdb</code> module.</li>
+<li>more low level programming you will probably want to look into <a href="https://www.gnu.org/software/gdb/"><code>gdb</code></a> (and its quality of life modification <a href="https://github.com/pwndbg/pwndbg"><code>pwndbg</code></a>) and <a href="https://lldb.llvm.org/"><code>lldb</code></a>. </li>
+</ul>
+</li>
+<li>
+<p>Specialized Tools</p>
+<ul>
+<li>
+<p>black box binary</p>
+</li>
+<li>
+<p>trace the syscalls your program makes</p>
+</li>
+<li>
+<p>In Linux there’s <a href="https://www.man7.org/linux/man-pages/man1/strace.1.html"><code>strace</code></a> and macOS and BSD have <a href="http://dtrace.org/blogs/about/"><code>dtrace</code></a>.</p>
+</li>
+<li>
+<pre><code class="language-sh"># On Linux
+sudo strace -e lstat ls -l &gt; /dev/null
+4
+# On macOS
+sudo dtruss -t lstat64_extended ls -l &gt; /dev/null
+</code></pre>
+</li>
+<li>
+<p>look at the network packets</p>
+<ul>
+<li>Tools like <a href="https://www.man7.org/linux/man-pages/man1/tcpdump.1.html"><code>tcpdump</code></a> and <a href="https://www.wireshark.org/">Wireshark</a> are network packet analyzers</li>
+</ul>
+</li>
+<li>
+<p>For web development, the Chrome/Firefox developer tools</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Static Analysis</p>
+<ul>
 <li>🚧 </li>
 </ul>
 </li>
