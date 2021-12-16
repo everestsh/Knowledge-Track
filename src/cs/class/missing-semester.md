@@ -809,4 +809,13 @@
 
   - Static Analysis
 
-    - 🚧 
+    - Python:  [`pyflakes`](https://pypi.org/project/pyflakes) /  [`mypy`](http://mypy-lang.org/) 
+    - Shell scripts:  [`shellcheck`](https://www.shellcheck.net/)
+    - Code linting
+    - Vim plugins:  [`ale`](https://vimawesome.com/plugin/ale) or [`syntastic`](https://vimawesome.com/plugin/syntastic) 
+    - [Awesome Static Analysis](https://github.com/mre/awesome-static-analysis) & [Awesome Linters](https://github.com/caramelomartins/awesome-linters)
+    - Code formatters
+
+- Profiling
+
+  - 🚧 
