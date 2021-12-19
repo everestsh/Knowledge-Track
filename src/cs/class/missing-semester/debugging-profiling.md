@@ -82,4 +82,46 @@
 
 - Profiling
 
-  - 🚧 
+  > Since [premature optimization is the root of all evil](http://wiki.c2.com/?PrematureOptimization), you should learn about profilers and monitoring tools. 
+  
+  - Timing
+    - *Real* time, wall clock time can be misleading
+    - In general, *User* + *Sys* tells you how much time your process actually spent in the CPU
+      - *Real* - Wall clock elapsed time from start to finish of the program, including the time taken by other processes and time taken while blocked (e.g. waiting for I/O or network)
+      - *User* - Amount of time spent in the CPU running user code
+      - *Sys* - Amount of time spent in the CPU running kernel code
+    - e.g: `time curl https://missing.csail.mit.edu &> /dev/null`
+  - Profilers
+    - CPU
+      - *tracing* and *sampling* profilers. [[more](https://jvns.ca/blog/2017/12/17/how-do-ruby---python-profilers-work-/)]
+      - `cProfile`,  [`line_profiler`](https://github.com/pyutils/line_profiler) in Python
+    - Memory
+      - memory leaks: like [Valgrind](https://valgrind.org/) that will help you identify memory leaks.
+    - Event Profiling
+      - The [`perf`](https://www.man7.org/linux/man-pages/man1/perf.1.html) command can easily report poor cache locality, high amounts of page faults or livelocks
+      - `perf list` - List the events that can be traced with perf
+      - `perf stat COMMAND ARG1 ARG2` - Gets counts of different events related a process or command
+      - `perf record COMMAND ARG1 ARG2` - Records the run of a command and saves the statistical data into a file called `perf.data`
+      - `perf report` - Formats and prints the data collected in `perf.data`
+    - Visualization
+      - displaying profiler’s output in an easier to parse way.
+      - display CPU profiling information for sampling profilers is to use a [Flame Graph](http://www.brendangregg.com/flamegraphs.html)
+      - **Call graphs** or **control flow graphs** display the relationships between subroutines within a program by including functions as nodes and functions calls between them as directed edges.
+  - Resource Monitoring
+    - **General Monitoring**:  [`htop`](https://htop.dev/) / [`top`](https://www.man7.org/linux/man-pages/man1/top.1.html) / [`glances`](https://nicolargo.github.io/glances/)
+    - **I/O operations**: [`iotop`](https://www.man7.org/linux/man-pages/man8/iotop.8.html)
+    - **Disk Usage**:  [`df`](https://www.man7.org/linux/man-pages/man1/df.1.html) displays metrics per partitions and [`du`](http://man7.org/linux/man-pages/man1/du.1.html) displays **d**isk **u**sage per file for the current directory.  `-h` flag
+      - A more interactive version of `du` is [`ncdu`](https://dev.yorhel.nl/ncdu) 
+    - **Memory Usage**:  [`free`](https://www.man7.org/linux/man-pages/man1/free.1.html) displays the total amount of free and used memory in the system
+    - **Open Files**: [`lsof`](https://www.man7.org/linux/man-pages/man8/lsof.8.html) lists file information about files opened by processes.
+    - **Network Connections and Config**:
+      -  [`ss`](https://www.man7.org/linux/man-pages/man8/ss.8.html) lets you monitor incoming and outgoing network packets statistics.
+      -  For displaying routing, network devices and interfaces you can use [`ip`](http://man7.org/linux/man-pages/man8/ip.8.html).
+      - `netstat` and `ifconfig` have been deprecated
+    - **Network Usage**: [`nethogs`](https://github.com/raboof/nethogs) and [`iftop`](http://www.ex-parrot.com/pdw/iftop/)
+    - The [`stress`](https://linux.die.net/man/1/stress) command.
+  - Specialized tools
+    - Tools like [`hyperfine`](https://github.com/sharkdp/hyperfine) let you quickly benchmark command line programs. 
+      - `hyperfine --warmup 3 'fd -e jpg' 'find . -iname "*.jpg"'`
+    - Webpage loading: More info for [Firefox](https://profiler.firefox.com/docs/) and [Chrome](https://developers.google.com/web/tools/chrome-devtools/rendering-tools).
+
