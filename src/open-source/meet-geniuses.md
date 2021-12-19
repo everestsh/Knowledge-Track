@@ -18,6 +18,9 @@ Meet geniuses. They are awesome.
     - [Rust系列文章](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA3NDM0ODQwMw==&action=getalbum&album_id=1701598373151047680&scene=173&from_msgid=2649828871&from_itemidx=1&count=3&nolastread=1#wechat_redirect)
   - 哔哩哔哩：https://space.bilibili.com/39222989
 
+- [Hoverbear](https://hoverbear.org/)
+- [Corruption Cat](https://gankra.github.io/blah/)
+
 ## iOS · Swift · Rust
 
 - **Nikolai Vazquez**：iOS + Rust @fullstory
