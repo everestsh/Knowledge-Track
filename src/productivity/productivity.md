@@ -31,3 +31,4 @@
 >   - **Done This Week** - tasks I’ve completed this week; I’ll report on these and archive
 >
 
+- [Mailbrew](https://app.mailbrew.com/) - 通过邮箱集中管理订阅各渠道讯息与推送，避免频繁碎片化查阅
