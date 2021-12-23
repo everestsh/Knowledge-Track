@@ -8,7 +8,7 @@
 - [x] [Data Wrangling](./missing-semester/data-wrangling.md)
 - [x] [Command-line Environment](./missing-semester/command-line.md)
 - [x] [Version Control (Git)](./missing-semester/version-control.md)
-- [ ] [Debugging and Profiling](./missing-semester/debugging-profiling.md)
+- [x] [Debugging and Profiling](./missing-semester/debugging-profiling.md)
 - [ ] [Metaprogramming](./missing-semester/metaprogramming.md)
 - [ ] [Security and Cryptography](./missing-semester/security.md)
 - [ ] [Potpourri](./missing-semester/potpourri.md)
