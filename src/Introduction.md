@@ -24,7 +24,3 @@ Hi, there. 欢迎来到棒棒彬的第二大脑，藏在这儿都被你发现了
 ## 关于我
 
 若有兴趣了解和认识我，这儿有个「[年更博客](https://binlogo.github.io/)」。
-
----
-
-> 广而告之: 若你对创作与激发创造也有热忱，欢迎加入我们团队。（具体见「[介绍](https://leetcode-cn.com/circle/discuss/e4bBtA/)」）
