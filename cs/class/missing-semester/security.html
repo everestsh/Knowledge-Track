@@ -148,7 +148,113 @@
 
             <div id="content" class="content">
                 <main>
-                    <h1 id="security-and-cryptography"><a class="header" href="#security-and-cryptography">Security and Cryptography</a></h1>
+                    <h2 id="security-and-cryptography"><a class="header" href="#security-and-cryptography">Security and Cryptography</a></h2>
+<ul>
+<li>
+<p>Entropy</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Entropy_(information_theory)">Entropy</a> is a measure of randomness.</li>
+</ul>
+</li>
+<li>
+<p>Hash functions</p>
+<ul>
+<li>A <a href="https://en.wikipedia.org/wiki/Cryptographic_hash_function">cryptographic hash function</a> maps data of arbitrary size to a fixed size, and has some special properties.</li>
+<li><code>hash(value: array&lt;byte&gt;) -&gt; vector&lt;byte, N&gt;  (for some fixed N)</code></li>
+<li>Applications:
+<ul>
+<li>Git, for content-addressed storage. </li>
+<li>A short summary of the contents of a file.</li>
+<li><a href="https://en.wikipedia.org/wiki/Commitment_scheme">Commitment schemes</a>. </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Key derivation functions</p>
+<ul>
+<li>Applications:
+<ul>
+<li>Producing keys from passphrases for use in other cryptographic algorithms</li>
+<li>Storing login credentials.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Symmetric cryptography</p>
+<ul>
+<li>
+<pre><code>keygen() -&gt; key  (this function is randomized)
+
+encrypt(plaintext: array&lt;byte&gt;, key) -&gt; array&lt;byte&gt;  (the ciphertext)
+decrypt(ciphertext: array&lt;byte&gt;, key) -&gt; array&lt;byte&gt;  (the plaintext)
+</code></pre>
+</li>
+<li>
+<p>Applications:</p>
+<ul>
+<li>Encrypting files for storage in an untrusted cloud service.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Asymmetric cryptography</p>
+<ul>
+<li>
+<pre><code>keygen() -&gt; (public key, private key)  (this function is randomized)
+
+encrypt(plaintext: array&lt;byte&gt;, public key) -&gt; array&lt;byte&gt;  (the ciphertext)
+decrypt(ciphertext: array&lt;byte&gt;, private key) -&gt; array&lt;byte&gt;  (the plaintext)
+
+sign(message: array&lt;byte&gt;, private key) -&gt; array&lt;byte&gt;  (the signature)
+verify(message: array&lt;byte&gt;, signature: array&lt;byte&gt;, public key) -&gt; bool  (whether or not the signature is valid)
+</code></pre>
+</li>
+<li>
+<p>Applications</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Pretty_Good_Privacy">PGP email encryption</a>.</li>
+<li>Private messaging. </li>
+<li>Signing software.</li>
+</ul>
+</li>
+<li>
+<p>Key Distribution</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Case Studies</p>
+<ul>
+<li>Password managers
+<ul>
+<li><a href="https://keepassxc.org/">KeePassXC</a>, <a href="https://www.passwordstore.org/">pass</a>, and <a href="https://1password.com/">1Password</a></li>
+</ul>
+</li>
+<li>Two-factor authentication (2FA)</li>
+<li>Full disk encryption</li>
+<li>Private messaging
+<ul>
+<li><a href="https://signal.org/">Signal</a> or <a href="https://keybase.io/">Keybase</a></li>
+</ul>
+</li>
+<li>SSH
+<ul>
+<li><code>ssh-keygen</code></li>
+<li>stored in the <code>.ssh/authorized_keys</code> file</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Resouces</p>
+<ul>
+<li><a href="https://latacora.micro.blog/2018/04/03/cryptographic-right-answers.html">Cryptographic Right Answers</a>: answers “what crypto should I use for X?” for many common X.</li>
+</ul>
+</li>
+</ul>
 
                     <!-- Comments powered by giscus.app -->
                     <div id="comments" class="giscus">
