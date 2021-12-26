@@ -149,6 +149,158 @@
             <div id="content" class="content">
                 <main>
                     <h1 id="potpourri"><a class="header" href="#potpourri">Potpourri</a></h1>
+<ul>
+<li>
+<p>Keyboard remapping, e.g:</p>
+<ul>
+<li>Remap <code>Caps Lock</code> to <code>Ctrl</code> or <code>Escape</code>.</li>
+<li>Remapping <code>PrtSc</code> to <code>Play/Pause</code> music.</li>
+<li>Swapping <code>Ctrl</code> and the <code>Meta</code> (Windows or Command) key.</li>
+<li>Map keys to arbitrary commands of your choosing, e.g:
+<ul>
+<li>Open a new terminal or browser window.</li>
+<li>Inserting some specific text, e.g. your long email address or your MIT ID number.</li>
+<li>Sleeping the computer or the displays.</li>
+</ul>
+</li>
+<li>Software resources:
+<ul>
+<li>macOS - <a href="https://pqrs.org/osx/karabiner/"><strong>karabiner-elements</strong></a>, <a href="https://github.com/koekeishiya/skhd">skhd</a> or <a href="https://folivora.ai/">BetterTouchTool</a></li>
+<li>Linux - <a href="https://wiki.archlinux.org/index.php/Xmodmap">xmodmap</a> or <a href="https://github.com/autokey/autokey">Autokey</a></li>
+<li>Windows - Builtin in Control Panel, <a href="https://www.autohotkey.com/">AutoHotkey</a> or <a href="https://www.randyrants.com/category/sharpkeys/">SharpKeys</a></li>
+<li>QMK - If your keyboard supports custom firmware you can use <a href="https://docs.qmk.fm/">QMK</a> to configure the hardware device itself so the remaps works for any machine you use the keyboard with.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Daemons</p>
+<ul>
+<li>These processes are called daemons and the programs that run as daemons often end with a <code>d</code> to indicate so.</li>
+<li>Systemd can be interacted with the <code>systemctl</code> command in order to <code>enable</code>, <code>disable</code>, <code>start</code>, <code>stop</code>, <code>restart</code> or check the <code>status</code> of services</li>
+<li>use <a href="https://www.man7.org/linux/man-pages/man8/cron.8.html"><code>cron</code></a>, a daemon your system already runs to perform scheduled tasks.</li>
+</ul>
+</li>
+<li>
+<p>FUSE</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Filesystem_in_Userspace">FUSE</a> (Filesystem in User Space) allows filesystems to be implemented by a user program.</li>
+<li>Examples:
+<ul>
+<li><a href="https://github.com/libfuse/sshfs">sshfs</a> - Open locally remote files/folder through an SSH connection.</li>
+<li><a href="https://rclone.org/commands/rclone_mount/">rclone</a> - Mount cloud storage services like Dropbox, GDrive, Amazon S3 or Google Cloud Storage and open data locally.</li>
+<li><a href="https://nuetzlich.net/gocryptfs/">gocryptfs</a> - Encrypted overlay system. Files are stored encrypted but once the FS is mounted they appear as plaintext in the mountpoint.</li>
+<li><a href="https://keybase.io/docs/kbfs">kbfs</a> - Distributed filesystem with end-to-end encryption. You can have private, shared and public folders.</li>
+<li><a href="https://borgbackup.readthedocs.io/en/stable/usage/mount.html">borgbackup</a> - Mount your deduplicated, compressed and encrypted backups for ease of browsing.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Backups</p>
+<ul>
+<li>
+<p>Synchronization solutions are not backups.</p>
+</li>
+<li><input disabled="" type="checkbox"/>
+<p>For a more detailed explanation, see 2019’s lecture notes on <a href="https://missing.csail.mit.edu/2019/backups">Backups</a>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>APIs</p>
+<ul>
+<li>With JSON, you can pipe through a tool like <a href="https://stedolan.github.io/jq/"><code>jq</code></a> to massage into what you care about.</li>
+<li>Authentication,  “<a href="https://www.oauth.com/">OAuth</a>”</li>
+<li><a href="https://ifttt.com/">IFTTT</a> </li>
+</ul>
+</li>
+<li>
+<p>Common command-line flags/patterns</p>
+<ul>
+<li>Most tools support some kind of <code>--help</code> flag to display brief usage instructions for the tool.</li>
+<li>Many tools that can cause irrevocable change support the notion of a “dry run” in which they only print what they <em>would have done</em>, but do not actually perform the change. Similarly, they often have an “interactive” flag that will prompt you for each destructive action.</li>
+<li>You can usually use <code>--version</code> or <code>-V</code> to have the program print its own version (handy for reporting bugs!).</li>
+<li>Almost all tools have a <code>--verbose</code> or <code>-v</code> flag to produce more verbose output. You can usually include the flag multiple times (<code>-vvv</code>) to get <em>more</em> verbose output, which can be handy for debugging. Similarly, many tools have a <code>--quiet</code> flag for making it only print something on error.</li>
+<li>In many tools, <code>-</code> in place of a file name means “standard input” or “standard output”, depending on the argument.</li>
+<li>Possibly destructive tools are generally not recursive by default, but support a “recursive” flag (often <code>-r</code>) to make them recurse.</li>
+<li>Sometimes, you want to pass something that <em>looks</em> like a flag as a normal argument. For example, imagine you wanted to remove a file called <code>-r</code>. Or you want to run one program “through” another, like <code>ssh machine foo</code>, and you want to pass a flag to the “inner” program (<code>foo</code>). The special argument <code>--</code> makes a program <em>stop</em> processing flags and options (things starting with <code>-</code>) in what follows, letting you pass things that look like flags without them being interpreted as such: <code>rm -- -r</code> or <code>ssh machine --for-ssh -- foo --for-foo</code>.</li>
+</ul>
+</li>
+<li>
+<p>Window managers</p>
+<ul>
+<li>My option: Magnet.</li>
+</ul>
+</li>
+<li>
+<p>VPNs</p>
+<ul>
+<li>Considerations：<a href="https://gist.github.com/joepie91/5a9909939e6ce7d09e29">Don't use VPN services.</a></li>
+</ul>
+</li>
+<li>
+<p>Markdown</p>
+<ul>
+<li>Instead of pulling out a heavy tool like Word or LaTeX, you may want to consider using the lightweight markup language <a href="https://commonmark.org/help/">Markdown</a>.</li>
+</ul>
+</li>
+<li>
+<p>Hammerspoon (desktop automation on macOS)</p>
+<ul>
+<li><a href="https://www.hammerspoon.org/">Hammerspoon</a> is a desktop automation framework for macOS.</li>
+<li>Examples：
+<ul>
+<li>Bind hotkeys to move windows to specific locations</li>
+<li>Create a menu bar button that automatically lays out windows in a specific layout</li>
+<li>Mute your speaker when you arrive in lab (by detecting the WiFi network)</li>
+<li>Show you a warning if you’ve accidentally taken your friend’s power supply</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Booting + Live USBs</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Live_USB">Live USBs</a> are USB flash drives containing an operating system.
+<ul>
+<li>There are tools like <a href="https://unetbootin.github.io/">UNetbootin</a> to help you create live USBs.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Docker, Vagrant, VMs, Cloud, OpenStack</p>
+<ul>
+<li><a href="https://www.vagrantup.com/">Vagrant</a> is a tool that lets you describe machine configurations</li>
+<li><a href="https://www.docker.com/">Docker</a> is conceptually similar but it uses containers instead.</li>
+<li>Virtual Machines on the cloud：
+<ul>
+<li>Popular services include <a href="https://aws.amazon.com/">Amazon AWS</a>, <a href="https://cloud.google.com/">Google Cloud</a>,<a href="https://azure.microsoft.com/"> Microsoft Azure</a>, <a href="https://www.digitalocean.com/">DigitalOcean</a>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Notebook programming</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Notebook_interface">Notebook programming environments</a> can be really handy for doing certain types of interactive or exploratory development.</li>
+<li><a href="https://jupyter.org/">Jupyter</a>, for Python</li>
+<li><a href="https://www.wolfram.com/mathematica/">Wolfram Mathematica</a> is another notebook programming environment that’s great for doing math-oriented programming.</li>
+</ul>
+</li>
+<li>
+<p>GitHub</p>
+<ul>
+<li>There are two primary ways in which people contribute to projects on GitHub:
+<ul>
+<li>Creating an <a href="https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue">issue</a>. </li>
+<li>Contribute code through a <a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests">pull request</a>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
                     <!-- Comments powered by giscus.app -->
                     <div id="comments" class="giscus">
