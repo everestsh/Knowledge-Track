@@ -12,10 +12,14 @@
 
 ## 链接
 
+- [TED x MIT](.tedxmit.md) - MIT 组织的 TED 演讲
 - [Stanford 2025](http://www.stanford2025.com/) - 斯坦福 2025 计划，探索未来全新高等教育可能
 
 ### 计算机&互联网
 
+- [The Infrastructure Group at MIT CSAIL](https://tig.csail.mit.edu/) 
+    - 麻省理工计算机科学与人工智能实验室·基础设施小组
+    - > Computing the future
 - [Exercism.org](https://exercism.org/) - 开源&非盈利的编程语言练习平台，导师代码评审
 - [微软 - Microsoft Learn](https://docs.microsoft.com/learn/)
 - [优达学城 - Udacity](https://www.udacity.com/) - 曾以「优达学城」的品牌在中国市场推广，似乎还是水土不服，不再中文本地化
