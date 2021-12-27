@@ -20,7 +20,10 @@
 
 ## 在读
 
+- [《Living by the code》](https://www.raywenderlich.com/books/living-by-the-code) 
+    - Apple Book
 - [《程序员修炼之道――从小工到专家（20周年纪念版）（第2版）（英文版）》](https://book.douban.com/subject/35055885/)
+    - 纸质书
 
 ## 想读
 
