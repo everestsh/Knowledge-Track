@@ -1,0 +1,1463 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>认识与感受 Rust 的红与黑 - 棒棒彬的第二大脑</title>
+    <!-- Custom HTML head -->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="icon" href="../../favicon.svg">
+    <link rel="shortcut icon" href="../../favicon.png">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/general.css">
+    <link rel="stylesheet" href="../../css/chrome.css">
+    <link rel="stylesheet" href="../../css/print.css" media="print">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../../fonts/fonts.css">
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" href="../../highlight.css">
+    <link rel="stylesheet" href="../../tomorrow-night.css">
+    <link rel="stylesheet" href="../../ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+</head>
+
+<body>
+    <!-- Provide site root to javascript -->
+    <script type="text/javascript">
+        var path_to_root = "../../";
+        var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+    </script>
+
+    <!-- Work around some values being stored in localStorage wrapped in quotes -->
+    <script type="text/javascript">
+        try {
+            var theme = localStorage.getItem('mdbook-theme');
+            var sidebar = localStorage.getItem('mdbook-sidebar');
+
+            if (theme.startsWith('"') && theme.endsWith('"')) {
+                localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+            }
+
+            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+    </script>
+
+    <!-- Set the theme before any content is loaded, prevents flash -->
+    <script type="text/javascript">
+        var theme;
+        try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+        if (theme === null || theme === undefined) { theme = default_theme; }
+        var html = document.querySelector('html');
+        html.classList.remove('no-js')
+        html.classList.remove('light')
+        html.classList.add(theme);
+        html.classList.add('js');
+    </script>
+
+    <!-- Hide / unhide sidebar before it is displayed -->
+    <script type="text/javascript">
+        var html = document.querySelector('html');
+        var sidebar = 'hidden';
+        if (document.body.clientWidth >= 1080) {
+            try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { }
+            sidebar = sidebar || 'visible';
+        }
+        html.classList.remove('sidebar-visible');
+        html.classList.add("sidebar-" + sidebar);
+    </script>
+
+    <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+        <div class="sidebar-scrollbox">
+            <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../Introduction.html">首页</a></li><li class="chapter-item expanded affix "><a href="../../meta/meta.html">元信息</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="../../education/education.html"><strong aria-hidden="true">1.</strong> 终身学习&amp;通识教育</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../education/reading/reading.html"><strong aria-hidden="true">1.1.</strong> 通识阅读</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../education/reading/a-whole-new-mind.html"><strong aria-hidden="true">1.1.1.</strong> 《全新思维》</a></li><li class="chapter-item expanded "><a href="../../education/reading/act-like-a-leader.html"><strong aria-hidden="true">1.1.2.</strong> 《能力陷阱》</a></li></ol></li><li class="chapter-item expanded "><a href="../../education/language.html"><strong aria-hidden="true">1.2.</strong> 世界语言</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.3.</strong> 知识管理</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../education/anki.html"><strong aria-hidden="true">1.3.1.</strong> Anki</a></li><li class="chapter-item expanded "><a href="../../education/second-brain-podcast.html"><strong aria-hidden="true">1.3.2.</strong> 构建第二大脑播客</a></li></ol></li><li class="chapter-item expanded "><a href="../../productivity/productivity.html"><strong aria-hidden="true">1.4.</strong> 时间管理</a></li><li class="chapter-item expanded "><a href="../../education/tedxmit.html"><strong aria-hidden="true">1.5.</strong> TEDxMIT</a></li></ol></li><li class="chapter-item expanded "><a href="../../infrastructure/infrastructure.html"><strong aria-hidden="true">2.</strong> 基础利器</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../macOS/macOS.html"><strong aria-hidden="true">2.1.</strong> macOS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../macOS/alfred.html"><strong aria-hidden="true">2.1.1.</strong> Alfred</a></li><li class="chapter-item expanded "><a href="../../macOS/snippetsLab.html"><strong aria-hidden="true">2.1.2.</strong> SnippetsLab</a></li><li class="chapter-item expanded "><a href="../../macOS/contexts.html"><strong aria-hidden="true">2.1.3.</strong> Contexts</a></li><li class="chapter-item expanded "><a href="../../macOS/homebrew.html"><strong aria-hidden="true">2.1.4.</strong> Homebrew</a></li><li class="chapter-item expanded "><a href="../../macOS/clion.html"><strong aria-hidden="true">2.1.5.</strong> CLion</a></li></ol></li><li class="chapter-item expanded "><a href="../../linux/linux.html"><strong aria-hidden="true">2.2.</strong> Linux</a></li><li class="chapter-item expanded "><a href="../../cli/cli.html"><strong aria-hidden="true">2.3.</strong> 命令行</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../cli/vim.html"><strong aria-hidden="true">2.3.1.</strong> Vim</a></li><li class="chapter-item expanded "><a href="../../cli/git-quick-checklist.html"><strong aria-hidden="true">2.3.2.</strong> Git 常用命令速查清单</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../cs/cs.html"><strong aria-hidden="true">3.</strong> 计算机科学</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">3.1.</strong> 课程记录</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../cs/class/cs110l.html"><strong aria-hidden="true">3.1.1.</strong> CS 110L: Safety in Systems Programming</a></li><li class="chapter-item expanded "><a href="../../cs/class/missing-semester.html"><strong aria-hidden="true">3.1.2.</strong> The Missing Semester of Your CS Education</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../cs/class/missing-semester/course-shell.html"><strong aria-hidden="true">3.1.2.1.</strong> Course overview + the shell</a></li><li class="chapter-item expanded "><a href="../../cs/class/missing-semester/shell-tools.html"><strong aria-hidden="true">3.1.2.2.</strong> Shell Tools and Scripting</a></li><li class="chapter-item expanded "><a href="../../cs/class/missing-semester/editors.html"><strong aria-hidden="true">3.1.2.3.</strong> Editors (Vim)</a></li><li class="chapter-item expanded "><a href="../../cs/class/missing-semester/data-wrangling.html"><strong aria-hidden="true">3.1.2.4.</strong> Data Wrangling</a></li><li class="chapter-item expanded "><a href="../../cs/class/missing-semester/command-line.html"><strong aria-hidden="true">3.1.2.5.</strong> Command-line Environment</a></li><li class="chapter-item expanded "><a href="../../cs/class/missing-semester/version-control.html"><strong aria-hidden="true">3.1.2.6.</strong> Version Control (Git)</a></li><li class="chapter-item expanded "><a href="../../cs/class/missing-semester/debugging-profiling.html"><strong aria-hidden="true">3.1.2.7.</strong> Debugging and Profiling</a></li><li class="chapter-item expanded "><a href="../../cs/class/missing-semester/metaprogramming.html"><strong aria-hidden="true">3.1.2.8.</strong> Metaprogramming</a></li><li class="chapter-item expanded "><a href="../../cs/class/missing-semester/security.html"><strong aria-hidden="true">3.1.2.9.</strong> Security and Cryptography</a></li><li class="chapter-item expanded "><a href="../../cs/class/missing-semester/potpourri.html"><strong aria-hidden="true">3.1.2.10.</strong> Potpourri</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../programming-languages/programming-languages.html"><strong aria-hidden="true">3.2.</strong> 编程语言</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../programming-languages/swift/swift.html"><strong aria-hidden="true">3.2.1.</strong> Swift</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../programming-languages/swift/what's-new-5-4.html"><strong aria-hidden="true">3.2.1.1.</strong> Swift 5.4 新特性速查</a></li><li class="chapter-item expanded "><a href="../../programming-languages/swift/advanced-swift.html"><strong aria-hidden="true">3.2.1.2.</strong> 《Swift 进阶》阅读纪要</a></li><li class="chapter-item expanded "><a href="../../programming-languages/swift/swift-method-dispatch-notes.html"><strong aria-hidden="true">3.2.1.3.</strong> Swift 方法派发纪要</a></li><li class="chapter-item expanded "><a href="../../programming-languages/swift/concurrency.html"><strong aria-hidden="true">3.2.1.4.</strong> Concurrency</a></li></ol></li><li class="chapter-item expanded "><a href="../../programming-languages/rust/rust.html"><strong aria-hidden="true">3.2.2.</strong> Rust</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../programming-languages/rust/insights_about_rust.html" class="active"><strong aria-hidden="true">3.2.2.1.</strong> 认识与感受 Rust 的红与黑</a></li><li class="chapter-item expanded "><a href="../../programming-languages/rust/concepts/closure.html"><strong aria-hidden="true">3.2.2.2.</strong> 化解神奇的闭包</a></li><li class="chapter-item expanded "><a href="../../programming-languages/rust/concepts/interior_mutability_and_cells.html"><strong aria-hidden="true">3.2.2.3.</strong> Rust 中的可变与不可变以及 Cell 的使用</a></li><li class="chapter-item expanded "><a href="../../programming-languages/rust/concepts/move_copy_borrow.html"><strong aria-hidden="true">3.2.2.4.</strong> Move&amp;Copy&amp;Borrow 可视化</a></li><li class="chapter-item expanded "><a href="../../programming-languages/rust/concepts/memory_layout.html"><strong aria-hidden="true">3.2.2.5.</strong> 内存布局可视化</a></li><li class="chapter-item expanded "><a href="../../programming-languages/rust/concepts/async_await.html"><strong aria-hidden="true">3.2.2.6.</strong> Async/Await</a></li><li class="chapter-item expanded "><a href="../../programming-languages/rust/concepts/pin_unpin.html"><strong aria-hidden="true">3.2.2.7.</strong> Pin/Unpin</a></li><li class="chapter-item expanded "><a href="../../programming-languages/rust/tao-of-rust.html"><strong aria-hidden="true">3.2.2.8.</strong> 《Rust 编程之道》阅读纪要</a></li></ol></li><li class="chapter-item expanded "><a href="../../programming-languages/c-style/c-style.html"><strong aria-hidden="true">3.2.3.</strong> C/C++/Objective-C</a></li></ol></li><li class="chapter-item expanded "><a href="../../cs/algrithoms.html"><strong aria-hidden="true">3.3.</strong> 数据结构与算法</a></li><li class="chapter-item expanded "><a href="../../cs/compiliers.html"><strong aria-hidden="true">3.4.</strong> 编译原理</a></li><li class="chapter-item expanded "><a href="../../cs/networking/networking.html"><strong aria-hidden="true">3.5.</strong> 网络</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../cs/networking/tcp.html"><strong aria-hidden="true">3.5.1.</strong> TCP</a></li></ol></li><li class="chapter-item expanded "><a href="../../cs/database.html"><strong aria-hidden="true">3.6.</strong> 数据库</a></li><li class="chapter-item expanded "><a href="../../cs/terminology.html"><strong aria-hidden="true">3.7.</strong> 术语汇总</a></li></ol></li><li class="chapter-item expanded "><a href="../../software-development/software-development.html"><strong aria-hidden="true">4.</strong> 软件开发</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../software-development/engineering.html"><strong aria-hidden="true">4.1.</strong> 工程效率</a></li><li class="chapter-item expanded "><a href="../../iOSDev/iOSDev.html"><strong aria-hidden="true">4.2.</strong> iOS 开发</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../iOSDev/architecture.html"><strong aria-hidden="true">4.2.1.</strong> 架构设计</a></li><li class="chapter-item expanded "><a href="../../iOSDev/threading-programming/threading-programming.html"><strong aria-hidden="true">4.2.2.</strong> 多线程编程</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../iOSDev/threading-programming/about.html"><strong aria-hidden="true">4.2.2.1.</strong> 关于多线程编程</a></li><li class="chapter-item expanded "><a href="../../iOSDev/threading-programming/thread-management.html"><strong aria-hidden="true">4.2.2.2.</strong> 线程管理</a></li><li class="chapter-item expanded "><a href="../../iOSDev/threading-programming/run-loops.html"><strong aria-hidden="true">4.2.2.3.</strong> Run Loops</a></li><li class="chapter-item expanded "><a href="../../iOSDev/threading-programming/synchronization.html"><strong aria-hidden="true">4.2.2.4.</strong> 线程同步</a></li></ol></li><li class="chapter-item expanded "><a href="../../iOSDev/performance.html"><strong aria-hidden="true">4.2.3.</strong> 性能优化</a></li><li class="chapter-item expanded "><a href="../../iOSDev/build-optimization.html"><strong aria-hidden="true">4.2.4.</strong> 编译优化</a></li><li class="chapter-item expanded "><a href="../../iOSDev/ui-layout.html"><strong aria-hidden="true">4.2.5.</strong> 视图布局</a></li><li class="chapter-item expanded "><a href="../../iOSDev/swift-ui.html"><strong aria-hidden="true">4.2.6.</strong> SwiftUI</a></li><li class="chapter-item expanded "><a href="../../iOSDev/database.html"><strong aria-hidden="true">4.2.7.</strong> 数据库</a></li><li class="chapter-item expanded "><a href="../../iOSDev/av.html"><strong aria-hidden="true">4.2.8.</strong> 音视频</a></li><li class="chapter-item expanded "><a href="../../iOSDev/community.html"><strong aria-hidden="true">4.2.9.</strong> 开发社区</a></li><li class="chapter-item expanded "><a href="../../iOSDev/xcode.html"><strong aria-hidden="true">4.2.10.</strong> Xcode</a></li><li class="chapter-item expanded "><a href="../../iOSDev/apps.html"><strong aria-hidden="true">4.2.11.</strong> iOS 应用</a></li></ol></li><li class="chapter-item expanded "><a href="../../software-development/android.html"><strong aria-hidden="true">4.3.</strong> Android 开发</a></li></ol></li><li class="chapter-item expanded "><a href="../../life/life.html"><strong aria-hidden="true">5.</strong> 丰富生活</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../life/stories.html"><strong aria-hidden="true">5.1.</strong> 故事</a></li></ol></li><li class="chapter-item expanded "><a href="../../work/work.html"><strong aria-hidden="true">6.</strong> 积极工作</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../work/job-hunt.html"><strong aria-hidden="true">6.1.</strong> 求职</a></li><li class="chapter-item expanded "><a href="../../work/career.html"><strong aria-hidden="true">6.2.</strong> 职场发展</a></li><li class="chapter-item expanded "><a href="../../work/remote.html"><strong aria-hidden="true">6.3.</strong> 远程工作</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../work/articles/how-to-get-a-remote-job-by-writing-in-english.html"><strong aria-hidden="true">6.3.1.</strong> 如何通过英文写作找到国外的远程工作机会</a></li></ol></li><li class="chapter-item expanded "><a href="../../work/slashie.html"><strong aria-hidden="true">6.4.</strong> 延伸拓展</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../product/product.html"><strong aria-hidden="true">6.4.1.</strong> 产品</a></li><li class="chapter-item expanded "><a href="../../design/design.html"><strong aria-hidden="true">6.4.2.</strong> 设计</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../open-source/open-source.html"><strong aria-hidden="true">7.</strong> 开源世界</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../open-source/github.html"><strong aria-hidden="true">7.1.</strong> GitHub</a></li><li class="chapter-item expanded "><a href="../../open-source/meet-geniuses.html"><strong aria-hidden="true">7.2.</strong> 遇见天才</a></li></ol></li></ol>
+        </div>
+        <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+    </nav>
+
+    <div id="page-wrapper" class="page-wrapper">
+
+        <div class="page">
+            <div id="menu-bar-hover-placeholder"></div>
+            <div id="menu-bar" class="menu-bar sticky bordered">
+                <div class="left-buttons">
+                    <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents"
+                        aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <button id="theme-toggle" class="icon-button" type="button" title="Change theme"
+                        aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                        <i class="fa fa-paint-brush"></i>
+                    </button>
+                    <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                        <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button>
+                        </li>
+                    </ul>
+                    <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
+                        aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S"
+                        aria-controls="searchbar">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+
+                <h1 class="menu-title">棒棒彬的第二大脑</h1>
+
+                <div class="right-buttons">
+                    <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                        <i id="print-button" class="fa fa-print"></i>
+                    </a>
+                    <a href="https://github.com/Binlogo/Knowledge-Track" title="Git repository" aria-label="Git repository">
+                        <i id="git-repository-button" class="fa fa-github"></i>
+                    </a>
+                    <a href="https://github.com/Binlogo/Knowledge-Track/edit/main/src/programming-languages/rust/insights_about_rust.md" title="Suggest an edit" aria-label="Suggest an edit">
+                        <i id="git-edit-button" class="fa fa-edit"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div id="search-wrapper" class="hidden">
+                <form id="searchbar-outer" class="searchbar-outer">
+                    <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..."
+                        aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                </form>
+                <div id="searchresults-outer" class="searchresults-outer hidden">
+                    <div id="searchresults-header" class="searchresults-header"></div>
+                    <ul id="searchresults">
+                    </ul>
+                </div>
+            </div>
+            <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+            <script type="text/javascript">
+                document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                    link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                });
+            </script>
+
+            <div id="content" class="content">
+                <main>
+                    <h1 id="认识与感受-rust-的红与黑"><a class="header" href="#认识与感受-rust-的红与黑">认识与感受 Rust 的红与黑</a></h1>
+<h2 id="写在前面"><a class="header" href="#写在前面">写在前面</a></h2>
+<blockquote>
+<p>你如今的气质里，藏着你走过的路、读过的书、爱过的人，以及学习过的编程语言 😄</p>
+</blockquote>
+<p><img src="./insights_about_rust.assets/intro.png" alt="img" /></p>
+<blockquote>
+<p>😝 趣图镇楼～ by <a href="https://folyd.com/about/">@Folyd</a></p>
+</blockquote>
+<blockquote>
+<p><strong>题外话</strong>：欢迎一起交流&amp;加入我们团队 😎</p>
+</blockquote>
+<h2 id="希望能解答的问题"><a class="header" href="#希望能解答的问题">希望能解答的问题</a></h2>
+<ol>
+<li>前期调研：感受 Rust 是一门什么样的编程语言</li>
+<li>Rust 目前的发展状况</li>
+<li>是否真的有必要了解或学习</li>
+</ol>
+<ul>
+<li>（学不动了 🌫️</li>
+</ul>
+<h2 id="不太能解答的问题"><a class="header" href="#不太能解答的问题">不太能解答的问题</a></h2>
+<ol>
+<li>掌握甚至入门 Rust</li>
+</ol>
+<ul>
+<li>若有意进一步学习，可跳转文档底部[参考]</li>
+<li>若有任何问题，可随时评论交流</li>
+</ul>
+<h2 id="takeaway"><a class="header" href="#takeaway">Takeaway</a></h2>
+<blockquote>
+<p>一门赋予每个人构建可靠且高效软件能力的语言。—— <a href="https://www.rust-lang.org/zh-CN/">Rust 程序设计语言</a></p>
+</blockquote>
+<ul>
+<li>Rust 十分重视与强调开发者<strong>用户体验</strong>，拥有<strong>友好</strong>的编译器和清晰明确的错误提示与完整的文档</li>
+<li>Rust 采用强大的类型系统+所有权机制，兼具优异的<strong>性能</strong>、<strong>安全</strong>与丰富的语言抽象<strong>表现力</strong></li>
+<li>Rust 是一门系统级的<strong>通用</strong>编程语言，<strong>应用领域广泛</strong>：嵌入式、操作系统，区块链、数据处理到网络应用、UI 编程、游戏等</li>
+<li>个人体会：
+<ul>
+<li>Rust 像一个<strong>始终在线</strong>且<strong>严格</strong>的<strong>优秀</strong>导师，引导我写出更可靠而高效的代码</li>
+<li>掌握了 Swift 学习 Rust，迁移起来非常自然，且有助于更深入理解 Swift</li>
+<li>C/C++ 的性能 + Swift 的安全保障与表现力</li>
+</ul>
+</li>
+</ul>
+<h3 id="rust-的负面因素"><a class="header" href="#rust-的负面因素">🚦Rust 的负面因素</a></h3>
+<ul>
+<li>对于链表这样存在环的数据结构，实现起来非常费劲（<a href="https://rust-unofficial.github.io/too-many-lists/">链接参考</a>）</li>
+<li>编译时间相比其他绝大多数语言要慢，编译器检查和全局性优化</li>
+<li>编译器过于严格，甚至是啰嗦，虽然错误提示非常友好，但仍需要花时间适应</li>
+<li>整个语言体系非常复杂，除了极为丰富的类型系统，还引入了诸多新语言特性和概念
+<ul>
+<li>循循渐进地了解</li>
+</ul>
+</li>
+<li>目前来看，社区整体还较新的同时，Rust 狂热爱好者会显得过于追捧和激进（重构一切主义🙅‍♂️）
+<ul>
+<li>因地制宜，权衡取舍，润物细无声</li>
+</ul>
+</li>
+</ul>
+<h1 id="准备工具集"><a class="header" href="#准备工具集"><strong>准备工具集</strong></a></h1>
+<ul>
+<li>Rust (采用 Rustup 安装)
+<ul>
+<li>推荐: <a href="https://rsproxy.cn/">RsProxy</a> 镜像 By Bytedance.</li>
+</ul>
+</li>
+<li>VSCode + <a href="https://rust-analyzer.github.io/manual.html#vs-code">rust-analyzer</a> [+ crates]</li>
+<li><a href="https://rust.extension.sh/">Rust Search Extension</a>（可选&amp;强烈推荐）</li>
+</ul>
+<h1 id="rust-初体验"><a class="header" href="#rust-初体验">Rust 初体验</a></h1>
+<p>采用 <a href="https://play.rust-lang.org/">Rust Playground</a> 快速体验</p>
+<ul>
+<li>
+<h3 id="a-hrefhttpsplayrust-langorgversionnightlymodedebugedition2021gista0e2835842ac277af8a7f2bebe162239hello-worlda"><a class="header" href="#a-hrefhttpsplayrust-langorgversionnightlymodedebugedition2021gista0e2835842ac277af8a7f2bebe162239hello-worlda"><a href="https://play.rust-lang.org/?version=nightly&amp;mode=debug&amp;edition=2021&amp;gist=a0e2835842ac277af8a7f2bebe162239">Hello World</a></a></h3>
+</li>
+</ul>
+<pre><code class="language-Rust">fn hello(name: Option&lt;&amp;str&gt;) {
+
+    match name {
+
+        Some(name) =&gt; println!(&quot;Hello, {}!&quot;, name),
+
+        None =&gt; println!(&quot;Hello, World!&quot;),
+
+    }
+
+}
+
+
+
+fn main() {
+
+    hello(None);
+
+    hello(Some(&quot;Binlogo&quot;));
+
+}
+</code></pre>
+<ul>
+<li>
+<p>类型系统强大，无 <code>null</code> 和 <code>void *</code> 等类型</p>
+</li>
+<li>
+<p><code>Option</code> 类型用于表达<code>空</code>，编译时检查，避免运行时错误</p>
+</li>
+<li>
+<h3 id="a-hrefhttpsplayrust-langorgversionstablemodedebugedition2021gist9f9e2c47850eafb70d5b9b1f82c4c85c翻转字符串a"><a class="header" href="#a-hrefhttpsplayrust-langorgversionstablemodedebugedition2021gist9f9e2c47850eafb70d5b9b1f82c4c85c翻转字符串a"><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2021&amp;gist=9f9e2c47850eafb70d5b9b1f82c4c85c">翻转字符串</a></a></h3>
+</li>
+</ul>
+<pre><code class="language-Rust">fn reverse(input: &amp;str) -&gt; String {
+
+    input.chars().filter(|c| !c.is_whitespace()).rev().collect()
+
+}
+
+
+
+fn main() {
+
+    let s = &quot;a1  b2  cdefg&quot;;
+
+    println!(&quot;{}&quot;, reverse(&amp;s));
+
+}
+</code></pre>
+<ul>
+<li>代码抽象程度高，表达力强</li>
+<li>高阶函数支持</li>
+<li>实现以上两点的同时，没有运行时消耗（零成本抽象）</li>
+</ul>
+<h1 id="rust-的目标与设计理念"><a class="header" href="#rust-的目标与设计理念">Rust 的目标与设计理念</a></h1>
+<ul>
+<li>
+<p><strong>实用</strong>的系统级编程语言</p>
+</li>
+<li>
+<p>同时追求<strong>安全</strong>、<strong>并发</strong>、<strong>高性能</strong></p>
+</li>
+<li>
+<p>显式高于隐式</p>
+</li>
+<li>
+<p>运行时行为可预测</p>
+</li>
+</ul>
+<p><img src="./insights_about_rust.assets/20211228215513874.png" alt="img" /></p>
+<blockquote>
+<p>图源：https://tyrchen.github.io/rust-training/rust-training-all-in-one-cn.html#12</p>
+</blockquote>
+<p><img src="./insights_about_rust.assets/20211228215701271.png" alt="img" /></p>
+<blockquote>
+<p>图源：https://livebook.manning.com/book/rust-in-action/chapter-1/121</p>
+</blockquote>
+<h2 id="安全"><a class="header" href="#安全">安全</a></h2>
+<ul>
+<li>
+<p>类型系统</p>
+<ul>
+<li>编译器检查，暴露隐含错误</li>
+</ul>
+</li>
+<li>
+<p>编译器获取更多信息，利于优化</p>
+</li>
+<li>
+<p>增强可读性，代码表达性强</p>
+</li>
+<li>
+<p>所有权系统：每个被分配的内存都有一个独占其所有权的指针</p>
+</li>
+<li>
+<p>借用和生命周期：每个变量都有其生命周期，借用可通过标记生命周期供编译检查</p>
+</li>
+</ul>
+<h3 id="如何实现内存安全"><a class="header" href="#如何实现内存安全">如何实现内存安全？</a></h3>
+<ul>
+<li><strong>人工管理</strong>：C/C++，难处理，易出错</li>
+<li><strong>智能指针</strong>：C++/Objc/Swift，性能损失，循环引用问题</li>
+<li><strong>垃圾回收</strong>：Java，大量内存消耗，不必要的堆内存分配</li>
+<li><strong>所有权模型（Ownership）</strong>：Rust，学习曲线&amp;理解成本</li>
+</ul>
+<h3 id="如何实现并发安全"><a class="header" href="#如何实现并发安全">如何实现并发安全？</a></h3>
+<ul>
+<li>
+<p>单线程</p>
+<p>：JavaScript</p>
+<ul>
+<li>最安全的并发方式，但无法利用多核性能</li>
+</ul>
+</li>
+<li>
+<p>全局解释器锁（GIL）</p>
+<p>：Python/Ruby</p>
+<ul>
+<li>全局锁，以性能换安全</li>
+<li>锁粒度过大</li>
+</ul>
+</li>
+<li>
+<p>Actor Model</p>
+<p>：Erlang/Swift(&gt; 5.5)</p>
+<ul>
+<li>通过消息同步（actor -&gt; actor)</li>
+<li>额外内存拷贝和堆内存分配</li>
+</ul>
+</li>
+<li>
+<p>Communicating Sequential Process (CSP)</p>
+<p>：Golang</p>
+<ul>
+<li>通过消息同步（coroutine -&gt; channel -&gt; coroutine)</li>
+<li>额外内存拷贝和堆内存分配</li>
+</ul>
+</li>
+<li>
+<p><strong>所有权模型 + 类型系统</strong></p>
+<p>：Rust</p>
+<ul>
+<li>通过类型安全保证</li>
+<li>无性能损失，且可以与其他方式兼容，如 <code>std::sync::mpsc</code> </li>
+</ul>
+</li>
+</ul>
+<h2 id="零成本抽象性能"><a class="header" href="#零成本抽象性能">零成本抽象（性能）</a></h2>
+<pre><code class="language-Rust">// Rust
+
+fn main() {
+
+    6.times(|_| println!(&quot;6&quot;));
+
+}
+
+
+
+pub trait Times where Self: Sized {
+
+    fn times&lt;F: FnMut(Self)&gt;(&amp;self, closure: F);
+
+}
+
+
+
+macro_rules! impl_times {
+
+    ($ptype:ty) =&gt; {
+
+        impl Times for $ptype {
+
+            fn times&lt;F: FnMut($ptype)&gt;(&amp;self, mut closure: F) {
+
+                for i in 0..*self {
+
+                    closure(i)
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+
+impl_times!(i8);
+
+impl_times!(u8);
+
+impl_times!(i16);
+
+impl_times!(u16);
+
+impl_times!(i32);
+
+impl_times!(u32);
+
+impl_times!(i64);
+
+impl_times!(u64);
+
+impl_times!(usize);
+</code></pre>
+<ul>
+<li>不存在运行时性能开销，编译时完成</li>
+<li>语言特性基石：泛型和 <code>trait</code></li>
+</ul>
+<h3 id="性能对比"><a class="header" href="#性能对比">性能对比</a></h3>
+<p><img src="./insights_about_rust.assets/20211228215755814.png" alt="img" /></p>
+<blockquote>
+<p>来源：<a href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/fastest/swift-rust.html">Swift vs Rust - Which programs are fastest? | Computer Language Benchmarks Game</a></p>
+</blockquote>
+<h2 id="实用性"><a class="header" href="#实用性">实用性</a></h2>
+<ul>
+<li>
+<p>友好的 FFI 支持，可以很好利用已有 C/C++ 等生态</p>
+</li>
+<li>
+<p>包管理器 Cargo 及其<strong>一致的工作流</strong></p>
+</li>
+<li>
+<p>强大智能的编译器错误提示机制</p>
+</li>
+</ul>
+<h3 id="工具链"><a class="header" href="#工具链">工具链</a></h3>
+<ul>
+<li>
+<p>Rustup</p>
+<p>: 工具链安装与版本管理</p>
+<ul>
+<li>rustc - Rust 编译器</li>
+<li><strong>cargo</strong> - Rust 构建与包管理工具
+<ul>
+<li>两个关键文件：<code>Cargo.toml</code> 和 <code>Cargo.lock</code></li>
+<li><code>cargo build</code> —— 编译</li>
+<li><code>cargo run</code> —— 运行</li>
+<li><code>cargo test</code> —— 测试</li>
+<li><code>cargo tree</code> —— 解析依赖树</li>
+<li>更多：<a href="https://doc.rust-lang.org/cargo/index.html">The Cargo Book</a></li>
+</ul>
+</li>
+<li>rustdoc - Rust 文档工具</li>
+<li>rust-(lldb|gdb)</li>
+<li>libcore/libstd </li>
+</ul>
+</li>
+<li>
+<p>常用命令</p>
+<ul>
+<li><code>rustup install stable</code></li>
+<li><code>rustup default stable</code></li>
+<li><code>rustup doc [--std]</code></li>
+<li><code>rustup override set stable</code></li>
+<li><code>rustup target list</code></li>
+<li><code>rustup target add armv7-apple-ios</code> - 添加交叉编译的目标支持</li>
+</ul>
+</li>
+<li>
+<p>添加其他辅助工具</p>
+<ul>
+<li><code>rustup component add rustfmt</code> - Rust 代码自动格式化</li>
+<li><code>rustup component add clippy</code> - Rust 代码检查与优化</li>
+</ul>
+</li>
+</ul>
+<h3 id="丰富的文档"><a class="header" href="#丰富的文档">丰富的文档</a></h3>
+<blockquote>
+<p><a href="https://www.rust-lang.org/learn">Learn Rust</a></p>
+</blockquote>
+<ul>
+<li>官方指南
+<ul>
+<li><a href="https://doc.rust-lang.org/book/">Rust 程序设计语言</a></li>
+<li><a href="https://github.com/rust-lang/rustlings/">Rustlings</a> - Rust 练习集</li>
+<li><a href="https://doc.rust-lang.org/stable/rust-by-example/">通过示例学 Rust</a></li>
+</ul>
+</li>
+<li>核心文档
+<ul>
+<li><a href="https://doc.rust-lang.org/std/index.html">标准库</a> - Rust 标准库 API 手册</li>
+<li><a href="https://doc.rust-lang.org/edition-guide/index.html">版本指南</a></li>
+<li><a href="https://doc.rust-lang.org/cargo/index.html">Cargo 手册</a> - Rust 包管理器与构建系统</li>
+<li><a href="https://doc.rust-lang.org/rustdoc/index.html">Rustdoc 手册</a></li>
+<li><a href="https://doc.rust-lang.org/error-index.html">编译错误索引表</a>  - 深入解释可能遇到的编译错误</li>
+</ul>
+</li>
+<li>进阶文档
+<ul>
+<li><a href="https://doc.rust-lang.org/reference/index.html">Rust 参考手册</a> - 深入语言设计原理与实现细节</li>
+<li><a href="https://doc.rust-lang.org/nomicon/index.html">Rust 黑魔法手册</a> - 如何更灵活地应用「不安全」的 Rust</li>
+<li><a href="https://doc.rust-lang.org/nightly/unstable-book/index.html">未稳定特性手册</a> - 了解通过特性开关开启的语言特性</li>
+</ul>
+</li>
+<li>除此以外，所有的三方库都有一致的发布平台和文档中心：
+<ul>
+<li><a href="https://crates.io/">crates.io: Rust Package Registry</a></li>
+<li><a href="https://docs.rs/">Docs.rs</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="版本兼容性"><a class="header" href="#版本兼容性">版本兼容性</a></h3>
+<ul>
+<li>基于版次（Edition）的引入，稳定版 Rust 将始终向后兼容。—— <strong>No Rust 2.0</strong>
+<ul>
+<li>与此同时，<code>cargo fix --edition</code> 支持快速迁移</li>
+</ul>
+</li>
+</ul>
+<h3 id="跨平台特性"><a class="header" href="#跨平台特性">跨平台特性</a></h3>
+<p>Rust 是对标 C/C++ 的系统级编程语言，理论上可以应用到各个领域。就移动端应用领域而言，目前跨平台的编程语言以 C++ 为主，例如较为主流的 Facebook 的跨平台布局框架 Yoga，腾讯微信的跨平台网络库 mars。而 Rust 是一门对 FFI 良好支持的系统级语言，既能够和 Swift/Kotlin 等平台支持语言一样有良好的抽象和表达性，又能够达到 C/C++ 的性能的同时，还可以在编译期保证安全。因此，如果团队合适，又有跨平台的开发需求，那么 Rust 会是个不错的可选项。</p>
+<h4 id="较为流行与成熟的跨平台开源项目"><a class="header" href="#较为流行与成熟的跨平台开源项目">较为流行与成熟的跨平台开源项目</a></h4>
+<ul>
+<li>GitHub - mozilla/application-services: Firefox Application Services
+<ul>
+<li>Firefox 的应用服务层，供 Android/iOS/Desktop 各端使用</li>
+</ul>
+</li>
+<li>GitHub - signalapp/libsignal-client
+<ul>
+<li>Signal 应用跨平台层，供 Android/iOS/Desktop 各端使用</li>
+</ul>
+</li>
+</ul>
+<h1 id="rust-的工作流程与社区生态建设"><a class="header" href="#rust-的工作流程与社区生态建设">Rust 的工作流程与社区生态建设</a></h1>
+<p>开源<a href="https://www.rust-lang.org/zh-CN/governance">治理</a> · <a href="https://www.rust-lang.org/zh-CN/community">社区</a>文化建设&amp;驱动 · <a href="https://foundation.rust-lang.org/">基金会</a>支持</p>
+<ul>
+<li><a href="https://github.com/rust-lang/rfcs">RFC</a>：Rust 中的每个重要决定都是从征求意见稿（RFC）开始的。 任何人都可以参与提案的讨论，权衡利弊以便达成共识。 对每个语言特性，社区都集思广益、深思熟虑，保证 Rust 高质量迭代。</li>
+<li>通过 RFC 流程机制，制定<a href="https://github.com/rust-lang/rfcs/blob/master/text/3037-roadmap-2021.md">年度路线图</a>：确保研发流程的专注</li>
+</ul>
+<h2 id="团队构成与分工"><a class="header" href="#团队构成与分工">团队构成与分工：</a></h2>
+<table><thead><tr><th>核心团队</th><th>关注项目的整体及跨领域方向，管理子工作组。</th></tr></thead><tbody>
+<tr><td>社区团队</td><td>协调并支持活动，运营 RustBridge 项目以及开展调查研究。</td></tr>
+<tr><td>编译器团队</td><td>编译器内部结构和优化</td></tr>
+<tr><td>Crates.io 团队</td><td>管理 <a href="https://crates.io/">crates.io</a> （社区三方库）的运维、开发和相关政策。</td></tr>
+<tr><td>开发工具团队</td><td>Rust 开发者工具</td></tr>
+<tr><td>基础架构团队</td><td>Rust 项目自身所需的各种基础设施：持续集成、版本管理、机器人和性能指标。</td></tr>
+<tr><td>语言团队</td><td>设计新的语言特性</td></tr>
+<tr><td>库团队</td><td>Rust 标准库、rust-lang 包、代码约定以及生态的支持。</td></tr>
+<tr><td>审查团队</td><td>帮助维护行为准则</td></tr>
+<tr><td>发布团队</td><td>跟踪回归测试，稳定化并发布 Rust。</td></tr>
+</tbody></table>
+<ul>
+<li>团队中的每个成员都可以通过 GitHub 找到他们</li>
+<li>「<a href="https://rust-ctcft.github.io/ctcft/">跨团队协作欢乐时光</a>」会议：类似字节的技术双月会</li>
+</ul>
+<h1 id="生产环境采用-rust-的用户和产品"><a class="header" href="#生产环境采用-rust-的用户和产品">生产环境采用 Rust 的用户和产品</a></h1>
+<blockquote>
+<p><a href="https://www.rust-lang.org/production/users">Production users</a></p>
+</blockquote>
+<ul>
+<li>Android - <a href="https://source.android.com/setup/build/rust/building-rust-modules/overview">Android Rust Introduction</a></li>
+<li>Atlassian - <a href="https://bitbucket.org/blog/why-rust">Why we chose Rust as our programming language</a></li>
+<li>Coursera - <a href="https://medium.com/coursera-engineering/rust-docker-in-production-coursera-f7841d88e6ed">Rust &amp; Docker in production @ Coursera</a></li>
+<li>Dropbox - <a href="https://dropbox.tech/infrastructure/rewriting-the-heart-of-our-sync-engine">Rewriting the heart of our sync engine</a></li>
+<li>Figma - <a href="https://www.figma.com/blog/rust-in-production-at-figma/">How Mozilla’s Rust dramatically improved our server-side performance</a></li>
+<li>Fuchsia OS - <a href="https://fuchsia.dev/fuchsia-src/development/languages/rust">Fuchisia Rust Introduction</a></li>
+<li>Sourcegraph - <a href="https://github.com/sourcegraph/sourcegraph/tree/main/docker-images/syntax-highlighter">Syntect Server</a></li>
+<li>Lark/飞书 - <a href="https://www.infoq.cn/article/oh79weak7z3s2xavo*bv">Rust 跨平台客户端开发在字节跳动的实践-InfoQ</a></li>
+<li>npm, Inc - <a href="https://www.rust-lang.org/static/pdfs/Rust-npm-Whitepaper.pdf">Community makes Rust an easy choice for npm</a></li>
+<li>......</li>
+</ul>
+<h1 id="rust-核心语言特性"><a class="header" href="#rust-核心语言特性">Rust 核心语言特性</a></h1>
+<h2 id="所有权借用规则"><a class="header" href="#所有权借用规则">所有权&amp;借用规则</a></h2>
+<blockquote>
+<p>Rust 内存管理的基础模型</p>
+</blockquote>
+<p><img src="./insights_about_rust.assets/20211228215849642.png" alt="img" /></p>
+<blockquote>
+<p>图源：https://tyrchen.github.io/rust-training/rust-training-all-in-one-cn.html#39</p>
+</blockquote>
+<p>和垃圾回收、自动引用计数类似，只是一种内存管理和控制的方式：</p>
+<ul>
+<li>给了内存安全+并发安全在编译时检查空间</li>
+<li>付出了编码时更多的考虑（即编译器更多限制）</li>
+</ul>
+<h3 id="所有权规则ownership"><a class="header" href="#所有权规则ownership">所有权规则（Ownership）</a></h3>
+<ul>
+<li>一个值只有一个所有者（owner）</li>
+<li>所有权（ownership）可以传递（move）给函数和其他变量</li>
+<li>所有者负责从内存中删除数据</li>
+<li>所有者能够对数据进行任何操作并可以对其进行修改</li>
+</ul>
+<h4 id="a-hrefhttpsplayrust-langorgversionstablemodedebugedition2018gist3ce7843bec063a54c36330f9b9bed5e1代码示例a"><a class="header" href="#a-hrefhttpsplayrust-langorgversionstablemodedebugedition2018gist3ce7843bec063a54c36330f9b9bed5e1代码示例a"><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2018&amp;gist=3ce7843bec063a54c36330f9b9bed5e1">代码示例</a></a></h4>
+<pre><code class="language-Rust">#[derive(Debug)]
+
+struct Dot {
+
+    id: String,
+
+    x: i32,
+
+    y: i32
+
+}
+
+
+
+fn main() {
+
+    let dot = Dot { id: &quot;dot_1&quot;.to_string(), x: 1, y: 2 }; 
+
+    pacman(dot);
+
+    // 若尝试再次调用，则报错，见下图
+
+    // pacman(dot);
+
+}
+
+
+
+fn pacman(dot: Dot) { 
+
+    println!(&quot;Eating {:?}&quot;, dot);
+
+    
+
+}
+</code></pre>
+<p><img src="./insights_about_rust.assets/20211228215945158.png" alt="img" /></p>
+<ul>
+<li>编译错误索引：[<a href="https://doc.rust-lang.org/stable/error-index.html#E0382">E0382]</a></li>
+</ul>
+<h4 id="内存生命周期示意"><a class="header" href="#内存生命周期示意">内存生命周期示意</a></h4>
+<p><img src="./insights_about_rust.assets/20211228220010174.png" alt="img" /></p>
+<ul>
+<li>当 <code>pacman</code> 函数 return，<code>dot</code> 对象（如同局部变量一样）将随着整个调用栈帧回收释放(<code>drop</code>)</li>
+</ul>
+<h4 id="如何处理所有权被转移的情况a-hrefhttpsdocrust-langorgstableerror-indexhtmle0382e0382a"><a class="header" href="#如何处理所有权被转移的情况a-hrefhttpsdocrust-langorgstableerror-indexhtmle0382e0382a">如何处理所有权被转移的情况（[<a href="https://doc.rust-lang.org/stable/error-index.html#E0382">E0382]</a>）</a></h4>
+<ul>
+<li>
+<h5 id="显示调用-clone-进行克隆对内存进行拷贝传递"><a class="header" href="#显示调用-clone-进行克隆对内存进行拷贝传递">显示调用 <code>.clone()</code> 进行克隆，对内存进行拷贝传递</a></h5>
+</li>
+</ul>
+<pre><code class="language-Rust">#[derive(Debug, Clone)]
+
+struct Dot {
+
+    id: String,
+
+    x: i32,
+
+    y: i32
+
+}
+
+
+
+fn main() {
+
+    let dot = Dot { id: &quot;dot_1&quot;.to_string(), x: 1, y: 2 }; 
+
+    pacman(dot.clone());
+
+    // 再次调用，编译通过 ✅
+
+    pacman(dot);
+
+}
+
+
+
+fn pacman(dot: Dot) { 
+
+    println!(&quot;Eating {:?}&quot;, dot);
+
+    
+
+}
+</code></pre>
+<ul>
+<li>
+<h5 id="对数据类型实现-copy-trait表明该类型可以简单通过位复制创造副本"><a class="header" href="#对数据类型实现-copy-trait表明该类型可以简单通过位复制创造副本">对数据类型实现 <code>Copy</code> trait，表明该类型可以简单通过位复制创造副本</a></h5>
+<ul>
+<li>实现了 <code>Copy</code> trait 的数据类型，将默认通过「值拷贝」语义进行参数传递</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-Rust">#[derive(Debug, Clone, Copy)]
+
+struct Dot {
+
+    id: String,
+
+    x: i32,
+
+    y: i32
+
+}
+
+
+
+fn main() {
+
+    let dot = Dot { id: &quot;dot_1&quot;.to_string(), x: 1, y: 2 }; 
+
+    pacman(dot); // 实现了 Copy trait，默认通过「值拷贝」传递
+
+    // 再次调用，编译通过 ✅
+
+    pacman(dot);
+
+}
+
+
+
+fn pacman(dot: Dot) { 
+
+    println!(&quot;Eating {:?}&quot;, dot);
+
+    
+
+}
+</code></pre>
+<ul>
+<li>
+<h5 id="通过借用borrow在避免所有权转移的情况下共用数据"><a class="header" href="#通过借用borrow在避免所有权转移的情况下共用数据">通过借用（Borrow），在避免所有权转移的情况下共用数据</a></h5>
+</li>
+</ul>
+<h3 id="借用borrowing"><a class="header" href="#借用borrowing">借用（Borrowing）</a></h3>
+<blockquote>
+<p><code>&amp;</code>：借用操作符，与引用的区别，在于「借用」受一定规则约束</p>
+</blockquote>
+<ul>
+<li>
+<h4 id="不可变借用"><a class="header" href="#不可变借用">不可变借用(<code>&amp;</code>)</a></h4>
+<ul>
+<li>可多次借用，不可对数据进行修改</li>
+<li>引用将始终有效，不会为 null 或野指针（即不会超过数据的生命周期）</li>
+<li>借用的有效期间，确保引用的数据不会发生突变</li>
+</ul>
+</li>
+</ul>
+<p>[代码示例](https://play.rust-lang.org/?version=stable&amp;edition=2018&amp;code=%23[derive(Debug)] struct Point {    x%3A i32%2C    y%3A i32 } fn main() {    let mut p %3D Point { x%3A 1%2C y%3A 2 }%3B     inspect(%26p)%3B     p.x %3D 2%3B     inspect(%26p)%3B     } fn inspect(p%3A %26Point) {     println!(&quot;{%3A%3F}&quot;%2C p)%3B })：</p>
+<pre><code class="language-Rust">#[derive(Debug)]
+
+struct Point {
+
+    x: i32,
+
+    y: i32
+
+}
+
+
+
+fn main() {
+
+    let mut p = Point { x: 1, y: 2 }; 
+
+    inspect(&amp;p); 
+
+    p.x = 2; 
+
+    inspect(&amp;p);
+
+    
+
+}
+
+
+
+fn inspect(p: &amp;Point) { 
+
+    println!(&quot;{:?}&quot;, p);
+
+}
+</code></pre>
+<p><a href="https://play.rust-lang.org/?version=stable&amp;mode=debug&amp;edition=2018&amp;gist=d62bdd044f9f672592b2e9d51967f1fc">代码示例</a>：</p>
+<pre><code class="language-Rust">#[derive(Debug)]
+
+struct Point {
+
+    x: i32,
+
+    y: i32
+
+}
+
+
+
+fn main() {
+
+    let mut point = Point { x: 1, y: 2 };
+
+    let re = &amp;point; // -\ 
+
+    point.x = 2;     //  | 
+
+    inspect(re);     // -/ 
+
+}
+
+
+
+fn inspect(p: &amp;Point) { 
+
+    println!(&quot;{:?}&quot;, p);
+
+}
+</code></pre>
+<p><img src="./insights_about_rust.assets/20211228220040296.png" alt="img" /></p>
+<ul>
+<li>
+<p>编译错误索引：[<a href="https://doc.rust-lang.org/stable/error-index.html#E0506">E0506]</a></p>
+</li>
+<li>
+<h4 id="可变借用mut"><a class="header" href="#可变借用mut">可变借用（<code>&amp;mut</code>）</a></h4>
+<ul>
+<li>仅支持一次可变借用，可对数据进行修改</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-Rust">fn main() {
+
+    let mut p = Point { x: 1, y: 2 };
+
+    inspect(&amp;p); 
+
+    move_point(&amp;mut p, 3, 3); 
+
+    inspect(&amp;p); 
+
+}
+
+
+
+fn move_point(
+
+    p: &amp;mut Point,  
+
+    x: i32, y: i32
+
+) {
+
+    p.x = x;
+
+    p.y = y;
+
+}
+</code></pre>
+<ul>
+<li>
+<h4 id="借用规则"><a class="header" href="#借用规则">借用规则</a></h4>
+<ul>
+<li>多次不可变借用</li>
+<li>仅单个可变借用</li>
+<li>以上两者互斥，即无法共享可变性</li>
+<li>借用的生命周期无法超过值本身的生命周期</li>
+</ul>
+</li>
+</ul>
+<h2 id="生命周期"><a class="header" href="#生命周期">生命周期</a></h2>
+<blockquote>
+<p>生命周期是个心智负担较重的概念，但好在大多数时候编译器，都能自动识别生命周期，不需要额外标注。可先仅作了解，后续再深入。</p>
+</blockquote>
+<ul>
+<li>描述标注借用的值在内存中存活的时间范围，即变量的有效范围</li>
+<li>主要作用是避免指针失效/悬垂引用</li>
+<li>仅仅是描述和标注，以便编译器做安全检查，不会强制改变固有的生命周期逻辑</li>
+<li>语法上，与范型相似</li>
+</ul>
+<h3 id="静态与动态生命周期"><a class="header" href="#静态与动态生命周期">静态与动态生命周期</a></h3>
+<p><img src="./insights_about_rust.assets/20211228220105753.png" alt="img" /></p>
+<ul>
+<li>分配在堆和栈上的内存有其各自的<strong>作用域</strong>，生命周期是动态的。</li>
+<li>全局变量、静态变量、字符串字面量、代码等内容，在编译时，会被编译到可执行文件中，加载入内存。生命周期和进程的生命周期一致，生命周期是静态的。</li>
+<li>函数指针的生命周期也是静态的，因为函数在 Text 段中，只要进程活着，其内存一直存在。</li>
+</ul>
+<h3 id="代码示例"><a class="header" href="#代码示例">代码示例</a></h3>
+<pre><code class="language-Rust">fn main() {
+
+    let s1 = String::from(&quot;Lindsey&quot;);
+
+    let s2 = String::from(&quot;Rosie&quot;);
+
+    let result = max(&amp;s1, &amp;s2);
+
+    println!(&quot;bigger one: {}&quot;, result);
+
+}
+
+
+
+fn max(s1: &amp; str, s2: &amp; str) -&gt; &amp;str {
+
+    if s1 &gt; s2 {
+
+        s1
+
+    } else {
+
+        s2
+
+    }
+
+}
+</code></pre>
+<p><img src="./insights_about_rust.assets/20211228220130930.png" alt="img" /></p>
+<ul>
+<li>编译错误索引： [<a href="https://doc.rust-lang.org/stable/error-index.html#E0106">E0106]</a>: missing lifetime specifier</li>
+</ul>
+<h4 id="根据编译器报错引导添加生命周期标注"><a class="header" href="#根据编译器报错引导添加生命周期标注">根据编译器报错引导，添加生命周期标注</a></h4>
+<pre><code class="language-Rust">fn max&lt;'a&gt;(s1: &amp;'a str, s2: &amp;'a str) -&gt; &amp;'a str
+</code></pre>
+<h1 id="rust-实战live-coding"><a class="header" href="#rust-实战live-coding">Rust 实战（Live Coding）</a></h1>
+<h2 id="rusty-todo-cli代办清单-cli-工具"><a class="header" href="#rusty-todo-cli代办清单-cli-工具">rusty-todo-cli：代办清单 CLI 工具</a></h2>
+<ul>
+<li>创建事项：<code>add &quot;Rust sharing for genius bytedancers&quot;</code></li>
+<li>查看事项列表：<code>list</code></li>
+<li>完成事项: <code>done [index]</code></li>
+<li>持久化：
+<ul>
+<li>通过 JSON 文件保存</li>
+<li>默认路径：用户目录，可选文件路径指定</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>
+<h3 id="创建项目"><a class="header" href="#创建项目">创建项目</a></h3>
+</li>
+</ol>
+<pre><code class="language-Bash">cargo new rusty-todo-cli
+</code></pre>
+<ol>
+<li>
+<h3 id="依赖安装"><a class="header" href="#依赖安装">依赖安装</a></h3>
+</li>
+</ol>
+<pre><code class="language-Rust">[package]
+
+name = &quot;rusty-todo-cli&quot;
+
+version = &quot;0.1.0&quot;
+
+edition = &quot;2021&quot;
+
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+
+[dependencies]
+
+anyhow = &quot;1.0&quot; # 错误处理
+
+structopt = &quot;0.3&quot; # 命令定义
+
+serde = { version = &quot;1.0&quot;, features = [&quot;derive&quot;] } # 序列化/反序列化
+
+serde_json = &quot;1.0&quot; # JSON 解析
+
+chrono = { version = &quot;0.4&quot;, features = [&quot;serde&quot;] } # 时间解析
+
+home = &quot;0.5&quot; # 默认存储目录
+</code></pre>
+<ol>
+<li>
+<h3 id="定义命令"><a class="header" href="#定义命令">定义命令</a></h3>
+</li>
+</ol>
+<blockquote>
+<p>Doc: <strong><a href="https://docs.rs/structopt/0.3.25/structopt/#how-to-derivestructopt">structopt - Rust</a></strong></p>
+</blockquote>
+<pre><code class="language-Rust">use std::path::PathBuf;
+
+
+
+pub enum Action {
+
+    List,
+
+    Add { text: String },
+
+    Done { index: usize },
+
+}
+
+
+
+pub struct CommandLineOptions {
+
+    action: Action,
+
+    json_file_path: Option&lt;PathBuf&gt;,
+
+}
+</code></pre>
+<ul>
+<li>cli.rs</li>
+</ul>
+<pre><code class="language-Rust">use std::path::PathBuf;
+
+use structopt::StructOpt;
+
+
+
+#[derive(Debug, StructOpt)]
+
+pub enum Action {
+
+    List,
+
+    Add {
+
+        #[structopt()]
+
+        text: String,
+
+    },
+
+    Done {
+
+        #[structopt()]
+
+        index: usize,
+
+    },
+
+}
+
+
+
+#[derive(Debug, StructOpt)]
+
+#[structopt(name = &quot;rusty-todo&quot;, about = &quot;A command line todo app&quot;)]
+
+pub struct CommandLineOptions {
+
+    #[structopt(subcommand)]
+
+    action: Action,
+
+    #[structopt(parse(from_os_str), short = &quot;p&quot;, long = &quot;path&quot;)]
+
+    json_file_path: Option&lt;PathBuf&gt;,
+
+}
+</code></pre>
+<ul>
+<li>main.rs</li>
+</ul>
+<pre><code class="language-Rust">mod cli;
+
+use cli::*;
+
+use structopt::StructOpt;
+
+
+
+fn main() {
+
+    let CommandLineOptions {
+
+        action,
+
+        json_file_path,
+
+    } = CommandLineOptions::from_args();
+
+
+
+    println!(&quot;JSON file path: {:?}&quot;, json_file_path);
+
+    match action {
+
+        Action::List =&gt; println!(&quot;List all&quot;),
+
+        Action::Add { text } =&gt; println!(&quot;Add: {:?}&quot;, text),
+
+        Action::Done { index } =&gt; println!(&quot;Done: {:?}&quot;, index),
+
+    }
+
+}
+</code></pre>
+<h4 id="运行"><a class="header" href="#运行">运行</a></h4>
+<blockquote>
+<pre><code>cargo run -- add &quot;Rust sharing for genius bytedancers&quot;
+</code></pre>
+</blockquote>
+<p><img src="./insights_about_rust.assets/20211228220156043.png" alt="img" /></p>
+<ol>
+<li>
+<h3 id="功能实现happy-crud-"><a class="header" href="#功能实现happy-crud-">功能实现：Happy CRUD 🚀</a></h3>
+</li>
+</ol>
+<ul>
+<li>
+<h4 id="设计数据结构"><a class="header" href="#设计数据结构">设计数据结构</a></h4>
+</li>
+</ul>
+<pre><code class="language-Rust">use chrono::{DateTime, Utc};
+
+
+
+pub struct Task {
+
+    pub text: String,
+
+    pub created_at: DateTime&lt;Utc&gt;,
+
+}
+use chrono::{serde::ts_seconds, DateTime, Utc};
+
+use serde::{Deserialize, Serialize};
+
+
+
+#[derive(Debug, Deserialize, Serialize)]
+
+pub struct Task {
+
+    pub text: String,
+
+    #[serde(with = &quot;ts_seconds&quot;)]
+
+    pub created_at: DateTime&lt;Utc&gt;,
+
+}
+
+
+
+impl Task {
+
+    pub fn new(text: String) -&gt; Self {
+
+        Self {
+
+            text,
+
+            created_at: Utc::now(),
+
+        }
+
+    }
+
+}
+</code></pre>
+<ul>
+<li>
+<h4 id="添加任务"><a class="header" href="#添加任务">添加任务</a></h4>
+<ul>
+<li>task.rs</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-Rust">pub fn add_task(task: Task, json_file_path: PathBuf) -&gt; Result&lt;()&gt; {
+
+    let file = OpenOptions::new()
+
+        .read(true)
+
+        .write(true)
+
+        .create(true)
+
+        .open(json_file_path)?;
+
+    let mut tasks = parse_tasks(&amp;file)?;
+
+    tasks.push(task);
+
+    serde_json::to_writer(&amp;file, &amp;tasks)?;
+
+    Ok(())
+
+}
+
+
+
+fn parse_tasks(file: &amp;std::fs::File) -&gt; Result&lt;Vec&lt;Task&gt;&gt; {
+
+    let reader = BufReader::new(file);
+
+    let tasks = serde_json::from_reader(reader)?;
+
+    Ok(tasks)
+
+}
+</code></pre>
+<ul>
+<li>main.rs</li>
+</ul>
+<pre><code class="language-Rust">mod cli;
+
+mod tasks;
+
+use anyhow::{anyhow, Result};
+
+use cli::*;
+
+use std::path::PathBuf;
+
+use structopt::StructOpt;
+
+use tasks::*;
+
+
+
+fn main() -&gt; Result&lt;()&gt; {
+
+    let CommandLineOptions {
+
+        action,
+
+        json_file_path,
+
+    } = CommandLineOptions::from_args();
+
+
+
+    let json_file_path = json_file_path
+
+        .or_else(default_json_file_path)
+
+        .ok_or(anyhow!(&quot;文件路径查找失败&quot;))?;
+
+    match action {
+
+        Action::List =&gt; println!(&quot;List all&quot;),
+
+        Action::Add { text } =&gt; add_task(Task::new(text), json_file_path)?,
+
+        Action::Done { index } =&gt; println!(&quot;Done: {:?}&quot;, index),
+
+    }
+
+    Ok(())
+
+}
+
+
+
+fn default_json_file_path() -&gt; Option&lt;PathBuf&gt; {
+
+    home::home_dir().map(|mut path| {
+
+        path.push(&quot;.rusty-todo.json&quot;);
+
+        path
+
+    })
+
+}
+</code></pre>
+<h5 id="运行-1"><a class="header" href="#运行-1">运行</a></h5>
+<blockquote>
+<p>cargo run -- add &quot;Rust sharing for genius bytedancers&quot;</p>
+</blockquote>
+<p><img src="./insights_about_rust.assets/20211228220243740.png" alt="img" /></p>
+<p>默认用户目录下：</p>
+<p><img src="./insights_about_rust.assets/20211228220303915.png" alt="img" /></p>
+<p>🎉🎉🎉 添加任务成功</p>
+<p><img src="./insights_about_rust.assets/20211228220327273.png" alt="img" /></p>
+<ul>
+<li>
+<h4 id="查看任务"><a class="header" href="#查看任务">查看任务</a></h4>
+<ul>
+<li>tasks.rs</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-Rust">impl Display for Task {
+
+    fn fmt(&amp;self, f: &amp;mut std::fmt::Formatter&lt;'_&gt;) -&gt; std::fmt::Result {
+
+        write!(f, &quot;{:&lt;50} [{}]&quot;, self.text, self.created_at)
+
+    }
+
+}
+
+
+
+pub fn list_tasks(json_file_path: PathBuf) -&gt; Result&lt;()&gt; {
+
+    let file = OpenOptions::new().read(true).open(json_file_path)?;
+
+    let tasks = parse_tasks(&amp;file)?;
+
+    if tasks.is_empty() {
+
+        println!(&quot;待办事项为空，好好休息下吧～🎉&quot;)
+
+    } else {
+
+        for (index, task) in tasks.into_iter().enumerate() {
+
+            println!(&quot;{}: {}&quot;, index, task);
+
+        }
+
+    }
+
+    Ok(())
+
+}
+</code></pre>
+<ul>
+<li>main.rs</li>
+</ul>
+<pre><code class="language-Rust">    match action {
+
+        Action::List =&gt; list_tasks(json_file_path)?,
+
+        Action::Add { text } =&gt; add_task(Task::new(text), json_file_path)?,
+
+        Action::Done { index } =&gt; println!(&quot;Done: {:?}&quot;, index),
+
+    }
+</code></pre>
+<h5 id="运行-2"><a class="header" href="#运行-2">运行</a></h5>
+<blockquote>
+<p>cargo run -- list</p>
+</blockquote>
+<p><img src="./insights_about_rust.assets/20211228220358004.png" alt="img" /></p>
+<ul>
+<li>
+<h4 id="删除任务"><a class="header" href="#删除任务">删除任务</a></h4>
+</li>
+</ul>
+<p>略：动手尝试下吧！</p>
+<blockquote>
+<p>附：<a href="https://github.com/Binlogo/playground-rs/tree/master/rusty-journal">查阅</a>此次 Live Coding 代码</p>
+</blockquote>
+<h1 id="参考"><a class="header" href="#参考">参考</a></h1>
+<ul>
+<li>
+<p><a href="https://www.infoq.cn/article/umqbighceoa81yij7uyg">2021年 Rust 行业调研报告-InfoQ</a></p>
+</li>
+<li>
+<p><a href="https://binlogo.github.io/Knowledge-Track/programming-languages/rust/rust.html">棒棒彬的第二大脑-编程语言-Rust</a></p>
+</li>
+<li>
+<p><a href="https://github.com/binlogo/rust-on-mobile">GitHub - Binlogo/rust-on-mobile: Rust 在移动跨平台的实践</a></p>
+</li>
+<li>
+<p><a href="https://binlogo.github.io/Knowledge-Track/cs/class/cs110l.html">CS 110L: Safety in Systems Programming</a></p>
+</li>
+<li>
+<p><a href="https://tyrchen.github.io/rust-training/rust-training-all-in-one-cn.html">程序君的 Rust 培训课</a></p>
+</li>
+<li>
+<p><a href="https://exercism.org/tracks/rust">Rust on Exercism</a></p>
+</li>
+<li>
+<p><a href="https://livebook.manning.com/book/rust-in-action">Rust in Action: Systems programming concepts and techniques</a></p>
+</li>
+<li>
+<p><a href="http://gk.link/a/10CqG">陈天 · Rust 编程第一课</a> （<a href="https://github.com/tyrchen">陈天</a>的课程质量非常高，深入浅出，认真推荐🌟）</p>
+</li>
+</ul>
+<blockquote>
+<p>欢迎使用我的二维码，我将获得半杯咖啡 😝</p>
+</blockquote>
+<p><img src="./insights_about_rust.assets/20211228220423460.png" alt="img" /></p>
+
+                    <!-- Comments powered by giscus.app -->
+                    <div id="comments" class="giscus">
+                        <script src="https://giscus.app/client.js" data-repo="Binlogo/Knowledge-Track"
+                            data-repo-id="MDEwOlJlcG9zaXRvcnkyNDc1MTA2ODg=" data-category="Announcements"
+                            data-category-id="DIC_kwDODsC2oM4B_hm2" data-mapping="pathname" data-reactions-enabled="1"
+                            data-emit-metadata="0" data-theme="light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </main>
+
+                <nav class="nav-wrapper" aria-label="Page navigation">
+                    <!-- Mobile navigation buttons -->
+                    <a rel="prev" href="../../programming-languages/rust/rust.html" class="mobile-nav-chapters previous"
+                        title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../programming-languages/rust/concepts/closure.html" class="mobile-nav-chapters next"
+                        title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                    <div style="clear: both"></div>
+                </nav>
+            </div>
+        </div>
+
+        <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            <a rel="prev" href="../../programming-languages/rust/rust.html" class="nav-chapters previous" title="Previous chapter"
+                aria-label="Previous chapter" aria-keyshortcuts="Left">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a rel="next" href="../../programming-languages/rust/concepts/closure.html" class="nav-chapters next" title="Next chapter"
+                aria-label="Next chapter" aria-keyshortcuts="Right">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </nav>
+
+    </div>
+
+    <!-- Google Analytics Tag -->
+    <script type="text/javascript">
+        var localAddrs = ["localhost", "127.0.0.1", ""];
+
+        // make sure we don't activate google analytics if the developer is
+        // inspecting the book locally...
+        if (localAddrs.indexOf(document.location.hostname) === -1) {
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-160717450-2', 'auto');
+            ga('send', 'pageview');
+        }
+    </script>
+    <script type="text/javascript">
+        window.playground_copyable = true;
+    </script>
+    <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- Custom JS scripts -->
+</body>
+
+</html>
