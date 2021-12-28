@@ -50,6 +50,7 @@
       - [Swift 方法派发纪要](./programming-languages/swift/swift-method-dispatch-notes.md)
       - [Concurrency](./programming-languages/swift/concurrency.md)
     - [Rust](./programming-languages/rust/rust.md)
+      - [认识与感受 Rust 的红与黑](./programming-languages/rust/insights_about_rust.md)
       - [化解神奇的闭包](./programming-languages/rust/concepts/closure.md)
       - [Rust 中的可变与不可变以及 Cell 的使用](./programming-languages/rust/concepts/interior_mutability_and_cells.md)
       - [Move&Copy&Borrow 可视化](./programming-languages/rust/concepts/move_copy_borrow.md)
