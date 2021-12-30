@@ -77,6 +77,11 @@
 - [iced-rs/iced](https://github.com/iced-rs/iced) - Rust 跨平台 GUI 库
 - [emilk/egui: egui: an easy-to-use immediate mode GUI in pure Rust](https://github.com/emilk/egui)
 
+---
+
+- [x] [Building a GUI app in Rust [Part A] - YouTube](https://www.youtube.com/watch?v=NtUkr_z7l84)
+- [ ] [Building a GUI app in Rust [Part B] - YouTube](https://www.youtube.com/watch?v=SvFPdgGwzTQ&t=0s)
+
 ### 音视频领域实践
 
 - [Ian Hobson - An introduction to Rust for audio developers](https://www.youtube.com/watch?v=Yom9E-67bdI&ab_channel=JUCE) - Rust 在音频开发的介绍与实践
