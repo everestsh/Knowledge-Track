@@ -64,14 +64,18 @@
 - [深度探索：前端中的后端](https://mp.weixin.qq.com/s/W-EvvKzmj1A8VsNKFYkuhQ)
 - [深度分析：前端中的后端-实现篇](https://mp.weixin.qq.com/s/5FfSRpRG-F8Y8X3BX9mJ-Q)
 - [mozilla/uniffi-rs](https://github.com/mozilla/uniffi-rs) - Rust 跨平台交互代码生成器
-- [rust-windowing/winit](https://github.com/rust-windowing/winit) - 跨平台窗口创建和管理
-- [iced-rs/iced](https://github.com/iced-rs/iced) - Rust 跨平台 GUI 库
 
 #### 跨平台开源项目
 
 - [mozilla/application-services](https://github.com/mozilla/application-services) - Firefox Application Services
 - [signalapp/libsignal-client](https://github.com/signalapp/libsignal-client)
 - [deltachat/deltachat-core-rust](https://github.com/deltachat/deltachat-core-rust)
+
+### GUI
+
+- [rust-windowing/winit](https://github.com/rust-windowing/winit) - 跨平台窗口创建和管理
+- [iced-rs/iced](https://github.com/iced-rs/iced) - Rust 跨平台 GUI 库
+- [emilk/egui: egui: an easy-to-use immediate mode GUI in pure Rust](https://github.com/emilk/egui)
 
 ### 音视频领域实践
 
