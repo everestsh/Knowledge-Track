@@ -80,7 +80,7 @@
 ---
 
 - [x] [Building a GUI app in Rust [Part A] - YouTube](https://www.youtube.com/watch?v=NtUkr_z7l84)
-- [ ] [Building a GUI app in Rust [Part B] - YouTube](https://www.youtube.com/watch?v=SvFPdgGwzTQ&t=0s)
+- [x] [Building a GUI app in Rust [Part B] - YouTube](https://www.youtube.com/watch?v=SvFPdgGwzTQ&t=0s)
 
 ### 音视频领域实践
 
