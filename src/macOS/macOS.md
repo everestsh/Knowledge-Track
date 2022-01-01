@@ -120,6 +120,18 @@ pod setup
   
  - 地址栏输入并回车：`chrome://flags/#enable-parallel-downloading`, 将 Default 改为 Enabled 即可
 
+- 如何快速测试网络？
+
+  ```sh
+  networkQuality
+  ==== SUMMARY ====
+  Upload capacity: 9.795 Mbps
+  Download capacity: 21.594 Mbps
+  Upload flows: 20
+  Download flows: 20
+  Responsiveness: Medium (304 RPM)
+  ```
+
 ## 链接
 
 - [Apple Teacher Learning Center](https://appleteacher.apple.com/#/home/resources)
