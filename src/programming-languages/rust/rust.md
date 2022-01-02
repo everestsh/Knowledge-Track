@@ -48,6 +48,7 @@
 
 ### 实践经验分享
 
+- [x] [Why is my Rust build so slow?](https://fasterthanli.me/articles/why-is-my-rust-build-so-slow)
 - [My ideal Rust workflow](https://fasterthanli.me/articles/my-ideal-rust-workflow)
 - [What is Rust and why is it so popular?](https://stackoverflow.blog/2020/01/20/what-is-rust-and-why-is-it-so-popular/)
 - [Rust: A Language for the Next 40 Years - Carol Nichols](https://www.youtube.com/watch?v=A3AdN7U24iU)
