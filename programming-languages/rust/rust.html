@@ -226,6 +226,13 @@
 </ul>
 <h3 id="实践经验分享"><a class="header" href="#实践经验分享">实践经验分享</a></h3>
 <ul>
+<li><input disabled="" type="checkbox" checked=""/>
+<a href="https://fasterthanli.me/articles/why-is-my-rust-build-so-slow">Why is my Rust build so slow?</a>
+<ul>
+<li>升级 rust 版本后编译耗时劣化严重，作者的编译分析思路十分值得借鉴</li>
+<li>重点记录在 <a href="#qa-%E9%80%9F%E6%9F%A5">Q&amp;A速查</a>：Cargo 编译耗时如何分析与优化？</li>
+</ul>
+</li>
 <li><a href="https://fasterthanli.me/articles/my-ideal-rust-workflow">My ideal Rust workflow</a></li>
 <li><a href="https://stackoverflow.blog/2020/01/20/what-is-rust-and-why-is-it-so-popular/">What is Rust and why is it so popular?</a></li>
 <li><a href="https://www.youtube.com/watch?v=A3AdN7U24iU">Rust: A Language for the Next 40 Years - Carol Nichols</a></li>
@@ -381,6 +388,89 @@ Caused by:
 <p>解决办法：</p>
 <pre><code>rm -r ~/.cargo/.package-cache
 </code></pre>
+<ul>
+<li>
+<p>Cargo 编译耗时如何分析与优化？</p>
+<ul>
+<li><code>Cargo.lock</code>的分析：<code>cat Cargo.lock | toml2json | jq '.package | length'</code>
+<ul>
+<li><a href="https://github.com/woodruffw/toml2json">toml2json</a> - a Rust CLI utility</li>
+<li><a href="https://stedolan.github.io/jq/">jq</a> - a CLI utility for JSON processor.</li>
+</ul>
+</li>
+<li>编译产物分析：
+<ul>
+<li><code>nm ./target/release/deps/libtree_sitter_highlight-dbbf005203d40df6.rlib | tail -8 | rustfilt</code></li>
+<li>or <code>llvm-nm --demangle ./target/release/deps/libtree_sitter_highlight-dbbf005203d40df6.rlib | head -8</code></li>
+<li><a href="https://crates.io/crates/rustfilt"><code>rustfilt</code></a> to demangle</li>
+</ul>
+</li>
+<li>编译单元：&quot;rust codegen unit&quot; (<a href="https://github.com/rust-lang/rust/blob/3d57c61a9e04dcd3df633f41142009d6dcad4399/compiler/rustc_session/src/config.rs#L657">RCGU</a>)</li>
+<li>Cargo 编译运行分析：
+<ul>
+<li><code>cargo</code> invokes <code>rustc</code> <strong>once per crate</strong></li>
+<li><code>rustc</code> decides how many &quot;codegen units&quot; to do in parallel, writes them as .o files, then archives them in an .rlib</li>
+<li><code>cargo</code> does one <strong>final</strong> rustc invocation with all the required .rlib, which ends up calling the linker to make a binary</li>
+</ul>
+</li>
+<li>Package v.s crate:
+<ul>
+<li>something that has a <code>Cargo.toml</code> is a package.</li>
+<li>each package may have multiple crates: a build script crate, a lib crate, one or more bin crates, etc.</li>
+</ul>
+</li>
+<li>编译耗时分析
+<ul>
+<li>cargo has a <code>-Z timings</code> option, <strong>nightly-only</strong></li>
+<li>a <code>cargo-timing.html</code> file
+<ul>
+<li><strong>Orange</strong>: means we're running a build script.</li>
+<li><strong>Light blue</strong>: where we're still busy generating metadata, and any dependents (crates that depend on us) are blocked</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>链接耗时分析</li>
+<li>Debug symbols 分析
+<ul>
+<li><code>nm</code> / <code>objdump</code> / <code>readelf</code> / <code>rustfilt</code></li>
+</ul>
+</li>
+<li>增量编译选项分析
+<ul>
+<li>编译缓存可选方案：<a href="https://lib.rs/crates/sccache">sccache</a></li>
+</ul>
+</li>
+<li>Link-time optimization (LTO) 选项分析</li>
+<li>「杀手锏」：Rustc self-profiling
+<ul>
+<li><code>-Z self-profile</code></li>
+<li>可视化分析工具安装：<code>cargo install --git https://github.com/rust-lang/measureme crox flamegraph summarize</code></li>
+<li>summarize: <code>summarize summarize futile-1004573.mm_profdata | head -10</code></li>
+<li>flamegraph: <code>flamegraph futile-1004573.mm_profdata</code></li>
+<li>crox: <code>crox futile-1004573.mm_profdata</code>
+<ul>
+<li><code>chrome://tracing</code></li>
+</ul>
+</li>
+<li>最终定位：Wrap 的 TraitPredicate 复杂泛型定义在 Rust 1.57.0 版本下，劣化</li>
+</ul>
+</li>
+<li>解决办法：
+<ol>
+<li>升级 nightly</li>
+<li>运行时性能适当妥协，通过封箱隐藏泛型「Warp provides <code>Filter::boxed</code>, and boxing is a great way to hide actual types.」</li>
+</ol>
+</li>
+<li>其他尝试与分析：Splitting into more crates!
+<ul>
+<li>编译耗时影响因素之一：LLVM IR 生成数量</li>
+<li><a href="https://github.com/dtolnay/cargo-llvm-lines">cargo-llvm-lines</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
                     <!-- Comments powered by giscus.app -->
                     <div id="comments" class="giscus">
