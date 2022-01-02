@@ -49,6 +49,8 @@
 ### 实践经验分享
 
 - [x] [Why is my Rust build so slow?](https://fasterthanli.me/articles/why-is-my-rust-build-so-slow)
+  - 升级 rust 版本后编译耗时劣化严重，作者的编译分析思路十分值得借鉴
+  - 重点记录在 [Q&A速查](#qa-速查)：Cargo 编译耗时如何分析与优化？
 - [My ideal Rust workflow](https://fasterthanli.me/articles/my-ideal-rust-workflow)
 - [What is Rust and why is it so popular?](https://stackoverflow.blog/2020/01/20/what-is-rust-and-why-is-it-so-popular/)
 - [Rust: A Language for the Next 40 Years - Carol Nichols](https://www.youtube.com/watch?v=A3AdN7U24iU)
@@ -177,3 +179,46 @@ cargo build --verbose
 ```
 rm -r ~/.cargo/.package-cache
 ```
+
+- Cargo 编译耗时如何分析与优化？
+
+  - `Cargo.lock`的分析：`cat Cargo.lock | toml2json | jq '.package | length'`
+    - [toml2json](https://github.com/woodruffw/toml2json) - a Rust CLI utility
+    - [jq](https://stedolan.github.io/jq/) - a CLI utility for JSON processor.
+  - 编译产物分析：
+    - `nm ./target/release/deps/libtree_sitter_highlight-dbbf005203d40df6.rlib | tail -8 | rustfilt`
+    - or `llvm-nm --demangle ./target/release/deps/libtree_sitter_highlight-dbbf005203d40df6.rlib | head -8`
+    - [`rustfilt`](https://crates.io/crates/rustfilt) to demangle
+  - 编译单元："rust codegen unit" ([RCGU](https://github.com/rust-lang/rust/blob/3d57c61a9e04dcd3df633f41142009d6dcad4399/compiler/rustc_session/src/config.rs#L657))
+  - Cargo 编译运行分析：
+    - `cargo` invokes `rustc` **once per crate**
+    - `rustc` decides how many "codegen units" to do in parallel, writes them as .o files, then archives them in an .rlib
+    - `cargo` does one **final** rustc invocation with all the required .rlib, which ends up calling the linker to make a binary
+  - Package v.s crate:
+    - something that has a `Cargo.toml` is a package.
+    - each package may have multiple crates: a build script crate, a lib crate, one or more bin crates, etc.
+  - 编译耗时分析
+    - cargo has a `-Z timings` option, **nightly-only**
+    - a `cargo-timing.html` file
+      - **Orange**: means we're running a build script.
+      - **Light blue**: where we're still busy generating metadata, and any dependents (crates that depend on us) are blocked
+  - 链接耗时分析
+  - Debug symbols 分析
+    - `nm` / `objdump` / `readelf` / `rustfilt`
+  - 增量编译选项分析
+    - 编译缓存可选方案：[sccache](https://lib.rs/crates/sccache)
+  - Link-time optimization (LTO) 选项分析
+  - 「杀手锏」：Rustc self-profiling
+    - `-Z self-profile`
+    - 可视化分析工具安装：`cargo install --git https://github.com/rust-lang/measureme crox flamegraph summarize`
+    - summarize: `summarize summarize futile-1004573.mm_profdata | head -10`
+    - flamegraph: `flamegraph futile-1004573.mm_profdata`
+    - crox: `crox futile-1004573.mm_profdata`
+      - `chrome://tracing`
+    - 最终定位：Wrap 的 TraitPredicate 复杂泛型定义在 Rust 1.57.0 版本下，劣化
+  - 解决办法：
+    1. 升级 nightly
+    2. 运行时性能适当妥协，通过封箱隐藏泛型「Warp provides `Filter::boxed`, and boxing is a great way to hide actual types.」
+  - 其他尝试与分析：Splitting into more crates!
+    - 编译耗时影响因素之一：LLVM IR 生成数量
+    - [cargo-llvm-lines](https://github.com/dtolnay/cargo-llvm-lines)
