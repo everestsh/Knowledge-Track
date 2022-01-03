@@ -8,4 +8,5 @@
 
 ## 链接
 
+- [Sorting Algorithms Animations | Toptal®](https://www.toptal.com/developers/sorting-algorithms) - 排序算法动画演示
 - [labuladong的算法小抄](https://labuladong.gitbook.io/algo/)

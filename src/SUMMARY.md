@@ -59,7 +59,7 @@
       - [Pin/Unpin](./programming-languages/rust/concepts/pin_unpin.md)
       - [《Rust 编程之道》阅读纪要](./programming-languages/rust/tao-of-rust.md)
     - [C/C++/Objective-C](./programming-languages/c-style/c-style.md)
-  - [数据结构与算法](./cs/algrithoms.md)
+  - [数据结构与算法](./cs/algorithms.md)
   - [编译原理](./cs/compiliers.md)
   - [网络](./cs/networking/networking.md)
     - [TCP](./cs/networking/tcp.md)
