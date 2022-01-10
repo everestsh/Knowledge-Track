@@ -58,6 +58,10 @@
 - [Understanding Rust as a C++ developer](https://renoth.medium.com/understanding-rust-as-a-c-developer-69ee8ca76fd6)
 - [x] [Building an (almost entirely) rust iOS app using uikit-sys. - Sebastian Imlay](https://simlay.net/posts/using-uikit-sys/) - 尝试几乎完全采用 Rust 构建 iOS 应用
 - [x] [How we built Appflowy with Flutter and Rust](https://blog-appflowy.ghost.io/tech-design-flutter-rust/) ⭐️
+- [GitHub - wooden-worm/ios-app-rs](https://github.com/wooden-worm/ios-app-rs) - 概念验证: 完全使用 Rust 写 iOS 应用
+  - [objc-derive](https://github.com/wooden-worm/objc-derive)
+  - [tao-foundation](https://github.com/wooden-worm/tao-foundation)
+  - [tao-uikit](https://github.com/wooden-worm/tao-uikit)
 
 ### Rust 移动端跨平台
 
