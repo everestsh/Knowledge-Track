@@ -20,6 +20,7 @@ Meet geniuses. They are awesome.
 
 - [Hoverbear](https://hoverbear.org/)
 - [Corruption Cat](https://gankra.github.io/blah/)
+- [Pascal’s Scribbles](https://deterministic.space/)
 
 ## iOS · Swift · Rust
 
