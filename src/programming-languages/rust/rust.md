@@ -62,6 +62,7 @@
   - [objc-derive](https://github.com/wooden-worm/objc-derive)
   - [tao-foundation](https://github.com/wooden-worm/tao-foundation)
   - [tao-uikit](https://github.com/wooden-worm/tao-uikit)
+- [x] [How Bevy uses Rust traits for labeling - Pascal’s Scribbles](https://deterministic.space/bevy-labels.html) - 使用 `traits` 处理标识
 
 ### Rust 移动端跨平台
 
