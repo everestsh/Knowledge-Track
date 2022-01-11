@@ -90,6 +90,7 @@ pod setup
 
 ### 其他
 
+- [CleanShot X for Mac](https://cleanshot.com/) - 设计精美流畅的截屏录屏工作流应用
 - [Raycast](https://www.raycast.com/features) - 类似 Alfred 的效率工具，应用启动&工作流扩展集成
 - [Notable.md](https://notable.md/) - 另一个简洁易用的 markdown 编辑器，旧有版本开源(TypeScript)。
 - [Kaleidoscope](https://kaleidoscope.app/) - Diff 差异检查应用，文本、图片、文件夹、开发流集成
