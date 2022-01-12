@@ -36,6 +36,7 @@
 
 ## 链接
 
+- [Awesome Rust Repositories | RustRepo](https://rustrepo.com/)
 - [Book - The Rust Programming Language](https://doc.rust-lang.org/book/)
 - [Rust Platform Support](https://forge.rust-lang.org/release/platform-support.html)
 - [Closures: Magic Functions](https://rustyyato.github.io/rust/syntactic/sugar/2019/01/17/Closures-Magic-Functions.html)
