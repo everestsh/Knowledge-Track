@@ -92,6 +92,7 @@
 - [积极工作](./work/work.md)
   - [求职](./work/job-hunt.md)
   - [职场发展](./work/career.md)
+    - [工程师的成长](./work/articles/better-engineer.md)
   - [远程工作](./work/remote.md)
     - [如何通过英文写作找到国外的远程工作机会](./work/articles/how-to-get-a-remote-job-by-writing-in-english.md)
   - [延伸拓展](./work/slashie.md)

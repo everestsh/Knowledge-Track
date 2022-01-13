@@ -4,7 +4,9 @@
 
 - [如何清单：技术评审要点](https://share.mubu.com/doc/e5QaMhsRX0)
 
-- [工程师的个人发展规划](https://developer.apple.com/cn/news/?id=yv6so7ie) - Wu Duoyi @nwind, 百度
+- [工程师的成长](./articles/better-engineer.md)
+
+- [工程师的个人发展规划](https://speakerdeck.com/baidufe/gong-cheng-shi-de-ge-ren-fa-zhan-gui-hua) - Wu Duoyi @nwind, 百度
 
     > 此生理想、近期计划、今日功课
 
