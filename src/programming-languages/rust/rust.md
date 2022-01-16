@@ -98,6 +98,10 @@
   - [Sample Code](https://github.com/irh/freeverb-rs)
   - 🆕 [JUCE.com](https://juce.com/) - 音频开发工具
 
+### 操作系统
+
+- [theseus-os/Theseus](https://github.com/theseus-os/Theseus) - A modern OS written from scratch in Rust that explores 𝐢𝐧𝐭𝐫𝐚𝐥𝐢𝐧𝐠𝐮𝐚𝐥 𝐝𝐞𝐬𝐢𝐠𝐧, novel OS structure, and state management. It strives to close the semantic gap between compiler and hardware in order to maximally leverage the power of language safety, and thus shift OS responsibilities (resource management) into the compiler.
+
 ### 库
 
 - [A Rust implementation of DEFLATE algorithm and related formats (ZLIB, GZIP)](https://github.com/sile/libflate)
