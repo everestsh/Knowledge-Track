@@ -128,6 +128,7 @@
   - [讲义](https://tyrchen.github.io/rust-training/rust-training-all-in-one-cn.html) - 💡 可常温故参阅
   - [x] [上](https://www.bilibili.com/video/BV19b4y1o7Lt)
   - [x] [下](https://www.bilibili.com/video/BV1h64y197G3)
+  - [ ] [Rust 过程宏（第一弹）](https://www.bilibili.com/video/BV1Za411q7LQ)
 - [x] [Rust & Tell Berlin September 2021 - Bastian Gruber: Learning Rust - One tutorial to rule them all](https://www.youtube.com/watch?v=QoatPlzc0-Y) ![Progress](https://img.shields.io/badge/Progress-100%25-brightgreen)
   - [OneTutorial](https://git.sr.ht/~gruberb/onetutorial/) - Rust 快速实践（🌟 新手强烈推荐）
 - [x] [Take your first steps with Rust](https://docs.microsoft.com/en-us/learn/paths/rust-first-steps/) - 微软学院出品的 Rust 学习路径 ![Progress](https://img.shields.io/badge/Progress-100%25-brightgreen)
