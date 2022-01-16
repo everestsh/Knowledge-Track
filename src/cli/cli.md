@@ -28,6 +28,7 @@ alias project="open -a Xcode *.xcodeproj"
 
 ## 链接
 
+- [modern-unix](https://github.com/ibraheemdev/modern-unix) - A collection of modern/faster/saner alternatives to common unix commands.
 - [ ] [Read The Tao of tmux | Leanpub](https://leanpub.com/the-tao-of-tmux/read)
 - [Docker 命令行快捷指南](https://devhints.io/docker)
 - [命令行的艺术](https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md)
