@@ -89,6 +89,7 @@
 
 - [丰富生活](./life/life.md)
   - [故事](./life/stories.md)
+  - [视频创作](./life/video_creation.md)
 
 - [积极工作](./work/work.md)
   - [求职](./work/job-hunt.md)
