@@ -104,6 +104,13 @@ L0（low-level knowledge)
 - [我的阅读工作流(2021版)](https://mp.weixin.qq.com/s/lioyPd8RRv3XUyTkaJFDDQ) - by 潦草学者
   ![阅读工作流](./assets/reading_flow.webp)
 
+- 芯片工程师「老石」的第二大脑实践分享
+  - [我如何用第二大脑“记住”所有事情？](https://www.bilibili.com/video/BV1Hq4y157rK?share_source=copy_web)
+  <iframe width="712" height="430" src="//player.bilibili.com/player.html?aid=548620289&bvid=BV1Hq4y157rK&cid=424202060&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+  
+  - [碎片化阅读+笔记整理的“神仙”软件！| 第二大脑工作流App分享](https://www.bilibili.com/video/BV1db4y1b7w5?share_source=copy_web)
+  <iframe width="712" height="430" src="//player.bilibili.com/player.html?aid=633913153&bvid=BV1db4y1b7w5&cid=436171563&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
 ### 其他大脑传送带
 
 - [Everything I know by Nikita Voloboev](https://wiki.nikitavoloboev.xyz/) - 最初建设的重要灵感来源之一
