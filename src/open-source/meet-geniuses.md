@@ -81,6 +81,12 @@ Meet geniuses. They are awesome.
 - [Paul Hudson](https://twitter.com/twostraws)
 - [John Sundell](https://twitter.com/johnsundell)
 
+## More fields
+
+- **老石**：FPGA 芯片工程师
+  - Website: https://shilicon.com/
+  - Bilibili 频道: [老石谈芯](https://space.bilibili.com/612932327?spm_id_from=333.788.b_765f7570696e666f.2)
+    - 芯片领域以及个人效率、学习方法的分享
 
 ---
 
