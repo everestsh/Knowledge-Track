@@ -35,6 +35,15 @@
 养成「灵感捕捉」的习惯，通过捕获闪现的灵感，保存在系统中沉淀下来，这些点会逐渐连起来，最终在一定程度上能够反映出自己的兴趣和追求，找到擅长和向往的方向。
 与此同时，将灵感捕获到外部系统，也能够给自己的大脑腾出更开放的空间，进而迸发出更多的奇思妙想。
 
+## Idea Recycling
+
+<iframe style="border: none" src="//html5-player.libsyn.com/embed/episode/id/13685453/height/90/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/" height="90" width="100%" scrolling="no"  allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen>
+</iframe>
+
+你往往不知道过去的你知道些什么。你创造的每一份文件或可交付成果都代表着你所做的有价值的思考，并且可以在未来的项目中回收和重复使用。稍微多花点功夫对这些成果，做些「持久化」，沉淀下来，是值得的。时不时再回顾下，会发现过去的自己常常能给未来的自己一些惊喜。
+
+即：「DRY 原则」，Don't repeat yourself. 经验具像化。
+
 ## Keep Your Ideas Moving
 
 <iframe style="border: none" src="//html5-player.libsyn.com/embed/episode/id/13685342/height/90/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/" height="90" width="100%" scrolling="no" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" oallowfullscreen="" msallowfullscreen="">
