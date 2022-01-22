@@ -10,7 +10,7 @@
     - [《全新思维》](./education/reading/a-whole-new-mind.md)
     - [《能力陷阱》](./education/reading/act-like-a-leader.md)
   - [世界语言](./education/language.md)
-  - [知识管理]()
+  - [知识管理](./education/knowledge—management.md)
     - [Anki](./education/anki.md)
     - [构建第二大脑播客](./education/second-brain-podcast.md)
   - [时间管理](./productivity/productivity.md)
