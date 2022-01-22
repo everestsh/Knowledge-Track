@@ -27,6 +27,14 @@
 
 创造力不是「无中生有」，收集、组织他人的想法，并结合自己的思考，产生有机碰撞💥。因此，不要羞于倾听与借鉴，并且要提高**信息输入的质量**。
 
+## The Capture Habit
+
+<iframe style="border: none" src="//html5-player.libsyn.com/embed/episode/id/13685474/height/90/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/" height="90" width="100%" scrolling="no"  allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen>
+</iframe>
+
+养成「灵感捕捉」的习惯，通过捕获闪现的灵感，保存在系统中沉淀下来，这些点会逐渐连起来，最终在一定程度上能够反映出自己的兴趣和追求，找到擅长和向往的方向。
+与此同时，将灵感捕获到外部系统，也能够给自己的大脑腾出更开放的空间，进而迸发出更多的奇思妙想。
+
 ## Keep Your Ideas Moving
 
 <iframe style="border: none" src="//html5-player.libsyn.com/embed/episode/id/13685342/height/90/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/" height="90" width="100%" scrolling="no" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" oallowfullscreen="" msallowfullscreen="">
