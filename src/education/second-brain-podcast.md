@@ -20,6 +20,13 @@
 9. Make it Easier for Your Future Self - 「为将来的你编写高可读的代码」
 10. Keep Your Ideas Moving - 保持知识与想法不断迭代👇
 
+## Borrowed Creativity
+
+<iframe style="border: none" src="//html5-player.libsyn.com/embed/episode/id/13685486/height/90/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/" height="90" width="100%" scrolling="no"  allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen>
+</iframe>
+
+创造力不是「无中生有」，收集、组织他人的想法，并结合自己的思考，产生有机碰撞💥。因此，不要羞于倾听与借鉴，并且要提高**信息输入的质量**。
+
 ## Keep Your Ideas Moving
 
 <iframe style="border: none" src="//html5-player.libsyn.com/embed/episode/id/13685342/height/90/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/" height="90" width="100%" scrolling="no" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" oallowfullscreen="" msallowfullscreen="">
