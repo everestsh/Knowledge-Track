@@ -44,6 +44,12 @@
 
 即：「DRY 原则」，Don't repeat yourself. 经验具像化。
 
+## Projects Over Categories
+
+<iframe style="border: none" src="//html5-player.libsyn.com/embed/episode/id/13685426/height/90/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/" height="90" width="100%" scrolling="no"  allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+
+与其将想法根据类型划分，使其形成孤岛，不如将想法根据**具体可应用的场景**进行组织，以便在需要时更高效地触达这些想法。
+
 ## Keep Your Ideas Moving
 
 <iframe style="border: none" src="//html5-player.libsyn.com/embed/episode/id/13685342/height/90/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/" height="90" width="100%" scrolling="no" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" oallowfullscreen="" msallowfullscreen="">
