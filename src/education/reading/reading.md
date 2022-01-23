@@ -4,11 +4,12 @@
 
 ## 在读
 
-- [ ] [《Living by the code》](https://www.raywenderlich.com/books/living-by-the-code) 
 - [ ] [《程序员修炼之道――从小工到专家（20周年纪念版）（第2版）（英文版）》](https://book.douban.com/subject/35055885/)
 
 ## 已读
 
+- [x] [《Living by the code》](https://www.raywenderlich.com/books/living-by-the-code) 
+    - 通过采访技术社区优秀开发者的形式，讲述与分享他们的职业发展建议
 - [x] 《如何打造你的最优工作节奏》
     - 核心观点：聚焦与散焦，在专注之余，通过主动地进行散焦，进行节奏控制
     - 整体而言，读下来比较简单，也有些简单实用的建议，如：积极白日梦、公园徒步，以及像番茄工作法、冥想等。
