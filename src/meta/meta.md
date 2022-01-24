@@ -2,13 +2,15 @@
 
 > 弱水三千，取一瓢饮。
 
-# 笔记流程
+## 笔记流程
 
 > Input -> Process -> Output
 
-滴答清单输入，幕布加工，GitHub 输出
+滴答清单捕获输入，Obsidian 处理记录，GitHub 自动化输出
 
-# 内容结构
+- **2022.01.24 Update**:  通过 Obsidian 支持双向链接且[兼容 ](https://github.com/zoni/obsidian-export)mdbook
+
+## 内容结构
 
 1. 标题
 2. 描述
@@ -19,7 +21,7 @@
 
 > 评论系统采用 [giscus](https://giscus.app/) 搭建，基于 [GitHub Discussions](https://docs.github.com/discussions) 驱动
 
-## 笔记概要
+### 笔记概要
 
 部分精华内容阅读后，可采用以下方式进行摘要记录，内容支持展开或折叠。
 ```html
@@ -30,7 +32,7 @@
 </details>
 ```
 
-# 搭建、记录与发布
+## 搭建、记录与发布
 
 - [VS Code](https://code.visualstudio.com/) + [Typora](https://typora.io/) 书写 ✍️
 
@@ -40,7 +42,7 @@
 
 > 采用**免费的** [GitHub Actions](https://github.com/features/actions) 自动化部署
 
-# 知识体系
+## 知识体系
 
 ![Knowledge Hierachy](./assets/knowledge_hierarchy.png)
 
@@ -65,7 +67,7 @@ L0（low-level knowledge)
 * L2：实践层，在领域上的初步分化
 * L3：领域层，专业细化的领域知识
 
-# 学习金字塔理论
+## 学习金字塔理论
 
 > 在初次学习两个星期后:
 > - 通过阅读学习能够记住内容的 10%；
@@ -79,7 +81,7 @@ L0（low-level knowledge)
 
 主动学习：Learning by doing & sharing & teaching.
 
-# 构建第二大脑
+## 构建第二大脑
 
 - [Building a Second Brain: Capturing, Organizing, and Sharing Knowledge Using Digital Notes](https://www.youtube.com/watch?v=SjZSy8s2VEE)
 
@@ -91,7 +93,7 @@ L0（low-level knowledge)
 
 关键字：**洞察**、**判断**、**觉知**
 
-# 不断优化提升
+## 不断优化提升
 
 ![优化提升示意图](./assets/improvement_cycle.png)
 
@@ -99,6 +101,7 @@ L0（low-level knowledge)
 
 ## 链接 
 
+- [[second-brain-podcast|第二大脑播客]]
 - [职场人士应该学什么以及学习方法（编码领域）](https://jingwei.link/2020/04/05/learning-methodology.html)
 - [我们如何获取信息，组织知识](https://mp.weixin.qq.com/s/0tLF_cTbLGgQr1_-kNPFXg) - by 产品沉思录
 - [我的阅读工作流(2021版)](https://mp.weixin.qq.com/s/lioyPd8RRv3XUyTkaJFDDQ) - by 潦草学者
