@@ -39,7 +39,7 @@ alias project="open -a Xcode *.xcodeproj"
 ### Git 版本控制
 
 - [git - ours vs theirs](https://nitaym.github.io/ourstheirs/) - 更快捷优雅地处理冲突
-- [Git 常用命令速查清单](./git-quick-checklist.md)
+- [[git-quick-checklist|Git 常用命令速查清单]]
 - [x] [Learn Git Branching](https://learngitbranching.js.org/?locale=zh_CN) - Git 分支处理交互式教程
 - [Pro Git](https://git-scm.com/book/zh/v2)
 - [Tower- Learn Version Control with Git](https://www.git-tower.com/learn/git/ebook/cn/command-line/introduction)
