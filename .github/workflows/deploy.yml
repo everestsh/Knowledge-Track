@@ -17,9 +17,15 @@ jobs:
         with:
           path: |
             ~/.cargo/bin/mdbook
-          key: ${{ runner.os }}-cargo-binary-mdbook
+            ~/.cargo/bin/obsidian-export
+          key: ${{ runner.os }}-cargo-binary-dependency
       - name: Install Rust (rustup)
         run: rustup update stable --no-self-update && rustup default stable
+      - name: Install obsidian-export
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: cargo install obsidian-export
+      - name: Obsidian export to mdbook-src
+        run: obsidian-export src mdbook-src
       - name: Install mdBook
         if: steps.cache.outputs.cache-hit != 'true'
         run: cargo install mdbook

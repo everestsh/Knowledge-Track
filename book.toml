@@ -2,8 +2,11 @@
 authors = ["王兴彬_Binboy"]
 language = "zh-CN"
 multilingual = false
-src = "src"
 title = "棒棒彬的第二大脑"
+src = "mdbook-src"
+
+[build]
+create-missing = false
 
 [output.html]
 default-theme = "light"

@@ -9,6 +9,7 @@
   - [通识阅读](./education/reading/reading.md)
     - [《全新思维》](./education/reading/a-whole-new-mind.md)
     - [《能力陷阱》](./education/reading/act-like-a-leader.md)
+  - [写作](./education/writing/writing.md)
   - [世界语言](./education/language.md)
   - [知识管理](./education/knowledge—management.md)
     - [Anki](./education/anki.md)
