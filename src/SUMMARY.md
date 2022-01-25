@@ -11,7 +11,7 @@
     - [《能力陷阱》](./education/reading/act-like-a-leader.md)
   - [写作](./education/writing/writing.md)
   - [世界语言](./education/language.md)
-  - [知识管理](./education/knowledge—management.md)
+  - [知识管理](knowledge-management.md)
     - [Anki](./education/anki.md)
     - [构建第二大脑播客](./education/second-brain-podcast.md)
   - [时间管理](./productivity/productivity.md)
