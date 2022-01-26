@@ -2,37 +2,8 @@
 
 > 性能、安全、抽象易用，向编译器学习（di tou🙈）。
 
-## 工具集
-
-- [Rustup](https://rust-lang.github.io/rustup/index.html)
-  - 自动补全安装指南：`rustup help completions`
-  - 版本信息：
-    - [Overrides-The toolchain file: `rust-toolchain`](https://rust-lang.github.io/rustup/overrides.html#the-toolchain-file)  
-    - [What Rust is it?](https://www.whatrustisit.com/)
-- VSCode
-  - 扩展插件：
-    - rust-analyzer
-    - rust syntax
-    - crates
-    - better toml
-    - Tabnine
-    - Error Lens
-  - 配置选项：
-    - 括号对着色
-    - 括号对指南
-- [Rust Search Extension](https://rust.extension.sh/) - 浏览器搜索扩展插件
-
-- [cargo-xtask](https://github.com/matklad/cargo-xtask/) - （rust-analyzer [在用](https://rust-analyzer.github.io/rust-analyzer/xtask/index.html)的）构建辅助工具
-- [JSON to Rust Serde](https://transform.tools/json-to-rust-serde) - 快速通过 JSON 生成 Rust Serde 代码
-- [Rust Cheat Sheet](https://cheats.rs/) - [PDF](https://cheats.rs/rust_cheat_sheet.pdf) - 速查表
-
-## 社区&协作
-
-> Rust 团队在工作流和团队协作方法论上也有诸多值得学习和借鉴的地方，在此记录
-
-- [Lib.rs — home for Rust crates](https://lib.rs/) - 三方库索引，[crates.io](https://crates.io/) 的补充
-- [Cross-Team Collaboration Fun Times](https://rust-ctcft.github.io/ctcft/) - Rust 「跨团队协作欢乐时光」会议
-  - [协作文档](https://hackmd.io/@rust-ctcft)
+- [[rust-tooling|工具集]]
+- [[rust-community|社区&协作]]
 
 ## 链接
 

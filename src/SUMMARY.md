@@ -3,9 +3,10 @@
 [首页](./Introduction.md)
 [元信息](./meta/meta.md)
 
---------
+---
 
 - [终身学习&通识教育](./education/education.md)
+
   - [通识阅读](./education/reading/reading.md)
     - [《全新思维》](./education/reading/a-whole-new-mind.md)
     - [《能力陷阱》](./education/reading/act-like-a-leader.md)
@@ -31,8 +32,8 @@
   - [命令行](./cli/cli.md)
     - [Vim](./cli/vim.md)
     - [Git 常用命令速查清单](./cli/git-quick-checklist.md)
-    
 - [计算机科学](./cs/cs.md)
+
   - [课程记录]()
     - [CS 110L: Safety in Systems Programming](./cs/class/cs110l.md)
     - [The Missing Semester of Your CS Education](./cs/class/missing-semester.md)
@@ -46,7 +47,6 @@
       - [Metaprogramming](./cs/class/missing-semester/metaprogramming.md)
       - [Security and Cryptography](./cs/class/missing-semester/security.md)
       - [Potpourri](./cs/class/missing-semester/potpourri.md)
-      
   - [编程语言](./programming-languages/programming-languages.md)
     - [Swift](./programming-languages/swift/swift.md)
       - [Swift 5.4 新特性速查](./programming-languages/swift/what's-new-5-4.md)
@@ -54,6 +54,8 @@
       - [Swift 方法派发纪要](./programming-languages/swift/swift-method-dispatch-notes.md)
       - [Concurrency](./programming-languages/swift/concurrency.md)
     - [Rust](./programming-languages/rust/rust.md)
+      - [[rust-tooling|工具集]]
+      - [[rust-community|社区&协作]]
       - [认识与感受 Rust 的红与黑](./programming-languages/rust/insights_about_rust.md)
       - [过程宏](./programming-languages/rust/concepts/proc_macro.md)
       - [化解神奇的闭包](./programming-languages/rust/concepts/closure.md)
@@ -72,6 +74,7 @@
   - [术语汇总](./cs/terminology.md)
 
 - [软件开发](./software-development/software-development.md)
+
   - [工程效率](./software-development/engineering.md)
   - [iOS 开发](./iOSDev/iOSDev.md)
     - [架构设计](./iOSDev/architecture.md)
@@ -92,11 +95,13 @@
   - [Android 开发](./software-development/android.md)
 
 - [丰富生活](./life/life.md)
+
   - [故事](./life/stories.md)
   - [视频创作](./life/video_creation.md)
   - [娱乐](./life/entertainment.md)
 
 - [积极工作](./work/work.md)
+
   - [求职](./work/job-hunt.md)
   - [职场发展](./work/career.md)
     - [工程师的成长](./work/articles/better-engineer.md)
