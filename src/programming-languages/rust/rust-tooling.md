@@ -5,17 +5,12 @@
   - 版本信息：
     - [Overrides-The toolchain file: `rust-toolchain`](https://rust-lang.github.io/rustup/overrides.html#the-toolchain-file)  
     - [What Rust is it?](https://www.whatrustisit.com/)
-- VSCode
+- [[VSCode]] - 编辑器，可配合多款插件
   - 扩展插件：
     - rust-analyzer
     - rust syntax
     - crates
     - better toml
-    - Tabnine
-    - Error Lens
-  - 配置选项：
-    - 括号对着色
-    - 括号对指南
 - [Rust Search Extension](https://rust.extension.sh/) - 浏览器搜索扩展插件
 
 - [cargo-xtask](https://github.com/matklad/cargo-xtask/) - （rust-analyzer [在用](https://rust-analyzer.github.io/rust-analyzer/xtask/index.html)的）构建辅助工具

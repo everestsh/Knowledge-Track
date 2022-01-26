@@ -6,6 +6,7 @@ macOS 杀手级应用，快捷操作 macOS 的各项事务 + [工作流](https:/
 
 - [Dash](https://github.com/Kapeli/Dash-Alfred-Workflow)
 - [alfred-open-with-vscode](https://github.com/iamstevendao/alfred-open-with-vscode)
+	- 快速打开 [[VSCode]]
 
 **配置项**
 

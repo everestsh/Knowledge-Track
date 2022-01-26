@@ -53,7 +53,7 @@
 
 - Rust (采用 Rustup 安装)
   - 推荐: [RsProxy](https://rsproxy.cn/) 镜像 By Bytedance.
-- VSCode + [rust-analyzer](https://rust-analyzer.github.io/manual.html#vs-code) [+ crates]
+- [[VSCode]] + [rust-analyzer](https://rust-analyzer.github.io/manual.html#vs-code) [+ crates]
 - [Rust Search Extension](https://rust.extension.sh/)（可选&强烈推荐）
 
 # Rust 初体验

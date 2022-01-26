@@ -66,7 +66,7 @@ pod setup
 
 - [Dash](https://kapeli.com/dash) - 开发文档阅读
 
-- [VSCode](https://code.visualstudio.com/) - 编辑器，内部直接使用命令行非常便捷
+- [[VSCode]] - 编辑器，内部直接使用命令行非常便捷
 
 - [Typora](https://typora.io/) - markdown 编辑器，简洁、易用，所见即所得
 
