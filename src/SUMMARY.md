@@ -11,7 +11,7 @@
     - [《能力陷阱》](./education/reading/act-like-a-leader.md)
   - [写作](./education/writing/writing.md)
   - [世界语言](./education/language.md)
-  - [知识管理](knowledge-management.md)
+  - [[knowledge-management|知识管理]]
     - [[Zettelkasten Method|卢曼卡片笔记法]]
     - [[Obsidian]]
     - [[Logseq]]
