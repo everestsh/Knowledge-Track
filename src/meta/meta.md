@@ -9,6 +9,7 @@
 滴答清单捕获输入，Obsidian 处理记录，GitHub 自动化输出
 
 - **2022.01.24 Update**:  通过 Obsidian 支持双向链接且[兼容 ](https://github.com/zoni/obsidian-export)mdbook
+	- 实践 [[Zettelkasten Method]]，卢曼卡片笔记法
 
 ## 内容结构
 
