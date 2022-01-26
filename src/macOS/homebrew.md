@@ -1,6 +1,7 @@
-# [Homebrew](https://brew.sh/)
+# Homebrew
 
-> macOS 包管理大杀器
+macOS 包管理大杀器
+
 > The Missing Package Manager for macOS (or Linux)
 
 ## 安装
@@ -50,3 +51,6 @@ FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 ```sh
 export HOMEBREW_NO_AUTO_UPDATE=1
 ```
+
+## 链接
+- [Homebrew 官方网站](https://brew.sh/)
