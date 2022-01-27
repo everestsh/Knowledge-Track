@@ -23,3 +23,8 @@
 - [Exercism.org](https://exercism.org/) - 开源&非盈利的编程语言练习平台，导师代码评审
 - [微软 - Microsoft Learn](https://docs.microsoft.com/learn/)
 - [优达学城 - Udacity](https://www.udacity.com/) - 曾以「优达学城」的品牌在中国市场推广，似乎还是水土不服，不再中文本地化
+
+### 资讯
+- [edX is Now Part of 2U: the Next Era of Online Learning Begins Today](https://blog.edx.org/the-next-era-of-online-learning-begins-today)
+	- 全球知名 MOOC 课程平台 edX 被上市公司 2U 收购
+		- 2U，Inc：教育技术公司，与非营利性学院和大学签订合同，以构建，提供和支持在线学位和非学位课程，提供 SaaS 服务、课程设计、基础架构设计和资金等。
