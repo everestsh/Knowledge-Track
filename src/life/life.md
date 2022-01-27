@@ -27,3 +27,6 @@
 
 - [Ludovico Einaudi](https://zh.wikipedia.org/wiki/%E5%8D%A2%E5%A4%9A%E7%BB%B4%E7%A7%91%C2%B7%E4%BC%8A%E8%AF%BA%E7%AC%AC) —— 意大利当代古典主义音乐作曲家、钢琴家。
     - 大都偏舒缓、平静，适合放松和专注
+- [大卫·鲍伊 (David Bowie) ](https://zh.wikipedia.org/wiki/%E5%A4%A7%E5%8D%AB%C2%B7%E9%B2%8D%E4%BC%8A)—— 英国摇滚音乐家
+	- 艺术摇滚、流行电子，让人陶醉沉浸，律动感十足
+	- 了解来源：61 在三五环播客节目中推荐的片尾曲
