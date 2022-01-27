@@ -26,6 +26,8 @@
 
 `双击 ⇧` 搜索全局
 
+`⌃ + G` 添加下一个当前选中的内容
+
 ## 全部快捷键
 
 - [Clion Reference Card for mac](https://resources.jetbrains.com/storage/products/clion/docs/CLion_ReferenceCard_mac.pdf)
