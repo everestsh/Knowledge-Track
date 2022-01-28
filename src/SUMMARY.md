@@ -8,6 +8,7 @@
 - [终身学习&通识教育](./education/education.md)
 
   - [通识阅读](./education/reading/reading.md)
+    -  [[The WEIRDest People in the World|《西方怪人-西方如何变得如此奇特的心理又如此繁荣》]] 
     - [《全新思维》](./education/reading/a-whole-new-mind.md)
     - [《能力陷阱》](./education/reading/act-like-a-leader.md)
   - [写作](./education/writing/writing.md)

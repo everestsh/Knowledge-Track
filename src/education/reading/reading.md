@@ -5,6 +5,7 @@
 ## 在读
 
 - [ ] [《程序员修炼之道――从小工到专家（20周年纪念版）（第2版）（英文版）》](https://book.douban.com/subject/35055885/)
+- [ ] [[The WEIRDest People in the World|《西方怪人-西方如何变得如此奇特的心理又如此繁荣》]]
 
 ## 已读
 
