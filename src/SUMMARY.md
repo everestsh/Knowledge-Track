@@ -11,6 +11,7 @@
     -  [[The WEIRDest People in the World|《西方怪人-西方如何变得如此奇特的心理又如此繁荣》]] 
     - [《全新思维》](./education/reading/a-whole-new-mind.md)
     - [《能力陷阱》](./education/reading/act-like-a-leader.md)
+    - [[The Essence of Computing|《计算之魂》]]
   - [写作](./education/writing/writing.md)
   - [世界语言](./education/language.md)
   - [[knowledge-management|知识管理]]
