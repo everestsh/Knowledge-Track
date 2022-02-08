@@ -50,6 +50,10 @@ Meet geniuses. They are awesome.
   - GitHub: https://github.com/icanzilb
   - Twitter: https://twitter.com/icanzilb
 
+- [Federico Zanetello](https://twitter.com/zntfdr)
+	- https://www.fivestars.blog/
+	- https://wwdcnotes.com/
+
 - [Ankit Aggarwal](https://twitter.com/aciidb0mb3r)
 - [Harlan Haskins](https://twitter.com/harlanhaskins)
 - [Nate Cook](https://twitter.com/nnnnnnnn)
