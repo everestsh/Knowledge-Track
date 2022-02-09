@@ -8,5 +8,6 @@
   - [协作文档](https://hackmd.io/@rust-ctcft)
 
 ### 播客
-- [Rust Talk](https://www.xiaoyuzhoufm.com/podcast/61d06724ee197a3aac3dab61)
+- [Rust Talk](https://github.com/RustTalk/rusttalk.github.io) - 专注在 Rust 社区的程序员闲聊播客节目
 	- [x] [001. 与 Folyd 聊他的 Rust 使用经历 - RustTalk](https://www.xiaoyuzhoufm.com/episode/61effdd0c999d90198f1ba90?s=eyJ1IjogIjVlN2RkYTkwMGE3YmQ4MDljMmU4N2MxMSJ9)
+	- [x] [002. 与黄光星畅聊 Rust、Redis 与新加坡](https://www.xiaoyuzhoufm.com/episode/61fa9540c120ae716dbddd36)
