@@ -95,6 +95,7 @@
     - [Xcode](./iOSDev/xcode.md)
     - [iOS 应用](./iOSDev/apps.md)
   - [Android 开发](./software-development/android.md)
+  - [[how-modern-browsers-work|现代浏览器是如何工作的]]
 
 - [丰富生活](./life/life.md)
 
