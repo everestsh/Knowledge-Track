@@ -28,3 +28,4 @@
 ## 想读
 
 - [《The Programmer's Brain》](https://livebook.manning.com/book/the-programmers-brain/the-programmer-s-brain/)
+- [《Rust for Rustaceans》](https://rust-for-rustaceans.com/)
