@@ -9129,6 +9129,42 @@ notarytool submit path/to/submission.zip --wait
 <li>渲染进程完成回调</li>
 </ul>
 </li>
+<li>渲染流程
+<ul>
+<li>Parsing，解析
+<ul>
+<li>将 HTML 文本数据解析为 DOM（Document Object Model）
+<ul>
+<li>由 <a href="https://whatwg-cn.github.io/html/">HTML 协议</a>定义</li>
+</ul>
+</li>
+<li>加载依赖资源：如 <code>&lt;img&gt;</code>、<code>&lt;link&gt;</code> 等标签</li>
+<li>JavaScript 可以阻塞解析
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+<a href="https://html.spec.whatwg.org/multipage/parsing.html#overview-of-the-parsing-model">解析流程</a></li>
+<li><input disabled="" type="checkbox"/>
+<a href="https://mathiasbynens.be/notes/shapes-ics">V8 团队的分享</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>指定浏览器如何加载资源
+<ul>
+<li><code>async</code> 或 <code>defer</code></li>
+<li><code>&lt;link rel=&quot;preload&quot;&gt;</code></li>
+</ul>
+</li>
+<li>CSS style 计算
+<ul>
+<li>即使没有 CSS 指定，也会使用 Chrome <a href="https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/html/resources/html.css">默认风格样式</a></li>
+</ul>
+</li>
+<li>布局</li>
+<li>绘制</li>
+<li>Compositing</li>
+</ul>
+</li>
 </ul>
 <h2 id="参考文献-1"><a class="header" href="#参考文献-1">参考文献</a></h2>
 <p>Google Updates 的一系列介绍 Chrome 架构的文章，了解现代浏览器如何工作。</p>
@@ -9137,13 +9173,18 @@ notarytool submit path/to/submission.zip --wait
 bit.ly/browsers-pt1</li>
 <li><input disabled="" type="checkbox" checked=""/>
 bit.ly/browsers-pt2</li>
-<li><input disabled="" type="checkbox"/>
+<li><input disabled="" type="checkbox" checked=""/>
 bit.ly/browsers-pt3</li>
 <li><input disabled="" type="checkbox"/>
 bit.ly/browsers-pt4
 以及：</li>
 <li><input disabled="" type="checkbox"/>
 https://browser.engineering</li>
+</ul>
+<h3 id="性能优化-1"><a class="header" href="#性能优化-1">性能优化</a></h3>
+<ul>
+<li><a href="https://web.dev/why-speed-matters/">为什么速度很重要？</a></li>
+<li><a href="https://web.dev/fast/#prioritize-resources">快速加载</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="生活"><a class="header" href="#生活">生活</a></h1>
 <blockquote>
