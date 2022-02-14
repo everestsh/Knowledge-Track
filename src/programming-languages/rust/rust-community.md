@@ -11,3 +11,5 @@
 - [Rust Talk](https://github.com/RustTalk/rusttalk.github.io) - 专注在 Rust 社区的程序员闲聊播客节目
 	- [x] [001. 与 Folyd 聊他的 Rust 使用经历 - RustTalk](https://www.xiaoyuzhoufm.com/episode/61effdd0c999d90198f1ba90?s=eyJ1IjogIjVlN2RkYTkwMGE3YmQ4MDljMmU4N2MxMSJ9)
 	- [x] [002. 与黄光星畅聊 Rust、Redis 与新加坡](https://www.xiaoyuzhoufm.com/episode/61fa9540c120ae716dbddd36)
+- [The Rustacean Station Podcast](https://rustacean-station.org/)
+- [Are we podcast yet?](https://arewepodcastyet.com/)
