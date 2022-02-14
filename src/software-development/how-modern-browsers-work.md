@@ -29,16 +29,20 @@
 	- 布局
 	- 绘制
 	- Compositing
+- 事件处理
+	- 如何在用户交互时保持流畅
 
 ## 参考文献
 
 Google Updates 的一系列介绍 Chrome 架构的文章，了解现代浏览器如何工作。
-- [x] bit.ly/browsers-pt1  
-- [x] bit.ly/browsers-pt2  
-- [x] bit.ly/browsers-pt3  
-- [ ] bit.ly/browsers-pt4
+- [x] http://bit.ly/browsers-pt1  
+- [x] http://bit.ly/browsers-pt2  
+- [x] http://bit.ly/browsers-pt3  
+- [x] http://bit.ly/browsers-pt4
+
 以及：
-- [ ] https://browser.engineering
+
+- [Web Browser Engineering](https://browser.engineering)
 
 ### 性能优化
 - [为什么速度很重要？](https://web.dev/why-speed-matters/)
