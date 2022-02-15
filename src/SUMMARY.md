@@ -21,6 +21,7 @@
     - [Anki](./education/anki.md)
     - [构建第二大脑播客](./education/second-brain-podcast.md)
   - [时间管理](./productivity/productivity.md)
+  - [[iget|得到]]
   - [TEDxMIT](./education/tedxmit.md)
 
 - [基础利器](./infrastructure/infrastructure.md)
