@@ -4,6 +4,15 @@
 
 > 只工作，不玩耍，聪明的孩子会变傻。
 
+## 桌面卡牌游戏
+
+- [OutOfMemory! card game](https://playoutofmemory.com/)
+
+## Switch 游戏
+
+- [ ] 塞尔达
+- [x] 奥德赛
+
 ## 影视剧集
 
 那些年，共同经历过的想象，记录看过的一些影视剧集。
