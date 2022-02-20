@@ -2038,24 +2038,83 @@ Build a Mac app inside 30 minutes using nothing but SwiftUI</li>
 </ul>
 <h2 id="工具-1"><a class="header" href="#工具-1">工具</a></h2>
 <ul>
-<li><a href="cli/"><code>tree</code></a> - 文件目录展示工具</li>
-<li><a href="https://github.com/sharkdp/bat"><code>bat</code></a> - A cat(1) clone with syntax highlighting and Git integration.</li>
-<li><a href="https://github.com/XAMPPRocky/tokei"><code>tokei</code></a> - 代码量统计工具</li>
-<li><a href="https://github.com/tmux/tmux"><code>tmux</code></a> - 终端复用
+<li>
+<p><a href="cli/"><code>tree</code></a> - 文件目录展示工具</p>
+</li>
+<li>
+<p><a href="https://github.com/sharkdp/bat"><code>bat</code></a> - A cat(1) clone with syntax highlighting and Git integration.</p>
+</li>
+<li>
+<p><a href="https://github.com/XAMPPRocky/tokei"><code>tokei</code></a> - 代码量统计工具</p>
+</li>
+<li>
+<p><a href="https://github.com/tmux/tmux"><code>tmux</code></a> - 终端复用</p>
 <ul>
 <li><input disabled="" type="checkbox" checked=""/>
 <a href="https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/">A Quick and Easy Guide to tmux</a></li>
 <li><a href="https://tmuxcheatsheet.com/">Tmux Cheat Sheet &amp; Quick Reference</a></li>
 </ul>
 </li>
-<li><a href="https://fishshell.com/"><code>fish</code></a> - 交互更友好的 shell
+<li>
+<p><a href="https://fishshell.com/"><code>fish</code></a> - 交互更友好的 shell</p>
 <ul>
 <li><a href="https://github.com/jorgebucaran/awsm.fish">awsm.fish</a></li>
 </ul>
 </li>
-<li><a href="https://asciinema.org/">asciinema</a> - Record and share your terminal sessions, the right way.</li>
-<li><a href="https://stedolan.github.io/jq/">jq</a> - JSON 处理</li>
+<li>
+<p><a href="https://asciinema.org/">asciinema</a> - Record and share your terminal sessions, the right way.</p>
+</li>
+<li>
+<p><a href="https://stedolan.github.io/jq/">jq</a> - JSON 处理</p>
+</li>
+<li>
+<p><a href="https://www.smartmontools.org/">smartmontools</a> - 查看硬盘健康状况，针对 M1 芯片硬盘读写问题</p>
+<details><summary>示例</summary>
+  ```
+  ❯ smartctl -a disk0
+  smartctl 7.2 2020-12-30 r5155 [Darwin 21.2.0 arm64] (local build)
+  Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+</li>
 </ul>
+<p>=== START OF INFORMATION SECTION ===
+Model Number:                       APPLE SSD AP0512Q
+Serial Number:                      0ba0108b24244411
+Firmware Version:                   386.60.2
+PCI Vendor/Subsystem ID:            0x106b
+IEEE OUI Identifier:                0x000000
+Controller ID:                      0
+NVMe Version:                       1.2
+Number of Namespaces:               3
+Local Time is:                      Sun Feb 20 18:30:11 2022 CST
+Firmware Updates (0x02):            1 Slot
+Optional Admin Commands (0x0004):   Frmw_DL
+Optional NVM Commands (0x0004):     DS_Mngmt
+Maximum Data Transfer Size:         256 Pages</p>
+<p>Supported Power States
+St Op     Max   Active     Idle   RL RT WL WT  Ent_Lat  Ex_Lat
+0 +     0.00W       -        -    0  0  0  0        0       0</p>
+<p>=== START OF SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED</p>
+<p>SMART/Health Information (NVMe Log 0x02)
+Critical Warning:                   0x00
+Temperature:                        27 Celsius
+Available Spare:                    100%
+Available Spare Threshold:          99%
+Percentage Used:                    1%
+Data Units Read:                    86,638,313 [44.3 TB]
+Data Units Written:                 69,117,640 [35.3 TB]
+Host Read Commands:                 639,771,714
+Host Write Commands:                297,254,752
+Controller Busy Time:               0
+Power Cycles:                       154
+Power On Hours:                     322
+Unsafe Shutdowns:                   31
+Media and Data Integrity Errors:    0
+Error Information Log Entries:      0</p>
+<p>Read 1 entries from Error Information Log failed: GetLogPage failed: system=0x38, sub=0x0, code=745</p>
+<pre><code>&lt;/details&gt;
+
+</code></pre>
 <h2 id="alias"><a class="header" href="#alias">Alias</a></h2>
 <pre><code>alias workspace=&quot;open -a Xcode *.xcworkspace&quot;
 alias project=&quot;open -a Xcode *.xcodeproj&quot;
@@ -9971,6 +10030,7 @@ http://bit.ly/browsers-pt4</li>
 </ul>
 <h2 id="链接-51"><a class="header" href="#链接-51">链接</a></h2>
 <ul>
+<li><a href="https://www.yuque.com/bytebase/blog/launch">Bytebase 0.1.0 开源版发布</a> - 数据库表结构 Schema 变更协作控制</li>
 <li><a href="https://www.codetriage.com/">CodeTriage</a> - 通过邮件追踪订阅关注的开源项目，为开源社区贡献的同时提升开发与协同能力</li>
 <li><a href="http://opensource.apple.com">Apple Open Source</a> - Open Source at Apple.</li>
 <li><a href="https://ferrous-systems.com/open-source/">Open Source at Ferrous Systems</a>
