@@ -24,6 +24,7 @@
 
 ## 链接
 
+- [Bytebase 0.1.0 开源版发布](https://www.yuque.com/bytebase/blog/launch) - 数据库表结构 Schema 变更协作控制
 - [CodeTriage](https://www.codetriage.com/) - 通过邮件追踪订阅关注的开源项目，为开源社区贡献的同时提升开发与协同能力
 - [Apple Open Source](http://opensource.apple.com) - Open Source at Apple.
 - [Open Source at Ferrous Systems](https://ferrous-systems.com/open-source/)
