@@ -30,6 +30,7 @@
 
 - [Clipchamp - free video editor & video maker](https://app.clipchamp.com/) - 微软旗下「视频云剪辑」
 - [Frame.io | Video Review and Collaboration Software](https://www.frame.io/) - 视频剪辑工作流协同工具
+- [OBS](https://obsproject.com/) - 录屏直播工具
 
 ## ToB(B for business)
 - [x] [13000字的Figma研究笔记，聊聊Product-Led Growth的误区与思考](https://mp.weixin.qq.com/s/3C43vxrxbkMhNQAdojG0bg)
