@@ -20,6 +20,8 @@
     - 魔法第二法则：限制 > 权限
     - 魔法第三法则：在添加新内容之前优先考虑扩展您已有的内容
     </details>
+- [Coppice](https://coppiceapp.com/) - 思维笔记工具（for macOS）
+	- [应用开发日志与过程](https://coppiceapp.com/blog)
 
 ### 工具
 
