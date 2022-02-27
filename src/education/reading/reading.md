@@ -9,6 +9,8 @@
 
 ## 已读
 
+- [x] 《造物还原》—— 改变世界的 37 种物品
+	- 模范书局·诗空间
 - [x] [《Living by the code》](https://www.raywenderlich.com/books/living-by-the-code) 
     - 通过采访技术社区优秀开发者的形式，讲述与分享他们的职业发展建议
 - [x] 《如何打造你的最优工作节奏》
