@@ -23,3 +23,11 @@ Today I Learned.
 
 - 创造简单易行的仪式感（触发器）
 - 好的习惯不断地坚持就能创造「天赋」
+
+## WOOP 思维：张力如何变成行动力？
+
+> 链接：https://www.dedao.cn/share/packet?packetId=nG0OqKVDXA46djwFaWDTewzlvydkRMWJ
+
+- Wish（愿望）· Outcome（最好的结果）· Obstacle（可能的阻碍）· Plan（计划）
+- 仰望星空（W&O 强化目标），脚踏实地（O&P 克服障碍）
+- 「仰望星空，脚踏实地」这句陪伴我走过休学期间最艰难时光的话，以这样的形式出现，再次触动了自己，给自己一点时间，更广阔的一片星空，会出现的。🌃
