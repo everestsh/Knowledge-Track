@@ -83,3 +83,4 @@
 
 ## 参考文献
 - [卢曼卡片盒笔记法官方介绍](https://zettelkasten.de/introduction/zh/)
+- [不要漂亮的笔记，要更好的思考 - App Store](https://apps.apple.com/cn/story/id1581356533)
