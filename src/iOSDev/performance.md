@@ -42,6 +42,7 @@
 
 - [ImageOptim](https://imageoptim.com/howto.html) - 图片资源大小、加载优化工具
 - [WBBlades](https://github.com/wuba/WBBlades) - 基于 Mach-O文件 解析的工具集，包括无用代码检测、包大小分析等
+
 ## 书籍
 
 - 《高性能 iOS 应用开发》- 各方面的性能衡量到工程实践
@@ -53,6 +54,26 @@
 - [Xcode Organizer](https://developer.apple.com/videos/play/wwdc2020/10076)
 
 ## 链接
+
+- [iOS 高刷屏监控 + 优化：从理论到实践全面解析](https://mp.weixin.qq.com/s/gMxTq0_nmE-xW7GA3pkBJg)
+	- **帧率**: 屏幕内容的变化频率
+		- 刷新帧率，决定上限
+		- 渲染帧率，决定下限
+	- **动态刷新率**：ProMotion 本质上是对 [Adaptive-Sync](https://en.wikipedia.org/wiki/Variable_refresh_rate) 显示标准的一种实现
+		- The iPhone 13 Pro and iPhone 13 Pro Max ProMotion displays can present content on the display using the following refresh rates and timings: `120Hz (8ms), 80Hz (12ms), 60Hz (16ms), 48Hz (20ms), 40Hz (25ms), 30Hz (33ms), 24Hz (41ms), 20Hz (50ms), 16Hz (62ms), 15Hz (66ms), 12Hz (83ms), 10Hz (100ms)`
+		- The iPad Pro’s ProMotion display can present content on the display using the following refresh rates and timings: `120Hz (8ms), 60Hz (16ms), 40Hz (25ms), 30Hz (33ms), 24Hz (41ms)`
+	- 关键 API：
+		- `CADisableMinimumFrameDurationOnPhone`
+		- `preferredFrameRateRange`
+	- 测试指标：
+		- 1.  `CADisplayLink` 计算帧率
+		- 2.  Xcode GPU Report 帧率：Xcode -> Show Debug Navigator -> FPS 中显示的帧率
+		- 3.  Instruments Core Animation FPS
+		- 4.  Instruments Display/VSync 信号频率
+			- Display：指对应显示器的单个 Surface 上屏持续的时间，对应 CPU-GPU 管线的**渲染频率**
+			- VSync：指垂直同步信号时间戳，对应屏幕硬件的**刷新频率**
+		- **双缓冲刷新机制** v.s **三缓冲刷新机制**
+		- 
 
 - [移动芯片性能排行榜](https://www.socpk.com/)
 
