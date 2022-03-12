@@ -22,6 +22,14 @@
 - [x] [Build Your Text Editor With Rust!](https://medium.com/@otukof/build-your-text-editor-with-rust-678a463f968b) - 使用 Rust 写一个类似 vim 的命令行编辑器 ![Progress](https://img.shields.io/badge/Progress-100%25-brightgreen)
 - [Rust 培养提高计划 | Databend](https://space.bilibili.com/275673537/channel/seriesdetail?sid=488491) ⭐️
 
+## Rust crate 大巡礼（[链接](https://space.bilibili.com/39222989/channel/collectiondetail?sid=194011)）
+介绍各种优质的，有意思 Rust crates。by 陈天
+- [x] 用 Prost 处理 Protobuf
+- [x] 用 Axum 构建 API：使用提取器
+	- Trait `tower::Service`
+	- Live coding: todo app
+	- JWT: https://jwt.io/, 身份鉴权
+
 ## Learn Rust with Gitoxide （[链接](https://www.youtube.com/playlist?list=PLMHbQxe1e9Mk5kOHrm9v20-umkE2ck_gE)）
 
 - [x] LRG-01: The essence of Rust

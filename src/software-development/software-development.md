@@ -4,6 +4,7 @@
 
 ## 链接
 
+- [JSON Web Tokens](https://jwt.io/) - 身份鉴权
 - [For fast and secure sites | Jamstack](https://jamstack.org/) - Javascript，API 和 Markup，Web 开发模式
 - [GTK.org - Create interfaces that users just love](https://www.gtk.org/) - 创建跨平台 UI 界面
 - [Kotlin Multiplatform Mobile](https://kotlinlang.org/lp/mobile/) - 采用 Kotlin 的官方移动端跨平台方案
