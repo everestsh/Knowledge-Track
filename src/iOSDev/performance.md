@@ -55,7 +55,8 @@
 
 ## 链接
 
-- [iOS 高刷屏监控 + 优化：从理论到实践全面解析](https://mp.weixin.qq.com/s/gMxTq0_nmE-xW7GA3pkBJg)
+- [x] [iOS 高刷屏监控 + 优化：从理论到实践全面解析](https://mp.weixin.qq.com/s/gMxTq0_nmE-xW7GA3pkBJg) 
+	- 官方文档参考：[Optimizing ProMotion Refresh Rates for iPhone 13 Pro and iPad Pro](https://developer.apple.com/documentation/quartzcore/optimizing_promotion_refresh_rates_for_iphone_13_pro_and_ipad_pro))
 	- **帧率**: 屏幕内容的变化频率
 		- 刷新帧率，决定上限
 		- 渲染帧率，决定下限
@@ -72,8 +73,18 @@
 		- 4.  Instruments Display/VSync 信号频率
 			- Display：指对应显示器的单个 Surface 上屏持续的时间，对应 CPU-GPU 管线的**渲染频率**
 			- VSync：指垂直同步信号时间戳，对应屏幕硬件的**刷新频率**
-		- **双缓冲刷新机制** v.s **三缓冲刷新机制**
-		- 
+	- **双缓冲刷新机制** v.s **三缓冲刷新机制**
+	-  `display_timer_callback` 逻辑的变化
+	- iOS 15 上 Apple 改变了在 ProMotion 设备的渲染事件循环的驱动方式，CoreAnimation 的事务提交不再由完全由 RunLoop 驱动，而是涉及了多个信号源
+	- 默认的 CADisplayLink 的回调频率与实际帧率并不匹配，之前基于 CADisplayLink 进行帧率监控的方案在 ProMotion 设备上变得不再可行
+	- 动态帧率的应用场景：
+		- 监控动态帧率下的流畅度表现：通过在 CADisplayLink 回调中确认 `duration` 参数，计算得到当前屏幕的实时刷新率，并修改 `preferredFrameRateRange` 来进行跟踪。
+			- `Hitch Time Ratio` 比单纯的 FPS 更能适配不同刷新率的场景。
+		- 关键场景提升帧率
+			- 滑动中稳定 120Hz：可以用 CADisplayLink 来实现，`preferredFramesPerSecond`
+			- CAAnimation 设置动态帧率, `CAAnimation.preferredFrameRateRange`
+			- 手势/转场等其他场景解锁 120Hz, 启用一个解锁了频率的 CADisplayLink
+			- 
 
 - [移动芯片性能排行榜](https://www.socpk.com/)
 
