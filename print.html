@@ -8641,9 +8641,10 @@ typedef struct __CFRuntimeBase {
 </ul>
 <h2 id="链接-34"><a class="header" href="#链接-34">链接</a></h2>
 <ul>
-<li>
-<p><a href="https://mp.weixin.qq.com/s/gMxTq0_nmE-xW7GA3pkBJg">iOS 高刷屏监控 + 优化：从理论到实践全面解析</a></p>
+<li><input disabled="" type="checkbox" checked=""/>
+<p><a href="https://mp.weixin.qq.com/s/gMxTq0_nmE-xW7GA3pkBJg">iOS 高刷屏监控 + 优化：从理论到实践全面解析</a> </p>
 <ul>
+<li>官方文档参考：<a href="https://developer.apple.com/documentation/quartzcore/optimizing_promotion_refresh_rates_for_iphone_13_pro_and_ipad_pro">Optimizing ProMotion Refresh Rates for iPhone 13 Pro and iPad Pro</a>)</li>
 <li><strong>帧率</strong>: 屏幕内容的变化频率
 <ul>
 <li>刷新帧率，决定上限</li>
@@ -8688,8 +8689,27 @@ typedef struct __CFRuntimeBase {
 <li>VSync：指垂直同步信号时间戳，对应屏幕硬件的<strong>刷新频率</strong></li>
 </ul>
 </li>
+</ul>
+</li>
 <li><strong>双缓冲刷新机制</strong> v.s <strong>三缓冲刷新机制</strong></li>
+<li><code>display_timer_callback</code> 逻辑的变化</li>
+<li>iOS 15 上 Apple 改变了在 ProMotion 设备的渲染事件循环的驱动方式，CoreAnimation 的事务提交不再由完全由 RunLoop 驱动，而是涉及了多个信号源</li>
+<li>默认的 CADisplayLink 的回调频率与实际帧率并不匹配，之前基于 CADisplayLink 进行帧率监控的方案在 ProMotion 设备上变得不再可行</li>
+<li>动态帧率的应用场景：
+<ul>
+<li>监控动态帧率下的流畅度表现：通过在 CADisplayLink 回调中确认 <code>duration</code> 参数，计算得到当前屏幕的实时刷新率，并修改 <code>preferredFrameRateRange</code> 来进行跟踪。
+<ul>
+<li><code>Hitch Time Ratio</code> 比单纯的 FPS 更能适配不同刷新率的场景。</li>
+</ul>
+</li>
+<li>关键场景提升帧率
+<ul>
+<li>滑动中稳定 120Hz：可以用 CADisplayLink 来实现，<code>preferredFramesPerSecond</code></li>
+<li>CAAnimation 设置动态帧率, <code>CAAnimation.preferredFrameRateRange</code></li>
+<li>手势/转场等其他场景解锁 120Hz, 启用一个解锁了频率的 CADisplayLink</li>
 <li></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
