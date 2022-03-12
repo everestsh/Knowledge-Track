@@ -55,6 +55,7 @@
 ### GUI
 
 - [DioxusLabs/dioxus](https://github.com/dioxuslabs/dioxus) - Elegant React-like library for building user interfaces for desktop, web, mobile, SSR, liveview, and more.
+	- 官网：[Dioxus | An elegant GUI library for Rust](https://dioxuslabs.com/)
 - [rust-windowing/winit](https://github.com/rust-windowing/winit) - 跨平台窗口创建和管理
 - [iced-rs/iced](https://github.com/iced-rs/iced) - Rust 跨平台 GUI 库
 - [emilk/egui: egui: an easy-to-use immediate mode GUI in pure Rust](https://github.com/emilk/egui)
