@@ -251,7 +251,62 @@
 </ul>
 <h2 id="链接"><a class="header" href="#链接">链接</a></h2>
 <ul>
-<li><a href="https://www.socpk.com/">移动芯片性能排行榜</a></li>
+<li>
+<p><a href="https://mp.weixin.qq.com/s/gMxTq0_nmE-xW7GA3pkBJg">iOS 高刷屏监控 + 优化：从理论到实践全面解析</a></p>
+<ul>
+<li><strong>帧率</strong>: 屏幕内容的变化频率
+<ul>
+<li>刷新帧率，决定上限</li>
+<li>渲染帧率，决定下限</li>
+</ul>
+</li>
+<li><strong>动态刷新率</strong>：ProMotion 本质上是对 <a href="https://en.wikipedia.org/wiki/Variable_refresh_rate">Adaptive-Sync</a> 显示标准的一种实现
+<ul>
+<li>The iPhone 13 Pro and iPhone 13 Pro Max ProMotion displays can present content on the display using the following refresh rates and timings: <code>120Hz (8ms), 80Hz (12ms), 60Hz (16ms), 48Hz (20ms), 40Hz (25ms), 30Hz (33ms), 24Hz (41ms), 20Hz (50ms), 16Hz (62ms), 15Hz (66ms), 12Hz (83ms), 10Hz (100ms)</code></li>
+<li>The iPad Pro’s ProMotion display can present content on the display using the following refresh rates and timings: <code>120Hz (8ms), 60Hz (16ms), 40Hz (25ms), 30Hz (33ms), 24Hz (41ms)</code></li>
+</ul>
+</li>
+<li>关键 API：
+<ul>
+<li><code>CADisableMinimumFrameDurationOnPhone</code></li>
+<li><code>preferredFrameRateRange</code></li>
+</ul>
+</li>
+<li>测试指标：
+<ul>
+<li>
+<ol>
+<li><code>CADisplayLink</code> 计算帧率</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>Xcode GPU Report 帧率：Xcode -&gt; Show Debug Navigator -&gt; FPS 中显示的帧率</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>Instruments Core Animation FPS</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li>Instruments Display/VSync 信号频率</li>
+</ol>
+<ul>
+<li>Display：指对应显示器的单个 Surface 上屏持续的时间，对应 CPU-GPU 管线的<strong>渲染频率</strong></li>
+<li>VSync：指垂直同步信号时间戳，对应屏幕硬件的<strong>刷新频率</strong></li>
+</ul>
+</li>
+<li><strong>双缓冲刷新机制</strong> v.s <strong>三缓冲刷新机制</strong></li>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.socpk.com/">移动芯片性能排行榜</a></p>
+</li>
 </ul>
 <p><img src="./assets/%E7%A7%BB%E5%8A%A8%E8%8A%AF%E7%89%87%E7%BB%BC%E5%90%88%E5%A4%A9%E6%A2%AF%E5%9B%BE.webp" alt="移动芯片综合天梯图" /></p>
 
