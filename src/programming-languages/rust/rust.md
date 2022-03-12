@@ -54,6 +54,8 @@
 
 ### GUI
 
+- [tauri-apps/tauri](https://github.com/tauri-apps/tauri) - Build smaller, faster, and more secure desktop applications with a web frontend.
+	- 官网：https://tauri.studio/
 - [DioxusLabs/dioxus](https://github.com/dioxuslabs/dioxus) - Elegant React-like library for building user interfaces for desktop, web, mobile, SSR, liveview, and more.
 	- 官网：[Dioxus | An elegant GUI library for Rust](https://dioxuslabs.com/)
 - [rust-windowing/winit](https://github.com/rust-windowing/winit) - 跨平台窗口创建和管理
