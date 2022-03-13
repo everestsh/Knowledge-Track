@@ -28,12 +28,17 @@
 - [x] 用 Axum 构建 API：使用提取器
 	- Trait `tower::Service`
 	- Live coding: todo app
+	- Trait `axum::extract::FromRequest` & `axum::response::IntoResponse`
 	- JWT: https://jwt.io/, 身份鉴权
 - [x] 用 Axum 构建 WS 服务器：基本操作
 	- axum `ws` feature
-	- dashmap crate
+	- `dashmap` crate
 	- `tokio::sync::broadcast`
 	- `tokio::select!`
+- [x] 用 Axum 构建 WS 服务器：单元测试
+	- 将 `WebSocket` 类型通过泛型改造
+	- `fake-socket` crate
+	- server&shared&client crate 代码分层组织复用
 
 ## Learn Rust with Gitoxide （[链接](https://www.youtube.com/playlist?list=PLMHbQxe1e9Mk5kOHrm9v20-umkE2ck_gE)）
 
