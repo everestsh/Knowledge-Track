@@ -29,6 +29,11 @@
 	- Trait `tower::Service`
 	- Live coding: todo app
 	- JWT: https://jwt.io/, 身份鉴权
+- [x] 用 Axum 构建 WS 服务器：基本操作
+	- axum `ws` feature
+	- dashmap crate
+	- `tokio::sync::broadcast`
+	- `tokio::select!`
 
 ## Learn Rust with Gitoxide （[链接](https://www.youtube.com/playlist?list=PLMHbQxe1e9Mk5kOHrm9v20-umkE2ck_gE)）
 
