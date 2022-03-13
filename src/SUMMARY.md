@@ -59,6 +59,7 @@
     - [Rust](./programming-languages/rust/rust.md)
       - [[rust-tooling|工具集]]
       - [[rust-community|社区&协作]]
+      - [[rust-tutorial|教程与参考]]
       - [认识与感受 Rust 的红与黑](./programming-languages/rust/insights_about_rust.md)
       - [过程宏](./programming-languages/rust/concepts/proc_macro.md)
       - [化解神奇的闭包](./programming-languages/rust/concepts/closure.md)
