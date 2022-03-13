@@ -37,3 +37,10 @@ Today I Learned.
 - 努力控制你能控制的事情，而不妄图控制那些无法控制的事情
 - 大部分的烦恼，都来自妄图控制那些不能控制的事，却忽略放任可控制的事
 - 遇到一件事，想想自己能够控制的部分在哪里，找出来，并做成计划
+
+## 关于「经验」的定义
+
+> Experience is what you get when you didn't get what you wanted
+
+- 经验是你在没有得到你想要的东西时得到的东西。
+- 链接：[当我做 hackathon 时我在做什么](https://zhuanlan.zhihu.com/p/345318781)
