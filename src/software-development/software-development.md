@@ -28,6 +28,7 @@
 
 - [PlantUML](https://plantuml.com/) - 使用简单的代码「绘制」UML（Unified Modeling Language）
     - 语法统一明确，编写简单，易维护，易迁移
+- [Excalidraw](https://excalidraw.com/) - 手绘风格的画图应用，适合流程图、架构图绘制与展示
 
 ### 音视频
 

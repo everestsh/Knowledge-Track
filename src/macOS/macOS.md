@@ -76,8 +76,6 @@ pod setup
 
 - [Alfred](./alfred.md) - 快捷打开任意应用或工作流
 
-- [Excalidraw](https://excalidraw.com/) - 手绘风格的画图应用，适合流程图、架构图绘制与展示
-
 - [Contexts](./contexts.md) - 快速窗口切换
 
 - [SnippetsLab](./snippetsLab.md) - 代码片段库，支持 iCloud 备份 + [GitHub Gist](https://gist.github.com/Binlogo) 同步
