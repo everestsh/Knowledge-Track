@@ -42,3 +42,7 @@
 
 - [Git.io](https://git.io/) - GitHub 的短链接服务
   - Try it: https://git.io/JML4o
+
+### 社区
+
+- [HackerNoon - read, write and learn about any technology](https://hackernoon.com/)
