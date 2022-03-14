@@ -45,4 +45,6 @@
 
 ### 社区
 
+- [CoRecursive Podcast](https://corecursive.com/) - The Stories Behind The Code
+	- [The Untold Story of SQLite](https://corecursive.com/066-sqlite-with-richard-hipp/)
 - [HackerNoon - read, write and learn about any technology](https://hackernoon.com/)
