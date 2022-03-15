@@ -8,6 +8,7 @@
 ### 数据库
 - [SeaQL/sea-orm: 🐚 An async & dynamic ORM for Rust](https://github.com/SeaQL/sea-orm)
 - [launchbadge/sqlx: 🧰 The Rust SQL Toolkit. An async, pure Rust SQL crate featuring compile-time checked queries without a DSL. Supports PostgreSQL, MySQL, SQLite, and MSSQL.](https://github.com/launchbadge/sqlx)
+- [pola-rs/polars: Fast multi-threaded DataFrame library in Rust | Python | Node.js](https://github.com/pola-rs/polars)
 
 ## 播客
 - [Rust Talk](https://github.com/RustTalk/rusttalk.github.io) - 专注在 Rust 社区的程序员闲聊播客节目

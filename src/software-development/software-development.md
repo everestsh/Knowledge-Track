@@ -4,6 +4,10 @@
 
 ## 链接
 
+- [Real-Time In-App Chat and Communication Platform | PubNub](https://www.pubnub.com/)
+- [Pusher | Leader In Realtime Technologies](https://pusher.com/)
+- [Meilisearch](https://www.meilisearch.com/)
+- [GitHub - valeriansaliou/sonic: 🦔 Fast, lightweight & schema-less search backend. An alternative to Elasticsearch that runs on a few MBs of RAM.](https://github.com/valeriansaliou/sonic)
 - [JSON Web Tokens](https://jwt.io/) - 身份鉴权
 - [For fast and secure sites | Jamstack](https://jamstack.org/) - Javascript，API 和 Markup，Web 开发模式
 - [GTK.org - Create interfaces that users just love](https://www.gtk.org/) - 创建跨平台 UI 界面
@@ -48,3 +52,4 @@
     - [x] [Source Code Walkthrough of Telegram-iOS Part-7: Link Preview and Instant View](https://hubo.dev/2020-07-12-source-code-walkthrough-of-telegram-ios-part-7/)
     - [ ] TODO: 精华摘要
 
+- [ ] [探索 Notion 的实现](https://mp.weixin.qq.com/s?__biz=MzA3NDM0ODQwMw==&mid=2649828527&idx=1&sn=0230be23cbc63f549d1a87e2811f5fb6&chksm=8704aeb3b07327a54e39a301a34695864bfed29aa3d017fd3a2c115ec78beb6127ea96cf8c50&scene=21#wechat_redirect)
